@@ -65,3 +65,4 @@ set_global_assignment -name VHDL_FILE comparatorLessThan.vhd
 set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-STATED"
 set_global_assignment -name BDF_FILE 31mux.bdf
 set_global_assignment -name QIP_FILE StoP.qip
+set_global_assignment -name QIP_FILE compare13bits.qip
