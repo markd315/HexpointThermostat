@@ -1,0 +1,7 @@
+vendor_name = ModelSim
+source_file = 1, HexpointThermostat/HexpointThermostat.bdf
+source_file = 1, C:/intelFPGA_lite/17.1/HexpointThermostat/Waveform.vwf
+source_file = 1, C:/intelFPGA_lite/17.1/HexpointThermostat/hexpointthermostat.bdf
+design_name = HexpointThermostat
+instance = comp, \CLK~I , CLK, HexpointThermostat, 1
+instance = comp, \Halftog~I , Halftog, HexpointThermostat, 1

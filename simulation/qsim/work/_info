@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim
+vHexpointThermostat
+Z1 !s110 1513793620
+!i10b 1
+!s100 Y5Ld]C4jQgB;Sd^To30cS0
+IX<Vd9X=44QGPzF>MHnl6W2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1513793619
+8HexpointThermostat.vo
+FHexpointThermostat.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1513793620.000000
+!s107 HexpointThermostat.vo|
+!s90 -work|work|HexpointThermostat.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@hexpoint@thermostat
+vHexpointThermostat_vlg_vec_tst
+R1
+!i10b 1
+!s100 VN>5362cTS4eSYFVm50IV2
+IfmTOHCXAe`KBQ7HMSd0j>3
+R2
+R0
+w1513793618
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 29
+R3
+r1
+!s85 0
+31
+R4
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R5
+R6
+n@hexpoint@thermostat_vlg_vec_tst
