@@ -3,15 +3,123 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Setup 'CLK'
-Slack : -18.298
-TNS   : -1015.018
+Slack : -17.133
+TNS   : -1034.656
+
+Type  : Setup 'count5bits:inst15|inst3'
+Slack : -2.750
+TNS   : -2.750
+
+Type  : Setup 'count5bits:inst1|inst3'
+Slack : -2.711
+TNS   : -2.711
+
+Type  : Setup 'count5bits:inst15|inst1'
+Slack : 0.966
+TNS   : 0.000
+
+Type  : Setup 'count5bits:inst1|inst'
+Slack : 0.969
+TNS   : 0.000
+
+Type  : Setup 'count5bits:inst15|inst2'
+Slack : 1.904
+TNS   : 0.000
+
+Type  : Setup 'count5bits:inst15|inst'
+Slack : 1.983
+TNS   : 0.000
+
+Type  : Setup 'count5bits:inst1|inst2'
+Slack : 2.018
+TNS   : 0.000
+
+Type  : Setup 'fbctestclk'
+Slack : 3.216
+TNS   : 0.000
+
+Type  : Setup 'count5bits:inst1|inst1'
+Slack : 3.705
+TNS   : 0.000
+
+Type  : Hold 'count5bits:inst1|inst1'
+Slack : -3.565
+TNS   : -3.565
+
+Type  : Hold 'fbctestclk'
+Slack : -3.076
+TNS   : -3.076
 
 Type  : Hold 'CLK'
-Slack : 3.350
+Slack : -1.975
+TNS   : -1.975
+
+Type  : Hold 'count5bits:inst1|inst2'
+Slack : -1.878
+TNS   : -1.878
+
+Type  : Hold 'count5bits:inst15|inst'
+Slack : -1.843
+TNS   : -1.843
+
+Type  : Hold 'count5bits:inst15|inst2'
+Slack : -1.764
+TNS   : -1.764
+
+Type  : Hold 'count5bits:inst1|inst'
+Slack : -0.829
+TNS   : -0.829
+
+Type  : Hold 'count5bits:inst15|inst1'
+Slack : -0.826
+TNS   : -0.826
+
+Type  : Hold 'count5bits:inst1|inst3'
+Slack : 3.351
+TNS   : 0.000
+
+Type  : Hold 'count5bits:inst15|inst3'
+Slack : 3.390
 TNS   : 0.000
 
 Type  : Minimum Pulse Width 'CLK'
 Slack : -2.289
 TNS   : -2.289
+
+Type  : Minimum Pulse Width 'fbctestclk'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'count5bits:inst15|inst'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'count5bits:inst15|inst1'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'count5bits:inst15|inst2'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'count5bits:inst15|inst3'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'count5bits:inst1|inst'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'count5bits:inst1|inst1'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'count5bits:inst1|inst2'
+Slack : 0.161
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'count5bits:inst1|inst3'
+Slack : 0.161
+TNS   : 0.000
 
 ------------------------------------------------------------

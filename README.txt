@@ -26,6 +26,5 @@ Now do you understand why we need six setpoints?
 
 //TODO add programmable time-of-day defaults to be overridden by the triple-mode overrides.
 
-This schematic was designed by Mark Davis in Quartus 17.1 for compatible use with the ADT7408 temperature sensor hardware, purchasable for a unit price of $.90
-http://www.analog.com/media/en/technical-documentation/data-sheets/ADT7408.pdf
-
+This schematic was designed by Mark Davis in Quartus 17.1 for compatible use with the ADT7311 temperature sensor hardware, purchasable for a unit price of $1.72
+http://www.analog.com/media/en/technical-documentation/data-sheets/ADT7311.pdf

@@ -9,13 +9,13 @@ z2
 cModel Technology
 Z0 dC:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim
 vHexpointThermostat
-Z1 !s110 1513793620
+Z1 !s110 1513897318
 !i10b 1
-!s100 Y5Ld]C4jQgB;Sd^To30cS0
-IX<Vd9X=44QGPzF>MHnl6W2
+!s100 :en4NcG8k^bLOkN?dJFFI1
+IA4jIzik3ZcdVT4gAJPRWa2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1513793619
+w1513897317
 8HexpointThermostat.vo
 FHexpointThermostat.vo
 L0 31
@@ -23,21 +23,107 @@ Z3 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z4 !s108 1513793620.000000
+Z4 !s108 1513897318.000000
 !s107 HexpointThermostat.vo|
 !s90 -work|work|HexpointThermostat.vo|
 !i113 1
 Z5 o-work work
 Z6 tCvgOpt 0
 n@hexpoint@thermostat
+Ehexpointthermostat
+Z7 w1513896879
+Z8 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z9 DPx4 maxv 14 maxv_atom_pack 0 22 `BK`PRhBRzJ`D?VFe8HhF1
+Z10 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z11 DPx4 maxv 15 maxv_components 0 22 DkaDB?@L@IZ7N1;WjjI;M2
+Z12 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z13 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z14 8HexpointThermostat.vho
+Z15 FHexpointThermostat.vho
+l0
+L34
+VSVlZj[Nh;8IhFhVmi=3Eo2
+!s100 j`ikNYKI6k643L9I?_1[g3
+Z16 OV;C;10.5b;63
+32
+Z17 !s110 1513896880
+!i10b 1
+Z18 !s108 1513896880.000000
+Z19 !s90 -work|work|HexpointThermostat.vho|
+Z20 !s107 HexpointThermostat.vho|
+!i113 1
+R5
+Z21 tExplicit 1 CvgOpt 0
+Astructure
+R8
+R9
+R10
+R11
+R12
+R13
+DEx4 work 18 hexpointthermostat 0 22 SVlZj[Nh;8IhFhVmi=3Eo2
+l346
+L64
+V:lnMGml_U<Y[?^_6oTYO81
+!s100 Ee>KFGRSFa4bnk8gYWL5F1
+R16
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R5
+R21
+Ehexpointthermostat_vhd_vec_tst
+Z22 w1513896878
+R12
+R13
+R0
+Z23 8Waveform1.vwf.vht
+Z24 FWaveform1.vwf.vht
+l0
+L31
+VEIW6J@n5O;g]oBEE^:NYG3
+!s100 Ja`JcNXNYnT]DlQhe;P0n3
+R16
+32
+R17
+!i10b 1
+R18
+Z25 !s90 -work|work|Waveform1.vwf.vht|
+Z26 !s107 Waveform1.vwf.vht|
+!i113 1
+R5
+R21
+Ahexpointthermostat_arch
+R12
+R13
+DEx4 work 30 hexpointthermostat_vhd_vec_tst 0 22 EIW6J@n5O;g]oBEE^:NYG3
+l84
+L33
+VG_`;4U0S^N7iF4IRHlkDj1
+!s100 8cg1Tme2AQPm?l`m_3G?_3
+R16
+32
+R17
+!i10b 1
+R18
+R25
+R26
+!i113 1
+R5
+R21
 vHexpointThermostat_vlg_vec_tst
 R1
 !i10b 1
-!s100 VN>5362cTS4eSYFVm50IV2
-IfmTOHCXAe`KBQ7HMSd0j>3
+!s100 fZ[QjaD^bT8C_N4OXTj5D2
+IE7N5><;BFonWdD1Un4Xi33
 R2
 R0
-w1513793618
+w1513897316
 8Waveform.vwf.vt
 FWaveform.vwf.vt
 L0 29

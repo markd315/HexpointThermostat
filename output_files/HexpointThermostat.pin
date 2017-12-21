@@ -62,24 +62,24 @@ CHIP  "HexpointThermostat"  ASSIGNED TO AN: 5M570ZT100C5
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-RESERVED_INPUT               : 1         :        :                   :         : 2         :                
-RESERVED_INPUT               : 2         :        :                   :         : 1         :                
+fbc2                         : 1         : output : 3.3-V LVTTL       :         : 2         : N              
+fbc0                         : 2         : output : 3.3-V LVTTL       :         : 1         : N              
 RESERVED_INPUT               : 3         :        :                   :         : 1         :                
-RESERVED_INPUT               : 4         :        :                   :         : 1         :                
+fbc4                         : 4         : output : 3.3-V LVTTL       :         : 1         : N              
 RESERVED_INPUT               : 5         :        :                   :         : 1         :                
-RESERVED_INPUT               : 6         :        :                   :         : 1         :                
-RESERVED_INPUT               : 7         :        :                   :         : 1         :                
+fbc1                         : 6         : output : 3.3-V LVTTL       :         : 1         : N              
+fbctestclk                   : 7         : input  : 3.3-V LVTTL       :         : 1         : N              
 GND                          : 8         : gnd    :                   :         :           :                
 VCCIO1                       : 9         : power  :                   : 3.3V    : 1         :                
 GND                          : 10        : gnd    :                   :         :           :                
 GND                          : 11        : gnd    :                   :         :           :                
 CLK                          : 12        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : 13        : power  :                   : 1.8V    :           :                
-RESERVED_INPUT               : 14        :        :                   :         : 1         :                
+fbctestrestart               : 14        : input  : 3.3-V LVTTL       :         : 1         : N              
 RESERVED_INPUT               : 15        :        :                   :         : 1         :                
 RESERVED_INPUT               : 16        :        :                   :         : 1         :                
-SCL                          : 17        : output : 3.3-V LVTTL       :         : 1         : N              
-controlsActive               : 18        : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 17        :        :                   :         : 1         :                
+SCL                          : 18        : output : 3.3-V LVTTL       :         : 1         : N              
 RESERVED_INPUT               : 19        :        :                   :         : 1         :                
 RESERVED_INPUT               : 20        :        :                   :         : 1         :                
 RESERVED_INPUT               : 21        :        :                   :         : 1         :                
@@ -87,30 +87,30 @@ TMS                          : 22        : input  :                   :         
 TDI                          : 23        : input  :                   :         : 1         :                
 TCK                          : 24        : input  :                   :         : 1         :                
 TDO                          : 25        : output :                   :         : 1         :                
-NightNOTday18                : 26        : input  : 3.3-V LVTTL       :         : 1         : N              
-passiveNOTactive19           : 27        : input  : 3.3-V LVTTL       :         : 1         : N              
-RESERVED_INPUT               : 28        :        :                   :         : 1         :                
-Heat                         : 29        : output : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 26        :        :                   :         : 1         :                
+RESERVED_INPUT               : 27        :        :                   :         : 1         :                
+Dout                         : 28        : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 29        :        :                   :         : 1         :                
 RESERVED_INPUT               : 30        :        :                   :         : 1         :                
 VCCIO1                       : 31        : power  :                   : 3.3V    : 1         :                
 GND                          : 32        : gnd    :                   :         :           :                
-RESERVED_INPUT               : 33        :        :                   :         : 1         :                
+CS                           : 33        : output : 3.3-V LVTTL       :         : 1         : N              
 RESERVED_INPUT               : 34        :        :                   :         : 1         :                
 RESERVED_INPUT               : 35        :        :                   :         : 1         :                
 RESERVED_INPUT               : 36        :        :                   :         : 1         :                
 GND                          : 37        : gnd    :                   :         :           :                
-RESERVED_INPUT               : 38        :        :                   :         : 1         :                
+hiTrueSetDisp                : 38        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCINT                       : 39        : power  :                   : 1.8V    :           :                
-RESERVED_INPUT               : 40        :        :                   :         : 1         :                
-RESERVED_INPUT               : 41        :        :                   :         : 1         :                
-RESERVED_INPUT               : 42        :        :                   :         : 1         :                
+Heat                         : 40        : output : 3.3-V LVTTL       :         : 1         : N              
+passiveNOTactive19           : 41        : input  : 3.3-V LVTTL       :         : 1         : N              
+NightNOTday18                : 42        : input  : 3.3-V LVTTL       :         : 1         : N              
 RESERVED_INPUT               : 43        :        :                   :         : 1         :                
-RESERVED_INPUT               : 44        :        :                   :         : 1         :                
+Inc                          : 44        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : 45        : power  :                   : 3.3V    : 1         :                
 GND                          : 46        : gnd    :                   :         :           :                
-SDA                          : 47        : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 47        :        :                   :         : 1         :                
 RESERVED_INPUT               : 48        :        :                   :         : 1         :                
-hiTrueSetDisp                : 49        : input  : 3.3-V LVTTL       :         : 1         : N              
+RESERVED_INPUT               : 49        :        :                   :         : 1         :                
 RESERVED_INPUT               : 50        :        :                   :         : 1         :                
 RESERVED_INPUT               : 51        :        :                   :         : 1         :                
 RESERVED_INPUT               : 52        :        :                   :         : 2         :                
@@ -123,17 +123,17 @@ RESERVED_INPUT               : 58        :        :                   :         
 VCCIO2                       : 59        : power  :                   : 3.3V    : 2         :                
 GND                          : 60        : gnd    :                   :         :           :                
 RESERVED_INPUT               : 61        :        :                   :         : 2         :                
-RESERVED_INPUT               : 62        :        :                   :         : 2         :                
+Dec                          : 62        : input  : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : 63        : power  :                   : 1.8V    :           :                
-RESERVED_INPUT               : 64        :        :                   :         : 2         :                
+Initialize                   : 64        : input  : 3.3-V LVTTL       :         : 2         : N              
 GND                          : 65        : gnd    :                   :         :           :                
-RESERVED_INPUT               : 66        :        :                   :         : 2         :                
-RESERVED_INPUT               : 67        :        :                   :         : 2         :                
-NightNOTday                  : 68        : input  : 3.3-V LVTTL       :         : 2         : N              
-Cool                         : 69        : output : 3.3-V LVTTL       :         : 2         : N              
-Inc                          : 70        : input  : 3.3-V LVTTL       :         : 2         : N              
-passiveNOTactive             : 71        : input  : 3.3-V LVTTL       :         : 2         : N              
-Initialize                   : 72        : input  : 3.3-V LVTTL       :         : 2         : N              
+NightNOTday                  : 66        : input  : 3.3-V LVTTL       :         : 2         : N              
+passiveNOTactive             : 67        : input  : 3.3-V LVTTL       :         : 2         : N              
+Cool                         : 68        : output : 3.3-V LVTTL       :         : 2         : N              
+RESERVED_INPUT               : 69        :        :                   :         : 2         :                
+RESERVED_INPUT               : 70        :        :                   :         : 2         :                
+RESERVED_INPUT               : 71        :        :                   :         : 2         :                
+RESERVED_INPUT               : 72        :        :                   :         : 2         :                
 RESERVED_INPUT               : 73        :        :                   :         : 2         :                
 RESERVED_INPUT               : 74        :        :                   :         : 2         :                
 RESERVED_INPUT               : 75        :        :                   :         : 2         :                
@@ -145,8 +145,8 @@ VCCIO2                       : 80        : power  :                   : 3.3V    
 RESERVED_INPUT               : 81        :        :                   :         : 2         :                
 RESERVED_INPUT               : 82        :        :                   :         : 2         :                
 RESERVED_INPUT               : 83        :        :                   :         : 2         :                
-Dec                          : 84        : input  : 3.3-V LVTTL       :         : 2         : N              
-RESERVED_INPUT               : 85        :        :                   :         : 2         :                
+RESERVED_INPUT               : 84        :        :                   :         : 2         :                
+controlsActive               : 85        : input  : 3.3-V LVTTL       :         : 2         : N              
 RESERVED_INPUT               : 86        :        :                   :         : 2         :                
 RESERVED_INPUT               : 87        :        :                   :         : 2         :                
 VCCINT                       : 88        : power  :                   : 1.8V    :           :                
@@ -158,7 +158,7 @@ GND                          : 93        : gnd    :                   :         
 VCCIO2                       : 94        : power  :                   : 3.3V    : 2         :                
 GND                          : 95        : gnd    :                   :         :           :                
 RESERVED_INPUT               : 96        :        :                   :         : 2         :                
-RESERVED_INPUT               : 97        :        :                   :         : 2         :                
+Mof32                        : 97        : output : 3.3-V LVTTL       :         : 2         : N              
 RESERVED_INPUT               : 98        :        :                   :         : 2         :                
 RESERVED_INPUT               : 99        :        :                   :         : 2         :                
-RESERVED_INPUT               : 100       :        :                   :         : 2         :                
+fbc3                         : 100       : output : 3.3-V LVTTL       :         : 2         : N              

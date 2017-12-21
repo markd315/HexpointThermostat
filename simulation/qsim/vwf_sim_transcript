@@ -25,7 +25,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed Dec 20 13:13:37 2017
+    Info: Processing started: Thu Dec 21 18:01:56 2017
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off HexpointThermostat -c HexpointThermostat --vector_source=C:/intelFPGA_lite/17.1/HexpointThermostat/Waveform.vwf --testbench_file=C:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim/Waveform.vwf.vt
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
@@ -33,9 +33,9 @@ Completed successfully.
 
 Completed successfully. 
 
-**** Generating the functional simulation netlist ****
+**** Generating the timing simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim/" HexpointThermostat -c HexpointThermostat
+quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory="C:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim/" HexpointThermostat -c HexpointThermostat
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -53,13 +53,13 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed Dec 20 13:13:38 2017
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim/ HexpointThermostat -c HexpointThermostat
+    Info: Processing started: Thu Dec 21 18:01:56 2017
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=verilog --output_directory=C:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim/ HexpointThermostat -c HexpointThermostat
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file HexpointThermostat.vo in folder "C:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim//" for EDA simulation tool
+Info (204018): Generated files "HexpointThermostat.vo" and "HexpointThermostat_v.sdo" in directory "C:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 500 megabytes
-    Info: Processing ended: Wed Dec 20 13:13:39 2017
+    Info: Peak virtual memory: 506 megabytes
+    Info: Processing ended: Thu Dec 21 18:01:57 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -81,40 +81,46 @@ Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
 
 
 # do HexpointThermostat.do
-
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:13:40 on Dec 20,2017
+# Start time: 18:01:58 on Dec 21,2017
 # vlog -work work HexpointThermostat.vo 
+
 # -- Compiling module HexpointThermostat
 # 
 # Top level modules:
 # 	HexpointThermostat
-# End time: 13:13:40 on Dec 20,2017, Elapsed time: 0:00:00
+# End time: 18:01:58 on Dec 21,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:13:40 on Dec 20,2017
+# Start time: 18:01:58 on Dec 21,2017
 # vlog -work work Waveform.vwf.vt 
 # -- Compiling module HexpointThermostat_vlg_vec_tst
 # 
 # Top level modules:
 # 	HexpointThermostat_vlg_vec_tst
-# End time: 13:13:40 on Dec 20,2017, Elapsed time: 0:00:00
+# End time: 18:01:58 on Dec 21,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L maxv_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.HexpointThermostat_vlg_vec_tst 
-# Start time: 13:13:40 on Dec 20,2017
+# Start time: 18:01:59 on Dec 21,2017
 # Loading work.HexpointThermostat_vlg_vec_tst
 # Loading work.HexpointThermostat
 # Loading maxv_ver.maxv_io
 # Loading maxv_ver.maxv_lcell
 # Loading maxv_ver.maxv_asynch_lcell
 # Loading maxv_ver.maxv_lcell_register
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# 
+# Loading instances from HexpointThermostat_v.sdo
+# Loading timing data from HexpointThermostat_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /HexpointThermostat_vlg_vec_tst File: Waveform.vwf.vt
 # after#25
-# ** Note: $finish    : Waveform.vwf.vt(44)
+# ** Note: $finish    : Waveform.vwf.vt(88)
 #    Time: 1 us  Iteration: 0  Instance: /HexpointThermostat_vlg_vec_tst
-# End time: 13:13:41 on Dec 20,2017, Elapsed time: 0:00:01
+# End time: 18:01:59 on Dec 21,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -127,7 +133,7 @@ Reading C:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim/HexpointThermo
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim/HexpointThermostat_20171220131341.sim.vwf
+Writing the resulting VWF to C:/intelFPGA_lite/17.1/HexpointThermostat/simulation/qsim/HexpointThermostat_20171221180159.sim.vwf
 
 Finished VCD to VWF conversion.
 

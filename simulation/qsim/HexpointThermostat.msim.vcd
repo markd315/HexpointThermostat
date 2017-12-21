@@ -3,7 +3,7 @@ $comment
 		vcd file HexpointThermostat.msim.vcd -direction
 $end
 $date
-	Wed Dec 20 13:13:41 2017
+	Thu Dec 21 18:01:59 2017
 $end
 $version
 	ModelSim Version 10.5b
@@ -14,108 +14,2761 @@ $end
 
 $scope module HexpointThermostat_vlg_vec_tst $end
 $var reg 1 ! CLK $end
-$var wire 1 " Halftog $end
+$var reg 1 " controlsActive $end
+$var reg 1 # Dec $end
+$var reg 1 $ Dout $end
+$var reg 1 % fbctestclk $end
+$var reg 1 & fbctestrestart $end
+$var reg 1 ' hiTrueSetDisp $end
+$var reg 1 ( Inc $end
+$var reg 1 ) Initialize $end
+$var reg 1 * NightNOTday $end
+$var reg 1 + NightNOTday18 $end
+$var reg 1 , passiveNOTactive $end
+$var reg 1 - passiveNOTactive19 $end
+$var reg 1 . re $end
+$var wire 1 / Cool $end
+$var wire 1 0 CS $end
+$var wire 1 1 fbc0 $end
+$var wire 1 2 fbc1 $end
+$var wire 1 3 fbc2 $end
+$var wire 1 4 fbc3 $end
+$var wire 1 5 fbc4 $end
+$var wire 1 6 Heat $end
+$var wire 1 7 Mof32 $end
+$var wire 1 8 SCL $end
 
 $scope module i1 $end
-$var wire 1 # gnd $end
-$var wire 1 $ vcc $end
-$var wire 1 % unknown $end
-$var tri1 1 & devclrn $end
-$var tri1 1 ' devpor $end
-$var tri1 1 ( devoe $end
-$var wire 1 ) CLK~combout $end
-$var wire 1 * inst~regout $end
+$var wire 1 9 gnd $end
+$var wire 1 : vcc $end
+$var wire 1 ; unknown $end
+$var tri1 1 < devclrn $end
+$var tri1 1 = devpor $end
+$var tri1 1 > devoe $end
+$var wire 1 ? NightNOTday18~combout $end
+$var wire 1 @ passiveNOTactive19~combout $end
+$var wire 1 A CLK~combout $end
+$var wire 1 B Inc~combout $end
+$var wire 1 C Dec~combout $end
+$var wire 1 D inst9|inst16~combout $end
+$var wire 1 E Initialize~combout $end
+$var wire 1 F inst9|inst13~regout $end
+$var wire 1 G inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT $end
+$var wire 1 H inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1 $end
+$var wire 1 I inst9|inst12~regout $end
+$var wire 1 J inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT $end
+$var wire 1 K inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2 $end
+$var wire 1 L inst9|inst11~regout $end
+$var wire 1 M inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT $end
+$var wire 1 N inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3 $end
+$var wire 1 O inst9|inst10~regout $end
+$var wire 1 P inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT $end
+$var wire 1 Q inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4 $end
+$var wire 1 R inst9|inst9~regout $end
+$var wire 1 S inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT $end
+$var wire 1 T inst9|inst8~regout $end
+$var wire 1 U inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT $end
+$var wire 1 V inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5 $end
+$var wire 1 W inst9|inst7~regout $end
+$var wire 1 X inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT $end
+$var wire 1 Y inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6 $end
+$var wire 1 Z inst9|inst6~regout $end
+$var wire 1 [ inst24|LPM_COMPARE_component|auto_generated|agb~10_combout $end
+$var wire 1 \ inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT $end
+$var wire 1 ] inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7 $end
+$var wire 1 ^ inst9|inst5~regout $end
+$var wire 1 _ inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT $end
+$var wire 1 ` inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8 $end
+$var wire 1 a inst9|inst4~regout $end
+$var wire 1 b inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT $end
+$var wire 1 c inst9|inst3~regout $end
+$var wire 1 d inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT $end
+$var wire 1 e inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9 $end
+$var wire 1 f inst9|inst2~regout $end
+$var wire 1 g inst24|LPM_COMPARE_component|auto_generated|agb~9_combout $end
+$var wire 1 h inst24|LPM_COMPARE_component|auto_generated|agb~11_combout $end
+$var wire 1 i inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT $end
+$var wire 1 j inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10 $end
+$var wire 1 k inst9|inst1~regout $end
+$var wire 1 l inst24|LPM_COMPARE_component|auto_generated|agb~12_combout $end
+$var wire 1 m inst10|inst13~regout $end
+$var wire 1 n inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT $end
+$var wire 1 o inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1 $end
+$var wire 1 p inst10|inst12~regout $end
+$var wire 1 q inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT $end
+$var wire 1 r inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2 $end
+$var wire 1 s inst10|inst11~regout $end
+$var wire 1 t inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT $end
+$var wire 1 u inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3 $end
+$var wire 1 v inst10|inst10~regout $end
+$var wire 1 w inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT $end
+$var wire 1 x inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4 $end
+$var wire 1 y inst10|inst9~regout $end
+$var wire 1 z inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT $end
+$var wire 1 { inst10|inst8~regout $end
+$var wire 1 | inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT $end
+$var wire 1 } inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5 $end
+$var wire 1 ~ inst10|inst7~regout $end
+$var wire 1 !! inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT $end
+$var wire 1 "! inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6 $end
+$var wire 1 #! inst10|inst6~regout $end
+$var wire 1 $! inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT $end
+$var wire 1 %! inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7 $end
+$var wire 1 &! inst10|inst5~regout $end
+$var wire 1 '! inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT $end
+$var wire 1 (! inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8 $end
+$var wire 1 )! inst10|inst4~regout $end
+$var wire 1 *! inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT $end
+$var wire 1 +! inst10|inst3~regout $end
+$var wire 1 ,! inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT $end
+$var wire 1 -! inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9 $end
+$var wire 1 .! inst10|inst2~regout $end
+$var wire 1 /! inst24|LPM_COMPARE_component|auto_generated|agb~4_combout $end
+$var wire 1 0! inst24|LPM_COMPARE_component|auto_generated|agb~5_combout $end
+$var wire 1 1! inst24|LPM_COMPARE_component|auto_generated|agb~6_combout $end
+$var wire 1 2! inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT $end
+$var wire 1 3! inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10 $end
+$var wire 1 4! inst10|inst1~regout $end
+$var wire 1 5! inst24|LPM_COMPARE_component|auto_generated|agb~7_combout $end
+$var wire 1 6! inst11|inst13~regout $end
+$var wire 1 7! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT $end
+$var wire 1 8! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1 $end
+$var wire 1 9! inst11|inst12~regout $end
+$var wire 1 :! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT $end
+$var wire 1 ;! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2 $end
+$var wire 1 <! inst11|inst11~regout $end
+$var wire 1 =! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT $end
+$var wire 1 >! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3 $end
+$var wire 1 ?! inst11|inst10~regout $end
+$var wire 1 @! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT $end
+$var wire 1 A! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4 $end
+$var wire 1 B! inst11|inst9~regout $end
+$var wire 1 C! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT $end
+$var wire 1 D! inst11|inst8~regout $end
+$var wire 1 E! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT $end
+$var wire 1 F! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5 $end
+$var wire 1 G! inst11|inst7~regout $end
+$var wire 1 H! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT $end
+$var wire 1 I! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6 $end
+$var wire 1 J! inst11|inst6~regout $end
+$var wire 1 K! inst24|LPM_COMPARE_component|auto_generated|agb~1_combout $end
+$var wire 1 L! inst24|LPM_COMPARE_component|auto_generated|agb~2_combout $end
+$var wire 1 M! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT $end
+$var wire 1 N! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7 $end
+$var wire 1 O! inst11|inst5~regout $end
+$var wire 1 P! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT $end
+$var wire 1 Q! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8 $end
+$var wire 1 R! inst11|inst4~regout $end
+$var wire 1 S! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT $end
+$var wire 1 T! inst11|inst3~regout $end
+$var wire 1 U! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT $end
+$var wire 1 V! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9 $end
+$var wire 1 W! inst11|inst2~regout $end
+$var wire 1 X! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT $end
+$var wire 1 Y! inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10 $end
+$var wire 1 Z! inst11|inst1~regout $end
+$var wire 1 [! inst24|LPM_COMPARE_component|auto_generated|agb~0_combout $end
+$var wire 1 \! inst24|LPM_COMPARE_component|auto_generated|agb~3_combout $end
+$var wire 1 ]! inst24|LPM_COMPARE_component|auto_generated|agb~8_combout $end
+$var wire 1 ^! inst24|LPM_COMPARE_component|auto_generated|agb~13_combout $end
+$var wire 1 _! passiveNOTactive~combout $end
+$var wire 1 `! inst13|inst13~regout $end
+$var wire 1 a! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT $end
+$var wire 1 b! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1 $end
+$var wire 1 c! inst13|inst12~regout $end
+$var wire 1 d! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT $end
+$var wire 1 e! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2 $end
+$var wire 1 f! inst13|inst11~regout $end
+$var wire 1 g! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT $end
+$var wire 1 h! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3 $end
+$var wire 1 i! inst13|inst10~regout $end
+$var wire 1 j! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT $end
+$var wire 1 k! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4 $end
+$var wire 1 l! inst13|inst9~regout $end
+$var wire 1 m! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT $end
+$var wire 1 n! inst13|inst8~regout $end
+$var wire 1 o! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT $end
+$var wire 1 p! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5 $end
+$var wire 1 q! inst13|inst7~regout $end
+$var wire 1 r! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT $end
+$var wire 1 s! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6 $end
+$var wire 1 t! inst13|inst6~regout $end
+$var wire 1 u! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT $end
+$var wire 1 v! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7 $end
+$var wire 1 w! inst13|inst5~regout $end
+$var wire 1 x! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT $end
+$var wire 1 y! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8 $end
+$var wire 1 z! inst13|inst4~regout $end
+$var wire 1 {! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT $end
+$var wire 1 |! inst13|inst3~regout $end
+$var wire 1 }! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT $end
+$var wire 1 ~! inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9 $end
+$var wire 1 !" inst13|inst2~regout $end
+$var wire 1 "" inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT $end
+$var wire 1 #" inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10 $end
+$var wire 1 $" inst13|inst1~regout $end
+$var wire 1 %" inst12|inst13~regout $end
+$var wire 1 &" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT $end
+$var wire 1 '" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1 $end
+$var wire 1 (" inst12|inst12~regout $end
+$var wire 1 )" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT $end
+$var wire 1 *" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2 $end
+$var wire 1 +" inst12|inst11~regout $end
+$var wire 1 ," inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT $end
+$var wire 1 -" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3 $end
+$var wire 1 ." inst12|inst10~regout $end
+$var wire 1 /" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT $end
+$var wire 1 0" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4 $end
+$var wire 1 1" inst12|inst9~regout $end
+$var wire 1 2" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT $end
+$var wire 1 3" inst12|inst8~regout $end
+$var wire 1 4" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT $end
+$var wire 1 5" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5 $end
+$var wire 1 6" inst12|inst7~regout $end
+$var wire 1 7" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT $end
+$var wire 1 8" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6 $end
+$var wire 1 9" inst12|inst6~regout $end
+$var wire 1 :" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT $end
+$var wire 1 ;" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7 $end
+$var wire 1 <" inst12|inst5~regout $end
+$var wire 1 =" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT $end
+$var wire 1 >" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8 $end
+$var wire 1 ?" inst12|inst4~regout $end
+$var wire 1 @" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT $end
+$var wire 1 A" inst12|inst3~regout $end
+$var wire 1 B" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT $end
+$var wire 1 C" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9 $end
+$var wire 1 D" inst12|inst2~regout $end
+$var wire 1 E" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT $end
+$var wire 1 F" inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10 $end
+$var wire 1 G" inst12|inst1~regout $end
+$var wire 1 H" NightNOTday~combout $end
+$var wire 1 I" inst2|$00000|auto_generated|result_node[12]~0_combout $end
+$var wire 1 J" inst14|inst13~regout $end
+$var wire 1 K" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT $end
+$var wire 1 L" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1 $end
+$var wire 1 M" inst14|inst12~regout $end
+$var wire 1 N" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT $end
+$var wire 1 O" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2 $end
+$var wire 1 P" inst14|inst11~regout $end
+$var wire 1 Q" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT $end
+$var wire 1 R" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3 $end
+$var wire 1 S" inst14|inst10~regout $end
+$var wire 1 T" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT $end
+$var wire 1 U" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4 $end
+$var wire 1 V" inst14|inst9~regout $end
+$var wire 1 W" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT $end
+$var wire 1 X" inst14|inst8~regout $end
+$var wire 1 Y" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT $end
+$var wire 1 Z" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5 $end
+$var wire 1 [" inst14|inst7~regout $end
+$var wire 1 \" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT $end
+$var wire 1 ]" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6 $end
+$var wire 1 ^" inst14|inst6~regout $end
+$var wire 1 _" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT $end
+$var wire 1 `" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7 $end
+$var wire 1 a" inst14|inst5~regout $end
+$var wire 1 b" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT $end
+$var wire 1 c" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8 $end
+$var wire 1 d" inst14|inst4~regout $end
+$var wire 1 e" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT $end
+$var wire 1 f" inst14|inst3~regout $end
+$var wire 1 g" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT $end
+$var wire 1 h" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9 $end
+$var wire 1 i" inst14|inst2~regout $end
+$var wire 1 j" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT $end
+$var wire 1 k" inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10 $end
+$var wire 1 l" inst14|inst1~regout $end
+$var wire 1 m" inst2|$00000|auto_generated|result_node[12]~1_combout $end
+$var wire 1 n" fbctestclk~combout $end
+$var wire 1 o" fbctestrestart~combout $end
+$var wire 1 p" inst1|inst~regout $end
+$var wire 1 q" inst1|inst1~regout $end
+$var wire 1 r" inst1|inst2~regout $end
+$var wire 1 s" inst1|inst3~regout $end
+$var wire 1 t" inst1|inst4~regout $end
+$var wire 1 u" re~combout $end
+$var wire 1 v" inst15|inst~regout $end
+$var wire 1 w" inst15|inst1~regout $end
+$var wire 1 x" inst15|inst2~regout $end
+$var wire 1 y" inst15|inst3~regout $end
+$var wire 1 z" inst15|inst4~regout $end
+$var wire 1 {" inst17~0_combout $end
+$var wire 1 |" inst17~combout $end
+$var wire 1 }" inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [12] $end
+$var wire 1 ~" inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [11] $end
+$var wire 1 !# inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [10] $end
+$var wire 1 "# inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [9] $end
+$var wire 1 ## inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [8] $end
+$var wire 1 $# inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [7] $end
+$var wire 1 %# inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [6] $end
+$var wire 1 &# inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [5] $end
+$var wire 1 '# inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [4] $end
+$var wire 1 (# inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [3] $end
+$var wire 1 )# inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [2] $end
+$var wire 1 *# inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [1] $end
+$var wire 1 +# inst13|inst|LPM_ADD_SUB_component|stratix_adder|result [0] $end
+$var wire 1 ,# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [12] $end
+$var wire 1 -# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [11] $end
+$var wire 1 .# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [10] $end
+$var wire 1 /# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [9] $end
+$var wire 1 0# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [8] $end
+$var wire 1 1# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [7] $end
+$var wire 1 2# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [6] $end
+$var wire 1 3# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [5] $end
+$var wire 1 4# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [4] $end
+$var wire 1 5# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [3] $end
+$var wire 1 6# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [2] $end
+$var wire 1 7# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [1] $end
+$var wire 1 8# inst11|inst|LPM_ADD_SUB_component|stratix_adder|result [0] $end
+$var wire 1 9# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [12] $end
+$var wire 1 :# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [11] $end
+$var wire 1 ;# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [10] $end
+$var wire 1 <# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [9] $end
+$var wire 1 =# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [8] $end
+$var wire 1 ># inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [7] $end
+$var wire 1 ?# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [6] $end
+$var wire 1 @# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [5] $end
+$var wire 1 A# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [4] $end
+$var wire 1 B# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [3] $end
+$var wire 1 C# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [2] $end
+$var wire 1 D# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [1] $end
+$var wire 1 E# inst12|inst|LPM_ADD_SUB_component|stratix_adder|result [0] $end
+$var wire 1 F# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [12] $end
+$var wire 1 G# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [11] $end
+$var wire 1 H# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [10] $end
+$var wire 1 I# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [9] $end
+$var wire 1 J# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [8] $end
+$var wire 1 K# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [7] $end
+$var wire 1 L# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [6] $end
+$var wire 1 M# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [5] $end
+$var wire 1 N# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [4] $end
+$var wire 1 O# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [3] $end
+$var wire 1 P# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [2] $end
+$var wire 1 Q# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [1] $end
+$var wire 1 R# inst10|inst|LPM_ADD_SUB_component|stratix_adder|result [0] $end
+$var wire 1 S# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [12] $end
+$var wire 1 T# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [11] $end
+$var wire 1 U# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [10] $end
+$var wire 1 V# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [9] $end
+$var wire 1 W# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [8] $end
+$var wire 1 X# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [7] $end
+$var wire 1 Y# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [6] $end
+$var wire 1 Z# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [5] $end
+$var wire 1 [# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [4] $end
+$var wire 1 \# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [3] $end
+$var wire 1 ]# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [2] $end
+$var wire 1 ^# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [1] $end
+$var wire 1 _# inst9|inst|LPM_ADD_SUB_component|stratix_adder|result [0] $end
+$var wire 1 `# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [12] $end
+$var wire 1 a# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [11] $end
+$var wire 1 b# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [10] $end
+$var wire 1 c# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [9] $end
+$var wire 1 d# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [8] $end
+$var wire 1 e# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [7] $end
+$var wire 1 f# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [6] $end
+$var wire 1 g# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [5] $end
+$var wire 1 h# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [4] $end
+$var wire 1 i# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [3] $end
+$var wire 1 j# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [2] $end
+$var wire 1 k# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [1] $end
+$var wire 1 l# inst14|inst|LPM_ADD_SUB_component|stratix_adder|result [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
 0!
-0"
-0#
-1$
+x"
+x#
+x$
 x%
-1&
-1'
-1(
-0)
-0*
+x&
+x'
+x(
+x)
+x*
+x+
+x,
+x-
+1.
+x/
+00
+x1
+x2
+x3
+x4
+x5
+x6
+x7
+x8
+09
+1:
+x;
+1<
+1=
+1>
+x?
+x@
+xA
+xB
+xC
+xD
+xE
+0F
+xG
+0H
+0I
+xJ
+xK
+0L
+xM
+xN
+0O
+xP
+xQ
+0R
+xS
+0T
+xU
+0V
+0W
+xX
+xY
+0Z
+x[
+x\
+x]
+0^
+x_
+x`
+0a
+xb
+0c
+1d
+xe
+0f
+xg
+xh
+xi
+xj
+0k
+xl
+0m
+xn
+0o
+0p
+xq
+xr
+0s
+xt
+xu
+0v
+xw
+xx
+0y
+xz
+0{
+x|
+0}
+0~
+x!!
+x"!
+0#!
+x$!
+x%!
+0&!
+x'!
+x(!
+0)!
+x*!
+0+!
+1,!
+x-!
+0.!
+x/!
+x0!
+x1!
+x2!
+x3!
+04!
+x5!
+06!
+x7!
+08!
+09!
+x:!
+x;!
+0<!
+x=!
+x>!
+0?!
+x@!
+xA!
+0B!
+xC!
+0D!
+xE!
+0F!
+0G!
+xH!
+xI!
+0J!
+xK!
+xL!
+xM!
+xN!
+0O!
+xP!
+xQ!
+0R!
+xS!
+0T!
+1U!
+xV!
+0W!
+xX!
+xY!
+0Z!
+x[!
+x\!
+x]!
+x^!
+x_!
+0`!
+xa!
+0b!
+0c!
+xd!
+xe!
+0f!
+xg!
+xh!
+0i!
+xj!
+xk!
+0l!
+xm!
+0n!
+xo!
+0p!
+0q!
+xr!
+xs!
+0t!
+xu!
+xv!
+0w!
+xx!
+xy!
+0z!
+x{!
+0|!
+1}!
+x~!
+0!"
+x""
+x#"
+0$"
+0%"
+x&"
+0'"
+0("
+x)"
+x*"
+0+"
+x,"
+x-"
+0."
+x/"
+x0"
+01"
+x2"
+03"
+x4"
+05"
+06"
+x7"
+x8"
+09"
+x:"
+x;"
+0<"
+x="
+x>"
+0?"
+x@"
+0A"
+1B"
+xC"
+0D"
+xE"
+xF"
+0G"
+xH"
+xI"
+0J"
+xK"
+0L"
+0M"
+xN"
+xO"
+0P"
+xQ"
+xR"
+0S"
+xT"
+xU"
+0V"
+xW"
+0X"
+xY"
+0Z"
+0["
+x\"
+x]"
+0^"
+x_"
+x`"
+0a"
+xb"
+xc"
+0d"
+xe"
+0f"
+1g"
+xh"
+0i"
+xj"
+xk"
+0l"
+xm"
+xn"
+xo"
+0p"
+0q"
+0r"
+0s"
+0t"
+xu"
+0v"
+0w"
+0x"
+0y"
+0z"
+x{"
+x|"
+x+#
+x*#
+x)#
+x(#
+x'#
+x&#
+x%#
+x$#
+x##
+x"#
+x!#
+x~"
+x}"
+x8#
+x7#
+x6#
+x5#
+x4#
+x3#
+x2#
+x1#
+x0#
+x/#
+x.#
+x-#
+x,#
+xE#
+xD#
+xC#
+xB#
+xA#
+x@#
+x?#
+x>#
+x=#
+x<#
+x;#
+x:#
+x9#
+xR#
+xQ#
+xP#
+xO#
+xN#
+xM#
+xL#
+xK#
+xJ#
+xI#
+xH#
+xG#
+xF#
+x_#
+x^#
+x]#
+x\#
+x[#
+xZ#
+xY#
+xX#
+xW#
+xV#
+xU#
+xT#
+xS#
+xl#
+xk#
+xj#
+xi#
+xh#
+xg#
+xf#
+xe#
+xd#
+xc#
+xb#
+xa#
+x`#
 $end
-#50000
+#144
+1]"
+18"
+1s!
+1I!
+1"!
+1Y
+#160
+0j"
+0E"
+0""
+0X!
+02!
+0i
+#288
+0`"
+0;"
+0v!
+0N!
+0%!
+0]
+#432
+1c"
+1>"
+1y!
+1Q!
+1(!
+1`
+#935
+0e"
+0@"
+0{!
+0S!
+0*!
+0b
+#986
+0A
+1u"
+#3630
+0}"
+#3656
+09#
+#3722
+0`#
+#3740
+0S#
+0F#
+0,#
+#4276
+0{"
+#5000
 1!
-1)
-1*
-1"
+#5012
+0G
+#5014
+1K
+#5021
+0h"
+#5030
+0&"
+#5032
+1O"
+1r
+#5037
+1o!
+#5040
+0a!
+#5043
+1|
+#5046
+0C"
+0~!
+0n
+#5053
+1*"
+1e!
+#5057
+0-!
+#5065
+1U
+#5068
+0K"
+14"
+#5077
+1E!
+#5086
+0e
+#5093
+07!
+#5108
+1^#
+#5115
+0b#
+#5116
+0~"
+#5126
+1Q#
+1k#
+#5131
+0V!
+#5140
+0!#
+0;#
+#5144
+0T#
+0G#
+#5145
+0:#
+0a#
+#5147
+1*#
+1D#
+#5151
+0H#
+#5158
+0N
+#5165
+1k"
+#5172
+1J
+#5176
+0R"
+0u
+#5177
+0-#
+#5180
+0U#
+#5190
+1F"
+1#"
+1)"
+#5197
+0-"
+0h!
+0r!
+#5200
+1d!
+#5201
+13!
+#5203
+0!!
+#5206
+1q
+#5225
+0.#
+#5228
+1N"
+07"
+#5230
+1j
+#5275
+1Y!
+#5302
+1Q
+#5320
+1U"
+#5332
+0M
+#5341
+1k!
+#5350
+0,"
+#5357
+1u!
+#5360
+0g!
+#5366
+0t
+#5388
+0Q"
+#5492
+1P
+#5517
+0x!
+#5520
+1j!
+#5548
+1T"
+#5639
+0S
+#5657
+0W"
+#5986
+1A
+#6079
+1]#
+#6097
+1P#
+1j#
+#6100
+xb
+#6112
+1h
+#6118
+xe"
+1)#
+1C#
+#6223
+1\#
+#6241
+1i#
+#6262
+1(#
+#6367
+1[#
+#6385
+1h#
+#6669
+1[
+#6804
+1Y"
+#6870
+0?#
+#6899
+0L#
+#6902
+0%#
+#6915
+02
+#6930
+1Z#
+1Y#
+#6934
+0I#
+#6948
+1g#
+#6964
+0\"
+#6965
+11!
+#6979
+0H!
+#6989
+0<#
+#7015
+0=#
+#7044
+0##
+#7045
+01#
+#7062
+02#
+#7063
+0$#
+#7124
+1_"
+#7139
+1M!
+#7284
+0b"
+#7299
+0P!
+#7362
+1x
+#7371
+0X
+#7373
+1w
+#7386
+1;!
+#7397
+1:!
+#7413
+1:"
+#7429
+1'#
+#7446
+10"
+#7456
+1O#
+#7457
+1/"
+#7462
+1$!
+#7480
+17#
+#7483
+0/#
+#7496
+0>#
+#7508
+0"#
+#7530
+0>!
+#7531
+1\
+#7540
+1B#
+#7545
+0K#
+#7557
+0=!
+#7570
+1g
+#7573
+0="
+#7601
+0J#
+#7610
+1/!
+#7622
+0'!
+#7624
+xU#
+1T#
+1S#
+#7642
+xb#
+1a#
+1`#
+#7674
+1A!
+#7691
+0_
+#7699
+0z
+#7717
+1@!
+#7760
+0|"
+#7783
+02"
+#7806
+1e"
+#7858
+0m!
+#7897
+1f#
+#8011
+0C!
+#8057
+1e#
+#8160
+1*!
+#8213
+1b
+#8217
+1d#
+#8244
+1@"
+#8319
+1{!
+#8377
+1c#
+#8427
+1N#
+#8451
+16#
+#8464
+1X#
+#8472
+1S!
+#8511
+1A#
+#8595
+15#
+#8624
+1W#
+#8739
+14#
+#8784
+1V#
+#8884
+01
+#8990
+1M#
+1L#
+1K#
+1J#
+1I#
+#9074
+1@#
+1?#
+1>#
+1=#
+1<#
+#9114
+0I"
+#9149
+1&#
+1%#
+1$#
+1##
+1"#
+#9302
+13#
+12#
+11#
+10#
+1/#
+#9330
+1b#
+#9684
+1H#
+1G#
+1F#
+#9737
+1U#
+#9768
+1;#
+1:#
+19#
+#9843
+1!#
+1~"
+1}"
+#9996
+1.#
+1-#
+1,#
+#10000
+0.
+0!
+#10326
+xF
+xI
+xL
+xO
+xR
+xT
+xW
+xZ
+x^
+xa
+xc
+xf
+xk
+xm
+xp
+xs
+xv
+xy
+x{
+x~
+x#!
+x&!
+x)!
+x+!
+x.!
+x4!
+x6!
+x9!
+x<!
+x?!
+xB!
+xD!
+xG!
+xJ!
+xO!
+xR!
+xT!
+xW!
+xZ!
+x`!
+xc!
+xf!
+xi!
+xl!
+xn!
+xq!
+xt!
+xw!
+xz!
+x|!
+x!"
+x$"
+x%"
+x("
+x+"
+x."
+x1"
+x3"
+x6"
+x9"
+x<"
+x?"
+xA"
+xD"
+xG"
+xJ"
+xM"
+xP"
+xS"
+xV"
+xX"
+x["
+x^"
+xa"
+xd"
+xf"
+xi"
+xl"
+#10509
+05
+#10728
+10!
+#10986
+0A
+0u"
+#11010
+04
+#12622
+03
+#13956
+x}"
+#13982
+x9#
+#14048
+x`#
+#14066
+x,#
+xF#
+xS#
+#14397
+1l
+#14572
+15!
+#14649
+x/!
+#14651
+xI"
+xg
+#15000
+1!
+#15338
+xG
+#15340
+xK
+#15347
+xh"
+#15348
+x#"
+#15351
+xJ
+#15356
+x&"
+#15358
+xr
+xO"
+#15363
+xo!
+#15366
+xa!
+#15369
+xq
+x|
+xN"
+#15372
+x~!
+xC"
+xn
+#15376
+xj
+x3!
+#15377
+xF"
+xk"
+#15379
+xN
+xu
+xe!
+x*"
+#15383
+x-!
+#15384
+xh!
+#15390
+xM
+xt
+xd!
+x)"
+#15391
+xU
+#15394
+x4"
+xK"
+#15395
+xg!
+#15403
+xE!
+#15409
+xY!
+#15412
+xe
+#15413
+x-"
+#15419
+x7!
+#15423
+xR"
+#15424
+x,"
+#15433
+xh#
+#15434
+xQ"
+x^#
+#15441
+xb#
+#15442
+x~"
+#15446
+x&#
+#15452
+xk#
+xM#
+xQ#
+#15457
+xV!
+#15466
+x;#
+x!#
+#15470
+xG#
+xT#
+#15471
+xa#
+x:#
+#15473
+xD#
+x*#
+xP#
+x]#
+#15474
+xZ#
+#15475
+x4#
+#15477
+x@#
+xH#
+#15478
+x)#
+#15486
+x3#
+#15503
+x-#
+#15506
+xU#
+#15507
+xC#
+#15517
+xj#
+#15523
+xQ
+xx
+#15550
+xP
+xw
+#15551
+xX
+x.#
+#15557
+x0"
+#15563
+xH!
+#15579
+x:!
+#15584
+x/"
+#15652
+x[
+#15709
+x0!
+#15710
+xh
+#15711
+x\
+#15712
+x1!
+#15862
+xW"
+#15871
+x_
+#15904
+xC!
+#15914
+17
+#15986
+1A
+#16323
+0e"
+#16365
+0S!
+#16444
+xO#
+x\#
+#16478
+xB#
+#16484
+xY#
+#16496
+x2#
+#16644
+xX#
+#16804
+xW#
+#17100
+xk!
+#17111
+xj!
+#17113
+x7"
+#17130
+xY"
+#17142
+x!!
+#17145
+xr!
+#17173
+xU"
+#17184
+xT"
+#17190
+x>!
+#17194
+x(#
+#17195
+00#
+#17196
+xA!
+x?#
+#17201
+x=!
+#17207
+x@!
+#17208
+xc#
+#17213
+xg#
+#17218
+xV#
+#17225
+xL#
+#17228
+x%#
+#17235
+x[#
+#17236
+xN#
+#17258
+x="
+#17260
+xI#
+#17267
+xi#
+#17284
+x_"
+x6#
+#17287
+xx!
+#17288
+xM!
+#17290
+x5#
+#17297
+xA#
+#17306
+xu!
+#17315
+x<#
+#17341
+x=#
+#17367
+xe#
+#17370
+x##
+#17371
+x1#
+#17389
+x$#
+#17639
+x\"
+#17664
+xS
+#17665
+xz
+#17712
+x;!
+#17722
+xf#
+#17726
+x2"
+#17739
+x:"
+#17745
+xb"
+#17755
+x'#
+#17788
+x$!
+#17806
+x7#
+#17809
+x/#
+#17822
+x>#
+#17828
+xd#
+#17834
+x"#
+#17844
+x'!
+#17871
+xK#
+#17927
+xJ#
+#18125
+0b
+#18126
+0*!
+#18184
+xm!
+#18187
+0@"
+#18645
+0{!
+#19095
+xP!
+#19178
+x0#
+#19553
+x5!
+#19722
+xl
+#20000
+0!
+#20326
+1v"
+#20986
+0A
+#25000
+1!
+#25535
+1|"
+#25630
+1w"
+#25986
+1A
+#29837
+1x"
+#30000
+0!
+#30326
+0v"
+#30986
+0A
+#33689
+07
+#35000
+1!
+#35067
+1y"
+#35986
+1A
+#37731
+1{"
+#39302
+1z"
+#40000
+0!
+#40326
+1v"
+#40986
+0A
+#45000
+1!
+#45630
+0w"
+#45986
+1A
+#50000
+0!
+#50326
+0v"
+#50986
+0A
+#55000
+1!
+#55986
+1A
+#60000
+0!
+#60326
+1v"
+#60986
+0A
+#65000
+1!
+#65630
+1w"
+#65986
+1A
+#69837
+0x"
+#70000
+0!
+#70326
+0v"
+#70986
+0A
+#75000
+1!
+#75986
+1A
+#80000
+0!
+#80326
+1v"
+#80986
+0A
+#85000
+1!
+#85630
+0w"
+#85986
+1A
+#90000
+0!
+#90326
+0v"
+#90986
+0A
+#95000
+1!
+#95986
+1A
 #100000
 0!
-0)
-#150000
+#100326
+1v"
+#100986
+0A
+#105000
 1!
-1)
-0*
-0"
+#105630
+1w"
+#105986
+1A
+#109837
+1x"
+#110000
+0!
+#110326
+0v"
+#110986
+0A
+#115000
+1!
+#115067
+0y"
+#115986
+1A
+#120000
+0!
+#120326
+1v"
+#120986
+0A
+#125000
+1!
+#125630
+0w"
+#125986
+1A
+#130000
+0!
+#130326
+0v"
+#130986
+0A
+#135000
+1!
+#135986
+1A
+#140000
+0!
+#140326
+1v"
+#140986
+0A
+#145000
+1!
+#145630
+1w"
+#145986
+1A
+#149837
+0x"
+#150000
+0!
+#150326
+0v"
+#150986
+0A
+#155000
+1!
+#155986
+1A
+#160000
+0!
+#160326
+1v"
+#160986
+0A
+#165000
+1!
+#165630
+0w"
+#165986
+1A
+#170000
+0!
+#170326
+0v"
+#170986
+0A
+#175000
+1!
+#175986
+1A
+#180000
+0!
+#180326
+1v"
+#180986
+0A
+#185000
+1!
+#185630
+1w"
+#185986
+1A
+#189837
+1x"
+#190000
+0!
+#190326
+0v"
+#190986
+0A
+#195000
+1!
+#195067
+1y"
+#195986
+1A
+#199302
+0z"
 #200000
 0!
-0)
-#250000
+#200326
+1v"
+#200986
+0A
+#205000
 1!
-1)
-1*
-1"
+#205630
+0w"
+#205986
+1A
+#210000
+0!
+#210326
+0v"
+#210986
+0A
+#215000
+1!
+#215986
+1A
+#220000
+0!
+#220326
+1v"
+#220986
+0A
+#225000
+1!
+#225630
+1w"
+#225986
+1A
+#229837
+0x"
+#230000
+0!
+#230326
+0v"
+#230986
+0A
+#235000
+1!
+#235986
+1A
+#240000
+0!
+#240326
+1v"
+#240986
+0A
+#245000
+1!
+#245630
+0w"
+#245986
+1A
+#250000
+0!
+#250326
+0v"
+#250986
+0A
+#255000
+1!
+#255986
+1A
+#260000
+0!
+#260326
+1v"
+#260986
+0A
+#265000
+1!
+#265630
+1w"
+#265986
+1A
+#269837
+1x"
+#270000
+0!
+#270326
+0v"
+#270986
+0A
+#275000
+1!
+#275067
+0y"
+#275986
+1A
+#277731
+0{"
+#280000
+0!
+#280326
+1v"
+#280986
+0A
+#285000
+1!
+#285630
+0w"
+#285986
+1A
+#290000
+0!
+#290326
+0v"
+#290986
+0A
+#295000
+1!
+#295986
+1A
 #300000
 0!
-0)
-#350000
+#300326
+1v"
+#300986
+0A
+#305000
 1!
-1)
-0*
-0"
+#305630
+1w"
+#305986
+1A
+#309837
+0x"
+#310000
+0!
+#310326
+0v"
+#310986
+0A
+#315000
+1!
+#315986
+1A
+#320000
+0!
+#320326
+1v"
+#320986
+0A
+#325000
+1!
+#325630
+0w"
+#325986
+1A
+#330000
+0!
+#330326
+0v"
+#330986
+0A
+#335000
+1!
+#335535
+0|"
+#335986
+1A
+#340000
+0!
+#340326
+1v"
+#340986
+0A
+#343689
+17
+#345000
+1!
+#345535
+1|"
+#345630
+1w"
+#345986
+1A
+#349837
+1x"
+#350000
+0!
+#350326
+0v"
+#350986
+0A
+#353689
+07
+#355000
+1!
+#355067
+1y"
+#355986
+1A
+#357731
+1{"
+#359302
+1z"
+#360000
+0!
+#360326
+1v"
+#360986
+0A
+#365000
+1!
+#365630
+0w"
+#365986
+1A
+#370000
+0!
+#370326
+0v"
+#370986
+0A
+#375000
+1!
+#375986
+1A
+#380000
+0!
+#380326
+1v"
+#380986
+0A
+#385000
+1!
+#385630
+1w"
+#385986
+1A
+#389837
+0x"
+#390000
+0!
+#390326
+0v"
+#390986
+0A
+#395000
+1!
+#395986
+1A
 #400000
 0!
-0)
-#450000
+#400326
+1v"
+#400986
+0A
+#405000
 1!
-1)
-1*
-1"
+#405630
+0w"
+#405986
+1A
+#410000
+0!
+#410326
+0v"
+#410986
+0A
+#415000
+1!
+#415986
+1A
+#420000
+0!
+#420326
+1v"
+#420986
+0A
+#425000
+1!
+#425630
+1w"
+#425986
+1A
+#429837
+1x"
+#430000
+0!
+#430326
+0v"
+#430986
+0A
+#435000
+1!
+#435067
+0y"
+#435986
+1A
+#440000
+0!
+#440326
+1v"
+#440986
+0A
+#445000
+1!
+#445630
+0w"
+#445986
+1A
+#450000
+0!
+#450326
+0v"
+#450986
+0A
+#455000
+1!
+#455986
+1A
+#460000
+0!
+#460326
+1v"
+#460986
+0A
+#465000
+1!
+#465630
+1w"
+#465986
+1A
+#469837
+0x"
+#470000
+0!
+#470326
+0v"
+#470986
+0A
+#475000
+1!
+#475986
+1A
+#480000
+0!
+#480326
+1v"
+#480986
+0A
+#485000
+1!
+#485630
+0w"
+#485986
+1A
+#490000
+0!
+#490326
+0v"
+#490986
+0A
+#495000
+1!
+#495986
+1A
 #500000
 0!
-0)
-#550000
+#500326
+1v"
+#500986
+0A
+#505000
 1!
-1)
-0*
-0"
+#505630
+1w"
+#505986
+1A
+#509837
+1x"
+#510000
+0!
+#510326
+0v"
+#510986
+0A
+#515000
+1!
+#515067
+1y"
+#515986
+1A
+#519302
+0z"
+#520000
+0!
+#520326
+1v"
+#520986
+0A
+#525000
+1!
+#525630
+0w"
+#525986
+1A
+#530000
+0!
+#530326
+0v"
+#530986
+0A
+#535000
+1!
+#535986
+1A
+#540000
+0!
+#540326
+1v"
+#540986
+0A
+#545000
+1!
+#545630
+1w"
+#545986
+1A
+#549837
+0x"
+#550000
+0!
+#550326
+0v"
+#550986
+0A
+#555000
+1!
+#555986
+1A
+#560000
+0!
+#560326
+1v"
+#560986
+0A
+#565000
+1!
+#565630
+0w"
+#565986
+1A
+#570000
+0!
+#570326
+0v"
+#570986
+0A
+#575000
+1!
+#575986
+1A
+#580000
+0!
+#580326
+1v"
+#580986
+0A
+#585000
+1!
+#585630
+1w"
+#585986
+1A
+#589837
+1x"
+#590000
+0!
+#590326
+0v"
+#590986
+0A
+#595000
+1!
+#595067
+0y"
+#595986
+1A
+#597731
+0{"
 #600000
 0!
-0)
-#650000
+#600326
+1v"
+#600986
+0A
+#605000
 1!
-1)
-1*
-1"
+#605630
+0w"
+#605986
+1A
+#610000
+0!
+#610326
+0v"
+#610986
+0A
+#615000
+1!
+#615986
+1A
+#620000
+0!
+#620326
+1v"
+#620986
+0A
+#625000
+1!
+#625630
+1w"
+#625986
+1A
+#629837
+0x"
+#630000
+0!
+#630326
+0v"
+#630986
+0A
+#635000
+1!
+#635986
+1A
+#640000
+0!
+#640326
+1v"
+#640986
+0A
+#645000
+1!
+#645630
+0w"
+#645986
+1A
+#650000
+0!
+#650326
+0v"
+#650986
+0A
+#655000
+1!
+#655535
+0|"
+#655986
+1A
+#660000
+0!
+#660326
+1v"
+#660986
+0A
+#663689
+17
+#665000
+1!
+#665535
+1|"
+#665630
+1w"
+#665986
+1A
+#669837
+1x"
+#670000
+0!
+#670326
+0v"
+#670986
+0A
+#673689
+07
+#675000
+1!
+#675067
+1y"
+#675986
+1A
+#677731
+1{"
+#679302
+1z"
+#680000
+0!
+#680326
+1v"
+#680986
+0A
+#685000
+1!
+#685630
+0w"
+#685986
+1A
+#690000
+0!
+#690326
+0v"
+#690986
+0A
+#695000
+1!
+#695986
+1A
 #700000
 0!
-0)
-#750000
+#700326
+1v"
+#700986
+0A
+#705000
 1!
-1)
-0*
-0"
+#705630
+1w"
+#705986
+1A
+#709837
+0x"
+#710000
+0!
+#710326
+0v"
+#710986
+0A
+#715000
+1!
+#715986
+1A
+#720000
+0!
+#720326
+1v"
+#720986
+0A
+#725000
+1!
+#725630
+0w"
+#725986
+1A
+#730000
+0!
+#730326
+0v"
+#730986
+0A
+#735000
+1!
+#735986
+1A
+#740000
+0!
+#740326
+1v"
+#740986
+0A
+#745000
+1!
+#745630
+1w"
+#745986
+1A
+#749837
+1x"
+#750000
+0!
+#750326
+0v"
+#750986
+0A
+#755000
+1!
+#755067
+0y"
+#755986
+1A
+#760000
+0!
+#760326
+1v"
+#760986
+0A
+#765000
+1!
+#765630
+0w"
+#765986
+1A
+#770000
+0!
+#770326
+0v"
+#770986
+0A
+#775000
+1!
+#775986
+1A
+#780000
+0!
+#780326
+1v"
+#780986
+0A
+#785000
+1!
+#785630
+1w"
+#785986
+1A
+#789837
+0x"
+#790000
+0!
+#790326
+0v"
+#790986
+0A
+#795000
+1!
+#795986
+1A
 #800000
 0!
-0)
-#850000
+#800326
+1v"
+#800986
+0A
+#805000
 1!
-1)
-1*
-1"
+#805630
+0w"
+#805986
+1A
+#810000
+0!
+#810326
+0v"
+#810986
+0A
+#815000
+1!
+#815986
+1A
+#820000
+0!
+#820326
+1v"
+#820986
+0A
+#825000
+1!
+#825630
+1w"
+#825986
+1A
+#829837
+1x"
+#830000
+0!
+#830326
+0v"
+#830986
+0A
+#835000
+1!
+#835067
+1y"
+#835986
+1A
+#839302
+0z"
+#840000
+0!
+#840326
+1v"
+#840986
+0A
+#845000
+1!
+#845630
+0w"
+#845986
+1A
+#850000
+0!
+#850326
+0v"
+#850986
+0A
+#855000
+1!
+#855986
+1A
+#860000
+0!
+#860326
+1v"
+#860986
+0A
+#865000
+1!
+#865630
+1w"
+#865986
+1A
+#869837
+0x"
+#870000
+0!
+#870326
+0v"
+#870986
+0A
+#875000
+1!
+#875986
+1A
+#880000
+0!
+#880326
+1v"
+#880986
+0A
+#885000
+1!
+#885630
+0w"
+#885986
+1A
+#890000
+0!
+#890326
+0v"
+#890986
+0A
+#895000
+1!
+#895986
+1A
 #900000
 0!
-0)
-#950000
+#900326
+1v"
+#900986
+0A
+#905000
 1!
-1)
-0*
-0"
+#905630
+1w"
+#905986
+1A
+#909837
+1x"
+#910000
+0!
+#910326
+0v"
+#910986
+0A
+#915000
+1!
+#915067
+0y"
+#915986
+1A
+#917731
+0{"
+#920000
+0!
+#920326
+1v"
+#920986
+0A
+#925000
+1!
+#925630
+0w"
+#925986
+1A
+#930000
+0!
+#930326
+0v"
+#930986
+0A
+#935000
+1!
+#935986
+1A
+#940000
+0!
+#940326
+1v"
+#940986
+0A
+#945000
+1!
+#945630
+1w"
+#945986
+1A
+#949837
+0x"
+#950000
+0!
+#950326
+0v"
+#950986
+0A
+#955000
+1!
+#955986
+1A
+#960000
+0!
+#960326
+1v"
+#960986
+0A
+#965000
+1!
+#965630
+0w"
+#965986
+1A
+#970000
+0!
+#970326
+0v"
+#970986
+0A
+#975000
+1!
+#975535
+0|"
+#975986
+1A
+#980000
+0!
+#980326
+1v"
+#980986
+0A
+#983689
+17
+#985000
+1!
+#985535
+1|"
+#985630
+1w"
+#985986
+1A
+#989837
+1x"
+#990000
+0!
+#990326
+0v"
+#990986
+0A
+#993689
+07
+#995000
+1!
+#995067
+1y"
+#995986
+1A
+#997731
+1{"
+#999302
+1z"
 #1000000

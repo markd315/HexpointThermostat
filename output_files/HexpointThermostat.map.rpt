@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HexpointThermostat
-Wed Dec 20 23:13:22 2017
+Thu Dec 21 18:04:10 2017
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -72,13 +72,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Dec 20 23:13:22 2017       ;
+; Analysis & Synthesis Status ; Successful - Thu Dec 21 18:04:10 2017       ;
 ; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name               ; HexpointThermostat                          ;
 ; Top-level Entity Name       ; HexpointThermostat                          ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 173                                         ;
-; Total pins                  ; 14                                          ;
+; Total logic elements        ; 185                                         ;
+; Total pins                  ; 23                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -180,6 +180,7 @@ refer to the applicable agreement for further details.
 ; StoP.vhd                         ; yes             ; User Wizard-Generated File               ; C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd                             ;         ;
 ; compare13bits.vhd                ; yes             ; User Wizard-Generated File               ; C:/intelFPGA_lite/17.1/HexpointThermostat/compare13bits.vhd                    ;         ;
 ; add13bits.vhd                    ; yes             ; User Wizard-Generated File               ; C:/intelFPGA_lite/17.1/HexpointThermostat/add13bits.vhd                        ;         ;
+; count5bits.bdf                   ; yes             ; User Block Diagram/Schematic File        ; C:/intelFPGA_lite/17.1/HexpointThermostat/count5bits.bdf                       ;         ;
 ; hexpointthermostat.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/intelFPGA_lite/17.1/HexpointThermostat/hexpointthermostat.bdf               ;         ;
 ; lpm_compare.tdf                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_compare.tdf         ;         ;
 ; comptree.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/comptree.inc            ;         ;
@@ -204,39 +205,39 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Total logic elements                        ; 173   ;
-;     -- Combinational with no register       ; 95    ;
-;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 78    ;
-;                                             ;       ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 92    ;
-;     -- 3 input functions                    ; 74    ;
-;     -- 2 input functions                    ; 7     ;
-;     -- 1 input functions                    ; 0     ;
-;     -- 0 input functions                    ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 101   ;
-;     -- arithmetic mode                      ; 72    ;
-;     -- qfbk mode                            ; 0     ;
-;     -- register cascade mode                ; 0     ;
-;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 78    ;
-; Total logic cells in carry chains           ; 78    ;
-; I/O pins                                    ; 14    ;
-; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 79    ;
-; Total fan-out                               ; 685   ;
-; Average fan-out                             ; 3.66  ;
-+---------------------------------------------+-------+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Total logic elements                        ; 185        ;
+;     -- Combinational with no register       ; 97         ;
+;     -- Register only                        ; 0          ;
+;     -- Combinational with a register        ; 88         ;
+;                                             ;            ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 93         ;
+;     -- 3 input functions                    ; 74         ;
+;     -- 2 input functions                    ; 8          ;
+;     -- 1 input functions                    ; 10         ;
+;     -- 0 input functions                    ; 0          ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 113        ;
+;     -- arithmetic mode                      ; 72         ;
+;     -- qfbk mode                            ; 0          ;
+;     -- register cascade mode                ; 0          ;
+;     -- synchronous clear/load mode          ; 0          ;
+;     -- asynchronous clear/load mode         ; 10         ;
+;                                             ;            ;
+; Total registers                             ; 88         ;
+; Total logic cells in carry chains           ; 78         ;
+; I/O pins                                    ; 23         ;
+; Maximum fan-out node                        ; Initialize ;
+; Maximum fan-out                             ; 83         ;
+; Total fan-out                               ; 727        ;
+; Average fan-out                             ; 3.50       ;
++---------------------------------------------+------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -244,7 +245,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                            ; Entity Name         ; Library Name ;
 +-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |HexpointThermostat                             ; 173 (0)     ; 78           ; 0          ; 14   ; 0            ; 95 (0)       ; 0 (0)             ; 78 (0)           ; 78 (0)          ; 0 (0)      ; |HexpointThermostat                                                                                                            ; HexpointThermostat  ; work         ;
+; |HexpointThermostat                             ; 185 (2)     ; 88           ; 0          ; 23   ; 0            ; 97 (2)       ; 0 (0)             ; 88 (0)           ; 78 (0)          ; 0 (0)      ; |HexpointThermostat                                                                                                            ; HexpointThermostat  ; work         ;
 ;    |SetpointRegister:inst10|                    ; 26 (13)     ; 13           ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 13 (13)          ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10                                                                                    ; SetpointRegister    ; work         ;
 ;       |add13bits:inst|                          ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst                                                                     ; add13bits           ; work         ;
 ;          |lpm_add_sub:LPM_ADD_SUB_component|    ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component                                   ; lpm_add_sub         ; work         ;
@@ -275,6 +276,8 @@ refer to the applicable agreement for further details.
 ;    |compare13bits:inst24|                       ; 14 (0)      ; 0            ; 0          ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|compare13bits:inst24                                                                                       ; compare13bits       ; work         ;
 ;       |lpm_compare:LPM_COMPARE_component|       ; 14 (0)      ; 0            ; 0          ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|compare13bits:inst24|lpm_compare:LPM_COMPARE_component                                                     ; lpm_compare         ; work         ;
 ;          |cmpr_46g:auto_generated|              ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|compare13bits:inst24|lpm_compare:LPM_COMPARE_component|cmpr_46g:auto_generated                             ; cmpr_46g            ; work         ;
+;    |count5bits:inst15|                          ; 5 (5)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|count5bits:inst15                                                                                          ; count5bits          ; work         ;
+;    |count5bits:inst1|                           ; 5 (5)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|count5bits:inst1                                                                                           ; count5bits          ; work         ;
 +-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -329,10 +332,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 78    ;
+; Total registers                              ; 88    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 10    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -780,7 +783,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Dec 20 23:13:08 2017
+    Info: Processing started: Thu Dec 21 18:03:57 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HexpointThermostat -c HexpointThermostat
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -799,13 +802,16 @@ Info (12021): Found 2 design units, including 1 entities, in source file compare
 Info (12021): Found 2 design units, including 1 entities, in source file add13bits.vhd
     Info (12022): Found design unit 1: add13bits-SYN File: C:/intelFPGA_lite/17.1/HexpointThermostat/add13bits.vhd Line: 52
     Info (12023): Found entity 1: add13bits File: C:/intelFPGA_lite/17.1/HexpointThermostat/add13bits.vhd Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file count5bits.bdf
+    Info (12023): Found entity 1: count5bits
 Warning (12125): Using design file hexpointthermostat.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: HexpointThermostat
 Info (12127): Elaborating entity "HexpointThermostat" for the top level hierarchy
 Warning (275011): Block or symbol "StoP" of instance "inst6" overlaps another block or symbol
 Warning (275011): Block or symbol "NOT" of instance "inst4" overlaps another block or symbol
-Warning (275009): Pin "SDA" not connected
+Warning (275043): Pin "CS" is missing source
 Warning (275009): Pin "controlsActive" not connected
+Warning (275009): Pin "Dout" not connected
 Info (12128): Elaborating entity "compare13bits" for hierarchy "compare13bits:inst24"
 Info (12128): Elaborating entity "lpm_compare" for hierarchy "compare13bits:inst24|lpm_compare:LPM_COMPARE_component" File: C:/intelFPGA_lite/17.1/HexpointThermostat/compare13bits.vhd Line: 78
 Info (12130): Elaborated megafunction instantiation "compare13bits:inst24|lpm_compare:LPM_COMPARE_component" File: C:/intelFPGA_lite/17.1/HexpointThermostat/compare13bits.vhd Line: 78
@@ -844,22 +850,25 @@ Info (12133): Instantiated megafunction "StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_co
     Info (12134): Parameter "lpm_direction" = "RIGHT"
     Info (12134): Parameter "lpm_type" = "LPM_SHIFTREG"
     Info (12134): Parameter "lpm_width" = "16"
+Info (12128): Elaborating entity "count5bits" for hierarchy "count5bits:inst1"
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst3"
 Info (12130): Elaborated megafunction instantiation "BUSMUX:inst3"
 Info (12133): Instantiated megafunction "BUSMUX:inst3" with the following parameter:
     Info (12134): Parameter "WIDTH" = "13"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "CS" is stuck at GND
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "hiTrueSetDisp"
-    Warning (15610): No output dependent on input pin "SDA"
     Warning (15610): No output dependent on input pin "controlsActive"
-Info (21057): Implemented 187 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 173 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Warning (15610): No output dependent on input pin "Dout"
+Info (21057): Implemented 208 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 13 input pins
+    Info (21059): Implemented 10 output pins
+    Info (21061): Implemented 185 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
     Info: Peak virtual memory: 670 megabytes
-    Info: Processing ended: Wed Dec 20 23:13:22 2017
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+    Info: Processing ended: Thu Dec 21 18:04:10 2017
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:28
 
 

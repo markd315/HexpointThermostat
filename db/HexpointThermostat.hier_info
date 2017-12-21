@@ -10,6 +10,7 @@ CLK => SetpointRegister:inst12.CLK
 CLK => SetpointRegister:inst13.CLK
 CLK => SetpointRegister:inst14.CLK
 CLK => SCL.DATAIN
+CLK => count5bits:inst15.CLK
 Inc => SetpointRegister:inst9.Inc
 Inc => SetpointRegister:inst10.Inc
 Inc => SetpointRegister:inst11.Inc
@@ -28,13 +29,23 @@ Initialize => SetpointRegister:inst11.Initialize
 Initialize => SetpointRegister:inst12.Initialize
 Initialize => SetpointRegister:inst13.Initialize
 Initialize => SetpointRegister:inst14.Initialize
+Initialize => count5bits:inst15.restart
 Cool <= compare13bits:inst23.alb
 passiveNOTactive => BUSMUX:inst2.sel
 NightNOTday => BUSMUX:inst.sel
 SCL <= CLK.DB_MAX_OUTPUT_PORT_TYPE
+CS <= <GND>
+fbc0 <= count5bits:inst1.0
+fbctestclk => count5bits:inst1.CLK
+fbctestrestart => count5bits:inst1.restart
+fbc1 <= count5bits:inst1.1
+fbc3 <= count5bits:inst1.3
+fbc4 <= count5bits:inst1.4
+fbc2 <= count5bits:inst1.2
+Mof32 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
 hiTrueSetDisp => BUSMUX:inst8.sel
-SDA => ~NO_FANOUT~
 controlsActive => ~NO_FANOUT~
+Dout => ~NO_FANOUT~
 
 
 |HexpointThermostat|compare13bits:inst24
@@ -4043,6 +4054,26 @@ result[11] <= add_sub_cell[11].COMBOUT
 result[12] <= add_sub_cell[12].COMBOUT
 cout <= <GND>
 overflow <= <GND>
+
+
+|HexpointThermostat|count5bits:inst1
+4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+restart => inst6.IN0
+CLK => inst.CLK
+3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|count5bits:inst15
+4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+restart => inst6.IN0
+CLK => inst.CLK
+3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |HexpointThermostat|BUSMUX:inst3
