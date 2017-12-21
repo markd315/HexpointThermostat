@@ -1,3 +1,5 @@
+UNFINISHED//UNTESTED
+
 In our world, every serviceable thermostat needs at least four setpoints.
 Thermostatically controlled loads comprise roughly 50% of the overall electricity demand in the United States (Energy Information Administration, ‘‘Residential energy consumption survey,’’ U.S. Dept. Energy, Washington, DC, Tech. Rep., 2001.)
 We can't make environmentally conscious choices unless we're empowered to compromise. The quad-setpoint thermostat encourages and teaches us to compromise. My design goes a step further and embraces the human sleep/wake cycle to really nail down desired functionality.
@@ -9,13 +11,15 @@ This range should be as wide as the range you and your guests are comfortable wi
 
 A quad-setpoint thermostat allows you to have "active" and "relaxed" modes to compromise with your schedule.
 We're on the go, but especially in extreme temperatures nobody wants to come home to a completely frigid or uncooled home or office.
+Turning it off is just plain untenable for some.
+At the same time, setting the thermostat too aggressively while away drives up electricity costs without improving utility.
 Configure your passive mode such that you can live with the temperature range upon arrival while remaining environmentally conscious.
-Upon getting home, just slap the device into active mode (single-button) and your HVAC will cool or warm to your more specific, comfortable temperature range.
+Upon getting home, just slap the device into active mode (single-button) and your HVAC will cool or warm back to your more specific, comfortable temperature range.
 
 My hex-setpoint thermostat allows you to compromise with your own body.
 A human male like myself should be sleeping at a nice chilly temperature of 15.5-19.5 degrees (60-67 F). source: https://sleep.org/articles/temperature-for-sleep/
 It doesn't need to be like that while I'm awake. Frankly in Florida, that would be quite ridiculous. We need to go back to the drawing board and compromise again. 
-I'd prefer to keep it between 19 and 24 while I'm awake, I just need it a bit cooler at night.
+I'd prefer to keep it between 19 and 23.5 while I'm awake, I just need it a bit cooler at night.
 And so our design adds a third mode with two more setpoints for nighttime use: plain and simple.
 
 Now do you understand why we need six setpoints?
