@@ -42,8 +42,8 @@ USE lpm.all;
 ENTITY compare13bits IS
 	PORT
 	(
-		dataa		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-		datab		: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+		dataa		: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
+		datab		: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
 		agb		: OUT STD_LOGIC ;
 		alb		: OUT STD_LOGIC 
 	);
@@ -64,8 +64,8 @@ ARCHITECTURE SYN OF compare13bits IS
 		lpm_width		: NATURAL
 	);
 	PORT (
-			dataa	: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-			datab	: IN STD_LOGIC_VECTOR (7 DOWNTO 0);
+			dataa	: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
+			datab	: IN STD_LOGIC_VECTOR (12 DOWNTO 0);
 			agb	: OUT STD_LOGIC ;
 			alb	: OUT STD_LOGIC 
 	);
@@ -79,7 +79,7 @@ BEGIN
 	GENERIC MAP (
 		lpm_representation => "SIGNED",
 		lpm_type => "LPM_COMPARE",
-		lpm_width => 8
+		lpm_width => 13
 	)
 	PORT MAP (
 		dataa => dataa,
@@ -111,18 +111,18 @@ END SYN;
 -- Retrieval info: PRIVATE: aclr NUMERIC "0"
 -- Retrieval info: PRIVATE: clken NUMERIC "0"
 -- Retrieval info: PRIVATE: isPortBConstant NUMERIC "0"
--- Retrieval info: PRIVATE: nBit NUMERIC "8"
+-- Retrieval info: PRIVATE: nBit NUMERIC "13"
 -- Retrieval info: PRIVATE: new_diagram STRING "1"
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 -- Retrieval info: CONSTANT: LPM_REPRESENTATION STRING "SIGNED"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_COMPARE"
--- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "8"
+-- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "13"
 -- Retrieval info: USED_PORT: agb 0 0 0 0 OUTPUT NODEFVAL "agb"
 -- Retrieval info: USED_PORT: alb 0 0 0 0 OUTPUT NODEFVAL "alb"
--- Retrieval info: USED_PORT: dataa 0 0 8 0 INPUT NODEFVAL "dataa[7..0]"
--- Retrieval info: USED_PORT: datab 0 0 8 0 INPUT NODEFVAL "datab[7..0]"
--- Retrieval info: CONNECT: @dataa 0 0 8 0 dataa 0 0 8 0
--- Retrieval info: CONNECT: @datab 0 0 8 0 datab 0 0 8 0
+-- Retrieval info: USED_PORT: dataa 0 0 13 0 INPUT NODEFVAL "dataa[12..0]"
+-- Retrieval info: USED_PORT: datab 0 0 13 0 INPUT NODEFVAL "datab[12..0]"
+-- Retrieval info: CONNECT: @dataa 0 0 13 0 dataa 0 0 13 0
+-- Retrieval info: CONNECT: @datab 0 0 13 0 datab 0 0 13 0
 -- Retrieval info: CONNECT: agb 0 0 0 0 @agb 0 0 0 0
 -- Retrieval info: CONNECT: alb 0 0 0 0 @alb 0 0 0 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL compare13bits.vhd TRUE

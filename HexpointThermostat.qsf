@@ -66,3 +66,4 @@ set_global_assignment -name RESERVE_ALL_UNUSED_PINS_NO_OUTPUT_GND "AS INPUT TRI-
 set_global_assignment -name BDF_FILE 31mux.bdf
 set_global_assignment -name QIP_FILE StoP.qip
 set_global_assignment -name QIP_FILE compare13bits.qip
+set_global_assignment -name QIP_FILE add13bits.qip

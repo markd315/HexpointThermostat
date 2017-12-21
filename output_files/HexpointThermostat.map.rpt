@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HexpointThermostat
-Wed Dec 20 19:17:34 2017
+Wed Dec 20 23:13:22 2017
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,14 +14,39 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: BUSMUX:inst
- 11. Parameter Settings for User Entity Instance: BUSMUX:inst1
- 12. Parameter Settings for User Entity Instance: BUSMUX:inst2
- 13. Parameter Settings for User Entity Instance: BUSMUX:inst3
- 14. Parameter Settings for User Entity Instance: StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component
- 15. lpm_shiftreg Parameter Settings by Entity Instance
- 16. Analysis & Synthesis Messages
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: compare13bits:inst24|lpm_compare:LPM_COMPARE_component
+ 14. Parameter Settings for User Entity Instance: BUSMUX:inst5
+ 15. Parameter Settings for User Entity Instance: BUSMUX:inst20
+ 16. Parameter Settings for User Entity Instance: SetpointRegister:inst9|BUSMUX:inst17
+ 17. Parameter Settings for User Entity Instance: SetpointRegister:inst9|BUSMUX:inst15
+ 18. Parameter Settings for User Entity Instance: SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 19. Parameter Settings for User Entity Instance: SetpointRegister:inst10|BUSMUX:inst17
+ 20. Parameter Settings for User Entity Instance: SetpointRegister:inst10|BUSMUX:inst15
+ 21. Parameter Settings for User Entity Instance: SetpointRegister:inst10|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 22. Parameter Settings for User Entity Instance: SetpointRegister:inst11|BUSMUX:inst17
+ 23. Parameter Settings for User Entity Instance: SetpointRegister:inst11|BUSMUX:inst15
+ 24. Parameter Settings for User Entity Instance: SetpointRegister:inst11|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 25. Parameter Settings for User Entity Instance: StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component
+ 26. Parameter Settings for User Entity Instance: compare13bits:inst23|lpm_compare:LPM_COMPARE_component
+ 27. Parameter Settings for User Entity Instance: BUSMUX:inst2
+ 28. Parameter Settings for User Entity Instance: BUSMUX:inst
+ 29. Parameter Settings for User Entity Instance: SetpointRegister:inst12|BUSMUX:inst17
+ 30. Parameter Settings for User Entity Instance: SetpointRegister:inst12|BUSMUX:inst15
+ 31. Parameter Settings for User Entity Instance: SetpointRegister:inst12|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 32. Parameter Settings for User Entity Instance: SetpointRegister:inst13|BUSMUX:inst17
+ 33. Parameter Settings for User Entity Instance: SetpointRegister:inst13|BUSMUX:inst15
+ 34. Parameter Settings for User Entity Instance: SetpointRegister:inst13|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 35. Parameter Settings for User Entity Instance: SetpointRegister:inst14|BUSMUX:inst17
+ 36. Parameter Settings for User Entity Instance: SetpointRegister:inst14|BUSMUX:inst15
+ 37. Parameter Settings for User Entity Instance: SetpointRegister:inst14|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 38. Parameter Settings for User Entity Instance: BUSMUX:inst3
+ 39. Parameter Settings for User Entity Instance: BUSMUX:inst8
+ 40. lpm_shiftreg Parameter Settings by Entity Instance
+ 41. Analysis & Synthesis Messages
 
 
 
@@ -47,13 +72,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Dec 20 19:17:34 2017       ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 20 23:13:22 2017       ;
 ; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name               ; HexpointThermostat                          ;
 ; Top-level Entity Name       ; HexpointThermostat                          ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 0                                           ;
-; Total pins                  ; 10                                          ;
+; Total logic elements        ; 173                                         ;
+; Total pins                  ; 14                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -146,25 +171,37 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
-; StoP.vhd                         ; yes             ; User Wizard-Generated File               ; C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd                      ;         ;
-; hexpointthermostat.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/intelFPGA_lite/17.1/HexpointThermostat/hexpointthermostat.bdf        ;         ;
-; busmux.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf       ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc      ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.tdf      ;         ;
-; aglobal171.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc   ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/muxlut.inc       ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/bypassff.inc     ;         ;
-; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.inc     ;         ;
-; db/mux_58c.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/intelFPGA_lite/17.1/HexpointThermostat/db/mux_58c.tdf                ;         ;
-; lpm_shiftreg.tdf                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_constant.inc ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dffeea.inc       ;         ;
-+----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------+---------+
+; SetpointRegister.bdf             ; yes             ; User Block Diagram/Schematic File        ; C:/intelFPGA_lite/17.1/HexpointThermostat/SetpointRegister.bdf                 ;         ;
+; StoP.vhd                         ; yes             ; User Wizard-Generated File               ; C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd                             ;         ;
+; compare13bits.vhd                ; yes             ; User Wizard-Generated File               ; C:/intelFPGA_lite/17.1/HexpointThermostat/compare13bits.vhd                    ;         ;
+; add13bits.vhd                    ; yes             ; User Wizard-Generated File               ; C:/intelFPGA_lite/17.1/HexpointThermostat/add13bits.vhd                        ;         ;
+; hexpointthermostat.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/intelFPGA_lite/17.1/HexpointThermostat/hexpointthermostat.bdf               ;         ;
+; lpm_compare.tdf                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_compare.tdf         ;         ;
+; comptree.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/comptree.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc          ;         ;
+; db/cmpr_46g.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/intelFPGA_lite/17.1/HexpointThermostat/db/cmpr_46g.tdf                      ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf              ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.tdf             ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/muxlut.inc              ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; db/mux_58c.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/intelFPGA_lite/17.1/HexpointThermostat/db/mux_58c.tdf                       ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; alt_stratix_add_sub.tdf          ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/alt_stratix_add_sub.tdf ;         ;
+; stratix_lcell.inc                ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_lcell.inc       ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf        ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
++----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -172,52 +209,119 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 0     ;
-;     -- Combinational with no register       ; 0     ;
+; Total logic elements                        ; 173   ;
+;     -- Combinational with no register       ; 95    ;
 ;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 0     ;
+;     -- Combinational with a register        ; 78    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- 2 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 92    ;
+;     -- 3 input functions                    ; 74    ;
+;     -- 2 input functions                    ; 7     ;
 ;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
+;     -- normal mode                          ; 101   ;
+;     -- arithmetic mode                      ; 72    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-; I/O pins                                    ; 10    ;
+; Total registers                             ; 78    ;
+; Total logic cells in carry chains           ; 78    ;
+; I/O pins                                    ; 14    ;
 ; Maximum fan-out node                        ; CLK   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 1     ;
-; Average fan-out                             ; 0.10  ;
+; Maximum fan-out                             ; 79    ;
+; Total fan-out                               ; 685   ;
+; Average fan-out                             ; 3.66  ;
 +---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                       ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name        ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
-; |HexpointThermostat        ; 0 (0)       ; 0            ; 0          ; 10   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat ; HexpointThermostat ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                        ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                            ; Entity Name         ; Library Name ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |HexpointThermostat                             ; 173 (0)     ; 78           ; 0          ; 14   ; 0            ; 95 (0)       ; 0 (0)             ; 78 (0)           ; 78 (0)          ; 0 (0)      ; |HexpointThermostat                                                                                                            ; HexpointThermostat  ; work         ;
+;    |SetpointRegister:inst10|                    ; 26 (13)     ; 13           ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 13 (13)          ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10                                                                                    ; SetpointRegister    ; work         ;
+;       |add13bits:inst|                          ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst                                                                     ; add13bits           ; work         ;
+;          |lpm_add_sub:LPM_ADD_SUB_component|    ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component                                   ; lpm_add_sub         ; work         ;
+;             |alt_stratix_add_sub:stratix_adder| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component|alt_stratix_add_sub:stratix_adder ; alt_stratix_add_sub ; work         ;
+;    |SetpointRegister:inst11|                    ; 26 (13)     ; 13           ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 13 (13)          ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst11                                                                                    ; SetpointRegister    ; work         ;
+;       |add13bits:inst|                          ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst11|add13bits:inst                                                                     ; add13bits           ; work         ;
+;          |lpm_add_sub:LPM_ADD_SUB_component|    ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst11|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component                                   ; lpm_add_sub         ; work         ;
+;             |alt_stratix_add_sub:stratix_adder| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst11|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component|alt_stratix_add_sub:stratix_adder ; alt_stratix_add_sub ; work         ;
+;    |SetpointRegister:inst12|                    ; 26 (13)     ; 13           ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 13 (13)          ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst12                                                                                    ; SetpointRegister    ; work         ;
+;       |add13bits:inst|                          ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst12|add13bits:inst                                                                     ; add13bits           ; work         ;
+;          |lpm_add_sub:LPM_ADD_SUB_component|    ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst12|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component                                   ; lpm_add_sub         ; work         ;
+;             |alt_stratix_add_sub:stratix_adder| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst12|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component|alt_stratix_add_sub:stratix_adder ; alt_stratix_add_sub ; work         ;
+;    |SetpointRegister:inst13|                    ; 26 (13)     ; 13           ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 13 (13)          ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst13                                                                                    ; SetpointRegister    ; work         ;
+;       |add13bits:inst|                          ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst13|add13bits:inst                                                                     ; add13bits           ; work         ;
+;          |lpm_add_sub:LPM_ADD_SUB_component|    ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst13|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component                                   ; lpm_add_sub         ; work         ;
+;             |alt_stratix_add_sub:stratix_adder| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst13|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component|alt_stratix_add_sub:stratix_adder ; alt_stratix_add_sub ; work         ;
+;    |SetpointRegister:inst14|                    ; 26 (13)     ; 13           ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 13 (13)          ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst14                                                                                    ; SetpointRegister    ; work         ;
+;       |add13bits:inst|                          ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst14|add13bits:inst                                                                     ; add13bits           ; work         ;
+;          |lpm_add_sub:LPM_ADD_SUB_component|    ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst14|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component                                   ; lpm_add_sub         ; work         ;
+;             |alt_stratix_add_sub:stratix_adder| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst14|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component|alt_stratix_add_sub:stratix_adder ; alt_stratix_add_sub ; work         ;
+;    |SetpointRegister:inst9|                     ; 27 (14)     ; 13           ; 0          ; 0    ; 0            ; 14 (1)       ; 0 (0)             ; 13 (13)          ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst9                                                                                     ; SetpointRegister    ; work         ;
+;       |add13bits:inst|                          ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst9|add13bits:inst                                                                      ; add13bits           ; work         ;
+;          |lpm_add_sub:LPM_ADD_SUB_component|    ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component                                    ; lpm_add_sub         ; work         ;
+;             |alt_stratix_add_sub:stratix_adder| ; 13 (13)     ; 0            ; 0          ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 0 (0)            ; 13 (13)         ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component|alt_stratix_add_sub:stratix_adder  ; alt_stratix_add_sub ; work         ;
+;    |busmux:inst2|                               ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst2                                                                                               ; busmux              ; work         ;
+;       |lpm_mux:$00000|                          ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst2|lpm_mux:$00000                                                                                ; lpm_mux             ; work         ;
+;          |mux_58c:auto_generated|               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst2|lpm_mux:$00000|mux_58c:auto_generated                                                         ; mux_58c             ; work         ;
+;    |compare13bits:inst24|                       ; 14 (0)      ; 0            ; 0          ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|compare13bits:inst24                                                                                       ; compare13bits       ; work         ;
+;       |lpm_compare:LPM_COMPARE_component|       ; 14 (0)      ; 0            ; 0          ; 0    ; 0            ; 14 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|compare13bits:inst24|lpm_compare:LPM_COMPARE_component                                                     ; lpm_compare         ; work         ;
+;          |cmpr_46g:auto_generated|              ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|compare13bits:inst24|lpm_compare:LPM_COMPARE_component|cmpr_46g:auto_generated                             ; cmpr_46g            ; work         ;
++-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                            ;
-+--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File ;
-+--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
-; Altera ; LPM_SHIFTREG ; 17.1    ; N/A          ; N/A          ; |HexpointThermostat|StoP:inst6 ; StoP.vhd        ;
-+--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                          ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------+-------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                            ; IP Include File   ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------+-------------------+
+; Altera ; LPM_SHIFTREG ; 17.1    ; N/A          ; N/A          ; |HexpointThermostat|StoP:inst6                             ; StoP.vhd          ;
+; Altera ; LPM_ADD_SUB  ; 17.1    ; N/A          ; N/A          ; |HexpointThermostat|SetpointRegister:inst9|add13bits:inst  ; add13bits.vhd     ;
+; Altera ; LPM_ADD_SUB  ; 17.1    ; N/A          ; N/A          ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst ; add13bits.vhd     ;
+; Altera ; LPM_ADD_SUB  ; 17.1    ; N/A          ; N/A          ; |HexpointThermostat|SetpointRegister:inst11|add13bits:inst ; add13bits.vhd     ;
+; Altera ; LPM_ADD_SUB  ; 17.1    ; N/A          ; N/A          ; |HexpointThermostat|SetpointRegister:inst12|add13bits:inst ; add13bits.vhd     ;
+; Altera ; LPM_ADD_SUB  ; 17.1    ; N/A          ; N/A          ; |HexpointThermostat|SetpointRegister:inst13|add13bits:inst ; add13bits.vhd     ;
+; Altera ; LPM_ADD_SUB  ; 17.1    ; N/A          ; N/A          ; |HexpointThermostat|SetpointRegister:inst14|add13bits:inst ; add13bits.vhd     ;
+; Altera ; LPM_COMPARE  ; 17.1    ; N/A          ; N/A          ; |HexpointThermostat|compare13bits:inst23                   ; compare13bits.vhd ;
+; Altera ; LPM_COMPARE  ; 17.1    ; N/A          ; N/A          ; |HexpointThermostat|compare13bits:inst24                   ; compare13bits.vhd ;
++--------+--------------+---------+--------------+--------------+------------------------------------------------------------+-------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++------------------------------------------------------------+----------------------------------------+
+; Register name                                              ; Reason for Removal                     ;
++------------------------------------------------------------+----------------------------------------+
+; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0..15] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 16                     ;                                        ;
++------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                    ;
++---------------------------------------------------------+---------------------------+----------------------------------------------------------+
+; Register name                                           ; Reason for Removal        ; Registers Removed due to This Register                   ;
++---------------------------------------------------------+---------------------------+----------------------------------------------------------+
+; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[7]  ; Stuck at GND              ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[6],  ;
+;                                                         ; due to stuck port data_in ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[5],  ;
+;                                                         ;                           ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[4],  ;
+;                                                         ;                           ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[3],  ;
+;                                                         ;                           ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[2],  ;
+;                                                         ;                           ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[1],  ;
+;                                                         ;                           ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0]   ;
+; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; Stuck at GND              ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14], ;
+;                                                         ; due to stuck port data_in ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13], ;
+;                                                         ;                           ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12]  ;
++---------------------------------------------------------+---------------------------+----------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -225,7 +329,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 78    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -235,18 +339,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: BUSMUX:inst ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; WIDTH          ; 13    ; Untyped                         ;
-+----------------+-------+---------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+; 3:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |HexpointThermostat|busmux:inst5|lpm_mux:$00000|mux_58c:auto_generated|result_node[11] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: compare13bits:inst24|lpm_compare:LPM_COMPARE_component ;
++------------------------+----------+-----------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                            ;
++------------------------+----------+-----------------------------------------------------------------+
+; lpm_width              ; 13       ; Signed Integer                                                  ;
+; LPM_REPRESENTATION     ; SIGNED   ; Untyped                                                         ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                         ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                         ;
+; ONE_INPUT_IS_CONSTANT  ; NO       ; Untyped                                                         ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                         ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                         ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                              ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                            ;
+; DEVICE_FAMILY          ; MAX V    ; Untyped                                                         ;
+; CBXI_PARAMETER         ; cmpr_46g ; Untyped                                                         ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                  ;
++------------------------+----------+-----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: BUSMUX:inst1 ;
+; Parameter Settings for User Entity Instance: BUSMUX:inst5 ;
 +----------------+-------+----------------------------------+
 ; Parameter Name ; Value ; Type                             ;
 +----------------+-------+----------------------------------+
@@ -255,23 +382,157 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: BUSMUX:inst2 ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; WIDTH          ; 13    ; Untyped                          ;
-+----------------+-------+----------------------------------+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst20 ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 13    ; Untyped                           ;
++----------------+-------+-----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: BUSMUX:inst3 ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; WIDTH          ; 13    ; Untyped                          ;
-+----------------+-------+----------------------------------+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst9|BUSMUX:inst17 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                  ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst9|BUSMUX:inst15 ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                  ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+-------------+-------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                          ;
++------------------------+-------------+-------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 13          ; Signed Integer                                                                ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                       ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                       ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                                       ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                       ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                       ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                       ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                       ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                       ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                            ;
+; DEVICE_FAMILY          ; MAX V       ; Untyped                                                                       ;
+; USE_WYS                ; OFF         ; Untyped                                                                       ;
+; STYLE                  ; FAST        ; Untyped                                                                       ;
+; CBXI_PARAMETER         ; add_sub_50g ; Untyped                                                                       ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                ;
++------------------------+-------------+-------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst10|BUSMUX:inst17 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                   ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst10|BUSMUX:inst15 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                   ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst10|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                           ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 13          ; Signed Integer                                                                 ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                        ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                        ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                                        ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                        ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                        ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                        ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                        ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                             ;
+; DEVICE_FAMILY          ; MAX V       ; Untyped                                                                        ;
+; USE_WYS                ; OFF         ; Untyped                                                                        ;
+; STYLE                  ; FAST        ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; add_sub_50g ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                 ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst11|BUSMUX:inst17 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                   ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst11|BUSMUX:inst15 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                   ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst11|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                           ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 13          ; Signed Integer                                                                 ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                        ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                        ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                                        ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                        ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                        ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                        ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                        ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                             ;
+; DEVICE_FAMILY          ; MAX V       ; Untyped                                                                        ;
+; USE_WYS                ; OFF         ; Untyped                                                                        ;
+; STYLE                  ; FAST        ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; add_sub_50g ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                 ;
++------------------------+-------------+--------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -293,6 +554,214 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: compare13bits:inst23|lpm_compare:LPM_COMPARE_component ;
++------------------------+----------+-----------------------------------------------------------------+
+; Parameter Name         ; Value    ; Type                                                            ;
++------------------------+----------+-----------------------------------------------------------------+
+; lpm_width              ; 13       ; Signed Integer                                                  ;
+; LPM_REPRESENTATION     ; SIGNED   ; Untyped                                                         ;
+; LPM_PIPELINE           ; 0        ; Untyped                                                         ;
+; CHAIN_SIZE             ; 8        ; Untyped                                                         ;
+; ONE_INPUT_IS_CONSTANT  ; NO       ; Untyped                                                         ;
+; CARRY_CHAIN            ; MANUAL   ; Untyped                                                         ;
+; CASCADE_CHAIN          ; MANUAL   ; Untyped                                                         ;
+; CARRY_CHAIN_LENGTH     ; 48       ; CARRY_CHAIN_LENGTH                                              ;
+; CASCADE_CHAIN_LENGTH   ; 2        ; CASCADE_CHAIN_LENGTH                                            ;
+; DEVICE_FAMILY          ; MAX V    ; Untyped                                                         ;
+; CBXI_PARAMETER         ; cmpr_46g ; Untyped                                                         ;
+; AUTO_CARRY_CHAINS      ; ON       ; AUTO_CARRY                                                      ;
+; IGNORE_CARRY_BUFFERS   ; OFF      ; IGNORE_CARRY                                                    ;
+; AUTO_CASCADE_CHAINS    ; ON       ; AUTO_CASCADE                                                    ;
+; IGNORE_CASCADE_BUFFERS ; OFF      ; IGNORE_CASCADE                                                  ;
++------------------------+----------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst2 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 13    ; Untyped                          ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; WIDTH          ; 13    ; Untyped                         ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst12|BUSMUX:inst17 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                   ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst12|BUSMUX:inst15 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                   ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst12|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                           ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 13          ; Signed Integer                                                                 ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                        ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                        ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                                        ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                        ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                        ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                        ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                        ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                             ;
+; DEVICE_FAMILY          ; MAX V       ; Untyped                                                                        ;
+; USE_WYS                ; OFF         ; Untyped                                                                        ;
+; STYLE                  ; FAST        ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; add_sub_50g ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                 ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst13|BUSMUX:inst17 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                   ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst13|BUSMUX:inst15 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                   ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst13|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                           ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 13          ; Signed Integer                                                                 ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                        ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                        ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                                        ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                        ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                        ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                        ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                        ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                             ;
+; DEVICE_FAMILY          ; MAX V       ; Untyped                                                                        ;
+; USE_WYS                ; OFF         ; Untyped                                                                        ;
+; STYLE                  ; FAST        ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; add_sub_50g ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                 ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst14|BUSMUX:inst17 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                   ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst14|BUSMUX:inst15 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 13    ; Untyped                                                   ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SetpointRegister:inst14|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                           ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 13          ; Signed Integer                                                                 ;
+; LPM_REPRESENTATION     ; SIGNED      ; Untyped                                                                        ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                        ;
+; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                                                                        ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                        ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                        ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                        ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                        ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                             ;
+; DEVICE_FAMILY          ; MAX V       ; Untyped                                                                        ;
+; USE_WYS                ; OFF         ; Untyped                                                                        ;
+; STYLE                  ; FAST        ; Untyped                                                                        ;
+; CBXI_PARAMETER         ; add_sub_50g ; Untyped                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                 ;
++------------------------+-------------+--------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst3 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 13    ; Untyped                          ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst8 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 13    ; Untyped                          ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------+
 ; lpm_shiftreg Parameter Settings by Entity Instance                          ;
 +----------------------------+------------------------------------------------+
@@ -311,7 +780,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Dec 20 19:17:20 2017
+    Info: Processing started: Wed Dec 20 23:13:08 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HexpointThermostat -c HexpointThermostat
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -327,34 +796,47 @@ Info (12021): Found 2 design units, including 1 entities, in source file stop.vh
 Info (12021): Found 2 design units, including 1 entities, in source file compare13bits.vhd
     Info (12022): Found design unit 1: compare13bits-SYN File: C:/intelFPGA_lite/17.1/HexpointThermostat/compare13bits.vhd Line: 53
     Info (12023): Found entity 1: compare13bits File: C:/intelFPGA_lite/17.1/HexpointThermostat/compare13bits.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file add13bits.vhd
+    Info (12022): Found design unit 1: add13bits-SYN File: C:/intelFPGA_lite/17.1/HexpointThermostat/add13bits.vhd Line: 52
+    Info (12023): Found entity 1: add13bits File: C:/intelFPGA_lite/17.1/HexpointThermostat/add13bits.vhd Line: 42
 Warning (12125): Using design file hexpointthermostat.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: HexpointThermostat
 Info (12127): Elaborating entity "HexpointThermostat" for the top level hierarchy
-Warning (275043): Pin "Heat" is missing source
-Warning (275043): Pin "Cool" is missing source
-Warning (275009): Pin "Inc" not connected
-Warning (275009): Pin "Dec" not connected
-Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst"
-Info (12130): Elaborated megafunction instantiation "BUSMUX:inst"
-Info (12133): Instantiated megafunction "BUSMUX:inst" with the following parameter:
+Warning (275011): Block or symbol "StoP" of instance "inst6" overlaps another block or symbol
+Warning (275011): Block or symbol "NOT" of instance "inst4" overlaps another block or symbol
+Warning (275009): Pin "SDA" not connected
+Warning (275009): Pin "controlsActive" not connected
+Info (12128): Elaborating entity "compare13bits" for hierarchy "compare13bits:inst24"
+Info (12128): Elaborating entity "lpm_compare" for hierarchy "compare13bits:inst24|lpm_compare:LPM_COMPARE_component" File: C:/intelFPGA_lite/17.1/HexpointThermostat/compare13bits.vhd Line: 78
+Info (12130): Elaborated megafunction instantiation "compare13bits:inst24|lpm_compare:LPM_COMPARE_component" File: C:/intelFPGA_lite/17.1/HexpointThermostat/compare13bits.vhd Line: 78
+Info (12133): Instantiated megafunction "compare13bits:inst24|lpm_compare:LPM_COMPARE_component" with the following parameter: File: C:/intelFPGA_lite/17.1/HexpointThermostat/compare13bits.vhd Line: 78
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_COMPARE"
+    Info (12134): Parameter "lpm_width" = "13"
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_46g.tdf
+    Info (12023): Found entity 1: cmpr_46g File: C:/intelFPGA_lite/17.1/HexpointThermostat/db/cmpr_46g.tdf Line: 22
+Info (12128): Elaborating entity "cmpr_46g" for hierarchy "compare13bits:inst24|lpm_compare:LPM_COMPARE_component|cmpr_46g:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_compare.tdf Line: 280
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst5"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst5"
+Info (12133): Instantiated megafunction "BUSMUX:inst5" with the following parameter:
     Info (12134): Parameter "WIDTH" = "13"
-Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst|lpm_mux:$00000" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
-Info (12131): Elaborated megafunction instantiation "BUSMUX:inst|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst5|lpm_mux:$00000" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "BUSMUX:inst5|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst5" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_58c.tdf
     Info (12023): Found entity 1: mux_58c File: C:/intelFPGA_lite/17.1/HexpointThermostat/db/mux_58c.tdf Line: 22
-Info (12128): Elaborating entity "mux_58c" for hierarchy "BUSMUX:inst|lpm_mux:$00000|mux_58c:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
-Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst1"
-Info (12130): Elaborated megafunction instantiation "BUSMUX:inst1"
-Info (12133): Instantiated megafunction "BUSMUX:inst1" with the following parameter:
-    Info (12134): Parameter "WIDTH" = "13"
-Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst2"
-Info (12130): Elaborated megafunction instantiation "BUSMUX:inst2"
-Info (12133): Instantiated megafunction "BUSMUX:inst2" with the following parameter:
-    Info (12134): Parameter "WIDTH" = "13"
-Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst3"
-Info (12130): Elaborated megafunction instantiation "BUSMUX:inst3"
-Info (12133): Instantiated megafunction "BUSMUX:inst3" with the following parameter:
-    Info (12134): Parameter "WIDTH" = "13"
+Info (12128): Elaborating entity "mux_58c" for hierarchy "BUSMUX:inst5|lpm_mux:$00000|mux_58c:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "SetpointRegister" for hierarchy "SetpointRegister:inst9"
+Info (12128): Elaborating entity "add13bits" for hierarchy "SetpointRegister:inst9|add13bits:inst"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component" File: C:/intelFPGA_lite/17.1/HexpointThermostat/add13bits.vhd Line: 81
+Info (12130): Elaborated megafunction instantiation "SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component" File: C:/intelFPGA_lite/17.1/HexpointThermostat/add13bits.vhd Line: 81
+Info (12133): Instantiated megafunction "SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component" with the following parameter: File: C:/intelFPGA_lite/17.1/HexpointThermostat/add13bits.vhd Line: 81
+    Info (12134): Parameter "lpm_direction" = "UNUSED"
+    Info (12134): Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=YES,CIN_USED=NO"
+    Info (12134): Parameter "lpm_representation" = "SIGNED"
+    Info (12134): Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info (12134): Parameter "lpm_width" = "13"
+Info (12128): Elaborating entity "alt_stratix_add_sub" for hierarchy "SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component|alt_stratix_add_sub:stratix_adder" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 122
+Info (12131): Elaborated megafunction instantiation "SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component|alt_stratix_add_sub:stratix_adder", which is child of megafunction instantiation "SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 122
 Info (12128): Elaborating entity "StoP" for hierarchy "StoP:inst6"
 Info (12128): Elaborating entity "lpm_shiftreg" for hierarchy "StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component" File: C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd Line: 74
 Info (12130): Elaborated megafunction instantiation "StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component" File: C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd Line: 74
@@ -362,23 +844,22 @@ Info (12133): Instantiated megafunction "StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_co
     Info (12134): Parameter "lpm_direction" = "RIGHT"
     Info (12134): Parameter "lpm_type" = "LPM_SHIFTREG"
     Info (12134): Parameter "lpm_width" = "16"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Heat" is stuck at GND
-    Warning (13410): Pin "Cool" is stuck at GND
-Warning (21074): Design contains 6 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "NightNOTday"
-    Warning (15610): No output dependent on input pin "passiveNOTactive"
-    Warning (15610): No output dependent on input pin "controlsActive"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst3"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst3"
+Info (12133): Instantiated megafunction "BUSMUX:inst3" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "13"
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "hiTrueSetDisp"
     Warning (15610): No output dependent on input pin "SDA"
-    Warning (15610): No output dependent on input pin "Inc"
-    Warning (15610): No output dependent on input pin "Dec"
-Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
+    Warning (15610): No output dependent on input pin "controlsActive"
+Info (21057): Implemented 187 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
     Info (21059): Implemented 3 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 660 megabytes
-    Info: Processing ended: Wed Dec 20 19:17:34 2017
+    Info (21061): Implemented 173 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 670 megabytes
+    Info: Processing ended: Wed Dec 20 23:13:22 2017
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:31
+    Info: Total CPU time (on all processors): 00:00:29
 
 

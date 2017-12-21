@@ -1,11 +1,11 @@
-Fitter Status : Successful - Wed Dec 20 19:17:38 2017
+Fitter Status : Successful - Wed Dec 20 23:13:25 2017
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : HexpointThermostat
 Top-level Entity Name : HexpointThermostat
 Family : MAX V
 Device : 5M570ZT100C5
 Timing Models : Final
-Total logic elements : 0 / 570 ( 0 % )
-Total pins : 10 / 74 ( 14 % )
+Total logic elements : 173 / 570 ( 30 % )
+Total pins : 14 / 74 ( 19 % )
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )

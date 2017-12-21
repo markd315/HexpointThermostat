@@ -1,5 +1,5 @@
 Flow report for HexpointThermostat
-Wed Dec 20 19:17:43 2017
+Wed Dec 20 23:13:30 2017
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Wed Dec 20 19:17:43 2017       ;
+; Flow Status           ; Successful - Wed Dec 20 23:13:30 2017       ;
 ; Quartus Prime Version ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name         ; HexpointThermostat                          ;
 ; Top-level Entity Name ; HexpointThermostat                          ;
 ; Family                ; MAX V                                       ;
 ; Device                ; 5M570ZT100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 0 / 570 ( 0 % )                             ;
-; Total pins            ; 10 / 74 ( 14 % )                            ;
+; Total logic elements  ; 173 / 570 ( 30 % )                          ;
+; Total pins            ; 14 / 74 ( 19 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -59,7 +59,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/20/2017 19:17:20 ;
+; Start date & time ; 12/20/2017 23:13:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; HexpointThermostat  ;
 +-------------------+---------------------+
@@ -70,7 +70,7 @@ refer to the applicable agreement for further details.
 +-------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name               ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID         ; 22727985108119.151381544017864 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID         ; 22727985108119.151382958804396 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT        ; Vhdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL           ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                ; 1 ps                           ; --            ; --          ; eda_simulation ;
@@ -80,6 +80,8 @@ refer to the applicable agreement for further details.
 ; MISC_FILE                     ; StoP.cmp                       ; --            ; --          ; --             ;
 ; MISC_FILE                     ; compare13bits.bsf              ; --            ; --          ; --             ;
 ; MISC_FILE                     ; compare13bits.cmp              ; --            ; --          ; --             ;
+; MISC_FILE                     ; add13bits.bsf                  ; --            ; --          ; --             ;
+; MISC_FILE                     ; add13bits.cmp                  ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION ; No Heat Sink With Still Air    ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY      ; output_files                   ; --            ; --          ; --             ;
 +-------------------------------+--------------------------------+---------------+-------------+----------------+
@@ -90,12 +92,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:14     ; 1.0                     ; 660 MB              ; 00:00:31                           ;
-; Fitter                    ; 00:00:03     ; 1.0                     ; 956 MB              ; 00:00:01                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 541 MB              ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 544 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 502 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:20     ; --                      ; --                  ; 00:00:35                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 670 MB              ; 00:00:29                           ;
+; Fitter                    ; 00:00:03     ; 1.0                     ; 960 MB              ; 00:00:03                           ;
+; Assembler                 ; 00:00:00     ; 1.0                     ; 543 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 545 MB              ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 503 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:18     ; --                      ; --                  ; 00:00:35                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
