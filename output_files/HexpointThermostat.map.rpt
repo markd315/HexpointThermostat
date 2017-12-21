@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HexpointThermostat
-Wed Dec 20 13:12:26 2017
+Wed Dec 20 19:17:34 2017
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -13,8 +13,15 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Analysis & Synthesis Messages
+  8. Analysis & Synthesis IP Cores Summary
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: BUSMUX:inst
+ 11. Parameter Settings for User Entity Instance: BUSMUX:inst1
+ 12. Parameter Settings for User Entity Instance: BUSMUX:inst2
+ 13. Parameter Settings for User Entity Instance: BUSMUX:inst3
+ 14. Parameter Settings for User Entity Instance: StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component
+ 15. lpm_shiftreg Parameter Settings by Entity Instance
+ 16. Analysis & Synthesis Messages
 
 
 
@@ -40,13 +47,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Dec 20 13:12:26 2017       ;
+; Analysis & Synthesis Status ; Successful - Wed Dec 20 19:17:34 2017       ;
 ; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name               ; HexpointThermostat                          ;
 ; Top-level Entity Name       ; HexpointThermostat                          ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 1                                           ;
-; Total pins                  ; 2                                           ;
+; Total logic elements        ; 0                                           ;
+; Total pins                  ; 10                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -139,13 +146,25 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                     ; Library ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+---------+
-; hexpointthermostat.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/intelFPGA_lite/17.1/HexpointThermostat/hexpointthermostat.bdf ;         ;
-+----------------------------------+-----------------+------------------------------------------+------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
+; StoP.vhd                         ; yes             ; User Wizard-Generated File               ; C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd                      ;         ;
+; hexpointthermostat.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/intelFPGA_lite/17.1/HexpointThermostat/hexpointthermostat.bdf        ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf       ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.inc      ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.tdf      ;         ;
+; aglobal171.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc   ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/muxlut.inc       ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/bypassff.inc     ;         ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.inc     ;         ;
+; db/mux_58c.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/intelFPGA_lite/17.1/HexpointThermostat/db/mux_58c.tdf                ;         ;
+; lpm_shiftreg.tdf                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_constant.inc ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dffeea.inc       ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -153,32 +172,32 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 1     ;
+; Total logic elements                        ; 0     ;
 ;     -- Combinational with no register       ; 0     ;
 ;     -- Register only                        ; 0     ;
-;     -- Combinational with a register        ; 1     ;
+;     -- Combinational with a register        ; 0     ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 0     ;
 ;     -- 3 input functions                    ; 0     ;
 ;     -- 2 input functions                    ; 0     ;
-;     -- 1 input functions                    ; 1     ;
+;     -- 1 input functions                    ; 0     ;
 ;     -- 0 input functions                    ; 0     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 1     ;
+;     -- normal mode                          ; 0     ;
 ;     -- arithmetic mode                      ; 0     ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
 ;     -- asynchronous clear/load mode         ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 1     ;
-; I/O pins                                    ; 2     ;
-; Maximum fan-out node                        ; inst  ;
-; Maximum fan-out                             ; 2     ;
-; Total fan-out                               ; 3     ;
-; Average fan-out                             ; 1.00  ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 10    ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 1     ;
+; Average fan-out                             ; 0.10  ;
 +---------------------------------------------+-------+
 
 
@@ -187,9 +206,18 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Entity Name        ; Library Name ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
-; |HexpointThermostat        ; 1 (1)       ; 1            ; 0          ; 2    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat ; HexpointThermostat ; work         ;
+; |HexpointThermostat        ; 0 (0)       ; 0            ; 0          ; 10   ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat ; HexpointThermostat ; work         ;
 +----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                            ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                ; IP Include File ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
+; Altera ; LPM_SHIFTREG ; 17.1    ; N/A          ; N/A          ; |HexpointThermostat|StoP:inst6 ; StoP.vhd        ;
++--------+--------------+---------+--------------+--------------+--------------------------------+-----------------+
 
 
 +------------------------------------------------------+
@@ -197,7 +225,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1     ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -207,28 +235,150 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; WIDTH          ; 13    ; Untyped                         ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst1 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 13    ; Untyped                          ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst2 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 13    ; Untyped                          ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BUSMUX:inst3 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 13    ; Untyped                          ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component ;
++------------------------+--------+-----------------------------------------------------------+
+; Parameter Name         ; Value  ; Type                                                      ;
++------------------------+--------+-----------------------------------------------------------+
+; LPM_WIDTH              ; 16     ; Signed Integer                                            ;
+; LPM_DIRECTION          ; RIGHT  ; Untyped                                                   ;
+; LPM_AVALUE             ; UNUSED ; Untyped                                                   ;
+; LPM_SVALUE             ; UNUSED ; Untyped                                                   ;
+; DEVICE_FAMILY          ; MAX V  ; Untyped                                                   ;
+; AUTO_CARRY_CHAINS      ; ON     ; AUTO_CARRY                                                ;
+; IGNORE_CARRY_BUFFERS   ; OFF    ; IGNORE_CARRY                                              ;
+; AUTO_CASCADE_CHAINS    ; ON     ; AUTO_CASCADE                                              ;
+; IGNORE_CASCADE_BUFFERS ; OFF    ; IGNORE_CASCADE                                            ;
++------------------------+--------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; lpm_shiftreg Parameter Settings by Entity Instance                          ;
++----------------------------+------------------------------------------------+
+; Name                       ; Value                                          ;
++----------------------------+------------------------------------------------+
+; Number of entity instances ; 1                                              ;
+; Entity Instance            ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component ;
+;     -- LPM_WIDTH           ; 16                                             ;
+;     -- LPM_DIRECTION       ; RIGHT                                          ;
++----------------------------+------------------------------------------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Dec 20 13:12:13 2017
+    Info: Processing started: Wed Dec 20 19:17:20 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HexpointThermostat -c HexpointThermostat
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Warning (12019): Can't analyze file -- file HexpointThermostat/HexpointThermostat.bdf is missing
+Warning (12019): Can't analyze file -- file comparator.vhd is missing
+Info (12021): Found 1 design units, including 1 entities, in source file setpointregister.bdf
+    Info (12023): Found entity 1: SetpointRegister
+Info (12021): Found 0 design units, including 0 entities, in source file comparatorlessthan.vhd
+Warning (12019): Can't analyze file -- file 31mux.bdf is missing
+Info (12021): Found 2 design units, including 1 entities, in source file stop.vhd
+    Info (12022): Found design unit 1: stop-SYN File: C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd Line: 52
+    Info (12023): Found entity 1: StoP File: C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd Line: 42
+Info (12021): Found 2 design units, including 1 entities, in source file compare13bits.vhd
+    Info (12022): Found design unit 1: compare13bits-SYN File: C:/intelFPGA_lite/17.1/HexpointThermostat/compare13bits.vhd Line: 53
+    Info (12023): Found entity 1: compare13bits File: C:/intelFPGA_lite/17.1/HexpointThermostat/compare13bits.vhd Line: 42
 Warning (12125): Using design file hexpointthermostat.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: HexpointThermostat
 Info (12127): Elaborating entity "HexpointThermostat" for the top level hierarchy
-Info (21057): Implemented 3 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 1 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 589 megabytes
-    Info: Processing ended: Wed Dec 20 13:12:26 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+Warning (275043): Pin "Heat" is missing source
+Warning (275043): Pin "Cool" is missing source
+Warning (275009): Pin "Inc" not connected
+Warning (275009): Pin "Dec" not connected
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst"
+Info (12133): Instantiated megafunction "BUSMUX:inst" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "13"
+Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst|lpm_mux:$00000" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12131): Elaborated megafunction instantiation "BUSMUX:inst|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/busmux.tdf Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_58c.tdf
+    Info (12023): Found entity 1: mux_58c File: C:/intelFPGA_lite/17.1/HexpointThermostat/db/mux_58c.tdf Line: 22
+Info (12128): Elaborating entity "mux_58c" for hierarchy "BUSMUX:inst|lpm_mux:$00000|mux_58c:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 86
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst1"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst1"
+Info (12133): Instantiated megafunction "BUSMUX:inst1" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "13"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst2"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst2"
+Info (12133): Instantiated megafunction "BUSMUX:inst2" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "13"
+Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst3"
+Info (12130): Elaborated megafunction instantiation "BUSMUX:inst3"
+Info (12133): Instantiated megafunction "BUSMUX:inst3" with the following parameter:
+    Info (12134): Parameter "WIDTH" = "13"
+Info (12128): Elaborating entity "StoP" for hierarchy "StoP:inst6"
+Info (12128): Elaborating entity "lpm_shiftreg" for hierarchy "StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component" File: C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd Line: 74
+Info (12130): Elaborated megafunction instantiation "StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component" File: C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd Line: 74
+Info (12133): Instantiated megafunction "StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component" with the following parameter: File: C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd Line: 74
+    Info (12134): Parameter "lpm_direction" = "RIGHT"
+    Info (12134): Parameter "lpm_type" = "LPM_SHIFTREG"
+    Info (12134): Parameter "lpm_width" = "16"
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Heat" is stuck at GND
+    Warning (13410): Pin "Cool" is stuck at GND
+Warning (21074): Design contains 6 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "NightNOTday"
+    Warning (15610): No output dependent on input pin "passiveNOTactive"
+    Warning (15610): No output dependent on input pin "controlsActive"
+    Warning (15610): No output dependent on input pin "SDA"
+    Warning (15610): No output dependent on input pin "Inc"
+    Warning (15610): No output dependent on input pin "Dec"
+Info (21057): Implemented 10 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 3 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 660 megabytes
+    Info: Processing ended: Wed Dec 20 19:17:34 2017
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:31
 
 

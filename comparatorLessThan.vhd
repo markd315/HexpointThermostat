@@ -1,1 +1,1 @@
-/*Write comparator function.
+--Write comparator function.
