@@ -1,5 +1,5 @@
 Fitter report for HexpointThermostat
-Thu Dec 21 18:04:13 2017
+Fri Dec 22 14:22:04 2017
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -56,15 +56,15 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Thu Dec 21 18:04:13 2017       ;
+; Fitter Status         ; Successful - Fri Dec 22 14:22:04 2017       ;
 ; Quartus Prime Version ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name         ; HexpointThermostat                          ;
 ; Top-level Entity Name ; HexpointThermostat                          ;
 ; Family                ; MAX V                                       ;
 ; Device                ; 5M570ZT100C5                                ;
 ; Timing Models         ; Final                                       ;
-; Total logic elements  ; 185 / 570 ( 32 % )                          ;
-; Total pins            ; 23 / 74 ( 31 % )                            ;
+; Total logic elements  ; 193 / 570 ( 34 % )                          ;
+; Total pins            ; 24 / 74 ( 32 % )                            ;
 ; Total virtual pins    ; 0                                           ;
 ; UFM blocks            ; 0 / 1 ( 0 % )                               ;
 +-----------------------+---------------------------------------------+
@@ -132,7 +132,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.0%      ;
+;     Processor 2            ;   1.1%      ;
 +----------------------------+-------------+
 
 
@@ -142,53 +142,53 @@ refer to the applicable agreement for further details.
 The pin-out file can be found in C:/intelFPGA_lite/17.1/HexpointThermostat/output_files/HexpointThermostat.pin.
 
 
-+------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                    ;
-+---------------------------------------------+--------------------+
-; Resource                                    ; Usage              ;
-+---------------------------------------------+--------------------+
-; Total logic elements                        ; 185 / 570 ( 32 % ) ;
-;     -- Combinational with no register       ; 97                 ;
-;     -- Register only                        ; 0                  ;
-;     -- Combinational with a register        ; 88                 ;
-;                                             ;                    ;
-; Logic element usage by number of LUT inputs ;                    ;
-;     -- 4 input functions                    ; 93                 ;
-;     -- 3 input functions                    ; 74                 ;
-;     -- 2 input functions                    ; 8                  ;
-;     -- 1 input functions                    ; 10                 ;
-;     -- 0 input functions                    ; 0                  ;
-;                                             ;                    ;
-; Logic elements by mode                      ;                    ;
-;     -- normal mode                          ; 113                ;
-;     -- arithmetic mode                      ; 72                 ;
-;     -- qfbk mode                            ; 0                  ;
-;     -- register cascade mode                ; 0                  ;
-;     -- synchronous clear/load mode          ; 0                  ;
-;     -- asynchronous clear/load mode         ; 10                 ;
-;                                             ;                    ;
-; Total registers                             ; 88 / 570 ( 15 % )  ;
-; Total LABs                                  ; 32 / 57 ( 56 % )   ;
-; Logic elements in carry chains              ; 78                 ;
-; Virtual pins                                ; 0                  ;
-; I/O pins                                    ; 23 / 74 ( 31 % )   ;
-;     -- Clock pins                           ; 4 / 4 ( 100 % )    ;
-;                                             ;                    ;
-; UFM blocks                                  ; 0 / 1 ( 0 % )      ;
-;                                             ;                    ;
-;     -- Total Fixed Point DSP Blocks         ; 0                  ;
-;     -- Total Floating Point DSP Blocks      ; 0                  ;
-;                                             ;                    ;
-; Global signals                              ; 3                  ;
-;     -- Global clocks                        ; 3 / 4 ( 75 % )     ;
-; JTAGs                                       ; 0 / 1 ( 0 % )      ;
-; Average interconnect usage (total/H/V)      ; 6.9% / 8.9% / 4.8% ;
-; Peak interconnect usage (total/H/V)         ; 6.9% / 8.9% / 4.8% ;
-; Maximum fan-out                             ; 83                 ;
-; Highest non-global fan-out                  ; 79                 ;
-; Total fan-out                               ; 763                ;
-; Average fan-out                             ; 3.67               ;
-+---------------------------------------------+--------------------+
++-------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                     ;
++---------------------------------------------+---------------------+
+; Resource                                    ; Usage               ;
++---------------------------------------------+---------------------+
+; Total logic elements                        ; 193 / 570 ( 34 % )  ;
+;     -- Combinational with no register       ; 97                  ;
+;     -- Register only                        ; 4                   ;
+;     -- Combinational with a register        ; 92                  ;
+;                                             ;                     ;
+; Logic element usage by number of LUT inputs ;                     ;
+;     -- 4 input functions                    ; 94                  ;
+;     -- 3 input functions                    ; 75                  ;
+;     -- 2 input functions                    ; 8                   ;
+;     -- 1 input functions                    ; 11                  ;
+;     -- 0 input functions                    ; 1                   ;
+;                                             ;                     ;
+; Logic elements by mode                      ;                     ;
+;     -- normal mode                          ; 121                 ;
+;     -- arithmetic mode                      ; 72                  ;
+;     -- qfbk mode                            ; 2                   ;
+;     -- register cascade mode                ; 0                   ;
+;     -- synchronous clear/load mode          ; 59                  ;
+;     -- asynchronous clear/load mode         ; 18                  ;
+;                                             ;                     ;
+; Total registers                             ; 96 / 570 ( 17 % )   ;
+; Total LABs                                  ; 32 / 57 ( 56 % )    ;
+; Logic elements in carry chains              ; 78                  ;
+; Virtual pins                                ; 0                   ;
+; I/O pins                                    ; 24 / 74 ( 32 % )    ;
+;     -- Clock pins                           ; 3 / 4 ( 75 % )      ;
+;                                             ;                     ;
+; UFM blocks                                  ; 0 / 1 ( 0 % )       ;
+;                                             ;                     ;
+;     -- Total Fixed Point DSP Blocks         ; 0                   ;
+;     -- Total Floating Point DSP Blocks      ; 0                   ;
+;                                             ;                     ;
+; Global signals                              ; 4                   ;
+;     -- Global clocks                        ; 4 / 4 ( 100 % )     ;
+; JTAGs                                       ; 0 / 1 ( 0 % )       ;
+; Average interconnect usage (total/H/V)      ; 7.0% / 10.2% / 3.6% ;
+; Peak interconnect usage (total/H/V)         ; 7.0% / 10.2% / 3.6% ;
+; Maximum fan-out                             ; 133                 ;
+; Highest non-global fan-out                  ; 133                 ;
+; Total fan-out                               ; 845                 ;
+; Average fan-out                             ; 3.89                ;
++---------------------------------------------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -196,19 +196,19 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/HexpointThermostat/outpu
 +--------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 ; Name               ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ; Slow Slew Rate ;
 +--------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
-; CLK                ; 12    ; 1        ; 0            ; 5            ; 0           ; 80                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; Dec                ; 62    ; 2        ; 13           ; 4            ; 4           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; Dout               ; 28    ; 1        ; 4            ; 3            ; 3           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; Inc                ; 44    ; 1        ; 8            ; 3            ; 2           ; 79                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; CLK                ; 12    ; 1        ; 0            ; 5            ; 0           ; 88                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; Dec                ; 29    ; 1        ; 4            ; 3            ; 2           ; 55                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; Dout               ; 7     ; 1        ; 0            ; 7            ; 4           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; Inc                ; 36    ; 1        ; 6            ; 3            ; 0           ; 133                   ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
 ; Initialize         ; 64    ; 2        ; 13           ; 4            ; 3           ; 83                    ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; NightNOTday        ; 66    ; 2        ; 13           ; 4            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; NightNOTday18      ; 42    ; 1        ; 7            ; 3            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; controlsActive     ; 85    ; 2        ; 8            ; 8            ; 2           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; fbctestclk         ; 7     ; 1        ; 0            ; 7            ; 4           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; NightNOTday        ; 40    ; 1        ; 7            ; 3            ; 2           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; NightNOTday18      ; 92    ; 2        ; 6            ; 8            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; controlsActive     ; 56    ; 2        ; 13           ; 2            ; 2           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; fbctestclk         ; 70    ; 2        ; 13           ; 6            ; 5           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
 ; fbctestrestart     ; 14    ; 1        ; 0            ; 5            ; 1           ; 5                     ; 0                  ; yes    ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; hiTrueSetDisp      ; 38    ; 1        ; 7            ; 3            ; 3           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; passiveNOTactive   ; 67    ; 2        ; 13           ; 4            ; 1           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
-; passiveNOTactive19 ; 41    ; 1        ; 7            ; 3            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; hiTrueSetDisp      ; 85    ; 2        ; 8            ; 8            ; 2           ; 0                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; passiveNOTactive   ; 42    ; 1        ; 7            ; 3            ; 0           ; 1                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; passiveNOTactive19 ; 97    ; 2        ; 5            ; 8            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
 +--------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
 
 
@@ -217,16 +217,17 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/HexpointThermostat/outpu
 +-------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
 +-------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
-; CS    ; 33    ; 1        ; 6            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; Cool  ; 68    ; 2        ; 13           ; 4            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; Heat  ; 40    ; 1        ; 7            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
-; Mof32 ; 97    ; 2        ; 5            ; 8            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; SCL   ; 18    ; 1        ; 0            ; 5            ; 5           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; fbc0  ; 2     ; 1        ; 1            ; 8            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; fbc1  ; 6     ; 1        ; 0            ; 7            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
-; fbc2  ; 1     ; 2        ; 3            ; 8            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; fbc3  ; 100   ; 2        ; 3            ; 8            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
-; fbc4  ; 4     ; 1        ; 0            ; 7            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; CS    ; 41    ; 1        ; 7            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; Cool  ; 43    ; 1        ; 8            ; 3            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; Din   ; 98    ; 2        ; 4            ; 8            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; Heat  ; 91    ; 2        ; 6            ; 8            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; Mof32 ; 44    ; 1        ; 8            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; SCL   ; 15    ; 1        ; 0            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; fbc0  ; 72    ; 2        ; 13           ; 6            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; fbc1  ; 71    ; 2        ; 13           ; 6            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; fbc2  ; 75    ; 2        ; 13           ; 7            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; fbc3  ; 73    ; 2        ; 13           ; 7            ; 5           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; fbc4  ; 74    ; 2        ; 13           ; 7            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
 +-------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
 
 
@@ -235,8 +236,8 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/HexpointThermostat/outpu
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 14 / 35 ( 40 % ) ; 3.3V          ; --           ;
-; 2        ; 9 / 39 ( 23 % )  ; 3.3V          ; --           ;
+; 1        ; 11 / 35 ( 31 % ) ; 3.3V          ; --           ;
+; 2        ; 13 / 39 ( 33 % ) ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -245,13 +246,13 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/HexpointThermostat/outpu
 +----------+------------+----------+--------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 ; Location ; Pad Number ; I/O Bank ; Pin Name/Usage     ; Dir.   ; I/O Standard ; Voltage ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
 +----------+------------+----------+--------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
-; 1        ; 161        ; 2        ; fbc2               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 2        ; 2          ; 1        ; fbc0               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 1        ; 161        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 2        ; 2          ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 3        ; 4          ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 4        ; 6          ; 1        ; fbc4               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 4        ; 6          ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 5        ; 8          ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 6        ; 9          ; 1        ; fbc1               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 7        ; 10         ; 1        ; fbctestclk         ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 6        ; 9          ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 7        ; 10         ; 1        ; Dout               ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 8        ;            ;          ; GND                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 9        ;            ; 1        ; VCCIO1             ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 10       ;            ;          ; GND                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -259,10 +260,10 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/HexpointThermostat/outpu
 ; 12       ; 20         ; 1        ; CLK                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 13       ;            ;          ; VCCINT             ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
 ; 14       ; 21         ; 1        ; fbctestrestart     ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 15       ; 22         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 15       ; 22         ; 1        ; SCL                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 16       ; 23         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 17       ; 24         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 18       ; 25         ; 1        ; SCL                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 18       ; 25         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 19       ; 32         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 20       ; 34         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 21       ; 36         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -272,23 +273,23 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/HexpointThermostat/outpu
 ; 25       ; 41         ; 1        ; #TDO               ; output ;              ;         ; --         ;                 ; --       ; --           ;
 ; 26       ; 47         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 27       ; 48         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 28       ; 50         ; 1        ; Dout               ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 29       ; 51         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 28       ; 50         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 29       ; 51         ; 1        ; Dec                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 30       ; 52         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 31       ;            ; 1        ; VCCIO1             ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 32       ;            ;          ; GND                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 33       ; 58         ; 1        ; CS                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 33       ; 58         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 34       ; 59         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 35       ; 60         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 36       ; 61         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 36       ; 61         ; 1        ; Inc                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 37       ;            ;          ; GND                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 38       ; 62         ; 1        ; hiTrueSetDisp      ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 38       ; 62         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 39       ;            ;          ; VCCINT             ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
-; 40       ; 63         ; 1        ; Heat               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 41       ; 64         ; 1        ; passiveNOTactive19 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 42       ; 65         ; 1        ; NightNOTday18      ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 43       ; 66         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 44       ; 67         ; 1        ; Inc                ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 40       ; 63         ; 1        ; NightNOTday        ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 41       ; 64         ; 1        ; CS                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 42       ; 65         ; 1        ; passiveNOTactive   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 43       ; 66         ; 1        ; Cool               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 44       ; 67         ; 1        ; Mof32              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 45       ;            ; 1        ; VCCIO1             ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 46       ;            ;          ; GND                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 47       ; 71         ; 1        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -300,26 +301,26 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/HexpointThermostat/outpu
 ; 53       ; 84         ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 54       ; 86         ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 55       ; 89         ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 56       ; 91         ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 56       ; 91         ; 2        ; controlsActive     ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 57       ; 92         ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 58       ; 93         ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 59       ;            ; 2        ; VCCIO2             ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 60       ;            ;          ; GND                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 61       ; 98         ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 62       ; 101        ; 2        ; Dec                ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 62       ; 101        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 63       ;            ;          ; VCCINT             ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
 ; 64       ; 102        ; 2        ; Initialize         ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 65       ;            ;          ; GND                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 66       ; 103        ; 2        ; NightNOTday        ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 67       ; 104        ; 2        ; passiveNOTactive   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; 68       ; 105        ; 2        ; Cool               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 66       ; 103        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 67       ; 104        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 68       ; 105        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; 69       ; 111        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 70       ; 112        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 71       ; 115        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 72       ; 116        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 73       ; 118        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 74       ; 120        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; 75       ; 122        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; 70       ; 112        ; 2        ; fbctestclk         ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 71       ; 115        ; 2        ; fbc1               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 72       ; 116        ; 2        ; fbc0               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 73       ; 118        ; 2        ; fbc3               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 74       ; 120        ; 2        ; fbc4               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; 75       ; 122        ; 2        ; fbc2               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; 76       ; 125        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 77       ; 126        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 78       ; 127        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -329,22 +330,22 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/HexpointThermostat/outpu
 ; 82       ; 136        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 83       ; 139        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 84       ; 140        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 85       ; 141        ; 2        ; controlsActive     ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 85       ; 141        ; 2        ; hiTrueSetDisp      ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 86       ; 142        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 87       ; 143        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 88       ;            ;          ; VCCINT             ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
 ; 89       ; 144        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; 90       ;            ;          ; GND                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; 91       ; 149        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 92       ; 150        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 91       ; 149        ; 2        ; Heat               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 92       ; 150        ; 2        ; NightNOTday18      ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 93       ;            ;          ; GND                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 94       ;            ; 2        ; VCCIO2             ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; 95       ;            ;          ; GND                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; 96       ; 152        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 97       ; 153        ; 2        ; Mof32              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; 98       ; 155        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; 97       ; 153        ; 2        ; passiveNOTactive19 ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 98       ; 155        ; 2        ; Din                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; 99       ; 156        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; 100      ; 158        ; 2        ; fbc3               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; 100      ; 158        ; 2        ; RESERVED_INPUT     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 +----------+------------+----------+--------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
@@ -383,6 +384,7 @@ Note: User assignments will override these defaults. The user specified values a
 ; fbc4               ; Missing location assignment ;
 ; fbc2               ; Missing location assignment ;
 ; Mof32              ; Missing location assignment ;
+; Din                ; Missing location assignment ;
 ; hiTrueSetDisp      ; Missing location assignment ;
 ; controlsActive     ; Missing location assignment ;
 ; Dout               ; Missing location assignment ;
@@ -391,9 +393,9 @@ Note: User assignments will override these defaults. The user specified values a
 ; NightNOTday        ; Missing location assignment ;
 ; passiveNOTactive   ; Missing location assignment ;
 ; CLK                ; Missing location assignment ;
-; Initialize         ; Missing location assignment ;
 ; Inc                ; Missing location assignment ;
 ; Dec                ; Missing location assignment ;
+; Initialize         ; Missing location assignment ;
 ; fbctestclk         ; Missing location assignment ;
 ; fbctestrestart     ; Missing location assignment ;
 +--------------------+-----------------------------+
@@ -404,7 +406,7 @@ Note: User assignments will override these defaults. The user specified values a
 +-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                            ; Entity Name         ; Library Name ;
 +-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |HexpointThermostat                             ; 185 (2)     ; 88           ; 0          ; 23   ; 0            ; 97 (2)       ; 0 (0)             ; 88 (0)           ; 78 (0)          ; 0 (0)      ; |HexpointThermostat                                                                                                            ; HexpointThermostat  ; work         ;
+; |HexpointThermostat                             ; 193 (2)     ; 96           ; 0          ; 24   ; 0            ; 97 (2)       ; 4 (0)             ; 92 (0)           ; 78 (0)          ; 2 (0)      ; |HexpointThermostat                                                                                                            ; HexpointThermostat  ; work         ;
 ;    |SetpointRegister:inst10|                    ; 26 (13)     ; 13           ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 13 (13)          ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10                                                                                    ; SetpointRegister    ; work         ;
 ;       |add13bits:inst|                          ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst                                                                     ; add13bits           ; work         ;
 ;          |lpm_add_sub:LPM_ADD_SUB_component|    ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component                                   ; lpm_add_sub         ; work         ;
@@ -437,6 +439,7 @@ Note: User assignments will override these defaults. The user specified values a
 ;          |cmpr_46g:auto_generated|              ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|compare13bits:inst24|lpm_compare:LPM_COMPARE_component|cmpr_46g:auto_generated                             ; cmpr_46g            ; work         ;
 ;    |count5bits:inst15|                          ; 5 (5)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|count5bits:inst15                                                                                          ; count5bits          ; work         ;
 ;    |count5bits:inst1|                           ; 5 (5)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|count5bits:inst1                                                                                           ; count5bits          ; work         ;
+;    |loadSignalGen:inst34|                       ; 8 (8)       ; 8            ; 0          ; 0    ; 0            ; 0 (0)        ; 4 (4)             ; 4 (4)            ; 0 (0)           ; 2 (2)      ; |HexpointThermostat|loadSignalGen:inst34                                                                                       ; loadSignalGen       ; work         ;
 +-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -456,6 +459,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; fbc4               ; Output   ; --            ;
 ; fbc2               ; Output   ; --            ;
 ; Mof32              ; Output   ; --            ;
+; Din                ; Output   ; --            ;
 ; hiTrueSetDisp      ; Input    ; (0)           ;
 ; controlsActive     ; Input    ; (0)           ;
 ; Dout               ; Input    ; (0)           ;
@@ -464,44 +468,46 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; NightNOTday        ; Input    ; (1)           ;
 ; passiveNOTactive   ; Input    ; (1)           ;
 ; CLK                ; Input    ; (1)           ;
-; Initialize         ; Input    ; (1)           ;
 ; Inc                ; Input    ; (1)           ;
 ; Dec                ; Input    ; (1)           ;
+; Initialize         ; Input    ; (1)           ;
 ; fbctestclk         ; Input    ; (0)           ;
 ; fbctestrestart     ; Input    ; (0)           ;
 +--------------------+----------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                   ;
-+-------------------------+-------------+---------+--------------+--------+----------------------+------------------+
-; Name                    ; Location    ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ;
-+-------------------------+-------------+---------+--------------+--------+----------------------+------------------+
-; CLK                     ; PIN_12      ; 80      ; Clock        ; yes    ; Global Clock         ; GCLK0            ;
-; Inc                     ; PIN_44      ; 79      ; Invert A     ; no     ; --                   ; --               ;
-; Initialize              ; PIN_64      ; 83      ; Async. clear ; yes    ; Global Clock         ; GCLK3            ;
-; count5bits:inst15|inst  ; LC_X4_Y6_N2 ; 3       ; Clock        ; no     ; --                   ; --               ;
-; count5bits:inst15|inst1 ; LC_X5_Y6_N3 ; 3       ; Clock        ; no     ; --                   ; --               ;
-; count5bits:inst15|inst2 ; LC_X5_Y6_N2 ; 3       ; Clock        ; no     ; --                   ; --               ;
-; count5bits:inst15|inst3 ; LC_X6_Y6_N9 ; 3       ; Clock        ; no     ; --                   ; --               ;
-; count5bits:inst1|inst   ; LC_X1_Y7_N8 ; 3       ; Clock        ; no     ; --                   ; --               ;
-; count5bits:inst1|inst1  ; LC_X1_Y7_N9 ; 3       ; Clock        ; no     ; --                   ; --               ;
-; count5bits:inst1|inst2  ; LC_X3_Y7_N2 ; 3       ; Clock        ; no     ; --                   ; --               ;
-; count5bits:inst1|inst3  ; LC_X2_Y7_N3 ; 3       ; Clock        ; no     ; --                   ; --               ;
-; fbctestclk              ; PIN_7       ; 1       ; Clock        ; no     ; --                   ; --               ;
-; fbctestrestart          ; PIN_14      ; 5       ; Async. clear ; yes    ; Global Clock         ; GCLK1            ;
-+-------------------------+-------------+---------+--------------+--------+----------------------+------------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                 ;
++-------------------------+--------------+---------+---------------------------+--------+----------------------+------------------+
+; Name                    ; Location     ; Fan-Out ; Usage                     ; Global ; Global Resource Used ; Global Line Name ;
++-------------------------+--------------+---------+---------------------------+--------+----------------------+------------------+
+; CLK                     ; PIN_12       ; 88      ; Clock                     ; yes    ; Global Clock         ; GCLK0            ;
+; Inc                     ; PIN_36       ; 133     ; Invert A                  ; no     ; --                   ; --               ;
+; Initialize              ; PIN_64       ; 83      ; Async. clear, Sync. clear ; yes    ; Global Clock         ; GCLK3            ;
+; count5bits:inst15|inst  ; LC_X11_Y3_N7 ; 3       ; Clock                     ; no     ; --                   ; --               ;
+; count5bits:inst15|inst1 ; LC_X10_Y3_N4 ; 3       ; Clock                     ; no     ; --                   ; --               ;
+; count5bits:inst15|inst2 ; LC_X10_Y3_N9 ; 3       ; Clock                     ; no     ; --                   ; --               ;
+; count5bits:inst15|inst3 ; LC_X11_Y3_N8 ; 3       ; Clock                     ; no     ; --                   ; --               ;
+; count5bits:inst1|inst   ; LC_X12_Y6_N3 ; 3       ; Clock                     ; no     ; --                   ; --               ;
+; count5bits:inst1|inst1  ; LC_X12_Y6_N2 ; 3       ; Clock                     ; no     ; --                   ; --               ;
+; count5bits:inst1|inst2  ; LC_X12_Y7_N3 ; 3       ; Clock                     ; no     ; --                   ; --               ;
+; count5bits:inst1|inst3  ; LC_X12_Y7_N2 ; 3       ; Clock                     ; no     ; --                   ; --               ;
+; fbctestclk              ; PIN_70       ; 1       ; Clock                     ; no     ; --                   ; --               ;
+; fbctestrestart          ; PIN_14       ; 5       ; Async. clear              ; yes    ; Global Clock         ; GCLK1            ;
+; inst17                  ; LC_X10_Y3_N7 ; 9       ; Async. clear              ; yes    ; Global Clock         ; GCLK2            ;
++-------------------------+--------------+---------+---------------------------+--------+----------------------+------------------+
 
 
-+-------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                   ;
-+----------------+----------+---------+----------------------+------------------+
-; Name           ; Location ; Fan-Out ; Global Resource Used ; Global Line Name ;
-+----------------+----------+---------+----------------------+------------------+
-; CLK            ; PIN_12   ; 80      ; Global Clock         ; GCLK0            ;
-; Initialize     ; PIN_64   ; 83      ; Global Clock         ; GCLK3            ;
-; fbctestrestart ; PIN_14   ; 5       ; Global Clock         ; GCLK1            ;
-+----------------+----------+---------+----------------------+------------------+
++-----------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                       ;
++----------------+--------------+---------+----------------------+------------------+
+; Name           ; Location     ; Fan-Out ; Global Resource Used ; Global Line Name ;
++----------------+--------------+---------+----------------------+------------------+
+; CLK            ; PIN_12       ; 88      ; Global Clock         ; GCLK0            ;
+; Initialize     ; PIN_64       ; 83      ; Global Clock         ; GCLK3            ;
+; fbctestrestart ; PIN_14       ; 5       ; Global Clock         ; GCLK1            ;
+; inst17         ; LC_X10_Y3_N7 ; 9       ; Global Clock         ; GCLK2            ;
++----------------+--------------+---------+----------------------+------------------+
 
 
 +----------------------------------------------+
@@ -509,77 +515,79 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+----------------------+
 ; Routing Resource Type ; Usage                ;
 +-----------------------+----------------------+
-; C4s                   ; 62 / 1,624 ( 4 % )   ;
-; Direct links          ; 103 / 1,930 ( 5 % )  ;
-; Global clocks         ; 3 / 4 ( 75 % )       ;
-; LAB clocks            ; 17 / 56 ( 30 % )     ;
+; C4s                   ; 45 / 1,624 ( 3 % )   ;
+; Direct links          ; 117 / 1,930 ( 6 % )  ;
+; Global clocks         ; 4 / 4 ( 100 % )      ;
+; LAB clocks            ; 20 / 56 ( 36 % )     ;
 ; LUT chains            ; 0 / 513 ( 0 % )      ;
-; Local interconnects   ; 279 / 1,930 ( 14 % ) ;
-; R4s                   ; 110 / 1,472 ( 7 % )  ;
+; Local interconnects   ; 301 / 1,930 ( 16 % ) ;
+; R4s                   ; 116 / 1,472 ( 8 % )  ;
 +-----------------------+----------------------+
 
 
 +---------------------------------------------------------------------------+
 ; LAB Logic Elements                                                        ;
 +--------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 5.78) ; Number of LABs  (Total = 32) ;
+; Number of Logic Elements  (Average = 6.03) ; Number of LABs  (Total = 32) ;
 +--------------------------------------------+------------------------------+
-; 1                                          ; 3                            ;
-; 2                                          ; 3                            ;
-; 3                                          ; 9                            ;
-; 4                                          ; 0                            ;
-; 5                                          ; 1                            ;
-; 6                                          ; 1                            ;
-; 7                                          ; 4                            ;
-; 8                                          ; 0                            ;
+; 1                                          ; 2                            ;
+; 2                                          ; 2                            ;
+; 3                                          ; 10                           ;
+; 4                                          ; 1                            ;
+; 5                                          ; 2                            ;
+; 6                                          ; 0                            ;
+; 7                                          ; 1                            ;
+; 8                                          ; 2                            ;
 ; 9                                          ; 0                            ;
-; 10                                         ; 11                           ;
+; 10                                         ; 12                           ;
 +--------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.09) ; Number of LABs  (Total = 32) ;
+; LAB-wide Signals  (Average = 1.47) ; Number of LABs  (Total = 32) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 6                            ;
+; 1 Async. clear                     ; 7                            ;
 ; 1 Clock                            ; 18                           ;
-; 1 Invert A                         ; 11                           ;
+; 1 Invert A                         ; 12                           ;
+; 1 Sync. clear                      ; 9                            ;
+; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 5.78) ; Number of LABs  (Total = 32) ;
+; Number of Signals Sourced  (Average = 6.06) ; Number of LABs  (Total = 32) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
-; 1                                           ; 3                            ;
-; 2                                           ; 3                            ;
-; 3                                           ; 9                            ;
-; 4                                           ; 0                            ;
-; 5                                           ; 1                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 4                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 11                           ;
+; 1                                           ; 2                            ;
+; 2                                           ; 2                            ;
+; 3                                           ; 10                           ;
+; 4                                           ; 1                            ;
+; 5                                           ; 2                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 12                           ;
 +---------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 5.41) ; Number of LABs  (Total = 32) ;
+; Number of Signals Sourced Out  (Average = 5.44) ; Number of LABs  (Total = 32) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 6                            ;
+; 1                                               ; 4                            ;
 ; 2                                               ; 3                            ;
-; 3                                               ; 6                            ;
+; 3                                               ; 9                            ;
 ; 4                                               ; 1                            ;
-; 5                                               ; 3                            ;
-; 6                                               ; 0                            ;
-; 7                                               ; 2                            ;
+; 5                                               ; 2                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 1                            ;
 ; 8                                               ; 0                            ;
 ; 9                                               ; 0                            ;
 ; 10                                              ; 11                           ;
@@ -589,26 +597,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                        ;
 +---------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 8.38) ; Number of LABs  (Total = 32) ;
+; Number of Distinct Inputs  (Average = 8.84) ; Number of LABs  (Total = 32) ;
 +---------------------------------------------+------------------------------+
 ; 0                                           ; 0                            ;
 ; 1                                           ; 0                            ;
 ; 2                                           ; 5                            ;
 ; 3                                           ; 1                            ;
 ; 4                                           ; 1                            ;
-; 5                                           ; 6                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 0                            ;
-; 10                                          ; 3                            ;
+; 5                                           ; 5                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 3                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 1                            ;
+; 10                                          ; 1                            ;
 ; 11                                          ; 6                            ;
-; 12                                          ; 0                            ;
-; 13                                          ; 6                            ;
-; 14                                          ; 0                            ;
-; 15                                          ; 0                            ;
-; 16                                          ; 1                            ;
-; 17                                          ; 1                            ;
+; 12                                          ; 1                            ;
+; 13                                          ; 1                            ;
+; 14                                          ; 1                            ;
+; 15                                          ; 4                            ;
+; 16                                          ; 0                            ;
+; 17                                          ; 0                            ;
+; 18                                          ; 2                            ;
 +---------------------------------------------+------------------------------+
 
 
@@ -644,7 +653,7 @@ Info (176444): Device migration not selected. If you intend to use device migrat
     Info (176445): Device 5M240ZT100C5 is compatible
     Info (176445): Device 5M240ZT100I5 is compatible
     Info (176445): Device 5M570ZT100I5 is compatible
-Critical Warning (169085): No exact pin location assignment(s) for 23 pins of 23 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Critical Warning (169085): No exact pin location assignment(s) for 24 pins of 24 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'HexpointThermostat.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
@@ -667,24 +676,26 @@ Info (186216): Automatically promoted some destinations of signal "CLK" to use G
     Info (186217): Destination "SCL" may be non-global or may not use global clock
 Info (186215): Automatically promoted signal "fbctestrestart" to use Global clock in PIN 14
 Info (186216): Automatically promoted some destinations of signal "Initialize" to use Global clock in PIN 64
-    Info (186217): Destination "SetpointRegister:inst11|inst1" may be non-global or may not use global clock
+    Info (186217): Destination "SetpointRegister:inst9|inst2" may be non-global or may not use global clock
+    Info (186217): Destination "SetpointRegister:inst10|inst2" may be non-global or may not use global clock
     Info (186217): Destination "SetpointRegister:inst11|inst2" may be non-global or may not use global clock
+    Info (186217): Destination "SetpointRegister:inst9|inst3" may be non-global or may not use global clock
+    Info (186217): Destination "SetpointRegister:inst10|inst3" may be non-global or may not use global clock
     Info (186217): Destination "SetpointRegister:inst11|inst3" may be non-global or may not use global clock
+    Info (186217): Destination "SetpointRegister:inst9|inst4" may be non-global or may not use global clock
+    Info (186217): Destination "SetpointRegister:inst10|inst4" may be non-global or may not use global clock
     Info (186217): Destination "SetpointRegister:inst11|inst4" may be non-global or may not use global clock
-    Info (186217): Destination "SetpointRegister:inst11|inst5" may be non-global or may not use global clock
-    Info (186217): Destination "SetpointRegister:inst11|inst6" may be non-global or may not use global clock
-    Info (186217): Destination "SetpointRegister:inst11|inst7" may be non-global or may not use global clock
-    Info (186217): Destination "SetpointRegister:inst11|inst8" may be non-global or may not use global clock
-    Info (186217): Destination "SetpointRegister:inst11|inst9" may be non-global or may not use global clock
-    Info (186217): Destination "SetpointRegister:inst11|inst10" may be non-global or may not use global clock
+    Info (186217): Destination "SetpointRegister:inst9|inst6" may be non-global or may not use global clock
     Info (186218): Limited to 10 non-global destinations
+Info (186216): Automatically promoted some destinations of signal "inst17" to use Global clock
+    Info (186217): Destination "Mof32" may be non-global or may not use global clock
 Info (186079): Completed Auto Global Promotion Operation
 Info (176234): Starting register packing
 Info (186468): Started processing fast register assignments
 Info (186469): Finished processing fast register assignments
 Info (176235): Finished register packing
 Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info (176211): Number of I/O pins in group: 20 (unused VREF, 3.3V VCCIO, 10 input, 10 output, 0 bidirectional)
+    Info (176211): Number of I/O pins in group: 21 (unused VREF, 3.3V VCCIO, 10 input, 11 output, 0 bidirectional)
         Info (176212): I/O standards used: 3.3-V LVTTL.
 Info (176215): I/O bank details before I/O pin placement
     Info (176214): Statistics of I/O banks
@@ -703,12 +714,12 @@ Info (170195): Router estimated average interconnect usage is 4% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.18 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/17.1/HexpointThermostat/output_files/HexpointThermostat.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 967 megabytes
-    Info: Processing ended: Thu Dec 21 18:04:13 2017
+    Info: Peak virtual memory: 966 megabytes
+    Info: Processing ended: Fri Dec 22 14:22:04 2017
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

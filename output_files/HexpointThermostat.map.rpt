@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HexpointThermostat
-Thu Dec 21 18:04:10 2017
+Fri Dec 22 14:22:02 2017
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -14,39 +14,40 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis IP Cores Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for User Entity Instance: compare13bits:inst24|lpm_compare:LPM_COMPARE_component
- 14. Parameter Settings for User Entity Instance: BUSMUX:inst5
- 15. Parameter Settings for User Entity Instance: BUSMUX:inst20
- 16. Parameter Settings for User Entity Instance: SetpointRegister:inst9|BUSMUX:inst17
- 17. Parameter Settings for User Entity Instance: SetpointRegister:inst9|BUSMUX:inst15
- 18. Parameter Settings for User Entity Instance: SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
- 19. Parameter Settings for User Entity Instance: SetpointRegister:inst10|BUSMUX:inst17
- 20. Parameter Settings for User Entity Instance: SetpointRegister:inst10|BUSMUX:inst15
- 21. Parameter Settings for User Entity Instance: SetpointRegister:inst10|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
- 22. Parameter Settings for User Entity Instance: SetpointRegister:inst11|BUSMUX:inst17
- 23. Parameter Settings for User Entity Instance: SetpointRegister:inst11|BUSMUX:inst15
- 24. Parameter Settings for User Entity Instance: SetpointRegister:inst11|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
- 25. Parameter Settings for User Entity Instance: StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component
- 26. Parameter Settings for User Entity Instance: compare13bits:inst23|lpm_compare:LPM_COMPARE_component
- 27. Parameter Settings for User Entity Instance: BUSMUX:inst2
- 28. Parameter Settings for User Entity Instance: BUSMUX:inst
- 29. Parameter Settings for User Entity Instance: SetpointRegister:inst12|BUSMUX:inst17
- 30. Parameter Settings for User Entity Instance: SetpointRegister:inst12|BUSMUX:inst15
- 31. Parameter Settings for User Entity Instance: SetpointRegister:inst12|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
- 32. Parameter Settings for User Entity Instance: SetpointRegister:inst13|BUSMUX:inst17
- 33. Parameter Settings for User Entity Instance: SetpointRegister:inst13|BUSMUX:inst15
- 34. Parameter Settings for User Entity Instance: SetpointRegister:inst13|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
- 35. Parameter Settings for User Entity Instance: SetpointRegister:inst14|BUSMUX:inst17
- 36. Parameter Settings for User Entity Instance: SetpointRegister:inst14|BUSMUX:inst15
- 37. Parameter Settings for User Entity Instance: SetpointRegister:inst14|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
- 38. Parameter Settings for User Entity Instance: BUSMUX:inst3
- 39. Parameter Settings for User Entity Instance: BUSMUX:inst8
- 40. lpm_shiftreg Parameter Settings by Entity Instance
- 41. Analysis & Synthesis Messages
+  9. State Machine - |HexpointThermostat|loadSignalGen:inst34|fstate
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: compare13bits:inst24|lpm_compare:LPM_COMPARE_component
+ 15. Parameter Settings for User Entity Instance: BUSMUX:inst5
+ 16. Parameter Settings for User Entity Instance: BUSMUX:inst20
+ 17. Parameter Settings for User Entity Instance: SetpointRegister:inst9|BUSMUX:inst17
+ 18. Parameter Settings for User Entity Instance: SetpointRegister:inst9|BUSMUX:inst15
+ 19. Parameter Settings for User Entity Instance: SetpointRegister:inst9|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 20. Parameter Settings for User Entity Instance: SetpointRegister:inst10|BUSMUX:inst17
+ 21. Parameter Settings for User Entity Instance: SetpointRegister:inst10|BUSMUX:inst15
+ 22. Parameter Settings for User Entity Instance: SetpointRegister:inst10|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 23. Parameter Settings for User Entity Instance: SetpointRegister:inst11|BUSMUX:inst17
+ 24. Parameter Settings for User Entity Instance: SetpointRegister:inst11|BUSMUX:inst15
+ 25. Parameter Settings for User Entity Instance: SetpointRegister:inst11|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 26. Parameter Settings for User Entity Instance: StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component
+ 27. Parameter Settings for User Entity Instance: compare13bits:inst23|lpm_compare:LPM_COMPARE_component
+ 28. Parameter Settings for User Entity Instance: BUSMUX:inst2
+ 29. Parameter Settings for User Entity Instance: BUSMUX:inst
+ 30. Parameter Settings for User Entity Instance: SetpointRegister:inst12|BUSMUX:inst17
+ 31. Parameter Settings for User Entity Instance: SetpointRegister:inst12|BUSMUX:inst15
+ 32. Parameter Settings for User Entity Instance: SetpointRegister:inst12|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 33. Parameter Settings for User Entity Instance: SetpointRegister:inst13|BUSMUX:inst17
+ 34. Parameter Settings for User Entity Instance: SetpointRegister:inst13|BUSMUX:inst15
+ 35. Parameter Settings for User Entity Instance: SetpointRegister:inst13|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 36. Parameter Settings for User Entity Instance: SetpointRegister:inst14|BUSMUX:inst17
+ 37. Parameter Settings for User Entity Instance: SetpointRegister:inst14|BUSMUX:inst15
+ 38. Parameter Settings for User Entity Instance: SetpointRegister:inst14|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
+ 39. Parameter Settings for User Entity Instance: BUSMUX:inst3
+ 40. Parameter Settings for User Entity Instance: BUSMUX:inst8
+ 41. lpm_shiftreg Parameter Settings by Entity Instance
+ 42. Analysis & Synthesis Messages
 
 
 
@@ -72,13 +73,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Thu Dec 21 18:04:10 2017       ;
+; Analysis & Synthesis Status ; Successful - Fri Dec 22 14:22:02 2017       ;
 ; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name               ; HexpointThermostat                          ;
 ; Top-level Entity Name       ; HexpointThermostat                          ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 185                                         ;
-; Total pins                  ; 23                                          ;
+; Total logic elements        ; 195                                         ;
+; Total pins                  ; 24                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -202,42 +203,43 @@ refer to the applicable agreement for further details.
 ; lpm_shiftreg.tdf                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf        ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
 ; dffeea.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; loadsignalgen.vhd                ; yes             ; Auto-Found VHDL File                     ; C:/intelFPGA_lite/17.1/HexpointThermostat/loadsignalgen.vhd                    ;         ;
 +----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Total logic elements                        ; 185        ;
-;     -- Combinational with no register       ; 97         ;
-;     -- Register only                        ; 0          ;
-;     -- Combinational with a register        ; 88         ;
-;                                             ;            ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 93         ;
-;     -- 3 input functions                    ; 74         ;
-;     -- 2 input functions                    ; 8          ;
-;     -- 1 input functions                    ; 10         ;
-;     -- 0 input functions                    ; 0          ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 113        ;
-;     -- arithmetic mode                      ; 72         ;
-;     -- qfbk mode                            ; 0          ;
-;     -- register cascade mode                ; 0          ;
-;     -- synchronous clear/load mode          ; 0          ;
-;     -- asynchronous clear/load mode         ; 10         ;
-;                                             ;            ;
-; Total registers                             ; 88         ;
-; Total logic cells in carry chains           ; 78         ;
-; I/O pins                                    ; 23         ;
-; Maximum fan-out node                        ; Initialize ;
-; Maximum fan-out                             ; 83         ;
-; Total fan-out                               ; 727        ;
-; Average fan-out                             ; 3.50       ;
-+---------------------------------------------+------------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 195   ;
+;     -- Combinational with no register       ; 99    ;
+;     -- Register only                        ; 6     ;
+;     -- Combinational with a register        ; 90    ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 94    ;
+;     -- 3 input functions                    ; 75    ;
+;     -- 2 input functions                    ; 8     ;
+;     -- 1 input functions                    ; 11    ;
+;     -- 0 input functions                    ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 123   ;
+;     -- arithmetic mode                      ; 72    ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 54    ;
+;     -- asynchronous clear/load mode         ; 18    ;
+;                                             ;       ;
+; Total registers                             ; 96    ;
+; Total logic cells in carry chains           ; 78    ;
+; I/O pins                                    ; 24    ;
+; Maximum fan-out node                        ; Inc   ;
+; Maximum fan-out                             ; 133   ;
+; Total fan-out                               ; 812   ;
+; Average fan-out                             ; 3.71  ;
++---------------------------------------------+-------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -245,7 +247,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                            ; Entity Name         ; Library Name ;
 +-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |HexpointThermostat                             ; 185 (2)     ; 88           ; 0          ; 23   ; 0            ; 97 (2)       ; 0 (0)             ; 88 (0)           ; 78 (0)          ; 0 (0)      ; |HexpointThermostat                                                                                                            ; HexpointThermostat  ; work         ;
+; |HexpointThermostat                             ; 195 (2)     ; 96           ; 0          ; 24   ; 0            ; 99 (2)       ; 6 (0)             ; 90 (0)           ; 78 (0)          ; 0 (0)      ; |HexpointThermostat                                                                                                            ; HexpointThermostat  ; work         ;
 ;    |SetpointRegister:inst10|                    ; 26 (13)     ; 13           ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 13 (13)          ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10                                                                                    ; SetpointRegister    ; work         ;
 ;       |add13bits:inst|                          ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst                                                                     ; add13bits           ; work         ;
 ;          |lpm_add_sub:LPM_ADD_SUB_component|    ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component                                   ; lpm_add_sub         ; work         ;
@@ -278,6 +280,7 @@ refer to the applicable agreement for further details.
 ;          |cmpr_46g:auto_generated|              ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|compare13bits:inst24|lpm_compare:LPM_COMPARE_component|cmpr_46g:auto_generated                             ; cmpr_46g            ; work         ;
 ;    |count5bits:inst15|                          ; 5 (5)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|count5bits:inst15                                                                                          ; count5bits          ; work         ;
 ;    |count5bits:inst1|                           ; 5 (5)       ; 5            ; 0          ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|count5bits:inst1                                                                                           ; count5bits          ; work         ;
+;    |loadSignalGen:inst34|                       ; 10 (10)     ; 8            ; 0          ; 0    ; 0            ; 2 (2)        ; 6 (6)             ; 2 (2)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|loadSignalGen:inst34                                                                                       ; loadSignalGen       ; work         ;
 +-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -299,13 +302,64 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+------------------------------------------------------------+-------------------+
 
 
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |HexpointThermostat|loadSignalGen:inst34|fstate                                                                                                                                                                                                                                                                                                                                                                               ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; Name           ; fstate.state19 ; fstate.state24 ; fstate.state22 ; fstate.state23 ; fstate.state21 ; fstate.state20 ; fstate.state18 ; fstate.state17 ; fstate.state16 ; fstate.state15 ; fstate.state14 ; fstate.state13 ; fstate.state12 ; fstate.state11 ; fstate.state10 ; fstate.state9 ; fstate.state8 ; fstate.state7 ; fstate.state6 ; fstate.state5 ; fstate.state4 ; fstate.state3 ; fstate.state2 ; fstate.state1 ; fstate.Origin ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+; fstate.Origin  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ;
+; fstate.state1  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 1             ;
+; fstate.state2  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 1             ;
+; fstate.state3  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 1             ;
+; fstate.state4  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state5  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state6  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state7  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state8  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state9  ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state10 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state11 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state12 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state13 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state14 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state15 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state16 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state17 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state18 ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state20 ; 0              ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state21 ; 0              ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state23 ; 0              ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state22 ; 0              ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state24 ; 0              ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
+; fstate.state19 ; 1              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0              ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 0             ; 1             ;
++----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+
+
+
 +-----------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                  ;
 +------------------------------------------------------------+----------------------------------------+
 ; Register name                                              ; Reason for Removal                     ;
 +------------------------------------------------------------+----------------------------------------+
 ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[0..15] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 16                     ;                                        ;
+; loadSignalGen:inst34|fstate.state8                         ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state9                         ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state10                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state11                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state12                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state13                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state14                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state15                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state16                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state17                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state18                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state20                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state21                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state23                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state22                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state24                        ; Lost fanout                            ;
+; loadSignalGen:inst34|fstate.state19                        ; Lost fanout                            ;
+; Total Number of Removed Registers = 33                     ;                                        ;
 +------------------------------------------------------------+----------------------------------------+
 
 
@@ -324,6 +378,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[15] ; Stuck at GND              ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[14], ;
 ;                                                         ; due to stuck port data_in ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[13], ;
 ;                                                         ;                           ; StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_component|dffs[12]  ;
+; loadSignalGen:inst34|fstate.state20                     ; Lost Fanouts              ; loadSignalGen:inst34|fstate.state19                      ;
+; loadSignalGen:inst34|fstate.state23                     ; Lost Fanouts              ; loadSignalGen:inst34|fstate.state22                      ;
 +---------------------------------------------------------+---------------------------+----------------------------------------------------------+
 
 
@@ -332,10 +388,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 88    ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 96    ;
+; Number of registers using Synchronous Clear  ; 54    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Clear ; 18    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -783,7 +839,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Dec 21 18:03:57 2017
+    Info: Processing started: Fri Dec 22 14:21:50 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HexpointThermostat -c HexpointThermostat
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -791,7 +847,7 @@ Warning (12019): Can't analyze file -- file HexpointThermostat/HexpointThermosta
 Warning (12019): Can't analyze file -- file comparator.vhd is missing
 Info (12021): Found 1 design units, including 1 entities, in source file setpointregister.bdf
     Info (12023): Found entity 1: SetpointRegister
-Info (12021): Found 0 design units, including 0 entities, in source file comparatorlessthan.vhd
+Warning (12019): Can't analyze file -- file comparatorLessThan.vhd is missing
 Warning (12019): Can't analyze file -- file 31mux.bdf is missing
 Info (12021): Found 2 design units, including 1 entities, in source file stop.vhd
     Info (12022): Found design unit 1: stop-SYN File: C:/intelFPGA_lite/17.1/HexpointThermostat/StoP.vhd Line: 52
@@ -851,24 +907,29 @@ Info (12133): Instantiated megafunction "StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_co
     Info (12134): Parameter "lpm_type" = "LPM_SHIFTREG"
     Info (12134): Parameter "lpm_width" = "16"
 Info (12128): Elaborating entity "count5bits" for hierarchy "count5bits:inst1"
+Warning (12125): Using design file loadsignalgen.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info (12022): Found design unit 1: loadSignalGen-BEHAVIOR File: C:/intelFPGA_lite/17.1/HexpointThermostat/loadsignalgen.vhd Line: 31
+    Info (12023): Found entity 1: loadSignalGen File: C:/intelFPGA_lite/17.1/HexpointThermostat/loadsignalgen.vhd Line: 21
+Info (12128): Elaborating entity "loadSignalGen" for hierarchy "loadSignalGen:inst34"
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst3"
 Info (12130): Elaborated megafunction instantiation "BUSMUX:inst3"
 Info (12133): Instantiated megafunction "BUSMUX:inst3" with the following parameter:
     Info (12134): Parameter "WIDTH" = "13"
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "CS" is stuck at GND
+Info (17049): 17 registers lost all their fanouts during netlist optimizations.
 Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "hiTrueSetDisp"
     Warning (15610): No output dependent on input pin "controlsActive"
     Warning (15610): No output dependent on input pin "Dout"
-Info (21057): Implemented 208 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 219 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
-    Info (21059): Implemented 10 output pins
-    Info (21061): Implemented 185 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 670 megabytes
-    Info: Processing ended: Thu Dec 21 18:04:10 2017
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+    Info (21059): Implemented 11 output pins
+    Info (21061): Implemented 195 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info: Peak virtual memory: 666 megabytes
+    Info: Processing ended: Fri Dec 22 14:22:02 2017
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:26
 
 

@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
--- DATE "12/21/2017 18:04:18"
+-- DATE "12/22/2017 14:22:09"
 
 -- 
 -- Device: Altera 5M570ZT100C5 Package TQFP100
@@ -53,6 +53,7 @@ ENTITY 	HexpointThermostat IS
 	fbc4 : OUT std_logic;
 	fbc2 : OUT std_logic;
 	Mof32 : OUT std_logic;
+	Din : OUT std_logic;
 	hiTrueSetDisp : IN std_logic;
 	controlsActive : IN std_logic;
 	Dout : IN std_logic
@@ -92,12 +93,15 @@ SIGNAL ww_fbc3 : std_logic;
 SIGNAL ww_fbc4 : std_logic;
 SIGNAL ww_fbc2 : std_logic;
 SIGNAL ww_Mof32 : std_logic;
+SIGNAL ww_Din : std_logic;
 SIGNAL ww_hiTrueSetDisp : std_logic;
 SIGNAL ww_controlsActive : std_logic;
 SIGNAL ww_Dout : std_logic;
+SIGNAL \inst34|fstate.state7~regout\ : std_logic;
+SIGNAL \NightNOTday18~combout\ : std_logic;
 SIGNAL \CLK~combout\ : std_logic;
-SIGNAL \Inc~combout\ : std_logic;
 SIGNAL \Dec~combout\ : std_logic;
+SIGNAL \Inc~combout\ : std_logic;
 SIGNAL \inst9|inst16~combout\ : std_logic;
 SIGNAL \Initialize~combout\ : std_logic;
 SIGNAL \inst9|inst13~regout\ : std_logic;
@@ -140,46 +144,6 @@ SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~10_combout\ : std_logic;
 SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~9_combout\ : std_logic;
 SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~12_combout\ : std_logic;
 SIGNAL \passiveNOTactive19~combout\ : std_logic;
-SIGNAL \NightNOTday18~combout\ : std_logic;
-SIGNAL \inst10|inst13~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
-SIGNAL \inst10|inst12~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
-SIGNAL \inst10|inst11~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
-SIGNAL \inst10|inst10~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ : std_logic;
-SIGNAL \inst10|inst9~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ : std_logic;
-SIGNAL \inst10|inst8~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\ : std_logic;
-SIGNAL \inst10|inst7~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\ : std_logic;
-SIGNAL \inst10|inst6~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\ : std_logic;
-SIGNAL \inst10|inst5~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\ : std_logic;
-SIGNAL \inst10|inst4~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ : std_logic;
-SIGNAL \inst10|inst3~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\ : std_logic;
-SIGNAL \inst10|inst2~regout\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~4_combout\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~5_combout\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~6_combout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
-SIGNAL \inst10|inst1~regout\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~7_combout\ : std_logic;
 SIGNAL \inst11|inst13~regout\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
@@ -198,10 +162,10 @@ SIGNAL \inst11|inst8~regout\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\ : std_logic;
 SIGNAL \inst11|inst7~regout\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~2_combout\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\ : std_logic;
 SIGNAL \inst11|inst6~regout\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~1_combout\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\ : std_logic;
 SIGNAL \inst11|inst5~regout\ : std_logic;
@@ -216,9 +180,48 @@ SIGNAL \inst11|inst2~regout\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
 SIGNAL \inst11|inst1~regout\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~2_combout\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~1_combout\ : std_logic;
 SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~0_combout\ : std_logic;
 SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~3_combout\ : std_logic;
+SIGNAL \inst10|inst13~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
+SIGNAL \inst10|inst12~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
+SIGNAL \inst10|inst11~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
+SIGNAL \inst10|inst10~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ : std_logic;
+SIGNAL \inst10|inst9~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ : std_logic;
+SIGNAL \inst10|inst8~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\ : std_logic;
+SIGNAL \inst10|inst7~regout\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~6_combout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\ : std_logic;
+SIGNAL \inst10|inst6~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\ : std_logic;
+SIGNAL \inst10|inst5~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\ : std_logic;
+SIGNAL \inst10|inst4~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ : std_logic;
+SIGNAL \inst10|inst3~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\ : std_logic;
+SIGNAL \inst10|inst2~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
+SIGNAL \inst10|inst1~regout\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~5_combout\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~4_combout\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~7_combout\ : std_logic;
 SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~8_combout\ : std_logic;
 SIGNAL \inst24|LPM_COMPARE_component|auto_generated|agb~13_combout\ : std_logic;
 SIGNAL \passiveNOTactive~combout\ : std_logic;
@@ -292,7 +295,6 @@ SIGNAL \inst13|inst2~regout\ : std_logic;
 SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
 SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
 SIGNAL \inst13|inst1~regout\ : std_logic;
-SIGNAL \NightNOTday~combout\ : std_logic;
 SIGNAL \inst12|inst13~regout\ : std_logic;
 SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
 SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
@@ -328,6 +330,7 @@ SIGNAL \inst12|inst2~regout\ : std_logic;
 SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
 SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
 SIGNAL \inst12|inst1~regout\ : std_logic;
+SIGNAL \NightNOTday~combout\ : std_logic;
 SIGNAL \inst2|$00000|auto_generated|result_node[12]~0_combout\ : std_logic;
 SIGNAL \inst2|$00000|auto_generated|result_node[12]~1_combout\ : std_logic;
 SIGNAL \fbctestclk~combout\ : std_logic;
@@ -344,13 +347,22 @@ SIGNAL \inst15|inst3~regout\ : std_logic;
 SIGNAL \inst15|inst4~regout\ : std_logic;
 SIGNAL \inst17~0_combout\ : std_logic;
 SIGNAL \inst17~combout\ : std_logic;
+SIGNAL \inst34|fstate.Origin~regout\ : std_logic;
+SIGNAL \inst34|fstate.state1~regout\ : std_logic;
+SIGNAL \inst34|fstate.state2~regout\ : std_logic;
+SIGNAL \inst34|fstate.state3~regout\ : std_logic;
+SIGNAL \inst34|fstate.state4~regout\ : std_logic;
+SIGNAL \inst34|fstate.state5~regout\ : std_logic;
+SIGNAL \inst34|fstate.state6~regout\ : std_logic;
+SIGNAL \inst34|WideOr0~0\ : std_logic;
+SIGNAL \inst34|WideOr0\ : std_logic;
 SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
-SIGNAL \ALT_INV_inst17~combout\ : std_logic;
+SIGNAL \inst34|ALT_INV_WideOr0\ : std_logic;
 SIGNAL \inst24|LPM_COMPARE_component|auto_generated|ALT_INV_agb~13_combout\ : std_logic;
 
 BEGIN
@@ -375,14 +387,26 @@ fbc3 <= ww_fbc3;
 fbc4 <= ww_fbc4;
 fbc2 <= ww_fbc2;
 Mof32 <= ww_Mof32;
+Din <= ww_Din;
 ww_hiTrueSetDisp <= hiTrueSetDisp;
 ww_controlsActive <= controlsActive;
 ww_Dout <= Dout;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\ALT_INV_inst17~combout\ <= NOT \inst17~combout\;
+\inst34|ALT_INV_WideOr0\ <= NOT \inst34|WideOr0\;
 \inst24|LPM_COMPARE_component|auto_generated|ALT_INV_agb~13_combout\ <= NOT \inst24|LPM_COMPARE_component|auto_generated|agb~13_combout\;
+
+-- Location: PIN_92,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\NightNOTday18~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_NightNOTday18,
+	combout => \NightNOTday18~combout\);
 
 -- Location: PIN_12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \CLK~I\ : maxv_io
@@ -395,18 +419,7 @@ PORT MAP (
 	padio => ww_CLK,
 	combout => \CLK~combout\);
 
--- Location: PIN_44,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\Inc~I\ : maxv_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "input")
--- pragma translate_on
-PORT MAP (
-	oe => GND,
-	padio => ww_Inc,
-	combout => \Inc~combout\);
-
--- Location: PIN_62,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_29,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \Dec~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -417,14 +430,25 @@ PORT MAP (
 	padio => ww_Dec,
 	combout => \Dec~combout\);
 
--- Location: LC_X12_Y4_N4
+-- Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\Inc~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_Inc,
+	combout => \Inc~combout\);
+
+-- Location: LC_X6_Y6_N6
 \inst9|inst16\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst16~combout\ = ((\Inc~combout\) # ((\Dec~combout\)))
+-- \inst9|inst16~combout\ = (((\Inc~combout\) # (\Dec~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ffcc",
+	lut_mask => "fff0",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -432,7 +456,7 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datab => \Inc~combout\,
+	datac => \Inc~combout\,
 	datad => \Dec~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -449,7 +473,7 @@ PORT MAP (
 	padio => ww_Initialize,
 	combout => \Initialize~combout\);
 
--- Location: LC_X8_Y5_N0
+-- Location: LC_X4_Y6_N0
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst9|inst13~regout\ $ ((\Inc~combout\)))
@@ -475,32 +499,34 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
 
--- Location: LC_X7_Y5_N2
+-- Location: LC_X3_Y6_N6
 \inst9|inst13\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst13~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0))) # (!\inst9|inst16~combout\ & ((\inst9|inst13~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst9|inst13~regout\ = DFFEAS((\Inc~combout\ & (((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0)))) # (!\Dec~combout\ & 
+-- (\inst9|inst13~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "f0e4",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	dataa => \Inc~combout\,
+	datab => \inst9|inst13~regout\,
 	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	datad => \inst9|inst13~regout\,
+	datad => \Dec~combout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst13~regout\);
 
--- Location: LC_X8_Y5_N1
+-- Location: LC_X4_Y6_N1
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst9|inst12~regout\ $ (((!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
@@ -533,32 +559,34 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
 
--- Location: LC_X7_Y5_N3
+-- Location: LC_X3_Y6_N2
 \inst9|inst12\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst12~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\inst9|inst16~combout\ & (\inst9|inst12~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst9|inst12~regout\ = DFFEAS((\Dec~combout\ & (((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\Inc~combout\ & 
+-- (\inst9|inst12~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "fe02",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst9|inst12~regout\,
+	dataa => \inst9|inst12~regout\,
+	datab => \Dec~combout\,
+	datac => \Inc~combout\,
 	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst12~regout\);
 
--- Location: LC_X8_Y5_N2
+-- Location: LC_X4_Y6_N2
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst9|inst11~regout\ $ ((!(!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
@@ -591,32 +619,34 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
 
--- Location: LC_X7_Y5_N1
+-- Location: LC_X3_Y6_N1
 \inst9|inst11\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst11~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2)))) # (!\inst9|inst16~combout\ & (\inst9|inst11~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst9|inst11~regout\ = DFFEAS((\Inc~combout\ & (((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2))))) # (!\Inc~combout\ & ((\Dec~combout\ & (\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2))) # (!\Dec~combout\ & 
+-- ((\inst9|inst11~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "f1e0",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst9|inst11~regout\,
-	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	datad => \inst9|inst11~regout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst11~regout\);
 
--- Location: LC_X8_Y5_N3
+-- Location: LC_X4_Y6_N3
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst9|inst10~regout\ $ (((!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
@@ -649,14 +679,14 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
 
--- Location: LC_X7_Y5_N7
+-- Location: LC_X3_Y6_N5
 \inst9|inst10\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst10~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3))) # (!\inst9|inst16~combout\ & ((\inst9|inst10~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst9|inst10~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3)))) # (!\inst9|inst16~combout\ & (\inst9|inst10~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "faee",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -666,15 +696,15 @@ GENERIC MAP (
 PORT MAP (
 	clk => \CLK~combout\,
 	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	datab => \inst9|inst10~regout\,
 	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	datad => \inst9|inst10~regout\,
+	datad => \inst9|inst16~combout\,
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst10~regout\);
 
--- Location: LC_X8_Y5_N4
+-- Location: LC_X4_Y6_N4
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst9|inst9~regout\ $ ((!(!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
@@ -704,14 +734,14 @@ PORT MAP (
 	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	cout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
 
--- Location: LC_X7_Y5_N6
+-- Location: LC_X6_Y6_N7
 \inst9|inst9\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst9~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4)))) # (!\inst9|inst16~combout\ & (\inst9|inst9~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "fef4",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -720,16 +750,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst9|inst9~regout\,
+	dataa => \inst9|inst16~combout\,
+	datab => \inst9|inst9~regout\,
+	datac => \Initialize~combout\,
 	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst9~regout\);
 
--- Location: LC_X8_Y5_N5
+-- Location: LC_X4_Y6_N5
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst9|inst8~regout\ $ ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
@@ -759,14 +789,14 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
 
--- Location: LC_X7_Y5_N4
+-- Location: LC_X3_Y6_N7
 \inst9|inst8\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst8~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(5)))) # (!\inst9|inst16~combout\ & (\inst9|inst8~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "fef4",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -775,16 +805,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst9|inst8~regout\,
+	dataa => \inst9|inst16~combout\,
+	datab => \inst9|inst8~regout\,
+	datac => \Initialize~combout\,
 	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(5),
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst8~regout\);
 
--- Location: LC_X8_Y5_N6
+-- Location: LC_X4_Y6_N6
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst9|inst7~regout\ $ ((!(!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\) 
@@ -819,32 +849,34 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
 
--- Location: LC_X7_Y5_N0
+-- Location: LC_X3_Y6_N8
 \inst9|inst7\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst7~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))) # (!\inst9|inst16~combout\ & ((\inst9|inst7~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst9|inst7~regout\ = DFFEAS((\Inc~combout\ & (((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))))) # (!\Inc~combout\ & ((\Dec~combout\ & (\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))) # (!\Dec~combout\ & 
+-- ((\inst9|inst7~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "f1e0",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
 	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
 	datad => \inst9|inst7~regout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst7~regout\);
 
--- Location: LC_X8_Y5_N7
+-- Location: LC_X4_Y6_N7
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst9|inst6~regout\ $ (((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\) # 
@@ -879,32 +911,34 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
 
--- Location: LC_X7_Y5_N9
+-- Location: LC_X3_Y6_N4
 \inst9|inst6\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst6~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\inst9|inst16~combout\ & (\inst9|inst6~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst9|inst6~regout\ = DFFEAS((\Dec~combout\ & (((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(7))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\Inc~combout\ & 
+-- (\inst9|inst6~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feae",
+	lut_mask => "fe02",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst6~regout\,
-	datac => \inst9|inst16~combout\,
+	dataa => \inst9|inst6~regout\,
+	datab => \Dec~combout\,
+	datac => \Inc~combout\,
 	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst6~regout\);
 
--- Location: LC_X8_Y5_N8
+-- Location: LC_X4_Y6_N8
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst9|inst5~regout\ $ ((!(!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\) 
@@ -939,14 +973,14 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
 
--- Location: LC_X7_Y5_N5
+-- Location: LC_X3_Y6_N3
 \inst9|inst5\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst5~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(8)))) # (!\inst9|inst16~combout\ & (\inst9|inst5~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef2",
+	lut_mask => "fef4",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -955,8 +989,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst5~regout\,
-	datab => \inst9|inst16~combout\,
+	dataa => \inst9|inst16~combout\,
+	datab => \inst9|inst5~regout\,
 	datac => \Initialize~combout\,
 	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
 	aclr => GND,
@@ -964,7 +998,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst9|inst5~regout\);
 
--- Location: LC_X8_Y5_N9
+-- Location: LC_X4_Y6_N9
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst9|inst4~regout\ $ (((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\) # 
@@ -996,32 +1030,34 @@ PORT MAP (
 	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	cout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
 
--- Location: LC_X7_Y5_N8
+-- Location: LC_X3_Y6_N0
 \inst9|inst4\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst4~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))) # (!\inst9|inst16~combout\ & ((\inst9|inst4~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst9|inst4~regout\ = DFFEAS((\Inc~combout\ & (((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(9)))) # (!\Dec~combout\ & 
+-- (\inst9|inst4~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "f0e4",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	dataa => \Inc~combout\,
+	datab => \inst9|inst4~regout\,
 	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
-	datad => \inst9|inst4~regout\,
+	datad => \Dec~combout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst4~regout\);
 
--- Location: LC_X9_Y5_N0
+-- Location: LC_X5_Y6_N0
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst9|inst3~regout\ $ ((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
@@ -1051,32 +1087,34 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
 
--- Location: LC_X10_Y5_N8
+-- Location: LC_X6_Y6_N9
 \inst9|inst3\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst3~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\inst9|inst16~combout\ & (\inst9|inst3~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst9|inst3~regout\ = DFFEAS((\Dec~combout\ & (((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(10))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\Inc~combout\ & 
+-- (\inst9|inst3~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "fe04",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
+	dataa => \Dec~combout\,
 	datab => \inst9|inst3~regout\,
-	datac => \Initialize~combout\,
+	datac => \Inc~combout\,
 	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(10),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst3~regout\);
 
--- Location: LC_X9_Y5_N1
+-- Location: LC_X5_Y6_N1
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst9|inst2~regout\ $ (((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\) 
@@ -1111,32 +1149,34 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
 
--- Location: LC_X10_Y5_N2
+-- Location: LC_X6_Y6_N8
 \inst9|inst2\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst2~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(11)))) # (!\inst9|inst16~combout\ & (\inst9|inst2~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst9|inst2~regout\ = DFFEAS((\Inc~combout\ & (((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(11))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(11)))) # (!\Dec~combout\ & 
+-- (\inst9|inst2~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feae",
+	lut_mask => "f0e2",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst2~regout\,
-	datac => \inst9|inst16~combout\,
-	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
+	dataa => \inst9|inst2~regout\,
+	datab => \Inc~combout\,
+	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
+	datad => \Dec~combout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst2~regout\);
 
--- Location: LC_X9_Y5_N2
+-- Location: LC_X5_Y6_N2
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
@@ -1165,35 +1205,37 @@ PORT MAP (
 	devpor => ww_devpor,
 	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
 
--- Location: LC_X10_Y5_N4
+-- Location: LC_X6_Y6_N1
 \inst9|inst1\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst1~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\inst9|inst16~combout\ & (\inst9|inst1~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst9|inst1~regout\ = DFFEAS((\Dec~combout\ & (((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\Inc~combout\ & 
+-- (\inst9|inst1~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "fe02",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst9|inst1~regout\,
-	datac => \Initialize~combout\,
+	dataa => \inst9|inst1~regout\,
+	datab => \Dec~combout\,
+	datac => \Inc~combout\,
 	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst1~regout\);
 
--- Location: LC_X11_Y5_N7
+-- Location: LC_X3_Y6_N9
 \inst24|LPM_COMPARE_component|auto_generated|agb~11\ : maxv_lcell
 -- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~11_combout\ = (!\inst9|inst11~regout\ & (!\inst9|inst10~regout\ & (!\inst9|inst13~regout\ & !\inst9|inst12~regout\)))
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~11_combout\ = (!\inst9|inst13~regout\ & (!\inst9|inst11~regout\ & (!\inst9|inst12~regout\ & !\inst9|inst7~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1205,18 +1247,18 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst9|inst11~regout\,
-	datab => \inst9|inst10~regout\,
-	datac => \inst9|inst13~regout\,
-	datad => \inst9|inst12~regout\,
+	dataa => \inst9|inst13~regout\,
+	datab => \inst9|inst11~regout\,
+	datac => \inst9|inst12~regout\,
+	datad => \inst9|inst7~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~11_combout\);
 
--- Location: LC_X10_Y5_N6
+-- Location: LC_X6_Y6_N4
 \inst24|LPM_COMPARE_component|auto_generated|agb~10\ : maxv_lcell
 -- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~10_combout\ = (!\inst9|inst6~regout\ & (!\inst9|inst9~regout\ & (!\inst9|inst7~regout\ & !\inst9|inst8~regout\)))
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~10_combout\ = (!\inst9|inst2~regout\ & (!\inst9|inst6~regout\ & (!\inst9|inst4~regout\ & !\inst9|inst3~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1228,18 +1270,18 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst9|inst6~regout\,
-	datab => \inst9|inst9~regout\,
-	datac => \inst9|inst7~regout\,
-	datad => \inst9|inst8~regout\,
+	dataa => \inst9|inst2~regout\,
+	datab => \inst9|inst6~regout\,
+	datac => \inst9|inst4~regout\,
+	datad => \inst9|inst3~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~10_combout\);
 
--- Location: LC_X10_Y5_N3
+-- Location: LC_X6_Y6_N2
 \inst24|LPM_COMPARE_component|auto_generated|agb~9\ : maxv_lcell
 -- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~9_combout\ = (!\inst9|inst3~regout\ & (!\inst9|inst5~regout\ & (!\inst9|inst4~regout\ & !\inst9|inst2~regout\)))
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~9_combout\ = (!\inst9|inst8~regout\ & (!\inst9|inst9~regout\ & (!\inst9|inst10~regout\ & !\inst9|inst5~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1251,15 +1293,15 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst9|inst3~regout\,
-	datab => \inst9|inst5~regout\,
-	datac => \inst9|inst4~regout\,
-	datad => \inst9|inst2~regout\,
+	dataa => \inst9|inst8~regout\,
+	datab => \inst9|inst9~regout\,
+	datac => \inst9|inst10~regout\,
+	datad => \inst9|inst5~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~9_combout\);
 
--- Location: LC_X10_Y5_N7
+-- Location: LC_X6_Y6_N0
 \inst24|LPM_COMPARE_component|auto_generated|agb~12\ : maxv_lcell
 -- Equation(s):
 -- \inst24|LPM_COMPARE_component|auto_generated|agb~12_combout\ = (\inst9|inst1~regout\) # ((\inst24|LPM_COMPARE_component|auto_generated|agb~11_combout\ & (\inst24|LPM_COMPARE_component|auto_generated|agb~10_combout\ & 
@@ -1283,7 +1325,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~12_combout\);
 
--- Location: PIN_41,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_97,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \passiveNOTactive19~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -1294,852 +1336,7 @@ PORT MAP (
 	padio => ww_passiveNOTactive19,
 	combout => \passiveNOTactive19~combout\);
 
--- Location: PIN_42,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\NightNOTday18~I\ : maxv_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "input")
--- pragma translate_on
-PORT MAP (
-	oe => GND,
-	padio => ww_NightNOTday18,
-	combout => \NightNOTday18~combout\);
-
--- Location: LC_X8_Y6_N0
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst10|inst13~regout\ $ ((\Inc~combout\)))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst10|inst13~regout\) # (!\Inc~combout\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst10|inst13~regout\) # (!\Inc~combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "964d",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst13~regout\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
-
--- Location: LC_X7_Y6_N2
-\inst10|inst13\ : maxv_lcell
--- Equation(s):
--- \inst10|inst13~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0))) # (!\inst9|inst16~combout\ & ((\inst10|inst13~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fbea",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	datad => \inst10|inst13~regout\,
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst13~regout\);
-
--- Location: LC_X8_Y6_N1
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst10|inst12~regout\ $ (((!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst12~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst10|inst12~regout\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst12~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst10|inst12~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst12~regout\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
-
--- Location: LC_X7_Y6_N3
-\inst10|inst12\ : maxv_lcell
--- Equation(s):
--- \inst10|inst12~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\inst9|inst16~combout\ & (\inst10|inst12~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "feba",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst10|inst12~regout\,
-	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst12~regout\);
-
--- Location: LC_X8_Y6_N2
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst10|inst11~regout\ $ ((!(!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst11~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst10|inst11~regout\ 
--- & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst11~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))) # (!VCC $ \Inc~combout\ & 
--- (\inst10|inst11~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "698e",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst11~regout\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
-
--- Location: LC_X7_Y6_N4
-\inst10|inst11\ : maxv_lcell
--- Equation(s):
--- \inst10|inst11~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2))) # (!\inst9|inst16~combout\ & ((\inst10|inst11~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fbea",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	datad => \inst10|inst11~regout\,
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst11~regout\);
-
--- Location: LC_X8_Y6_N3
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst10|inst10~regout\ $ (((!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst10~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst10|inst10~regout\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst10~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst10|inst10~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst10~regout\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
-
--- Location: LC_X7_Y6_N1
-\inst10|inst10\ : maxv_lcell
--- Equation(s):
--- \inst10|inst10~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3))) # (!\inst9|inst16~combout\ & ((\inst10|inst10~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fbea",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	datad => \inst10|inst10~regout\,
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst10~regout\);
-
--- Location: LC_X8_Y6_N4
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst10|inst9~regout\ $ ((!(!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst9~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))) # (!VCC $ \Inc~combout\ & 
--- (\inst10|inst9~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "698e",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst9~regout\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
-	cout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
-
--- Location: LC_X7_Y6_N6
-\inst10|inst9\ : maxv_lcell
--- Equation(s):
--- \inst10|inst9~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4)))) # (!\inst9|inst16~combout\ & (\inst10|inst9~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "feba",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst10|inst9~regout\,
-	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst9~regout\);
-
--- Location: LC_X8_Y6_N5
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst10|inst8~regout\ $ ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst8~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\) # (!\inst10|inst8~regout\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst8~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\) # (!\inst10|inst8~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst8~regout\,
-	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(5),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
-
--- Location: LC_X7_Y6_N7
-\inst10|inst8\ : maxv_lcell
--- Equation(s):
--- \inst10|inst8~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(5)))) # (!\inst9|inst16~combout\ & (\inst10|inst8~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "feba",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst10|inst8~regout\,
-	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(5),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst8~regout\);
-
--- Location: LC_X8_Y6_N6
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst10|inst7~regout\ $ ((!(!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\) # (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst7~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst10|inst7~regout\ & 
--- !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\)))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst7~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\))) # (!VCC $ \Inc~combout\ & 
--- (\inst10|inst7~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "698e",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst7~regout\,
-	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
-
--- Location: LC_X7_Y6_N5
-\inst10|inst7\ : maxv_lcell
--- Equation(s):
--- \inst10|inst7~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))) # (!\inst9|inst16~combout\ & ((\inst10|inst7~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fbea",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
-	datad => \inst10|inst7~regout\,
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst7~regout\);
-
--- Location: LC_X8_Y6_N7
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst10|inst6~regout\ $ (((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\) # (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst6~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\) # (!\inst10|inst6~regout\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst6~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\) # (!\inst10|inst6~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst6~regout\,
-	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
-
--- Location: LC_X7_Y6_N9
-\inst10|inst6\ : maxv_lcell
--- Equation(s):
--- \inst10|inst6~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\inst9|inst16~combout\ & (\inst10|inst6~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "feae",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst10|inst6~regout\,
-	datac => \inst9|inst16~combout\,
-	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst6~regout\);
-
--- Location: LC_X8_Y6_N8
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst10|inst5~regout\ $ ((!(!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\) # (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst5~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst10|inst5~regout\ & 
--- !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\)))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst5~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\))) # (!VCC $ \Inc~combout\ & 
--- (\inst10|inst5~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "698e",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst5~regout\,
-	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
-
--- Location: LC_X7_Y6_N0
-\inst10|inst5\ : maxv_lcell
--- Equation(s):
--- \inst10|inst5~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(8)))) # (!\inst9|inst16~combout\ & (\inst10|inst5~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fef2",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \inst10|inst5~regout\,
-	datab => \inst9|inst16~combout\,
-	datac => \Initialize~combout\,
-	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst5~regout\);
-
--- Location: LC_X8_Y6_N9
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst10|inst4~regout\ $ (((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\) # (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst4~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\) # (!\inst10|inst4~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst4~regout\,
-	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
-	cout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
-
--- Location: LC_X7_Y6_N8
-\inst10|inst4\ : maxv_lcell
--- Equation(s):
--- \inst10|inst4~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))) # (!\inst9|inst16~combout\ & ((\inst10|inst4~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fbea",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
-	datad => \inst10|inst4~regout\,
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst4~regout\);
-
--- Location: LC_X9_Y6_N0
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst10|inst3~regout\ $ ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst3~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst10|inst3~regout\ 
--- & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst3~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\))) # (!VCC $ \Inc~combout\ & 
--- (\inst10|inst3~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin_used => "true",
-	lut_mask => "698e",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst3~regout\,
-	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(10),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
-
--- Location: LC_X10_Y6_N5
-\inst10|inst3\ : maxv_lcell
--- Equation(s):
--- \inst10|inst3~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\inst9|inst16~combout\ & (\inst10|inst3~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fef4",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst10|inst3~regout\,
-	datac => \Initialize~combout\,
-	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(10),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst3~regout\);
-
--- Location: LC_X9_Y6_N1
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst10|inst2~regout\ $ (((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\) # (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst2~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\) # (!\inst10|inst2~regout\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst2~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\) # (!\inst10|inst2~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst2~regout\,
-	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
-
--- Location: LC_X10_Y6_N8
-\inst10|inst2\ : maxv_lcell
--- Equation(s):
--- \inst10|inst2~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11))) # (!\inst9|inst16~combout\ & ((\inst10|inst2~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fbea",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
-	datad => \inst10|inst2~regout\,
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst2~regout\);
-
--- Location: LC_X10_Y5_N5
-\inst24|LPM_COMPARE_component|auto_generated|agb~4\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~4_combout\ = (!\inst10|inst5~regout\ & (!\inst10|inst2~regout\ & (!\inst10|inst3~regout\ & !\inst10|inst4~regout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst10|inst5~regout\,
-	datab => \inst10|inst2~regout\,
-	datac => \inst10|inst3~regout\,
-	datad => \inst10|inst4~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~4_combout\);
-
--- Location: LC_X8_Y4_N2
-\inst24|LPM_COMPARE_component|auto_generated|agb~5\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~5_combout\ = (!\inst10|inst8~regout\ & (!\inst10|inst6~regout\ & (!\inst10|inst9~regout\ & !\inst10|inst7~regout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst10|inst8~regout\,
-	datab => \inst10|inst6~regout\,
-	datac => \inst10|inst9~regout\,
-	datad => \inst10|inst7~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~5_combout\);
-
--- Location: LC_X8_Y4_N4
-\inst24|LPM_COMPARE_component|auto_generated|agb~6\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~6_combout\ = (!\inst10|inst11~regout\ & (!\inst10|inst10~regout\ & (!\inst10|inst12~regout\ & !\inst10|inst13~regout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst10|inst11~regout\,
-	datab => \inst10|inst10~regout\,
-	datac => \inst10|inst12~regout\,
-	datad => \inst10|inst13~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~6_combout\);
-
--- Location: LC_X9_Y6_N2
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
--- (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst10|inst1~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "5aa5",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datad => \inst10|inst1~regout\,
-	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
-
--- Location: LC_X10_Y6_N1
-\inst10|inst1\ : maxv_lcell
--- Equation(s):
--- \inst10|inst1~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\inst9|inst16~combout\ & (\inst10|inst1~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fef4",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst10|inst1~regout\,
-	datac => \Initialize~combout\,
-	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst10|inst1~regout\);
-
--- Location: LC_X8_Y4_N3
-\inst24|LPM_COMPARE_component|auto_generated|agb~7\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~7_combout\ = (\inst10|inst1~regout\) # ((\inst24|LPM_COMPARE_component|auto_generated|agb~4_combout\ & (\inst24|LPM_COMPARE_component|auto_generated|agb~5_combout\ & 
--- \inst24|LPM_COMPARE_component|auto_generated|agb~6_combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff80",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst24|LPM_COMPARE_component|auto_generated|agb~4_combout\,
-	datab => \inst24|LPM_COMPARE_component|auto_generated|agb~5_combout\,
-	datac => \inst24|LPM_COMPARE_component|auto_generated|agb~6_combout\,
-	datad => \inst10|inst1~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~7_combout\);
-
--- Location: LC_X8_Y7_N0
+-- Location: LC_X5_Y4_N0
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst11|inst13~regout\ $ ((\Inc~combout\)))
@@ -2165,32 +1362,34 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
 
--- Location: LC_X7_Y7_N7
+-- Location: LC_X4_Y4_N3
 \inst11|inst13\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst13~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(0)))) # (!\inst9|inst16~combout\ & (\inst11|inst13~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst11|inst13~regout\ = DFFEAS((\Dec~combout\ & (((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(0))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(0)))) # (!\Inc~combout\ & 
+-- (\inst11|inst13~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "faee",
+	lut_mask => "f0e2",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst11|inst13~regout\,
+	dataa => \inst11|inst13~regout\,
+	datab => \Dec~combout\,
 	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	datad => \inst9|inst16~combout\,
+	datad => \Inc~combout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst11|inst13~regout\);
 
--- Location: LC_X8_Y7_N1
+-- Location: LC_X5_Y4_N1
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst11|inst12~regout\ $ (((!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
@@ -2223,32 +1422,34 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
 
--- Location: LC_X7_Y7_N2
+-- Location: LC_X4_Y4_N7
 \inst11|inst12\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst12~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\inst9|inst16~combout\ & (\inst11|inst12~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst11|inst12~regout\ = DFFEAS((\Dec~combout\ & (((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\Inc~combout\ & 
+-- (\inst11|inst12~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef2",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst11|inst12~regout\,
-	datab => \inst9|inst16~combout\,
-	datac => \Initialize~combout\,
+	dataa => \Dec~combout\,
+	datab => \Inc~combout\,
+	datac => \inst11|inst12~regout\,
 	datad => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst11|inst12~regout\);
 
--- Location: LC_X8_Y7_N2
+-- Location: LC_X5_Y4_N2
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst11|inst11~regout\ $ ((!(!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
@@ -2281,32 +1482,34 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
 
--- Location: LC_X7_Y7_N6
+-- Location: LC_X3_Y4_N9
 \inst11|inst11\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst11~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2)))) # (!\inst9|inst16~combout\ & (\inst11|inst11~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst11|inst11~regout\ = DFFEAS((\Dec~combout\ & (((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2)))) # (!\Inc~combout\ & 
+-- (\inst11|inst11~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "faee",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst11|inst11~regout\,
-	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	datad => \inst9|inst16~combout\,
+	dataa => \Dec~combout\,
+	datab => \Inc~combout\,
+	datac => \inst11|inst11~regout\,
+	datad => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst11|inst11~regout\);
 
--- Location: LC_X8_Y7_N3
+-- Location: LC_X5_Y4_N3
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst11|inst10~regout\ $ (((!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
@@ -2339,7 +1542,7 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
 
--- Location: LC_X7_Y7_N1
+-- Location: LC_X4_Y4_N2
 \inst11|inst10\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst10~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(3)))) # (!\inst9|inst16~combout\ & (\inst11|inst10~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
@@ -2364,7 +1567,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst11|inst10~regout\);
 
--- Location: LC_X8_Y7_N4
+-- Location: LC_X5_Y4_N4
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst11|inst9~regout\ $ ((!(!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
@@ -2394,14 +1597,14 @@ PORT MAP (
 	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	cout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
 
--- Location: LC_X7_Y7_N5
+-- Location: LC_X4_Y4_N4
 \inst11|inst9\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst9~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4)))) # (!\inst9|inst16~combout\ & (\inst11|inst9~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef2",
+	lut_mask => "feba",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -2410,16 +1613,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst11|inst9~regout\,
+	dataa => \Initialize~combout\,
 	datab => \inst9|inst16~combout\,
-	datac => \Initialize~combout\,
+	datac => \inst11|inst9~regout\,
 	datad => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst11|inst9~regout\);
 
--- Location: LC_X8_Y7_N5
+-- Location: LC_X5_Y4_N5
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst11|inst8~regout\ $ ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
@@ -2449,7 +1652,7 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
 
--- Location: LC_X7_Y7_N9
+-- Location: LC_X4_Y4_N9
 \inst11|inst8\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst8~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(5)))) # (!\inst9|inst16~combout\ & (\inst11|inst8~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
@@ -2474,7 +1677,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst11|inst8~regout\);
 
--- Location: LC_X8_Y7_N6
+-- Location: LC_X5_Y4_N6
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst11|inst7~regout\ $ ((!(!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -2509,32 +1712,57 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
 
--- Location: LC_X7_Y7_N3
+-- Location: LC_X4_Y4_N8
 \inst11|inst7\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst7~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))) # (!\inst9|inst16~combout\ & ((\inst11|inst7~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst11|inst7~regout\ = DFFEAS((\Dec~combout\ & (((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(6)))) # (!\Inc~combout\ & 
+-- (\inst11|inst7~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "f0e2",
 	operation_mode => "normal",
 	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \inst11|inst7~regout\,
+	datab => \Dec~combout\,
+	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
+	datad => \Inc~combout\,
+	aclr => GND,
+	sclr => \Initialize~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst11|inst7~regout\);
+
+-- Location: LC_X5_Y5_N6
+\inst24|LPM_COMPARE_component|auto_generated|agb~2\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~2_combout\ = (!\inst11|inst7~regout\ & (!\inst11|inst13~regout\ & (!\inst11|inst11~regout\ & !\inst11|inst12~regout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001",
+	operation_mode => "normal",
+	output_mode => "comb_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
-	datad => \inst11|inst7~regout\,
-	aclr => GND,
+	dataa => \inst11|inst7~regout\,
+	datab => \inst11|inst13~regout\,
+	datac => \inst11|inst11~regout\,
+	datad => \inst11|inst12~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \inst11|inst7~regout\);
+	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~2_combout\);
 
--- Location: LC_X8_Y7_N7
+-- Location: LC_X5_Y4_N7
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst11|inst6~regout\ $ (((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -2569,55 +1797,34 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
 
--- Location: LC_X7_Y7_N8
+-- Location: LC_X4_Y4_N1
 \inst11|inst6\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst6~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\inst9|inst16~combout\ & (\inst11|inst6~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst11|inst6~regout\ = DFFEAS((\Dec~combout\ & (((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(7))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\Inc~combout\ & 
+-- (\inst11|inst6~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	dataa => \Dec~combout\,
+	datab => \Inc~combout\,
 	datac => \inst11|inst6~regout\,
 	datad => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst11|inst6~regout\);
 
--- Location: LC_X10_Y7_N5
-\inst24|LPM_COMPARE_component|auto_generated|agb~1\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~1_combout\ = (!\inst11|inst7~regout\ & (!\inst11|inst9~regout\ & (!\inst11|inst8~regout\ & !\inst11|inst6~regout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0001",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst11|inst7~regout\,
-	datab => \inst11|inst9~regout\,
-	datac => \inst11|inst8~regout\,
-	datad => \inst11|inst6~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~1_combout\);
-
--- Location: LC_X8_Y7_N8
+-- Location: LC_X5_Y4_N8
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst11|inst5~regout\ $ ((!(!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -2652,14 +1859,14 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
 
--- Location: LC_X7_Y7_N0
+-- Location: LC_X4_Y4_N0
 \inst11|inst5\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst5~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(8)))) # (!\inst9|inst16~combout\ & (\inst11|inst5~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "fef2",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -2668,16 +1875,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
+	dataa => \inst11|inst5~regout\,
 	datab => \inst9|inst16~combout\,
-	datac => \inst11|inst5~regout\,
+	datac => \Initialize~combout\,
 	datad => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst11|inst5~regout\);
 
--- Location: LC_X8_Y7_N9
+-- Location: LC_X5_Y4_N9
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst11|inst4~regout\ $ (((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -2709,32 +1916,34 @@ PORT MAP (
 	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	cout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
 
--- Location: LC_X7_Y7_N4
+-- Location: LC_X4_Y4_N6
 \inst11|inst4\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst4~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(9)))) # (!\inst9|inst16~combout\ & (\inst11|inst4~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst11|inst4~regout\ = DFFEAS((\Dec~combout\ & (((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(9)))) # (!\Inc~combout\ & 
+-- (\inst11|inst4~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "faee",
+	lut_mask => "f0e2",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst11|inst4~regout\,
+	dataa => \inst11|inst4~regout\,
+	datab => \Dec~combout\,
 	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
-	datad => \inst9|inst16~combout\,
+	datad => \Inc~combout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst11|inst4~regout\);
 
--- Location: LC_X9_Y7_N0
+-- Location: LC_X6_Y4_N0
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst11|inst3~regout\ $ ((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
@@ -2764,32 +1973,34 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
 
--- Location: LC_X10_Y7_N4
+-- Location: LC_X6_Y5_N8
 \inst11|inst3\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst3~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\inst9|inst16~combout\ & (\inst11|inst3~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst11|inst3~regout\ = DFFEAS((\Dec~combout\ & (((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(10))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\Inc~combout\ & 
+-- (\inst11|inst3~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "fe02",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst11|inst3~regout\,
-	datac => \Initialize~combout\,
+	dataa => \inst11|inst3~regout\,
+	datab => \Dec~combout\,
+	datac => \Inc~combout\,
 	datad => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(10),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst11|inst3~regout\);
 
--- Location: LC_X9_Y7_N1
+-- Location: LC_X6_Y4_N1
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst11|inst2~regout\ $ (((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & 
@@ -2824,32 +2035,34 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
 
--- Location: LC_X10_Y7_N8
+-- Location: LC_X4_Y4_N5
 \inst11|inst2\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst2~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(11))) # (!\inst9|inst16~combout\ & ((\inst11|inst2~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst11|inst2~regout\ = DFFEAS((\Dec~combout\ & (((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(11))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(11)))) # (!\Inc~combout\ & 
+-- (\inst11|inst2~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
-	datad => \inst11|inst2~regout\,
+	dataa => \Dec~combout\,
+	datab => \Inc~combout\,
+	datac => \inst11|inst2~regout\,
+	datad => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst11|inst2~regout\);
 
--- Location: LC_X9_Y7_N2
+-- Location: LC_X6_Y4_N2
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
@@ -2878,35 +2091,37 @@ PORT MAP (
 	devpor => ww_devpor,
 	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
 
--- Location: LC_X10_Y7_N1
+-- Location: LC_X3_Y4_N5
 \inst11|inst1\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst1~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\inst9|inst16~combout\ & (\inst11|inst1~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst11|inst1~regout\ = DFFEAS((\Dec~combout\ & (((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\Inc~combout\ & 
+-- (\inst11|inst1~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst11|inst1~regout\,
-	datac => \Initialize~combout\,
+	dataa => \Dec~combout\,
+	datab => \Inc~combout\,
+	datac => \inst11|inst1~regout\,
 	datad => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst11|inst1~regout\);
 
--- Location: LC_X10_Y7_N7
-\inst24|LPM_COMPARE_component|auto_generated|agb~2\ : maxv_lcell
+-- Location: LC_X5_Y5_N4
+\inst24|LPM_COMPARE_component|auto_generated|agb~1\ : maxv_lcell
 -- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~2_combout\ = (!\inst11|inst13~regout\ & (!\inst11|inst11~regout\ & (!\inst11|inst12~regout\ & !\inst11|inst10~regout\)))
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~1_combout\ = (!\inst11|inst3~regout\ & (!\inst11|inst4~regout\ & (!\inst11|inst6~regout\ & !\inst11|inst2~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2918,18 +2133,18 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst11|inst13~regout\,
-	datab => \inst11|inst11~regout\,
-	datac => \inst11|inst12~regout\,
-	datad => \inst11|inst10~regout\,
+	dataa => \inst11|inst3~regout\,
+	datab => \inst11|inst4~regout\,
+	datac => \inst11|inst6~regout\,
+	datad => \inst11|inst2~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~2_combout\);
+	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~1_combout\);
 
--- Location: LC_X10_Y7_N2
+-- Location: LC_X5_Y5_N2
 \inst24|LPM_COMPARE_component|auto_generated|agb~0\ : maxv_lcell
 -- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~0_combout\ = (!\inst11|inst2~regout\ & (!\inst11|inst4~regout\ & (!\inst11|inst3~regout\ & !\inst11|inst5~regout\)))
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~0_combout\ = (!\inst11|inst8~regout\ & (!\inst11|inst10~regout\ & (!\inst11|inst9~regout\ & !\inst11|inst5~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2941,18 +2156,18 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst11|inst2~regout\,
-	datab => \inst11|inst4~regout\,
-	datac => \inst11|inst3~regout\,
+	dataa => \inst11|inst8~regout\,
+	datab => \inst11|inst10~regout\,
+	datac => \inst11|inst9~regout\,
 	datad => \inst11|inst5~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~0_combout\);
 
--- Location: LC_X10_Y7_N6
+-- Location: LC_X5_Y5_N5
 \inst24|LPM_COMPARE_component|auto_generated|agb~3\ : maxv_lcell
 -- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~3_combout\ = (\inst11|inst1~regout\) # ((\inst24|LPM_COMPARE_component|auto_generated|agb~1_combout\ & (\inst24|LPM_COMPARE_component|auto_generated|agb~2_combout\ & 
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~3_combout\ = (\inst11|inst1~regout\) # ((\inst24|LPM_COMPARE_component|auto_generated|agb~2_combout\ & (\inst24|LPM_COMPARE_component|auto_generated|agb~1_combout\ & 
 -- \inst24|LPM_COMPARE_component|auto_generated|agb~0_combout\)))
 
 -- pragma translate_off
@@ -2965,23 +2180,425 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst24|LPM_COMPARE_component|auto_generated|agb~1_combout\,
+	dataa => \inst24|LPM_COMPARE_component|auto_generated|agb~2_combout\,
 	datab => \inst11|inst1~regout\,
-	datac => \inst24|LPM_COMPARE_component|auto_generated|agb~2_combout\,
+	datac => \inst24|LPM_COMPARE_component|auto_generated|agb~1_combout\,
 	datad => \inst24|LPM_COMPARE_component|auto_generated|agb~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~3_combout\);
 
--- Location: LC_X7_Y4_N2
-\inst24|LPM_COMPARE_component|auto_generated|agb~8\ : maxv_lcell
+-- Location: LC_X10_Y6_N0
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~8_combout\ = (\passiveNOTactive19~combout\ & (((\inst24|LPM_COMPARE_component|auto_generated|agb~3_combout\)))) # (!\passiveNOTactive19~combout\ & 
--- (\inst24|LPM_COMPARE_component|auto_generated|agb~7_combout\ & (\NightNOTday18~combout\)))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst10|inst13~regout\ $ ((\Inc~combout\)))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst10|inst13~regout\) # (!\Inc~combout\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst10|inst13~regout\) # (!\Inc~combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ec20",
+	lut_mask => "964d",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst13~regout\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
+
+-- Location: LC_X9_Y6_N2
+\inst10|inst13\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst13~regout\ = DFFEAS((\Inc~combout\ & (((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0))))) # (!\Inc~combout\ & ((\Dec~combout\ & (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0))) # (!\Dec~combout\ & 
+-- ((\inst10|inst13~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f1e0",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	datad => \inst10|inst13~regout\,
+	aclr => GND,
+	sclr => \Initialize~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst13~regout\);
+
+-- Location: LC_X10_Y6_N1
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst10|inst12~regout\ $ (((!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst12~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst10|inst12~regout\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst12~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst10|inst12~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst12~regout\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
+
+-- Location: LC_X9_Y6_N7
+\inst10|inst12\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst12~regout\ = DFFEAS((\Inc~combout\ & (((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\Dec~combout\ & 
+-- (\inst10|inst12~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fe10",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst10|inst12~regout\,
+	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	aclr => GND,
+	sclr => \Initialize~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst12~regout\);
+
+-- Location: LC_X10_Y6_N2
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst10|inst11~regout\ $ ((!(!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst11~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst10|inst11~regout\ 
+-- & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst11~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))) # (!VCC $ \Inc~combout\ & 
+-- (\inst10|inst11~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "698e",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst11~regout\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
+
+-- Location: LC_X9_Y6_N1
+\inst10|inst11\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst11~regout\ = DFFEAS((\Inc~combout\ & (((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2))))) # (!\Inc~combout\ & ((\Dec~combout\ & (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2))) # (!\Dec~combout\ & 
+-- ((\inst10|inst11~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f1e0",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	datad => \inst10|inst11~regout\,
+	aclr => GND,
+	sclr => \Initialize~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst11~regout\);
+
+-- Location: LC_X10_Y6_N3
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst10|inst10~regout\ $ (((!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst10~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst10|inst10~regout\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst10~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst10|inst10~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst10~regout\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
+
+-- Location: LC_X9_Y6_N8
+\inst10|inst10\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst10~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3))) # (!\inst9|inst16~combout\ & ((\inst10|inst10~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fbea",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \Initialize~combout\,
+	datab => \inst9|inst16~combout\,
+	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	datad => \inst10|inst10~regout\,
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst10~regout\);
+
+-- Location: LC_X10_Y6_N4
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst10|inst9~regout\ $ ((!(!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst9~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))) # (!VCC $ \Inc~combout\ & 
+-- (\inst10|inst9~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "698e",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst9~regout\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
+	cout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
+
+-- Location: LC_X9_Y6_N4
+\inst10|inst9\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst9~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4)))) # (!\inst9|inst16~combout\ & (\inst10|inst9~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "feba",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \Initialize~combout\,
+	datab => \inst9|inst16~combout\,
+	datac => \inst10|inst9~regout\,
+	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst9~regout\);
+
+-- Location: LC_X10_Y6_N5
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst10|inst8~regout\ $ ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst8~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\) # (!\inst10|inst8~regout\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst8~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\) # (!\inst10|inst8~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst8~regout\,
+	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(5),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
+
+-- Location: LC_X9_Y6_N3
+\inst10|inst8\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst8~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(5)))) # (!\inst9|inst16~combout\ & (\inst10|inst8~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fef2",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \inst10|inst8~regout\,
+	datab => \inst9|inst16~combout\,
+	datac => \Initialize~combout\,
+	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(5),
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst8~regout\);
+
+-- Location: LC_X10_Y6_N6
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst10|inst7~regout\ $ ((!(!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\) # (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst7~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst10|inst7~regout\ & 
+-- !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\)))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst7~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\))) # (!VCC $ \Inc~combout\ & 
+-- (\inst10|inst7~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "698e",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst7~regout\,
+	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
+
+-- Location: LC_X9_Y6_N6
+\inst10|inst7\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst7~regout\ = DFFEAS((\Dec~combout\ & (((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(6)))) # (!\Inc~combout\ & 
+-- (\inst10|inst7~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f0e2",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \inst10|inst7~regout\,
+	datab => \Dec~combout\,
+	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
+	datad => \Inc~combout\,
+	aclr => GND,
+	sclr => \Initialize~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst7~regout\);
+
+-- Location: LC_X8_Y6_N8
+\inst24|LPM_COMPARE_component|auto_generated|agb~6\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~6_combout\ = (!\inst10|inst12~regout\ & (!\inst10|inst11~regout\ & (!\inst10|inst13~regout\ & !\inst10|inst7~regout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -2989,22 +2606,472 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst24|LPM_COMPARE_component|auto_generated|agb~7_combout\,
-	datab => \passiveNOTactive19~combout\,
+	dataa => \inst10|inst12~regout\,
+	datab => \inst10|inst11~regout\,
+	datac => \inst10|inst13~regout\,
+	datad => \inst10|inst7~regout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~6_combout\);
+
+-- Location: LC_X10_Y6_N7
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst10|inst6~regout\ $ (((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\) # (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst6~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\) # (!\inst10|inst6~regout\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst6~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\) # (!\inst10|inst6~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst6~regout\,
+	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
+
+-- Location: LC_X9_Y6_N5
+\inst10|inst6\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst6~regout\ = DFFEAS((\Inc~combout\ & (((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(7))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\Dec~combout\ & 
+-- (\inst10|inst6~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fe10",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst10|inst6~regout\,
+	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
+	aclr => GND,
+	sclr => \Initialize~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst6~regout\);
+
+-- Location: LC_X10_Y6_N8
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst10|inst5~regout\ $ ((!(!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\) # (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst5~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst10|inst5~regout\ & 
+-- !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\)))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst5~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\))) # (!VCC $ \Inc~combout\ & 
+-- (\inst10|inst5~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "698e",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst5~regout\,
+	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
+
+-- Location: LC_X9_Y6_N9
+\inst10|inst5\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst5~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(8)))) # (!\inst9|inst16~combout\ & (\inst10|inst5~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "feba",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \Initialize~combout\,
+	datab => \inst9|inst16~combout\,
+	datac => \inst10|inst5~regout\,
+	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst5~regout\);
+
+-- Location: LC_X10_Y6_N9
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst10|inst4~regout\ $ (((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\) # (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst4~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\) # (!\inst10|inst4~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst4~regout\,
+	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
+	cout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
+
+-- Location: LC_X9_Y6_N0
+\inst10|inst4\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst4~regout\ = DFFEAS((\Inc~combout\ & (((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))))) # (!\Inc~combout\ & ((\Dec~combout\ & (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))) # (!\Dec~combout\ & 
+-- ((\inst10|inst4~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f1e0",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
+	datad => \inst10|inst4~regout\,
+	aclr => GND,
+	sclr => \Initialize~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst4~regout\);
+
+-- Location: LC_X11_Y6_N0
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst10|inst3~regout\ $ ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst3~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst10|inst3~regout\ 
+-- & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst3~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\))) # (!VCC $ \Inc~combout\ & 
+-- (\inst10|inst3~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin_used => "true",
+	lut_mask => "698e",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst3~regout\,
+	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(10),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
+
+-- Location: LC_X8_Y6_N4
+\inst10|inst3\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst3~regout\ = DFFEAS((\Inc~combout\ & (((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(10))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\Dec~combout\ & 
+-- (\inst10|inst3~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fe10",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst10|inst3~regout\,
+	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(10),
+	aclr => GND,
+	sclr => \Initialize~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst3~regout\);
+
+-- Location: LC_X11_Y6_N1
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst10|inst2~regout\ $ (((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\) # (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst2~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\) # (!\inst10|inst2~regout\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst2~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\) # (!\inst10|inst2~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst2~regout\,
+	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
+
+-- Location: LC_X8_Y6_N6
+\inst10|inst2\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst2~regout\ = DFFEAS((\Inc~combout\ & (((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11)))) # (!\Dec~combout\ & 
+-- (\inst10|inst2~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fe10",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst10|inst2~regout\,
+	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
+	aclr => GND,
+	sclr => \Initialize~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst2~regout\);
+
+-- Location: LC_X11_Y6_N2
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
+-- (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst10|inst1~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "5aa5",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datad => \inst10|inst1~regout\,
+	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
+
+-- Location: LC_X8_Y6_N1
+\inst10|inst1\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst1~regout\ = DFFEAS((\Dec~combout\ & (((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\Inc~combout\ & 
+-- (\inst10|inst1~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fe04",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \Dec~combout\,
+	datab => \inst10|inst1~regout\,
+	datac => \Inc~combout\,
+	datad => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
+	aclr => GND,
+	sclr => \Initialize~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst10|inst1~regout\);
+
+-- Location: LC_X8_Y6_N0
+\inst24|LPM_COMPARE_component|auto_generated|agb~5\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~5_combout\ = (!\inst10|inst3~regout\ & (!\inst10|inst6~regout\ & (!\inst10|inst2~regout\ & !\inst10|inst4~regout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst10|inst3~regout\,
+	datab => \inst10|inst6~regout\,
+	datac => \inst10|inst2~regout\,
+	datad => \inst10|inst4~regout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~5_combout\);
+
+-- Location: LC_X8_Y6_N2
+\inst24|LPM_COMPARE_component|auto_generated|agb~4\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~4_combout\ = (!\inst10|inst9~regout\ & (!\inst10|inst5~regout\ & (!\inst10|inst8~regout\ & !\inst10|inst10~regout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0001",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst10|inst9~regout\,
+	datab => \inst10|inst5~regout\,
+	datac => \inst10|inst8~regout\,
+	datad => \inst10|inst10~regout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~4_combout\);
+
+-- Location: LC_X8_Y6_N7
+\inst24|LPM_COMPARE_component|auto_generated|agb~7\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~7_combout\ = (\inst10|inst1~regout\) # ((\inst24|LPM_COMPARE_component|auto_generated|agb~6_combout\ & (\inst24|LPM_COMPARE_component|auto_generated|agb~5_combout\ & 
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~4_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "eccc",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst24|LPM_COMPARE_component|auto_generated|agb~6_combout\,
+	datab => \inst10|inst1~regout\,
+	datac => \inst24|LPM_COMPARE_component|auto_generated|agb~5_combout\,
+	datad => \inst24|LPM_COMPARE_component|auto_generated|agb~4_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~7_combout\);
+
+-- Location: LC_X6_Y6_N3
+\inst24|LPM_COMPARE_component|auto_generated|agb~8\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~8_combout\ = (\passiveNOTactive19~combout\ & (\inst24|LPM_COMPARE_component|auto_generated|agb~3_combout\)) # (!\passiveNOTactive19~combout\ & (((\NightNOTday18~combout\ & 
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~7_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "d888",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \passiveNOTactive19~combout\,
+	datab => \inst24|LPM_COMPARE_component|auto_generated|agb~3_combout\,
 	datac => \NightNOTday18~combout\,
-	datad => \inst24|LPM_COMPARE_component|auto_generated|agb~3_combout\,
+	datad => \inst24|LPM_COMPARE_component|auto_generated|agb~7_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~8_combout\);
 
--- Location: LC_X7_Y4_N7
+-- Location: LC_X6_Y6_N5
 \inst24|LPM_COMPARE_component|auto_generated|agb~13\ : maxv_lcell
 -- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|agb~13_combout\ = (\inst24|LPM_COMPARE_component|auto_generated|agb~8_combout\) # ((\inst24|LPM_COMPARE_component|auto_generated|agb~12_combout\ & (!\passiveNOTactive19~combout\ & !\NightNOTday18~combout\)))
+-- \inst24|LPM_COMPARE_component|auto_generated|agb~13_combout\ = (\inst24|LPM_COMPARE_component|auto_generated|agb~8_combout\) # ((!\NightNOTday18~combout\ & (\inst24|LPM_COMPARE_component|auto_generated|agb~12_combout\ & !\passiveNOTactive19~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ff02",
+	lut_mask => "ff04",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -3012,15 +3079,15 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst24|LPM_COMPARE_component|auto_generated|agb~12_combout\,
-	datab => \passiveNOTactive19~combout\,
-	datac => \NightNOTday18~combout\,
+	dataa => \NightNOTday18~combout\,
+	datab => \inst24|LPM_COMPARE_component|auto_generated|agb~12_combout\,
+	datac => \passiveNOTactive19~combout\,
 	datad => \inst24|LPM_COMPARE_component|auto_generated|agb~8_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst24|LPM_COMPARE_component|auto_generated|agb~13_combout\);
 
--- Location: PIN_67,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_42,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \passiveNOTactive~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -3031,7 +3098,7 @@ PORT MAP (
 	padio => ww_passiveNOTactive,
 	combout => \passiveNOTactive~combout\);
 
--- Location: LC_X10_Y3_N0
+-- Location: LC_X8_Y7_N0
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst14|inst13~regout\ $ ((\Inc~combout\)))
@@ -3057,32 +3124,34 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
 
--- Location: LC_X11_Y5_N6
+-- Location: LC_X7_Y7_N4
 \inst14|inst13\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst13~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0)))) # (!\inst9|inst16~combout\ & (\inst14|inst13~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst14|inst13~regout\ = DFFEAS((\Dec~combout\ & (((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0)))) # (!\Inc~combout\ & 
+-- (\inst14|inst13~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef2",
+	lut_mask => "f0e2",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
 	dataa => \inst14|inst13~regout\,
-	datab => \inst9|inst16~combout\,
-	datac => \Initialize~combout\,
-	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	datab => \Dec~combout\,
+	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	datad => \Inc~combout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst13~regout\);
 
--- Location: LC_X10_Y3_N1
+-- Location: LC_X8_Y7_N1
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst14|inst12~regout\ $ (((!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
@@ -3115,32 +3184,34 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
 
--- Location: LC_X11_Y5_N9
+-- Location: LC_X7_Y7_N7
 \inst14|inst12\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst12~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\inst9|inst16~combout\ & (\inst14|inst12~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst14|inst12~regout\ = DFFEAS((\Inc~combout\ & (((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\Dec~combout\ & 
+-- (\inst14|inst12~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "faee",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst14|inst12~regout\,
-	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	datad => \inst9|inst16~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst14|inst12~regout\,
+	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst12~regout\);
 
--- Location: LC_X10_Y3_N2
+-- Location: LC_X8_Y7_N2
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst14|inst11~regout\ $ ((!(!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
@@ -3173,32 +3244,34 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
 
--- Location: LC_X9_Y4_N7
+-- Location: LC_X7_Y7_N2
 \inst14|inst11\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst11~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2)))) # (!\inst9|inst16~combout\ & (\inst14|inst11~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst14|inst11~regout\ = DFFEAS((\Inc~combout\ & (((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2))))) # (!\Inc~combout\ & ((\Dec~combout\ & (\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2))) # (!\Dec~combout\ & 
+-- ((\inst14|inst11~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "f1e0",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst14|inst11~regout\,
-	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	datad => \inst14|inst11~regout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst11~regout\);
 
--- Location: LC_X10_Y3_N3
+-- Location: LC_X8_Y7_N3
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst14|inst10~regout\ $ (((!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
@@ -3231,14 +3304,14 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
 
--- Location: LC_X12_Y3_N3
+-- Location: LC_X7_Y7_N1
 \inst14|inst10\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst10~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3)))) # (!\inst9|inst16~combout\ & (\inst14|inst10~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst14|inst10~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3))) # (!\inst9|inst16~combout\ & ((\inst14|inst10~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef2",
+	lut_mask => "fbea",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -3247,16 +3320,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst14|inst10~regout\,
+	dataa => \Initialize~combout\,
 	datab => \inst9|inst16~combout\,
-	datac => \Initialize~combout\,
-	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	datad => \inst14|inst10~regout\,
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst10~regout\);
 
--- Location: LC_X10_Y3_N4
+-- Location: LC_X8_Y7_N4
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst14|inst9~regout\ $ ((!(!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
@@ -3286,14 +3359,14 @@ PORT MAP (
 	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	cout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
 
--- Location: LC_X11_Y5_N3
+-- Location: LC_X7_Y7_N9
 \inst14|inst9\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst9~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(4))) # (!\inst9|inst16~combout\ & ((\inst14|inst9~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst14|inst9~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(4)))) # (!\inst9|inst16~combout\ & (\inst14|inst9~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "feae",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -3303,15 +3376,15 @@ GENERIC MAP (
 PORT MAP (
 	clk => \CLK~combout\,
 	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
-	datad => \inst14|inst9~regout\,
+	datab => \inst14|inst9~regout\,
+	datac => \inst9|inst16~combout\,
+	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst9~regout\);
 
--- Location: LC_X10_Y3_N5
+-- Location: LC_X8_Y7_N5
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst14|inst8~regout\ $ ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
@@ -3341,14 +3414,14 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
 
--- Location: LC_X12_Y3_N7
+-- Location: LC_X7_Y7_N6
 \inst14|inst8\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst8~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(5)))) # (!\inst9|inst16~combout\ & (\inst14|inst8~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "feba",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -3357,16 +3430,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst14|inst8~regout\,
-	datac => \Initialize~combout\,
+	dataa => \Initialize~combout\,
+	datab => \inst9|inst16~combout\,
+	datac => \inst14|inst8~regout\,
 	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(5),
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst8~regout\);
 
--- Location: LC_X10_Y3_N6
+-- Location: LC_X8_Y7_N6
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst14|inst7~regout\ $ ((!(!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -3401,32 +3474,34 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
 
--- Location: LC_X9_Y4_N5
+-- Location: LC_X7_Y7_N0
 \inst14|inst7\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst7~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(6)))) # (!\inst9|inst16~combout\ & (\inst14|inst7~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst14|inst7~regout\ = DFFEAS((\Inc~combout\ & (((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))))) # (!\Inc~combout\ & ((\Dec~combout\ & (\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))) # (!\Dec~combout\ & 
+-- ((\inst14|inst7~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "f1e0",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst14|inst7~regout\,
-	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
+	datad => \inst14|inst7~regout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst7~regout\);
 
--- Location: LC_X10_Y3_N7
+-- Location: LC_X8_Y7_N7
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst14|inst6~regout\ $ (((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -3461,32 +3536,34 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
 
--- Location: LC_X12_Y3_N4
+-- Location: LC_X7_Y7_N5
 \inst14|inst6\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst6~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\inst9|inst16~combout\ & (\inst14|inst6~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst14|inst6~regout\ = DFFEAS((\Inc~combout\ & (((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(7))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\Dec~combout\ & 
+-- (\inst14|inst6~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst14|inst6~regout\,
-	datac => \Initialize~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst14|inst6~regout\,
 	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst6~regout\);
 
--- Location: LC_X10_Y3_N8
+-- Location: LC_X8_Y7_N8
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst14|inst5~regout\ $ ((!(!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -3521,14 +3598,14 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
 
--- Location: LC_X12_Y3_N9
+-- Location: LC_X7_Y7_N3
 \inst14|inst5\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst5~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(8)))) # (!\inst9|inst16~combout\ & (\inst14|inst5~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "feba",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -3537,16 +3614,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst14|inst5~regout\,
-	datac => \Initialize~combout\,
+	dataa => \Initialize~combout\,
+	datab => \inst9|inst16~combout\,
+	datac => \inst14|inst5~regout\,
 	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst5~regout\);
 
--- Location: LC_X10_Y3_N9
+-- Location: LC_X8_Y7_N9
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst14|inst4~regout\ $ (((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -3578,32 +3655,34 @@ PORT MAP (
 	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	cout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
 
--- Location: LC_X9_Y4_N0
+-- Location: LC_X7_Y7_N8
 \inst14|inst4\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst4~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(9)))) # (!\inst9|inst16~combout\ & (\inst14|inst4~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst14|inst4~regout\ = DFFEAS((\Inc~combout\ & (((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))))) # (!\Inc~combout\ & ((\Dec~combout\ & (\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))) # (!\Dec~combout\ & 
+-- ((\inst14|inst4~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "f1e0",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst14|inst4~regout\,
-	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
+	datad => \inst14|inst4~regout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst4~regout\);
 
--- Location: LC_X11_Y3_N0
+-- Location: LC_X9_Y7_N0
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst14|inst3~regout\ $ ((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
@@ -3633,32 +3712,34 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
 
--- Location: LC_X12_Y3_N2
+-- Location: LC_X10_Y7_N4
 \inst14|inst3\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst3~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\inst9|inst16~combout\ & (\inst14|inst3~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst14|inst3~regout\ = DFFEAS((\Inc~combout\ & (((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(10))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\Dec~combout\ & 
+-- (\inst14|inst3~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst14|inst3~regout\,
-	datac => \Initialize~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst14|inst3~regout\,
 	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(10),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst3~regout\);
 
--- Location: LC_X11_Y3_N1
+-- Location: LC_X9_Y7_N1
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst14|inst2~regout\ $ (((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & 
@@ -3693,32 +3774,34 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
 
--- Location: LC_X12_Y3_N8
+-- Location: LC_X10_Y7_N5
 \inst14|inst2\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst2~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(11))) # (!\inst9|inst16~combout\ & ((\inst14|inst2~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst14|inst2~regout\ = DFFEAS((\Inc~combout\ & (((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(11))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(11)))) # (!\Dec~combout\ & 
+-- (\inst14|inst2~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
-	datad => \inst14|inst2~regout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst14|inst2~regout\,
+	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst2~regout\);
 
--- Location: LC_X11_Y3_N2
+-- Location: LC_X9_Y7_N2
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
@@ -3747,32 +3830,34 @@ PORT MAP (
 	devpor => ww_devpor,
 	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
 
--- Location: LC_X12_Y3_N5
+-- Location: LC_X10_Y7_N1
 \inst14|inst1\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst1~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\inst9|inst16~combout\ & (\inst14|inst1~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst14|inst1~regout\ = DFFEAS((\Inc~combout\ & (((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\Dec~combout\ & 
+-- (\inst14|inst1~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst14|inst1~regout\,
-	datac => \Initialize~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst14|inst1~regout\,
 	datad => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst14|inst1~regout\);
 
--- Location: LC_X11_Y6_N0
+-- Location: LC_X7_Y4_N0
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst13|inst13~regout\ $ ((\Inc~combout\)))
@@ -3798,32 +3883,34 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
 
--- Location: LC_X11_Y5_N8
+-- Location: LC_X9_Y4_N4
 \inst13|inst13\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst13~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0))) # (!\inst9|inst16~combout\ & ((\inst13|inst13~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst13|inst13~regout\ = DFFEAS((\Inc~combout\ & (((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0)))) # (!\Dec~combout\ & 
+-- (\inst13|inst13~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "fe04",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	datad => \inst13|inst13~regout\,
+	dataa => \Inc~combout\,
+	datab => \inst13|inst13~regout\,
+	datac => \Dec~combout\,
+	datad => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst13~regout\);
 
--- Location: LC_X11_Y6_N1
+-- Location: LC_X7_Y4_N1
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst13|inst12~regout\ $ (((!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
@@ -3856,32 +3943,34 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
 
--- Location: LC_X11_Y5_N2
+-- Location: LC_X6_Y5_N7
 \inst13|inst12\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst12~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\inst9|inst16~combout\ & (\inst13|inst12~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst13|inst12~regout\ = DFFEAS((\Dec~combout\ & (((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\Inc~combout\ & 
+-- (\inst13|inst12~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "f0e2",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst13|inst12~regout\,
-	datad => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	dataa => \inst13|inst12~regout\,
+	datab => \Dec~combout\,
+	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	datad => \Inc~combout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst12~regout\);
 
--- Location: LC_X11_Y6_N2
+-- Location: LC_X7_Y4_N2
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst13|inst11~regout\ $ ((!(!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
@@ -3914,32 +4003,34 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
 
--- Location: LC_X10_Y6_N9
+-- Location: LC_X6_Y5_N0
 \inst13|inst11\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst11~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2)))) # (!\inst9|inst16~combout\ & (\inst13|inst11~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst13|inst11~regout\ = DFFEAS((\Inc~combout\ & (((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2)))) # (!\Dec~combout\ & 
+-- (\inst13|inst11~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feae",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst13|inst11~regout\,
-	datac => \inst9|inst16~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst13|inst11~regout\,
 	datad => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst11~regout\);
 
--- Location: LC_X11_Y6_N3
+-- Location: LC_X7_Y4_N3
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst13|inst10~regout\ $ (((!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
@@ -3972,14 +4063,14 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
 
--- Location: LC_X10_Y6_N3
+-- Location: LC_X3_Y4_N6
 \inst13|inst10\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst10~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3))) # (!\inst9|inst16~combout\ & ((\inst13|inst10~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst13|inst10~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3)))) # (!\inst9|inst16~combout\ & (\inst13|inst10~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "faee",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -3989,15 +4080,15 @@ GENERIC MAP (
 PORT MAP (
 	clk => \CLK~combout\,
 	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	datab => \inst13|inst10~regout\,
 	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	datad => \inst13|inst10~regout\,
+	datad => \inst9|inst16~combout\,
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst10~regout\);
 
--- Location: LC_X11_Y6_N4
+-- Location: LC_X7_Y4_N4
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst13|inst9~regout\ $ ((!(!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
@@ -4027,14 +4118,14 @@ PORT MAP (
 	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	cout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
 
--- Location: LC_X11_Y5_N5
+-- Location: LC_X9_Y4_N6
 \inst13|inst9\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst9~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(4)))) # (!\inst9|inst16~combout\ & (\inst13|inst9~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef2",
+	lut_mask => "feba",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -4043,16 +4134,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst13|inst9~regout\,
+	dataa => \Initialize~combout\,
 	datab => \inst9|inst16~combout\,
-	datac => \Initialize~combout\,
+	datac => \inst13|inst9~regout\,
 	datad => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst9~regout\);
 
--- Location: LC_X11_Y6_N5
+-- Location: LC_X7_Y4_N5
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst13|inst8~regout\ $ ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
@@ -4082,14 +4173,14 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
 
--- Location: LC_X10_Y6_N0
+-- Location: LC_X9_Y4_N2
 \inst13|inst8\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst8~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(5)))) # (!\inst9|inst16~combout\ & (\inst13|inst8~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "feba",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -4098,16 +4189,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst13|inst8~regout\,
-	datac => \Initialize~combout\,
+	dataa => \Initialize~combout\,
+	datab => \inst9|inst16~combout\,
+	datac => \inst13|inst8~regout\,
 	datad => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(5),
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst8~regout\);
 
--- Location: LC_X11_Y6_N6
+-- Location: LC_X7_Y4_N6
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst13|inst7~regout\ $ ((!(!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -4142,32 +4233,34 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
 
--- Location: LC_X10_Y6_N2
+-- Location: LC_X9_Y4_N7
 \inst13|inst7\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst7~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))) # (!\inst9|inst16~combout\ & ((\inst13|inst7~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst13|inst7~regout\ = DFFEAS((\Dec~combout\ & (((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(6)))) # (!\Inc~combout\ & 
+-- (\inst13|inst7~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "f0e4",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	dataa => \Dec~combout\,
+	datab => \inst13|inst7~regout\,
 	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
-	datad => \inst13|inst7~regout\,
+	datad => \Inc~combout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst7~regout\);
 
--- Location: LC_X11_Y6_N7
+-- Location: LC_X7_Y4_N7
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst13|inst6~regout\ $ (((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -4202,32 +4295,34 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
 
--- Location: LC_X10_Y6_N7
+-- Location: LC_X3_Y4_N4
 \inst13|inst6\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst6~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\inst9|inst16~combout\ & (\inst13|inst6~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst13|inst6~regout\ = DFFEAS((\Dec~combout\ & (((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(7))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\Inc~combout\ & 
+-- (\inst13|inst6~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst13|inst6~regout\,
-	datac => \Initialize~combout\,
+	dataa => \Dec~combout\,
+	datab => \Inc~combout\,
+	datac => \inst13|inst6~regout\,
 	datad => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst6~regout\);
 
--- Location: LC_X11_Y6_N8
+-- Location: LC_X7_Y4_N8
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst13|inst5~regout\ $ ((!(!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -4262,14 +4357,14 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
 
--- Location: LC_X10_Y6_N4
+-- Location: LC_X3_Y4_N1
 \inst13|inst5\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst5~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(8)))) # (!\inst9|inst16~combout\ & (\inst13|inst5~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "fef2",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -4278,8 +4373,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst13|inst5~regout\,
+	dataa => \inst13|inst5~regout\,
+	datab => \inst9|inst16~combout\,
 	datac => \Initialize~combout\,
 	datad => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
 	aclr => GND,
@@ -4287,7 +4382,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst13|inst5~regout\);
 
--- Location: LC_X11_Y6_N9
+-- Location: LC_X7_Y4_N9
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst13|inst4~regout\ $ (((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -4319,32 +4414,34 @@ PORT MAP (
 	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	cout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
 
--- Location: LC_X10_Y6_N6
+-- Location: LC_X9_Y4_N8
 \inst13|inst4\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst4~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))) # (!\inst9|inst16~combout\ & ((\inst13|inst4~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst13|inst4~regout\ = DFFEAS((\Inc~combout\ & (((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(9)))) # (!\Dec~combout\ & 
+-- (\inst13|inst4~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "fe02",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
-	datad => \inst13|inst4~regout\,
+	dataa => \inst13|inst4~regout\,
+	datab => \Inc~combout\,
+	datac => \Dec~combout\,
+	datad => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst4~regout\);
 
--- Location: LC_X12_Y6_N0
+-- Location: LC_X8_Y4_N0
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst13|inst3~regout\ $ ((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
@@ -4374,32 +4471,34 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
 
--- Location: LC_X12_Y5_N2
+-- Location: LC_X9_Y4_N5
 \inst13|inst3\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst3~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\inst9|inst16~combout\ & (\inst13|inst3~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst13|inst3~regout\ = DFFEAS((\Dec~combout\ & (((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(10))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\Inc~combout\ & 
+-- (\inst13|inst3~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feae",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst13|inst3~regout\,
-	datac => \inst9|inst16~combout\,
+	dataa => \Dec~combout\,
+	datab => \Inc~combout\,
+	datac => \inst13|inst3~regout\,
 	datad => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(10),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst3~regout\);
 
--- Location: LC_X12_Y6_N1
+-- Location: LC_X8_Y4_N1
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst13|inst2~regout\ $ (((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & 
@@ -4434,32 +4533,34 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
 
--- Location: LC_X12_Y7_N3
+-- Location: LC_X9_Y4_N9
 \inst13|inst2\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst2~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(11)))) # (!\inst9|inst16~combout\ & (\inst13|inst2~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst13|inst2~regout\ = DFFEAS((\Dec~combout\ & (((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(11))))) # (!\Dec~combout\ & ((\Inc~combout\ & (\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(11))) # (!\Inc~combout\ & 
+-- ((\inst13|inst2~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef2",
+	lut_mask => "f1e0",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst13|inst2~regout\,
-	datab => \inst9|inst16~combout\,
-	datac => \Initialize~combout\,
-	datad => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
+	dataa => \Dec~combout\,
+	datab => \Inc~combout\,
+	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
+	datad => \inst13|inst2~regout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst2~regout\);
 
--- Location: LC_X12_Y6_N2
+-- Location: LC_X8_Y4_N2
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
@@ -4488,43 +4589,34 @@ PORT MAP (
 	devpor => ww_devpor,
 	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
 
--- Location: LC_X12_Y5_N0
+-- Location: LC_X8_Y6_N5
 \inst13|inst1\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst1~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\inst9|inst16~combout\ & (\inst13|inst1~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst13|inst1~regout\ = DFFEAS((\Inc~combout\ & (((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\Dec~combout\ & 
+-- (\inst13|inst1~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst13|inst1~regout\,
-	datac => \Initialize~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst13|inst1~regout\,
 	datad => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst13|inst1~regout\);
 
--- Location: PIN_66,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\NightNOTday~I\ : maxv_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "input")
--- pragma translate_on
-PORT MAP (
-	oe => GND,
-	padio => ww_NightNOTday,
-	combout => \NightNOTday~combout\);
-
--- Location: LC_X11_Y4_N0
+-- Location: LC_X8_Y5_N0
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst12|inst13~regout\ $ ((\Inc~combout\)))
@@ -4550,32 +4642,34 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
 
--- Location: LC_X10_Y4_N4
+-- Location: LC_X7_Y5_N2
 \inst12|inst13\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst13~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0)))) # (!\inst9|inst16~combout\ & (\inst12|inst13~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst12|inst13~regout\ = DFFEAS((\Inc~combout\ & (((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0))))) # (!\Inc~combout\ & ((\Dec~combout\ & (\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0))) # (!\Dec~combout\ & 
+-- ((\inst12|inst13~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "f1e0",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
-	datac => \inst12|inst13~regout\,
-	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	datad => \inst12|inst13~regout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst13~regout\);
 
--- Location: LC_X11_Y4_N1
+-- Location: LC_X8_Y5_N1
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst12|inst12~regout\ $ (((!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
@@ -4608,32 +4702,34 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
 
--- Location: LC_X10_Y4_N1
+-- Location: LC_X7_Y5_N3
 \inst12|inst12\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst12~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\inst9|inst16~combout\ & (\inst12|inst12~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst12|inst12~regout\ = DFFEAS((\Inc~combout\ & (((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))) # (!\Dec~combout\ & 
+-- (\inst12|inst12~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feae",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst12|inst12~regout\,
-	datac => \inst9|inst16~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst12|inst12~regout\,
 	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst12~regout\);
 
--- Location: LC_X11_Y4_N2
+-- Location: LC_X8_Y5_N2
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst12|inst11~regout\ $ ((!(!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
@@ -4666,32 +4762,34 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
 
--- Location: LC_X10_Y4_N8
+-- Location: LC_X7_Y5_N7
 \inst12|inst11\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst11~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2))) # (!\inst9|inst16~combout\ & ((\inst12|inst11~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst12|inst11~regout\ = DFFEAS((\Inc~combout\ & (((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2)))) # (!\Dec~combout\ & 
+-- (\inst12|inst11~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "f0e4",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	dataa => \Inc~combout\,
+	datab => \inst12|inst11~regout\,
 	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	datad => \inst12|inst11~regout\,
+	datad => \Dec~combout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst11~regout\);
 
--- Location: LC_X11_Y4_N3
+-- Location: LC_X8_Y5_N3
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst12|inst10~regout\ $ (((!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
@@ -4724,7 +4822,7 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
 
--- Location: LC_X10_Y4_N7
+-- Location: LC_X7_Y5_N8
 \inst12|inst10\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst10~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(3))) # (!\inst9|inst16~combout\ & ((\inst12|inst10~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
@@ -4749,7 +4847,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst12|inst10~regout\);
 
--- Location: LC_X11_Y4_N4
+-- Location: LC_X8_Y5_N4
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst12|inst9~regout\ $ ((!(!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
@@ -4779,14 +4877,14 @@ PORT MAP (
 	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	cout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
 
--- Location: LC_X10_Y4_N5
+-- Location: LC_X7_Y5_N4
 \inst12|inst9\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst9~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(4)))) # (!\inst9|inst16~combout\ & (\inst12|inst9~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "fef2",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -4795,16 +4893,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
+	dataa => \inst12|inst9~regout\,
 	datab => \inst9|inst16~combout\,
-	datac => \inst12|inst9~regout\,
+	datac => \Initialize~combout\,
 	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst9~regout\);
 
--- Location: LC_X11_Y4_N5
+-- Location: LC_X8_Y5_N5
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst12|inst8~regout\ $ ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
@@ -4834,7 +4932,7 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
 
--- Location: LC_X10_Y4_N2
+-- Location: LC_X7_Y5_N1
 \inst12|inst8\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst8~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(5)))) # (!\inst9|inst16~combout\ & (\inst12|inst8~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
@@ -4859,7 +4957,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst12|inst8~regout\);
 
--- Location: LC_X11_Y4_N6
+-- Location: LC_X8_Y5_N6
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst12|inst7~regout\ $ ((!(!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -4894,32 +4992,34 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
 
--- Location: LC_X10_Y4_N3
+-- Location: LC_X7_Y5_N6
 \inst12|inst7\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst7~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))) # (!\inst9|inst16~combout\ & ((\inst12|inst7~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst12|inst7~regout\ = DFFEAS((\Dec~combout\ & (((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(6))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(6)))) # (!\Inc~combout\ & 
+-- (\inst12|inst7~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "f0e2",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	dataa => \inst12|inst7~regout\,
+	datab => \Dec~combout\,
 	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
-	datad => \inst12|inst7~regout\,
+	datad => \Inc~combout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst7~regout\);
 
--- Location: LC_X11_Y4_N7
+-- Location: LC_X8_Y5_N7
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst12|inst6~regout\ $ (((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -4954,32 +5054,34 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
 
--- Location: LC_X10_Y4_N6
+-- Location: LC_X7_Y5_N0
 \inst12|inst6\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst6~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\inst9|inst16~combout\ & (\inst12|inst6~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst12|inst6~regout\ = DFFEAS((\Inc~combout\ & (((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(7))))) # (!\Inc~combout\ & ((\Dec~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))) # (!\Dec~combout\ & 
+-- (\inst12|inst6~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef2",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst12|inst6~regout\,
-	datab => \inst9|inst16~combout\,
-	datac => \Initialize~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
+	datac => \inst12|inst6~regout\,
 	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst6~regout\);
 
--- Location: LC_X11_Y4_N8
+-- Location: LC_X8_Y5_N8
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst12|inst5~regout\ $ ((!(!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -5014,14 +5116,14 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
 
--- Location: LC_X10_Y4_N0
+-- Location: LC_X7_Y5_N5
 \inst12|inst5\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst5~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(8)))) # (!\inst9|inst16~combout\ & (\inst12|inst5~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "fef2",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -5030,8 +5132,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst12|inst5~regout\,
+	dataa => \inst12|inst5~regout\,
+	datab => \inst9|inst16~combout\,
 	datac => \Initialize~combout\,
 	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
 	aclr => GND,
@@ -5039,7 +5141,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst12|inst5~regout\);
 
--- Location: LC_X11_Y4_N9
+-- Location: LC_X8_Y5_N9
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst12|inst4~regout\ $ (((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -5071,32 +5173,34 @@ PORT MAP (
 	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	cout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
 
--- Location: LC_X10_Y4_N9
+-- Location: LC_X7_Y5_N9
 \inst12|inst4\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst4~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & (\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))) # (!\inst9|inst16~combout\ & ((\inst12|inst4~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst12|inst4~regout\ = DFFEAS((\Inc~combout\ & (((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))))) # (!\Inc~combout\ & ((\Dec~combout\ & (\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(9))) # (!\Dec~combout\ & 
+-- ((\inst12|inst4~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fbea",
+	lut_mask => "f1e0",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	dataa => \Inc~combout\,
+	datab => \Dec~combout\,
 	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	datad => \inst12|inst4~regout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst4~regout\);
 
--- Location: LC_X12_Y4_N0
+-- Location: LC_X9_Y5_N0
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst12|inst3~regout\ $ ((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
@@ -5126,32 +5230,34 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
 
--- Location: LC_X9_Y4_N6
+-- Location: LC_X10_Y5_N4
 \inst12|inst3\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst3~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\inst9|inst16~combout\ & (\inst12|inst3~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst12|inst3~regout\ = DFFEAS((\Dec~combout\ & (((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(10))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(10)))) # (!\Inc~combout\ & 
+-- (\inst12|inst3~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	dataa => \Dec~combout\,
+	datab => \Inc~combout\,
 	datac => \inst12|inst3~regout\,
 	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(10),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst3~regout\);
 
--- Location: LC_X12_Y4_N1
+-- Location: LC_X9_Y5_N1
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst12|inst2~regout\ $ (((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & 
@@ -5186,32 +5292,34 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
 
--- Location: LC_X12_Y5_N5
+-- Location: LC_X10_Y5_N2
 \inst12|inst2\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst2~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(11)))) # (!\inst9|inst16~combout\ & (\inst12|inst2~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst12|inst2~regout\ = DFFEAS((\Dec~combout\ & (((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(11))))) # (!\Dec~combout\ & ((\Inc~combout\ & (\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(11))) # (!\Inc~combout\ & 
+-- ((\inst12|inst2~regout\))))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fef4",
+	lut_mask => "f1e0",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \inst9|inst16~combout\,
-	datab => \inst12|inst2~regout\,
-	datac => \Initialize~combout\,
-	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
+	dataa => \Dec~combout\,
+	datab => \Inc~combout\,
+	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
+	datad => \inst12|inst2~regout\,
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst2~regout\);
 
--- Location: LC_X12_Y4_N2
+-- Location: LC_X9_Y5_N2
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
@@ -5240,39 +5348,52 @@ PORT MAP (
 	devpor => ww_devpor,
 	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
 
--- Location: LC_X9_Y4_N4
+-- Location: LC_X10_Y5_N5
 \inst12|inst1\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst1~regout\ = DFFEAS((\Initialize~combout\) # ((\inst9|inst16~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\inst9|inst16~combout\ & (\inst12|inst1~regout\))), GLOBAL(\CLK~combout\), VCC, , , , , , )
+-- \inst12|inst1~regout\ = DFFEAS((\Dec~combout\ & (((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12))))) # (!\Dec~combout\ & ((\Inc~combout\ & ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))) # (!\Inc~combout\ & 
+-- (\inst12|inst1~regout\)))), GLOBAL(\CLK~combout\), VCC, , , , , \Initialize~combout\, )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "feba",
+	lut_mask => "fe10",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	dataa => \Initialize~combout\,
-	datab => \inst9|inst16~combout\,
+	dataa => \Dec~combout\,
+	datab => \Inc~combout\,
 	datac => \inst12|inst1~regout\,
 	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
 	aclr => GND,
+	sclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst1~regout\);
 
--- Location: LC_X12_Y4_N3
+-- Location: PIN_40,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\NightNOTday~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_NightNOTday,
+	combout => \NightNOTday~combout\);
+
+-- Location: LC_X8_Y4_N3
 \inst2|$00000|auto_generated|result_node[12]~0\ : maxv_lcell
 -- Equation(s):
 -- \inst2|$00000|auto_generated|result_node[12]~0_combout\ = ((\NightNOTday~combout\ & (\inst13|inst1~regout\)) # (!\NightNOTday~combout\ & ((\inst12|inst1~regout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "cfc0",
+	lut_mask => "ccf0",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5281,13 +5402,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datab => \inst13|inst1~regout\,
-	datac => \NightNOTday~combout\,
-	datad => \inst12|inst1~regout\,
+	datac => \inst12|inst1~regout\,
+	datad => \NightNOTday~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst2|$00000|auto_generated|result_node[12]~0_combout\);
 
--- Location: LC_X12_Y4_N6
+-- Location: LC_X8_Y4_N8
 \inst2|$00000|auto_generated|result_node[12]~1\ : maxv_lcell
 -- Equation(s):
 -- \inst2|$00000|auto_generated|result_node[12]~1_combout\ = ((\passiveNOTactive~combout\ & (\inst14|inst1~regout\)) # (!\passiveNOTactive~combout\ & ((\inst2|$00000|auto_generated|result_node[12]~0_combout\))))
@@ -5309,7 +5430,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	combout => \inst2|$00000|auto_generated|result_node[12]~1_combout\);
 
--- Location: PIN_7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_70,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \fbctestclk~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5331,7 +5452,7 @@ PORT MAP (
 	padio => ww_fbctestrestart,
 	combout => \fbctestrestart~combout\);
 
--- Location: LC_X1_Y7_N8
+-- Location: LC_X12_Y6_N3
 \inst1|inst\ : maxv_lcell
 -- Equation(s):
 -- \inst1|inst~regout\ = DFFEAS((((!\inst1|inst~regout\))), \fbctestclk~combout\, !GLOBAL(\fbctestrestart~combout\), , , , , , )
@@ -5353,7 +5474,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst1|inst~regout\);
 
--- Location: LC_X1_Y7_N9
+-- Location: LC_X12_Y6_N2
 \inst1|inst1\ : maxv_lcell
 -- Equation(s):
 -- \inst1|inst1~regout\ = DFFEAS((((!\inst1|inst1~regout\))), \inst1|inst~regout\, !GLOBAL(\fbctestrestart~combout\), , , , , , )
@@ -5375,7 +5496,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst1|inst1~regout\);
 
--- Location: LC_X3_Y7_N2
+-- Location: LC_X12_Y7_N3
 \inst1|inst2\ : maxv_lcell
 -- Equation(s):
 -- \inst1|inst2~regout\ = DFFEAS((((!\inst1|inst2~regout\))), \inst1|inst1~regout\, !GLOBAL(\fbctestrestart~combout\), , , , , , )
@@ -5397,7 +5518,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst1|inst2~regout\);
 
--- Location: LC_X2_Y7_N3
+-- Location: LC_X12_Y7_N2
 \inst1|inst3\ : maxv_lcell
 -- Equation(s):
 -- \inst1|inst3~regout\ = DFFEAS((((!\inst1|inst3~regout\))), \inst1|inst2~regout\, !GLOBAL(\fbctestrestart~combout\), , , , , , )
@@ -5419,7 +5540,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst1|inst3~regout\);
 
--- Location: LC_X2_Y7_N2
+-- Location: LC_X11_Y7_N2
 \inst1|inst4\ : maxv_lcell
 -- Equation(s):
 -- \inst1|inst4~regout\ = DFFEAS((((!\inst1|inst4~regout\))), \inst1|inst3~regout\, !GLOBAL(\fbctestrestart~combout\), , , , , , )
@@ -5441,14 +5562,14 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst1|inst4~regout\);
 
--- Location: LC_X4_Y6_N2
+-- Location: LC_X11_Y3_N7
 \inst15|inst\ : maxv_lcell
 -- Equation(s):
 -- \inst15|inst~regout\ = DFFEAS((((!\inst15|inst~regout\))), GLOBAL(\CLK~combout\), !GLOBAL(\Initialize~combout\), , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "00ff",
+	lut_mask => "0f0f",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -5457,20 +5578,20 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~combout\,
-	datad => \inst15|inst~regout\,
+	datac => \inst15|inst~regout\,
 	aclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst15|inst~regout\);
 
--- Location: LC_X5_Y6_N3
+-- Location: LC_X10_Y3_N4
 \inst15|inst1\ : maxv_lcell
 -- Equation(s):
 -- \inst15|inst1~regout\ = DFFEAS((((!\inst15|inst1~regout\))), \inst15|inst~regout\, !GLOBAL(\Initialize~combout\), , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "00ff",
+	lut_mask => "0f0f",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -5479,13 +5600,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \inst15|inst~regout\,
-	datad => \inst15|inst1~regout\,
+	datac => \inst15|inst1~regout\,
 	aclr => \Initialize~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst15|inst1~regout\);
 
--- Location: LC_X5_Y6_N2
+-- Location: LC_X10_Y3_N9
 \inst15|inst2\ : maxv_lcell
 -- Equation(s):
 -- \inst15|inst2~regout\ = DFFEAS((((!\inst15|inst2~regout\))), \inst15|inst1~regout\, !GLOBAL(\Initialize~combout\), , , , , , )
@@ -5507,7 +5628,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst15|inst2~regout\);
 
--- Location: LC_X6_Y6_N9
+-- Location: LC_X11_Y3_N8
 \inst15|inst3\ : maxv_lcell
 -- Equation(s):
 -- \inst15|inst3~regout\ = DFFEAS((((!\inst15|inst3~regout\))), \inst15|inst2~regout\, !GLOBAL(\Initialize~combout\), , , , , , )
@@ -5529,7 +5650,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst15|inst3~regout\);
 
--- Location: LC_X6_Y6_N2
+-- Location: LC_X12_Y3_N3
 \inst15|inst4\ : maxv_lcell
 -- Equation(s):
 -- \inst15|inst4~regout\ = DFFEAS((((!\inst15|inst4~regout\))), \inst15|inst3~regout\, !GLOBAL(\Initialize~combout\), , , , , , )
@@ -5551,14 +5672,14 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst15|inst4~regout\);
 
--- Location: LC_X6_Y6_N6
+-- Location: LC_X11_Y3_N3
 \inst17~0\ : maxv_lcell
 -- Equation(s):
--- \inst17~0_combout\ = (((\inst15|inst4~regout\) # (\inst15|inst3~regout\)))
+-- \inst17~0_combout\ = (((!\inst15|inst4~regout\ & !\inst15|inst3~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fff0",
+	lut_mask => "000f",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5572,14 +5693,14 @@ PORT MAP (
 	devpor => ww_devpor,
 	combout => \inst17~0_combout\);
 
--- Location: LC_X5_Y6_N5
+-- Location: LC_X10_Y3_N7
 inst17 : maxv_lcell
 -- Equation(s):
--- \inst17~combout\ = (\inst15|inst1~regout\) # ((\inst15|inst~regout\) # ((\inst17~0_combout\) # (\inst15|inst2~regout\)))
+-- \inst17~combout\ = (!\inst15|inst1~regout\ & (!\inst15|inst2~regout\ & (\inst17~0_combout\ & !\inst15|inst~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fffe",
+	lut_mask => "0010",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5588,14 +5709,202 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \inst15|inst1~regout\,
-	datab => \inst15|inst~regout\,
+	datab => \inst15|inst2~regout\,
 	datac => \inst17~0_combout\,
-	datad => \inst15|inst2~regout\,
+	datad => \inst15|inst~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst17~combout\);
 
--- Location: PIN_40,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: LC_X4_Y7_N9
+\inst34|fstate.Origin\ : maxv_lcell
+-- Equation(s):
+-- \inst34|fstate.Origin~regout\ = DFFEAS(VCC, GLOBAL(\CLK~combout\), !GLOBAL(\inst17~combout\), , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ffff",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	aclr => \inst17~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst34|fstate.Origin~regout\);
+
+-- Location: LC_X4_Y7_N3
+\inst34|fstate.state1\ : maxv_lcell
+-- Equation(s):
+-- \inst34|fstate.state1~regout\ = DFFEAS((((!\inst34|fstate.Origin~regout\))), GLOBAL(\CLK~combout\), !GLOBAL(\inst17~combout\), , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "00ff",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	datad => \inst34|fstate.Origin~regout\,
+	aclr => \inst17~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst34|fstate.state1~regout\);
+
+-- Location: LC_X4_Y7_N8
+\inst34|fstate.state2\ : maxv_lcell
+-- Equation(s):
+-- \inst34|WideOr0~0\ = (\inst34|fstate.state4~regout\) # (((G1_fstate.state2) # (\inst34|fstate.state5~regout\)) # (!\inst34|fstate.Origin~regout\))
+-- \inst34|fstate.state2~regout\ = DFFEAS(\inst34|WideOr0~0\, GLOBAL(\CLK~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state1~regout\, , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fffb",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \inst34|fstate.state4~regout\,
+	datab => \inst34|fstate.Origin~regout\,
+	datac => \inst34|fstate.state1~regout\,
+	datad => \inst34|fstate.state5~regout\,
+	aclr => \inst17~combout\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst34|WideOr0~0\,
+	regout => \inst34|fstate.state2~regout\);
+
+-- Location: LC_X4_Y7_N0
+\inst34|fstate.state3\ : maxv_lcell
+-- Equation(s):
+-- \inst34|fstate.state3~regout\ = DFFEAS((((\inst34|fstate.state2~regout\))), GLOBAL(\CLK~combout\), !GLOBAL(\inst17~combout\), , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ff00",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	datad => \inst34|fstate.state2~regout\,
+	aclr => \inst17~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst34|fstate.state3~regout\);
+
+-- Location: LC_X4_Y7_N5
+\inst34|fstate.state4\ : maxv_lcell
+-- Equation(s):
+-- \inst34|fstate.state4~regout\ = DFFEAS(GND, GLOBAL(\CLK~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state3~regout\, , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	datac => \inst34|fstate.state3~regout\,
+	aclr => \inst17~combout\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst34|fstate.state4~regout\);
+
+-- Location: LC_X4_Y7_N6
+\inst34|fstate.state5\ : maxv_lcell
+-- Equation(s):
+-- \inst34|fstate.state5~regout\ = DFFEAS(GND, GLOBAL(\CLK~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state4~regout\, , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	datac => \inst34|fstate.state4~regout\,
+	aclr => \inst17~combout\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst34|fstate.state5~regout\);
+
+-- Location: LC_X4_Y7_N7
+\inst34|fstate.state6\ : maxv_lcell
+-- Equation(s):
+-- \inst34|fstate.state6~regout\ = DFFEAS(GND, GLOBAL(\CLK~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state5~regout\, , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	datac => \inst34|fstate.state5~regout\,
+	aclr => \inst17~combout\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst34|fstate.state6~regout\);
+
+-- Location: LC_X4_Y7_N2
+\inst34|fstate.state7\ : maxv_lcell
+-- Equation(s):
+-- \inst34|WideOr0\ = (\inst34|fstate.state6~regout\) # (((G1_fstate.state7) # (\inst34|WideOr0~0\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fffa",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~combout\,
+	dataa => \inst34|fstate.state6~regout\,
+	datac => \inst34|fstate.state6~regout\,
+	datad => \inst34|WideOr0~0\,
+	aclr => \inst17~combout\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst34|WideOr0\,
+	regout => \inst34|fstate.state7~regout\);
+
+-- Location: PIN_91,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \Heat~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5606,7 +5915,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_Heat);
 
--- Location: PIN_68,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_43,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \Cool~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5617,7 +5926,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_Cool);
 
--- Location: PIN_18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \SCL~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5628,7 +5937,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_SCL);
 
--- Location: PIN_33,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_41,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \CS~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5639,7 +5948,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_CS);
 
--- Location: PIN_2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_72,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \fbc0~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5650,7 +5959,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_fbc0);
 
--- Location: PIN_6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_71,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \fbc1~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5661,7 +5970,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_fbc1);
 
--- Location: PIN_100,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_73,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \fbc3~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5672,7 +5981,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_fbc3);
 
--- Location: PIN_4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_74,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \fbc4~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5683,7 +5992,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_fbc4);
 
--- Location: PIN_1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_75,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \fbc2~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5694,18 +6003,29 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_fbc2);
 
--- Location: PIN_97,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_44,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \Mof32~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "output")
 -- pragma translate_on
 PORT MAP (
-	datain => \ALT_INV_inst17~combout\,
+	datain => \inst17~combout\,
 	oe => VCC,
 	padio => ww_Mof32);
 
--- Location: PIN_38,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_98,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\Din~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst34|ALT_INV_WideOr0\,
+	oe => VCC,
+	padio => ww_Din);
+
+-- Location: PIN_85,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \hiTrueSetDisp~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5715,7 +6035,7 @@ PORT MAP (
 	oe => GND,
 	padio => ww_hiTrueSetDisp);
 
--- Location: PIN_85,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_56,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \controlsActive~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -5725,7 +6045,7 @@ PORT MAP (
 	oe => GND,
 	padio => ww_controlsActive);
 
--- Location: PIN_28,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \Dout~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (

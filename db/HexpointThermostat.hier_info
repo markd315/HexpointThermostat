@@ -11,6 +11,7 @@ CLK => SetpointRegister:inst13.CLK
 CLK => SetpointRegister:inst14.CLK
 CLK => SCL.DATAIN
 CLK => count5bits:inst15.CLK
+CLK => loadSignalGen:inst34.clock
 Inc => SetpointRegister:inst9.Inc
 Inc => SetpointRegister:inst10.Inc
 Inc => SetpointRegister:inst11.Inc
@@ -43,6 +44,7 @@ fbc3 <= count5bits:inst1.3
 fbc4 <= count5bits:inst1.4
 fbc2 <= count5bits:inst1.2
 Mof32 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
+Din <= loadSignalGen:inst34.Din
 hiTrueSetDisp => BUSMUX:inst8.sel
 controlsActive => ~NO_FANOUT~
 Dout => ~NO_FANOUT~
@@ -4074,6 +4076,14 @@ CLK => inst.CLK
 2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
 1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|loadSignalGen:inst34
+reset => fstate~3.DATAIN
+clock => fstate~1.DATAIN
+CS <= CS.DB_MAX_OUTPUT_PORT_TYPE
+Din <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+freezeParalell <= freezeParalell.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |HexpointThermostat|BUSMUX:inst3
