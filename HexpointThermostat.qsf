@@ -71,3 +71,4 @@ set_global_assignment -name BDF_FILE count5bits.bdf
 set_global_assignment -name VECTOR_WAVEFORM_FILE test5bitcounter.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name SMF_FILE loadSignalGen.smf
+set_global_assignment -name QIP_FILE currentTempReg.qip

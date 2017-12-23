@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "12/21/2017 18:01:56"
+// Generated on "12/23/2017 14:47:36"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          HexpointThermostat
 // 
@@ -42,18 +42,20 @@ reg NightNOTday;
 reg NightNOTday18;
 reg passiveNOTactive;
 reg passiveNOTactive19;
-reg re;
 // wires                                               
 wire Cool;
 wire CS;
+wire Din;
 wire fbc0;
 wire fbc1;
 wire fbc2;
 wire fbc3;
 wire fbc4;
+wire FreezeReg;
 wire Heat;
 wire Mof32;
 wire SCL;
+wire [12:0] tempRead;
 
 // assign statements (if any)                          
 HexpointThermostat i1 (
@@ -63,6 +65,7 @@ HexpointThermostat i1 (
 	.Cool(Cool),
 	.CS(CS),
 	.Dec(Dec),
+	.Din(Din),
 	.Dout(Dout),
 	.fbc0(fbc0),
 	.fbc1(fbc1),
@@ -71,6 +74,7 @@ HexpointThermostat i1 (
 	.fbc4(fbc4),
 	.fbctestclk(fbctestclk),
 	.fbctestrestart(fbctestrestart),
+	.FreezeReg(FreezeReg),
 	.Heat(Heat),
 	.hiTrueSetDisp(hiTrueSetDisp),
 	.Inc(Inc),
@@ -80,8 +84,8 @@ HexpointThermostat i1 (
 	.NightNOTday18(NightNOTday18),
 	.passiveNOTactive(passiveNOTactive),
 	.passiveNOTactive19(passiveNOTactive19),
-	.re(re),
-	.SCL(SCL)
+	.SCL(SCL),
+	.tempRead(tempRead)
 );
 initial 
 begin 
@@ -96,11 +100,23 @@ begin
 	#5000;
 end 
 
-// re
+// Initialize
 initial
 begin
-	re = 1'b1;
-	re = #10000 1'b0;
+	Initialize = 1'b1;
+	Initialize = #10000 1'b0;
+end 
+
+// Dout
+initial
+begin
+	Dout = 1'b0;
+	Dout = #440000 1'b1;
+	Dout = #20000 1'b0;
+	Dout = #20000 1'b1;
+	Dout = #10000 1'b0;
+	Dout = #10000 1'b1;
+	Dout = #20000 1'b0;
 end 
 endmodule
 

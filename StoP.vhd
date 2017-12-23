@@ -43,6 +43,7 @@ ENTITY StoP IS
 	PORT
 	(
 		clock		: IN STD_LOGIC ;
+		enable		: IN STD_LOGIC ;
 		shiftin		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 	);
@@ -63,6 +64,7 @@ ARCHITECTURE SYN OF stop IS
 	);
 	PORT (
 			clock	: IN STD_LOGIC ;
+			enable	: IN STD_LOGIC ;
 			shiftin	: IN STD_LOGIC ;
 			q	: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 	);
@@ -73,12 +75,13 @@ BEGIN
 
 	LPM_SHIFTREG_component : LPM_SHIFTREG
 	GENERIC MAP (
-		lpm_direction => "RIGHT",
+		lpm_direction => "LEFT",
 		lpm_type => "LPM_SHIFTREG",
 		lpm_width => 16
 	)
 	PORT MAP (
 		clock => clock,
+		enable => enable,
 		shiftin => shiftin,
 		q => sub_wire0
 	);
@@ -94,9 +97,9 @@ END SYN;
 -- Retrieval info: PRIVATE: ALOAD NUMERIC "0"
 -- Retrieval info: PRIVATE: ASET NUMERIC "0"
 -- Retrieval info: PRIVATE: ASET_ALL1 NUMERIC "1"
--- Retrieval info: PRIVATE: CLK_EN NUMERIC "0"
+-- Retrieval info: PRIVATE: CLK_EN NUMERIC "1"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "MAX V"
--- Retrieval info: PRIVATE: LeftShift NUMERIC "0"
+-- Retrieval info: PRIVATE: LeftShift NUMERIC "1"
 -- Retrieval info: PRIVATE: ParallelDataInput NUMERIC "0"
 -- Retrieval info: PRIVATE: Q_OUT NUMERIC "1"
 -- Retrieval info: PRIVATE: SCLR NUMERIC "0"
@@ -109,13 +112,15 @@ END SYN;
 -- Retrieval info: PRIVATE: nBit NUMERIC "16"
 -- Retrieval info: PRIVATE: new_diagram STRING "1"
 -- Retrieval info: LIBRARY: lpm lpm.lpm_components.all
--- Retrieval info: CONSTANT: LPM_DIRECTION STRING "RIGHT"
+-- Retrieval info: CONSTANT: LPM_DIRECTION STRING "LEFT"
 -- Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_SHIFTREG"
 -- Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "16"
 -- Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL "clock"
+-- Retrieval info: USED_PORT: enable 0 0 0 0 INPUT NODEFVAL "enable"
 -- Retrieval info: USED_PORT: q 0 0 16 0 OUTPUT NODEFVAL "q[15..0]"
 -- Retrieval info: USED_PORT: shiftin 0 0 0 0 INPUT NODEFVAL "shiftin"
 -- Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
+-- Retrieval info: CONNECT: @enable 0 0 0 0 enable 0 0 0 0
 -- Retrieval info: CONNECT: @shiftin 0 0 0 0 shiftin 0 0 0 0
 -- Retrieval info: CONNECT: q 0 0 16 0 @q 0 0 16 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL StoP.vhd TRUE

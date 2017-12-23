@@ -17,6 +17,7 @@ component StoP
 	PORT
 	(
 		clock		: IN STD_LOGIC ;
+		enable		: IN STD_LOGIC ;
 		shiftin		: IN STD_LOGIC ;
 		q		: OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
 	);
