@@ -1,18 +1,20 @@
 |HexpointThermostat
-Heat <= compare13bits:inst24.agb
+Heat <= inst44.DB_MAX_OUTPUT_PORT_TYPE
+RTC => count7bits:inst22.CLK
+RTC => SCL.DATAIN
+RTC => inst40.CLK
+RTC => SetpointRegister:inst9.CLK
+RTC => SetpointRegister:inst10.CLK
+RTC => SetpointRegister:inst11.CLK
+RTC => SetpointRegister:inst38.CLK
+RTC => count5bits:inst15.CLK
+RTC => loadSignalGen:inst34.clock
+RTC => StoP:inst6.clock
+RTC => SetpointRegister:inst12.CLK
+RTC => SetpointRegister:inst13.CLK
+RTC => SetpointRegister:inst14.CLK
 passiveNOTactive19 => BUSMUX:inst5.sel
 NightNOTday18 => BUSMUX:inst20.sel
-CLK => SetpointRegister:inst9.CLK
-CLK => SetpointRegister:inst10.CLK
-CLK => SetpointRegister:inst11.CLK
-CLK => SetpointRegister:inst38.CLK
-CLK => count5bits:inst15.CLK
-CLK => loadSignalGen:inst34.clock
-CLK => StoP:inst6.clock
-CLK => SetpointRegister:inst12.CLK
-CLK => SetpointRegister:inst13.CLK
-CLK => SetpointRegister:inst14.CLK
-CLK => SCL.DATAIN
 Inc => SetpointRegister:inst9.Inc
 Inc => SetpointRegister:inst10.Inc
 Inc => SetpointRegister:inst11.Inc
@@ -25,19 +27,9 @@ Dec => SetpointRegister:inst11.Dec
 Dec => SetpointRegister:inst12.Dec
 Dec => SetpointRegister:inst13.Dec
 Dec => SetpointRegister:inst14.Dec
-Initialize => SetpointRegister:inst9.Initialize
-Initialize => SetpointRegister:inst10.Initialize
-Initialize => SetpointRegister:inst11.Initialize
-Initialize => count5bits:inst15.restart
-Initialize => SetpointRegister:inst12.Initialize
-Initialize => SetpointRegister:inst13.Initialize
-Initialize => SetpointRegister:inst14.Initialize
 Mof32 <= inst17.DB_MAX_OUTPUT_PORT_TYPE
 Dout => StoP:inst6.shiftin
-Cool <= compare13bits:inst23.alb
-passiveNOTactive => BUSMUX:inst2.sel
-NightNOTday => BUSMUX:inst.sel
-SCL <= CLK.DB_MAX_OUTPUT_PORT_TYPE
+SCL <= RTC.DB_MAX_OUTPUT_PORT_TYPE
 CS <= loadSignalGen:inst34.CS
 fbc0 <= count5bits:inst1.0
 fbc1 <= count5bits:inst1.1
@@ -46,6 +38,9 @@ fbc4 <= count5bits:inst1.4
 fbc2 <= count5bits:inst1.2
 Din <= loadSignalGen:inst34.Din
 FreezeReg <= loadSignalGen:inst34.freezeParalell
+Cool <= inst45.DB_MAX_OUTPUT_PORT_TYPE
+passiveNOTactive => BUSMUX:inst2.sel
+NightNOTday => BUSMUX:inst.sel
 tempRead[0] <= act[0].DB_MAX_OUTPUT_PORT_TYPE
 tempRead[1] <= act[1].DB_MAX_OUTPUT_PORT_TYPE
 tempRead[2] <= act[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -63,6 +58,18 @@ hiTrueSetDisp => BUSMUX:inst8.sel
 controlsActive => ~NO_FANOUT~
 fbctestclk => ~NO_FANOUT~
 fbctestrestart => ~NO_FANOUT~
+
+
+|HexpointThermostat|count7bits:inst22
+4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+restart => inst6.IN0
+CLK => inst.CLK
+3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+5 <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+6 <= inst8.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |HexpointThermostat|compare13bits:inst24
@@ -2652,6 +2659,16 @@ q[15] <= dffs[15].DB_MAX_OUTPUT_PORT_TYPE
 shiftout <= shiftout.DB_MAX_OUTPUT_PORT_TYPE
 
 
+|HexpointThermostat|count5bits:inst1
+4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+restart => inst6.IN0
+CLK => inst.CLK
+3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
 |HexpointThermostat|compare13bits:inst23
 dataa[0] => lpm_compare:LPM_COMPARE_component.dataa[0]
 dataa[1] => lpm_compare:LPM_COMPARE_component.dataa[1]
@@ -4591,16 +4608,6 @@ result[11] <= add_sub_cell[11].COMBOUT
 result[12] <= add_sub_cell[12].COMBOUT
 cout <= <GND>
 overflow <= <GND>
-
-
-|HexpointThermostat|count5bits:inst1
-4 <= inst4.DB_MAX_OUTPUT_PORT_TYPE
-restart => inst6.IN0
-CLK => inst.CLK
-3 <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-2 <= inst2.DB_MAX_OUTPUT_PORT_TYPE
-1 <= inst1.DB_MAX_OUTPUT_PORT_TYPE
-0 <= inst.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |HexpointThermostat|BUSMUX:inst3
