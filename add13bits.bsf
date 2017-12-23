@@ -46,7 +46,7 @@ refer to the applicable agreement for further details.
 	)
 	(drawing
 		(text "A+B/A-B" (rect 81 35 226 87)(font "Arial" (font_size 8)))
-		(text "1" (rect 8 71 21 159)(font "Arial" (font_size 8)))
+		(text "4" (rect 8 71 23 159)(font "Arial" (font_size 8)))
 		(text "A" (rect 60 47 130 111)(font "Arial" (font_size 8)))
 		(text "B" (rect 60 79 130 175)(font "Arial" (font_size 8)))
 		(line (pt 108 40)(pt 124 40))

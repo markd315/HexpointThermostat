@@ -74,7 +74,7 @@ ARCHITECTURE SYN OF add13bits IS
 	END COMPONENT;
 
 BEGIN
-	sub_wire0_bv(12 DOWNTO 0) <= "0000000000001";
+	sub_wire0_bv(12 DOWNTO 0) <= "0000000000100";
 	sub_wire0    <= To_stdlogicvector(sub_wire0_bv);
 	result    <= sub_wire1(12 DOWNTO 0);
 
@@ -103,7 +103,7 @@ END SYN;
 -- Retrieval info: PRIVATE: CarryIn NUMERIC "0"
 -- Retrieval info: PRIVATE: CarryOut NUMERIC "0"
 -- Retrieval info: PRIVATE: ConstantA NUMERIC "0"
--- Retrieval info: PRIVATE: ConstantB NUMERIC "1"
+-- Retrieval info: PRIVATE: ConstantB NUMERIC "4"
 -- Retrieval info: PRIVATE: Function NUMERIC "2"
 -- Retrieval info: PRIVATE: INTENDED_DEVICE_FAMILY STRING "MAX V"
 -- Retrieval info: PRIVATE: LPM_PIPELINE NUMERIC "0"
@@ -131,7 +131,7 @@ END SYN;
 -- Retrieval info: USED_PORT: result 0 0 13 0 OUTPUT NODEFVAL "result[12..0]"
 -- Retrieval info: CONNECT: @add_sub 0 0 0 0 add_sub 0 0 0 0
 -- Retrieval info: CONNECT: @dataa 0 0 13 0 dataa 0 0 13 0
--- Retrieval info: CONNECT: @datab 0 0 13 0 1 0 0 13 0
+-- Retrieval info: CONNECT: @datab 0 0 13 0 4 0 0 13 0
 -- Retrieval info: CONNECT: result 0 0 13 0 @result 0 0 13 0
 -- Retrieval info: GEN_FILE: TYPE_NORMAL add13bits.vhd TRUE
 -- Retrieval info: GEN_FILE: TYPE_NORMAL add13bits.inc FALSE

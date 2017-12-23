@@ -1,5 +1,5 @@
 Fitter report for HexpointThermostat
-Sat Dec 23 17:48:20 2017
+Sat Dec 23 17:57:57 2017
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -58,7 +58,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Fitter Summary                                                      ;
 +-----------------------+---------------------------------------------+
-; Fitter Status         ; Successful - Sat Dec 23 17:48:20 2017       ;
+; Fitter Status         ; Successful - Sat Dec 23 17:57:57 2017       ;
 ; Quartus Prime Version ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name         ; HexpointThermostat                          ;
 ; Top-level Entity Name ; HexpointThermostat                          ;
@@ -134,7 +134,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.1%      ;
+;     Processor 2            ;   2.3%      ;
 +----------------------------+-------------+
 
 
@@ -792,13 +792,13 @@ Info (170195): Router estimated average interconnect usage is 9% of the availabl
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.55 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.60 seconds.
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/17.1/HexpointThermostat/output_files/HexpointThermostat.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 968 megabytes
-    Info: Processing ended: Sat Dec 23 17:48:20 2017
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 967 megabytes
+    Info: Processing ended: Sat Dec 23 17:57:57 2017
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:05
 
 

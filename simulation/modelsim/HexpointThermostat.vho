@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
--- DATE "12/23/2017 17:48:30"
+-- DATE "12/23/2017 17:58:03"
 
 -- 
 -- Device: Altera 5M570ZT100C5 Package TQFP100
@@ -794,13 +794,13 @@ PORT MAP (
 -- Location: LC_X8_Y4_N0
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst9|inst13~regout\ $ ((\Inc~combout\)))
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst9|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst9|inst13~regout\) # (!\Inc~combout\))))
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & (\inst9|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst9|inst13~regout\) # (!\Inc~combout\))))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst9|inst13~regout\ $ ((!\Inc~combout\)))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst9|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst9|inst13~regout\ & !\Inc~combout\)))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst9|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst9|inst13~regout\ & !\Inc~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "964d",
+	lut_mask => "698e",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -904,13 +904,13 @@ PORT MAP (
 -- Location: LC_X8_Y7_N0
 \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst10|inst13~regout\ $ ((\Inc~combout\)))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst10|inst13~regout\) # (!\Inc~combout\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst10|inst13~regout\) # (!\Inc~combout\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst10|inst13~regout\ $ ((!\Inc~combout\)))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst10|inst13~regout\ & !\Inc~combout\)))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst10|inst13~regout\ & !\Inc~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "964d",
+	lut_mask => "698e",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -958,13 +958,13 @@ PORT MAP (
 -- Location: LC_X8_Y6_N0
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst11|inst13~regout\ $ ((\Inc~combout\)))
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst11|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst11|inst13~regout\) # (!\Inc~combout\))))
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & (\inst11|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst11|inst13~regout\) # (!\Inc~combout\))))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst11|inst13~regout\ $ ((!\Inc~combout\)))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst11|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst11|inst13~regout\ & !\Inc~combout\)))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst11|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst11|inst13~regout\ & !\Inc~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "964d",
+	lut_mask => "698e",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -1924,18 +1924,18 @@ PORT MAP (
 -- Location: LC_X8_Y4_N2
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst9|inst11~regout\ $ ((!(!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst9|inst11~regout\ $ (((!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst9|inst11~regout\) # (!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst9|inst11~regout\ & 
--- !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)))
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & ((\inst9|inst11~regout\) # (!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))) # (!VCC $ \Inc~combout\ & 
--- (\inst9|inst11~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst9|inst11~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst9|inst11~regout\) # 
+-- (!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst9|inst11~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst9|inst11~regout\) # (!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
 
 -- pragma translate_off
 GENERIC MAP (
 	cin0_used => "true",
 	cin1_used => "true",
-	lut_mask => "698e",
+	lut_mask => "964d",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -2070,18 +2070,18 @@ PORT MAP (
 -- Location: LC_X8_Y7_N2
 \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst10|inst11~regout\ $ ((!(!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst10|inst11~regout\ $ (((!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
 -- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst11~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst10|inst11~regout\ 
--- & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst11~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))) # (!VCC $ \Inc~combout\ & 
--- (\inst10|inst11~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst11~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst10|inst11~regout\) # 
+-- (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst11~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst10|inst11~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
 
 -- pragma translate_off
 GENERIC MAP (
 	cin0_used => "true",
 	cin1_used => "true",
-	lut_mask => "698e",
+	lut_mask => "964d",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -2192,18 +2192,18 @@ PORT MAP (
 -- Location: LC_X8_Y6_N2
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst11|inst11~regout\ $ ((!(!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst11|inst11~regout\ $ (((!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst11|inst11~regout\) # (!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst11|inst11~regout\ 
--- & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)))
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & ((\inst11|inst11~regout\) # (!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))) # (!VCC $ \Inc~combout\ & 
--- (\inst11|inst11~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst11|inst11~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst11|inst11~regout\) # 
+-- (!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst11|inst11~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst11|inst11~regout\) # (!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
 
 -- pragma translate_off
 GENERIC MAP (
 	cin0_used => "true",
 	cin1_used => "true",
-	lut_mask => "698e",
+	lut_mask => "964d",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5036,13 +5036,13 @@ PORT MAP (
 -- Location: LC_X11_Y6_N0
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst12|inst13~regout\ $ ((\Inc~combout\)))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst12|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst12|inst13~regout\) # (!\Inc~combout\))))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & (\inst12|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst12|inst13~regout\) # (!\Inc~combout\))))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst12|inst13~regout\ $ ((!\Inc~combout\)))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst12|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst12|inst13~regout\ & !\Inc~combout\)))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst12|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst12|inst13~regout\ & !\Inc~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "964d",
+	lut_mask => "698e",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5142,18 +5142,18 @@ PORT MAP (
 -- Location: LC_X11_Y6_N2
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst12|inst11~regout\ $ ((!(!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst12|inst11~regout\ $ (((!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst12|inst11~regout\) # (!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst12|inst11~regout\ 
--- & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & ((\inst12|inst11~regout\) # (!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))) # (!VCC $ \Inc~combout\ & 
--- (\inst12|inst11~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst12|inst11~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst12|inst11~regout\) # 
+-- (!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst12|inst11~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst12|inst11~regout\) # (!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
 
 -- pragma translate_off
 GENERIC MAP (
 	cin0_used => "true",
 	cin1_used => "true",
-	lut_mask => "698e",
+	lut_mask => "964d",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5785,13 +5785,13 @@ PORT MAP (
 -- Location: LC_X11_Y4_N0
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst13|inst13~regout\ $ ((\Inc~combout\)))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst13|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst13|inst13~regout\) # (!\Inc~combout\))))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & (\inst13|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst13|inst13~regout\) # (!\Inc~combout\))))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst13|inst13~regout\ $ ((!\Inc~combout\)))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst13|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst13|inst13~regout\ & !\Inc~combout\)))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst13|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst13|inst13~regout\ & !\Inc~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "964d",
+	lut_mask => "698e",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -5900,18 +5900,18 @@ PORT MAP (
 -- Location: LC_X11_Y4_N2
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst13|inst11~regout\ $ ((!(!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst13|inst11~regout\ $ (((!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst13|inst11~regout\) # (!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst13|inst11~regout\ 
--- & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & ((\inst13|inst11~regout\) # (!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))) # (!VCC $ \Inc~combout\ & 
--- (\inst13|inst11~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst13|inst11~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst13|inst11~regout\) # 
+-- (!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst13|inst11~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst13|inst11~regout\) # (!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
 
 -- pragma translate_off
 GENERIC MAP (
 	cin0_used => "true",
 	cin1_used => "true",
-	lut_mask => "698e",
+	lut_mask => "964d",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -6565,13 +6565,13 @@ PORT MAP (
 -- Location: LC_X11_Y7_N0
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst14|inst13~regout\ $ ((\Inc~combout\)))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst14|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst14|inst13~regout\) # (!\Inc~combout\))))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & (\inst14|inst13~regout\ & !\Inc~combout\)) # (!VCC $ \Inc~combout\ & ((\inst14|inst13~regout\) # (!\Inc~combout\))))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst14|inst13~regout\ $ ((!\Inc~combout\)))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst14|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst14|inst13~regout\ & !\Inc~combout\)))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst14|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst14|inst13~regout\ & !\Inc~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "964d",
+	lut_mask => "698e",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -6680,18 +6680,18 @@ PORT MAP (
 -- Location: LC_X11_Y7_N2
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst14|inst11~regout\ $ ((!(!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst14|inst11~regout\ $ (((!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst14|inst11~regout\) # (!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))) # (!VCC $ \Inc~combout\ & (\inst14|inst11~regout\ 
--- & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & ((\inst14|inst11~regout\) # (!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))) # (!VCC $ \Inc~combout\ & 
--- (\inst14|inst11~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst14|inst11~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst14|inst11~regout\) # 
+-- (!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst14|inst11~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst14|inst11~regout\) # (!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
 
 -- pragma translate_off
 GENERIC MAP (
 	cin0_used => "true",
 	cin1_used => "true",
-	lut_mask => "698e",
+	lut_mask => "964d",
 	operation_mode => "arithmetic",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
