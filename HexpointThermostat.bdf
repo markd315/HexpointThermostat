@@ -135,7 +135,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect -680 760 -512 776)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Day" (rect 5 0 27 12)(font "Arial" ))
+	(text "Day" (rect 5 0 26 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -151,7 +151,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect -680 824 -512 840)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Night" (rect 5 0 30 17)(font "Intel Clear" ))
+	(text "Night" (rect 5 0 29 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -167,7 +167,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect -680 888 -512 904)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Passive" (rect 5 0 42 17)(font "Intel Clear" ))
+	(text "Passive" (rect 5 0 41 17)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -183,7 +183,7 @@ refer to the applicable agreement for further details.
 	(input)
 	(rect -376 -200 -208 -184)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Hiset" (rect 5 0 31 12)(font "Arial" ))
+	(text "Hiset" (rect 5 0 30 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -392,6 +392,22 @@ refer to the applicable agreement for further details.
 	(rect 568 568 761 584)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "externalTemp[12..0]" (rect 90 0 187 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1776 680 1952 696)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "sevsegSign" (rect 90 0 147 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -3192,6 +3208,45 @@ refer to the applicable agreement for further details.
 		(circle (rect 31 12 39 20))
 	)
 )
+(symbol
+	(rect 1704 608 1832 672)
+	(text "LPM_ABS" (rect 35 0 106 16)(font "Arial" (font_size 10)))
+	(text "inst57" (rect 3 53 31 70)(font "Intel Clear" ))
+	(port
+		(pt 0 24)
+		(input)
+		(text "data[LPM_WIDTH-1..0]" (rect 20 18 146 32)(font "Arial" (font_size 8)))
+		(text "data[]" (rect 20 18 51 32)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 16 24)(line_width 3))
+	)
+	(port
+		(pt 128 24)
+		(output)
+		(text "result[LPM_WIDTH-1..0]" (rect 75 16 208 30)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 16 113 30)(font "Arial" (font_size 8)))
+		(line (pt 112 24)(pt 128 24)(line_width 3))
+	)
+	(port
+		(pt 128 40)
+		(output)
+		(text "overflow" (rect 65 34 116 48)(font "Arial" (font_size 8)))
+		(text "overflow" (rect 64 34 115 48)(font "Arial" (font_size 8)))
+		(line (pt 112 40)(pt 128 40))
+	)
+	(parameter
+		"LPM_WIDTH"
+		"13"
+		"Width of I/O, any integer >= 2"
+		" 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(drawing
+		(line (pt 16 48)(pt 112 48))
+		(line (pt 16 16)(pt 112 16))
+		(line (pt 16 48)(pt 16 16))
+		(line (pt 112 48)(pt 112 16))
+	)
+	(annotation_block (parameter)(rect 1832 568 1964 606))
+)
 (connector
 	(pt 680 96)
 	(pt 680 184)
@@ -3261,12 +3316,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 1504 704)
 	(pt 1456 704)
-)
-(connector
-	(text "toDisplay" (rect 1568 616 1612 633)(font "Intel Clear" ))
-	(pt 1560 632)
-	(pt 1600 632)
-	(bus)
 )
 (connector
 	(pt 1384 560)
@@ -4454,6 +4503,28 @@ refer to the applicable agreement for further details.
 	(text "nightNotDay" (rect -264 952 -205 969)(font "Intel Clear" ))
 	(pt -240 968)
 	(pt -272 968)
+)
+(connector
+	(text "toDisplay[12..0]" (rect 1568 616 1642 633)(font "Intel Clear" ))
+	(pt 1560 632)
+	(pt 1704 632)
+	(bus)
+)
+(connector
+	(text "absDisplay[12..0]" (rect 1840 616 1921 633)(font "Intel Clear" ))
+	(pt 1832 632)
+	(pt 1888 632)
+	(bus)
+)
+(connector
+	(text "toDisplay[12]" (rect 1736 672 1799 689)(font "Intel Clear" ))
+	(pt 1776 688)
+	(pt 1728 688)
+)
+(connector
+	(text "controlsActive" (rect -192 1072 -125 1089)(font "Intel Clear" ))
+	(pt -184 1088)
+	(pt -200 1088)
 )
 (junction (pt 624 176))
 (junction (pt 736 -344))

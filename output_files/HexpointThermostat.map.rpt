@@ -1,5 +1,5 @@
 Analysis & Synthesis report for HexpointThermostat
-Mon Dec 25 15:48:35 2017
+Mon Dec 25 16:26:27 2017
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -49,8 +49,9 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  41. Parameter Settings for User Entity Instance: SetpointRegister:inst14|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component
  42. Parameter Settings for User Entity Instance: BUSMUX:inst3
  43. Parameter Settings for User Entity Instance: BUSMUX:inst8
- 44. lpm_shiftreg Parameter Settings by Entity Instance
- 45. Analysis & Synthesis Messages
+ 44. Parameter Settings for User Entity Instance: LPM_ABS:inst57
+ 45. lpm_shiftreg Parameter Settings by Entity Instance
+ 46. Analysis & Synthesis Messages
 
 
 
@@ -76,13 +77,13 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Mon Dec 25 15:48:35 2017       ;
+; Analysis & Synthesis Status ; Successful - Mon Dec 25 16:26:27 2017       ;
 ; Quartus Prime Version       ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name               ; HexpointThermostat                          ;
 ; Top-level Entity Name       ; HexpointThermostat                          ;
 ; Family                      ; MAX V                                       ;
-; Total logic elements        ; 327                                         ;
-; Total pins                  ; 36                                          ;
+; Total logic elements        ; 335                                         ;
+; Total pins                  ; 37                                          ;
 ; Total virtual pins          ; 0                                           ;
 ; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
 +-----------------------------+---------------------------------------------+
@@ -208,6 +209,12 @@ refer to the applicable agreement for further details.
 ; lpm_shiftreg.tdf                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_shiftreg.tdf        ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_constant.inc        ;         ;
 ; dffeea.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/dffeea.inc              ;         ;
+; lpm_abs.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_abs.tdf             ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; addcore.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/addcore.tdf             ;         ;
+; a_csnbuffer.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_csnbuffer.inc         ;         ;
+; a_csnbuffer.tdf                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/a_csnbuffer.tdf         ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altshift.tdf            ;         ;
 +----------------------------------+-----------------+------------------------------------------+--------------------------------------------------------------------------------+---------+
 
 
@@ -216,32 +223,32 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Total logic elements                        ; 327   ;
-;     -- Combinational with no register       ; 179   ;
-;     -- Register only                        ; 133   ;
-;     -- Combinational with a register        ; 15    ;
+; Total logic elements                        ; 335   ;
+;     -- Combinational with no register       ; 182   ;
+;     -- Register only                        ; 137   ;
+;     -- Combinational with a register        ; 16    ;
 ;                                             ;       ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 18    ;
-;     -- 3 input functions                    ; 150   ;
+;     -- 3 input functions                    ; 153   ;
 ;     -- 2 input functions                    ; 12    ;
-;     -- 1 input functions                    ; 13    ;
+;     -- 1 input functions                    ; 14    ;
 ;     -- 0 input functions                    ; 1     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 231   ;
+;     -- normal mode                          ; 239   ;
 ;     -- arithmetic mode                      ; 96    ;
 ;     -- qfbk mode                            ; 0     ;
 ;     -- register cascade mode                ; 0     ;
 ;     -- synchronous clear/load mode          ; 0     ;
-;     -- asynchronous clear/load mode         ; 27    ;
+;     -- asynchronous clear/load mode         ; 31    ;
 ;                                             ;       ;
-; Total registers                             ; 148   ;
+; Total registers                             ; 153   ;
 ; Total logic cells in carry chains           ; 104   ;
-; I/O pins                                    ; 36    ;
+; I/O pins                                    ; 37    ;
 ; Maximum fan-out node                        ; RTC   ;
-; Maximum fan-out                             ; 137   ;
-; Total fan-out                               ; 996   ;
+; Maximum fan-out                             ; 142   ;
+; Total fan-out                               ; 1021  ;
 ; Average fan-out                             ; 2.74  ;
 +---------------------------------------------+-------+
 
@@ -251,7 +258,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                      ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                                                                            ; Entity Name         ; Library Name ;
 +-------------------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |HexpointThermostat                             ; 327 (9)     ; 148          ; 0          ; 36   ; 0            ; 179 (5)      ; 133 (3)           ; 15 (1)           ; 104 (0)         ; 0 (0)      ; |HexpointThermostat                                                                                                            ; HexpointThermostat  ; work         ;
+; |HexpointThermostat                             ; 335 (15)    ; 153          ; 0          ; 37   ; 0            ; 182 (6)      ; 137 (7)           ; 16 (2)           ; 104 (0)         ; 0 (0)      ; |HexpointThermostat                                                                                                            ; HexpointThermostat  ; work         ;
 ;    |SetpointRegister:inst10|                    ; 27 (14)     ; 13           ; 0          ; 0    ; 0            ; 14 (1)       ; 13 (13)           ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10                                                                                    ; SetpointRegister    ; work         ;
 ;       |add13bits:inst|                          ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst                                                                     ; add13bits           ; work         ;
 ;          |lpm_add_sub:LPM_ADD_SUB_component|    ; 13 (0)      ; 0            ; 0          ; 0    ; 0            ; 13 (0)       ; 0 (0)             ; 0 (0)            ; 13 (0)          ; 0 (0)      ; |HexpointThermostat|SetpointRegister:inst10|add13bits:inst|lpm_add_sub:LPM_ADD_SUB_component                                   ; lpm_add_sub         ; work         ;
@@ -282,6 +289,9 @@ refer to the applicable agreement for further details.
 ;    |busmux:inst2|                               ; 26 (0)      ; 0            ; 0          ; 0    ; 0            ; 26 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst2                                                                                               ; busmux              ; work         ;
 ;       |lpm_mux:$00000|                          ; 26 (0)      ; 0            ; 0          ; 0    ; 0            ; 26 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst2|lpm_mux:$00000                                                                                ; lpm_mux             ; work         ;
 ;          |mux_58c:auto_generated|               ; 26 (26)     ; 0            ; 0          ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst2|lpm_mux:$00000|mux_58c:auto_generated                                                         ; mux_58c             ; work         ;
+;    |busmux:inst3|                               ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst3                                                                                               ; busmux              ; work         ;
+;       |lpm_mux:$00000|                          ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst3|lpm_mux:$00000                                                                                ; lpm_mux             ; work         ;
+;          |mux_58c:auto_generated|               ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst3|lpm_mux:$00000|mux_58c:auto_generated                                                         ; mux_58c             ; work         ;
 ;    |busmux:inst5|                               ; 26 (0)      ; 0            ; 0          ; 0    ; 0            ; 26 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst5                                                                                               ; busmux              ; work         ;
 ;       |lpm_mux:$00000|                          ; 26 (0)      ; 0            ; 0          ; 0    ; 0            ; 26 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst5|lpm_mux:$00000                                                                                ; lpm_mux             ; work         ;
 ;          |mux_58c:auto_generated|               ; 26 (26)     ; 0            ; 0          ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |HexpointThermostat|busmux:inst5|lpm_mux:$00000|mux_58c:auto_generated                                                         ; mux_58c             ; work         ;
@@ -380,11 +390,11 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 148   ;
+; Total registers                              ; 153   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 27    ;
-; Number of registers using Asynchronous Load  ; 2     ;
+; Number of registers using Asynchronous Clear ; 31    ;
+; Number of registers using Asynchronous Load  ; 3     ;
 ; Number of registers using Clock Enable       ; 107   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
@@ -861,6 +871,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: LPM_ABS:inst57 ;
++------------------------+---------+--------------------------+
+; Parameter Name         ; Value   ; Type                     ;
++------------------------+---------+--------------------------+
+; LPM_WIDTH              ; 13      ; Untyped                  ;
+; ADDERTYPE              ; DEFAULT ; Untyped                  ;
+; DEVICE_FAMILY          ; MAX V   ; Untyped                  ;
+; CARRY_CHAIN            ; MANUAL  ; Untyped                  ;
+; AUTO_CARRY_CHAINS      ; ON      ; AUTO_CARRY               ;
+; IGNORE_CARRY_BUFFERS   ; OFF     ; IGNORE_CARRY             ;
+; AUTO_CASCADE_CHAINS    ; ON      ; AUTO_CASCADE             ;
+; IGNORE_CASCADE_BUFFERS ; OFF     ; IGNORE_CASCADE           ;
++------------------------+---------+--------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------+
 ; lpm_shiftreg Parameter Settings by Entity Instance                          ;
 +----------------------------+------------------------------------------------+
@@ -879,7 +906,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Dec 25 15:48:21 2017
+    Info: Processing started: Mon Dec 25 16:26:14 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off HexpointThermostat -c HexpointThermostat
 Warning (125092): Tcl Script File currentTempReg.qip not found
     Info (125063): set_global_assignment -name QIP_FILE currentTempReg.qip
@@ -959,28 +986,39 @@ Info (12133): Instantiated megafunction "StoP:inst6|lpm_shiftreg:LPM_SHIFTREG_co
     Info (12134): Parameter "lpm_direction" = "LEFT"
     Info (12134): Parameter "lpm_type" = "LPM_SHIFTREG"
     Info (12134): Parameter "lpm_width" = "16"
-Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst3"
-Info (12130): Elaborated megafunction instantiation "BUSMUX:inst3"
-Info (12133): Instantiated megafunction "BUSMUX:inst3" with the following parameter:
-    Info (12134): Parameter "WIDTH" = "13"
+Info (12128): Elaborating entity "LPM_ABS" for hierarchy "LPM_ABS:inst57"
+Info (12130): Elaborated megafunction instantiation "LPM_ABS:inst57"
+Info (12133): Instantiated megafunction "LPM_ABS:inst57" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTH" = "13"
+Info (12128): Elaborating entity "lpm_add_sub" for hierarchy "LPM_ABS:inst57|lpm_add_sub:adder" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_abs.tdf Line: 49
+Info (12131): Elaborated megafunction instantiation "LPM_ABS:inst57|lpm_add_sub:adder", which is child of megafunction instantiation "LPM_ABS:inst57" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_abs.tdf Line: 49
+Info (12128): Elaborating entity "addcore" for hierarchy "LPM_ABS:inst57|lpm_add_sub:adder|addcore:adder" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 250
+Info (12131): Elaborated megafunction instantiation "LPM_ABS:inst57|lpm_add_sub:adder|addcore:adder", which is child of megafunction instantiation "LPM_ABS:inst57" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 250
+Info (12128): Elaborating entity "a_csnbuffer" for hierarchy "LPM_ABS:inst57|lpm_add_sub:adder|addcore:adder|a_csnbuffer:oflow_node" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/addcore.tdf Line: 86
+Info (12131): Elaborated megafunction instantiation "LPM_ABS:inst57|lpm_add_sub:adder|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "LPM_ABS:inst57" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/addcore.tdf Line: 86
+Info (12128): Elaborating entity "a_csnbuffer" for hierarchy "LPM_ABS:inst57|lpm_add_sub:adder|addcore:adder|a_csnbuffer:result_node" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/addcore.tdf Line: 112
+Info (12131): Elaborated megafunction instantiation "LPM_ABS:inst57|lpm_add_sub:adder|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "LPM_ABS:inst57" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/addcore.tdf Line: 112
+Info (12128): Elaborating entity "altshift" for hierarchy "LPM_ABS:inst57|lpm_add_sub:adder|altshift:result_ext_latency_ffs" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 268
+Info (12131): Elaborated megafunction instantiation "LPM_ABS:inst57|lpm_add_sub:adder|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "LPM_ABS:inst57" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 268
+Info (12128): Elaborating entity "altshift" for hierarchy "LPM_ABS:inst57|lpm_add_sub:adder|altshift:carry_ext_latency_ffs" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 270
+Info (12131): Elaborated megafunction instantiation "LPM_ABS:inst57|lpm_add_sub:adder|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "LPM_ABS:inst57" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 270
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "fbc0" is stuck at GND
     Warning (13410): Pin "fbc1" is stuck at GND
     Warning (13410): Pin "fbc3" is stuck at GND
     Warning (13410): Pin "fbc4" is stuck at GND
     Warning (13410): Pin "fbc2" is stuck at GND
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "hiTrueSetDisp"
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "fbctestclk"
     Warning (15610): No output dependent on input pin "fbctestrestart"
-Info (21057): Implemented 363 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 372 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 25 output pins
-    Info (21061): Implemented 327 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 668 megabytes
-    Info: Processing ended: Mon Dec 25 15:48:35 2017
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:29
+    Info (21059): Implemented 26 output pins
+    Info (21061): Implemented 335 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 671 megabytes
+    Info: Processing ended: Mon Dec 25 16:26:27 2017
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:27
 
 
