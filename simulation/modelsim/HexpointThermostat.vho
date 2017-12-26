@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
--- DATE "12/26/2017 11:27:30"
+-- DATE "12/26/2017 11:33:08"
 
 -- 
 -- Device: Altera 5M570ZT100C5 Package TQFP100
@@ -55,6 +55,27 @@ ENTITY 	HexpointThermostat IS
 	Cool : OUT std_logic;
 	sevsegSign : OUT std_logic;
 	hiTrueSetDisp : IN std_logic;
+	MSA : OUT std_logic;
+	MSB : OUT std_logic;
+	MSC : OUT std_logic;
+	MSD : OUT std_logic;
+	MSF : OUT std_logic;
+	MSE : OUT std_logic;
+	MSG : OUT std_logic;
+	LSA : OUT std_logic;
+	LSB : OUT std_logic;
+	LSC : OUT std_logic;
+	LSD : OUT std_logic;
+	LSE : OUT std_logic;
+	LSF : OUT std_logic;
+	LSG : OUT std_logic;
+	FracA : OUT std_logic;
+	FracB : OUT std_logic;
+	FracC : OUT std_logic;
+	FracD : OUT std_logic;
+	FracF : OUT std_logic;
+	FracE : OUT std_logic;
+	FracG : OUT std_logic;
 	externalTemp : OUT std_logic_vector(12 DOWNTO 0);
 	fbctestclk : IN std_logic;
 	fbctestrestart : IN std_logic
@@ -96,6 +117,27 @@ SIGNAL ww_FreezeReg : std_logic;
 SIGNAL ww_Cool : std_logic;
 SIGNAL ww_sevsegSign : std_logic;
 SIGNAL ww_hiTrueSetDisp : std_logic;
+SIGNAL ww_MSA : std_logic;
+SIGNAL ww_MSB : std_logic;
+SIGNAL ww_MSC : std_logic;
+SIGNAL ww_MSD : std_logic;
+SIGNAL ww_MSF : std_logic;
+SIGNAL ww_MSE : std_logic;
+SIGNAL ww_MSG : std_logic;
+SIGNAL ww_LSA : std_logic;
+SIGNAL ww_LSB : std_logic;
+SIGNAL ww_LSC : std_logic;
+SIGNAL ww_LSD : std_logic;
+SIGNAL ww_LSE : std_logic;
+SIGNAL ww_LSF : std_logic;
+SIGNAL ww_LSG : std_logic;
+SIGNAL ww_FracA : std_logic;
+SIGNAL ww_FracB : std_logic;
+SIGNAL ww_FracC : std_logic;
+SIGNAL ww_FracD : std_logic;
+SIGNAL ww_FracF : std_logic;
+SIGNAL ww_FracE : std_logic;
+SIGNAL ww_FracG : std_logic;
 SIGNAL ww_externalTemp : std_logic_vector(12 DOWNTO 0);
 SIGNAL ww_fbctestclk : std_logic;
 SIGNAL ww_fbctestrestart : std_logic;
@@ -139,11 +181,11 @@ SIGNAL \Night~combout\ : std_logic;
 SIGNAL \Day~combout\ : std_logic;
 SIGNAL \inst55~0_combout\ : std_logic;
 SIGNAL \inst47~regout\ : std_logic;
+SIGNAL \inst49~regout\ : std_logic;
 SIGNAL \Inc~combout\ : std_logic;
+SIGNAL \Hiset~combout\ : std_logic;
 SIGNAL \Dec~combout\ : std_logic;
 SIGNAL \inst11|inst16~combout\ : std_logic;
-SIGNAL \Hiset~combout\ : std_logic;
-SIGNAL \inst49~regout\ : std_logic;
 SIGNAL \inst9|inst1~0_combout\ : std_logic;
 SIGNAL \inst9|inst13~regout\ : std_logic;
 SIGNAL \inst10|inst1~0_combout\ : std_logic;
@@ -152,47 +194,12 @@ SIGNAL \inst5|$00000|auto_generated|result_node[0]~24\ : std_logic;
 SIGNAL \inst11|inst1~0_combout\ : std_logic;
 SIGNAL \inst11|inst13~regout\ : std_logic;
 SIGNAL \inst5|$00000|auto_generated|result_node[0]~25\ : std_logic;
-SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
-SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
-SIGNAL \inst9|inst12~regout\ : std_logic;
-SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
-SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
-SIGNAL \inst9|inst11~regout\ : std_logic;
-SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
-SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
-SIGNAL \inst9|inst10~regout\ : std_logic;
-SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ : std_logic;
-SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ : std_logic;
-SIGNAL \inst9|inst9~regout\ : std_logic;
-SIGNAL \inst10|inst9~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
-SIGNAL \inst10|inst12~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
-SIGNAL \inst10|inst11~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
-SIGNAL \inst10|inst10~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[4]~18\ : std_logic;
-SIGNAL \inst11|inst9~regout\ : std_logic;
-SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
-SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[1]~20\ : std_logic;
-SIGNAL \inst11|inst12~regout\ : std_logic;
-SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
-SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[2]~22\ : std_logic;
-SIGNAL \inst11|inst11~regout\ : std_logic;
-SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
-SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[3]~16\ : std_logic;
-SIGNAL \inst11|inst10~regout\ : std_logic;
-SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ : std_logic;
-SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[4]~19\ : std_logic;
+SIGNAL \inst55~combout\ : std_logic;
+SIGNAL \inst54~regout\ : std_logic;
+SIGNAL \inst53~regout\ : std_logic;
+SIGNAL \inst52~regout\ : std_logic;
+SIGNAL \inst51~regout\ : std_logic;
+SIGNAL \inst50~regout\ : std_logic;
 SIGNAL \Dout~combout\ : std_logic;
 SIGNAL \inst15|inst~regout\ : std_logic;
 SIGNAL \inst15|inst1~regout\ : std_logic;
@@ -227,15 +234,97 @@ SIGNAL \inst34|fstate.state21~regout\ : std_logic;
 SIGNAL \inst34|fstate.state22~regout\ : std_logic;
 SIGNAL \inst34|fstate.state24~regout\ : std_logic;
 SIGNAL \inst34|freezeParalell\ : std_logic;
-SIGNAL \inst38|inst10~regout\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[3]~17\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\ : std_logic;
+SIGNAL \hiTrueSetDisp~combout\ : std_logic;
+SIGNAL \inst12|inst1~0_combout\ : std_logic;
+SIGNAL \inst12|inst13~regout\ : std_logic;
+SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
+SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
+SIGNAL \inst12|inst12~regout\ : std_logic;
+SIGNAL \inst13|inst1~0_combout\ : std_logic;
+SIGNAL \inst13|inst12~regout\ : std_logic;
+SIGNAL \inst13|inst13~regout\ : std_logic;
+SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
+SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[1]~22\ : std_logic;
+SIGNAL \inst14|inst1~0_combout\ : std_logic;
+SIGNAL \inst14|inst12~regout\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[0]~24\ : std_logic;
+SIGNAL \inst14|inst13~regout\ : std_logic;
+SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
+SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[1]~23\ : std_logic;
+SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
+SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
+SIGNAL \inst9|inst12~regout\ : std_logic;
+SIGNAL \inst10|inst12~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[1]~20\ : std_logic;
+SIGNAL \inst11|inst12~regout\ : std_logic;
+SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
+SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
 SIGNAL \inst5|$00000|auto_generated|result_node[1]~21\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[1]~37_combout\ : std_logic;
 SIGNAL \inst38|inst12~regout\ : std_logic;
+SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
+SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
+SIGNAL \inst9|inst11~regout\ : std_logic;
+SIGNAL \inst10|inst11~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[2]~22\ : std_logic;
+SIGNAL \inst11|inst11~regout\ : std_logic;
+SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
+SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
 SIGNAL \inst5|$00000|auto_generated|result_node[2]~23\ : std_logic;
 SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~6\ : std_logic;
+SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
+SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
+SIGNAL \inst12|inst11~regout\ : std_logic;
+SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
+SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
+SIGNAL \inst12|inst10~regout\ : std_logic;
+SIGNAL \inst13|inst10~regout\ : std_logic;
+SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
+SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
+SIGNAL \inst13|inst11~regout\ : std_logic;
+SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
+SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[3]~20\ : std_logic;
+SIGNAL \inst14|inst10~regout\ : std_logic;
+SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
+SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[2]~18\ : std_logic;
+SIGNAL \inst14|inst11~regout\ : std_logic;
+SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
+SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[3]~21\ : std_logic;
+SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
+SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
+SIGNAL \inst9|inst10~regout\ : std_logic;
+SIGNAL \inst10|inst10~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[3]~16\ : std_logic;
+SIGNAL \inst11|inst10~regout\ : std_logic;
+SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
+SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[3]~17\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[3]~34_combout\ : std_logic;
+SIGNAL \inst38|inst10~regout\ : std_logic;
+SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ : std_logic;
+SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ : std_logic;
+SIGNAL \inst9|inst9~regout\ : std_logic;
+SIGNAL \inst10|inst9~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[4]~18\ : std_logic;
+SIGNAL \inst11|inst9~regout\ : std_logic;
+SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ : std_logic;
+SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[4]~19\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\ : std_logic;
 SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~7\ : std_logic;
-SIGNAL \inst38|inst2~regout\ : std_logic;
 SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ : std_logic;
 SIGNAL \inst9|inst8~regout\ : std_logic;
 SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\ : std_logic;
@@ -274,7 +363,7 @@ SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ : 
 SIGNAL \inst10|inst3~regout\ : std_logic;
 SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\ : std_logic;
 SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[11]~2\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[11]~0\ : std_logic;
 SIGNAL \inst11|inst2~regout\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ : std_logic;
 SIGNAL \inst5|$00000|auto_generated|result_node[5]~12\ : std_logic;
@@ -300,74 +389,7 @@ SIGNAL \inst5|$00000|auto_generated|result_node[10]~6\ : std_logic;
 SIGNAL \inst11|inst3~regout\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\ : std_logic;
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[11]~3\ : std_logic;
-SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
-SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
-SIGNAL \inst9|inst1~regout\ : std_logic;
-SIGNAL \inst10|inst1~regout\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
-SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[12]~0\ : std_logic;
-SIGNAL \inst11|inst1~regout\ : std_logic;
-SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
-SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[12]~1\ : std_logic;
-SIGNAL \inst38|inst1~regout\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[9]~5\ : std_logic;
-SIGNAL \inst38|inst4~regout\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[10]~7\ : std_logic;
-SIGNAL \inst38|inst3~regout\ : std_logic;
-SIGNAL \inst38|inst8~regout\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[5]~13\ : std_logic;
-SIGNAL \inst38|inst13~regout\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\ : std_logic;
-SIGNAL \inst38|inst9~regout\ : std_logic;
-SIGNAL \inst38|inst11~regout\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~42_cout0\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\ : std_logic;
-SIGNAL \inst38|inst6~regout\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[7]~9\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[8]~11\ : std_logic;
-SIGNAL \inst38|inst5~regout\ : std_logic;
-SIGNAL \inst5|$00000|auto_generated|result_node[6]~15\ : std_logic;
-SIGNAL \inst38|inst7~regout\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~17_cout0\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~0_combout\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\ : std_logic;
-SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~4_combout\ : std_logic;
-SIGNAL \inst44~regout\ : std_logic;
-SIGNAL \inst34|WideOr0\ : std_logic;
-SIGNAL \inst12|inst1~0_combout\ : std_logic;
-SIGNAL \inst12|inst13~regout\ : std_logic;
-SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
-SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
-SIGNAL \inst12|inst12~regout\ : std_logic;
-SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
-SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
-SIGNAL \inst12|inst11~regout\ : std_logic;
-SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
-SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
-SIGNAL \inst12|inst10~regout\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[11]~1\ : std_logic;
 SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ : std_logic;
 SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ : std_logic;
 SIGNAL \inst12|inst9~regout\ : std_logic;
@@ -390,21 +412,7 @@ SIGNAL \inst12|inst3~regout\ : std_logic;
 SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\ : std_logic;
 SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\ : std_logic;
 SIGNAL \inst12|inst2~regout\ : std_logic;
-SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
-SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
-SIGNAL \inst12|inst1~regout\ : std_logic;
-SIGNAL \inst13|inst1~0_combout\ : std_logic;
-SIGNAL \inst13|inst1~regout\ : std_logic;
-SIGNAL \inst13|inst13~regout\ : std_logic;
-SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
-SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
-SIGNAL \inst13|inst12~regout\ : std_logic;
-SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
-SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
-SIGNAL \inst13|inst11~regout\ : std_logic;
-SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
-SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
-SIGNAL \inst13|inst10~regout\ : std_logic;
+SIGNAL \inst13|inst2~regout\ : std_logic;
 SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ : std_logic;
 SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ : std_logic;
 SIGNAL \inst13|inst9~regout\ : std_logic;
@@ -426,32 +434,14 @@ SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ : 
 SIGNAL \inst13|inst3~regout\ : std_logic;
 SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\ : std_logic;
 SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\ : std_logic;
-SIGNAL \inst13|inst2~regout\ : std_logic;
-SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
-SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[12]~0\ : std_logic;
-SIGNAL \inst14|inst1~0_combout\ : std_logic;
-SIGNAL \inst14|inst1~regout\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[0]~24\ : std_logic;
-SIGNAL \inst14|inst13~regout\ : std_logic;
-SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ : std_logic;
-SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[1]~22\ : std_logic;
-SIGNAL \inst14|inst12~regout\ : std_logic;
-SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ : std_logic;
-SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[2]~20\ : std_logic;
-SIGNAL \inst14|inst11~regout\ : std_logic;
-SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ : std_logic;
-SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[3]~18\ : std_logic;
-SIGNAL \inst14|inst10~regout\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[11]~2\ : std_logic;
+SIGNAL \inst14|inst2~regout\ : std_logic;
 SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ : std_logic;
 SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[4]~16\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[4]~14\ : std_logic;
 SIGNAL \inst14|inst9~regout\ : std_logic;
 SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[5]~14\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[5]~16\ : std_logic;
 SIGNAL \inst14|inst8~regout\ : std_logic;
 SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\ : std_logic;
 SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\ : std_logic;
@@ -474,19 +464,87 @@ SIGNAL \inst2|$00000|auto_generated|result_node[10]~4\ : std_logic;
 SIGNAL \inst14|inst3~regout\ : std_logic;
 SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\ : std_logic;
 SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[11]~2\ : std_logic;
-SIGNAL \inst14|inst2~regout\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[11]~3\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[11]~15_combout\ : std_logic;
+SIGNAL \inst38|inst2~regout\ : std_logic;
+SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
+SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
+SIGNAL \inst9|inst1~regout\ : std_logic;
+SIGNAL \inst10|inst1~regout\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
+SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[12]~2\ : std_logic;
+SIGNAL \inst11|inst1~regout\ : std_logic;
+SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
+SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[12]~3\ : std_logic;
+SIGNAL \inst38|inst1~regout\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[9]~7\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[9]~5\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[9]~19_combout\ : std_logic;
+SIGNAL \inst38|inst4~regout\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[10]~7\ : std_logic;
+SIGNAL \inst38|inst3~regout\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[5]~13\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[5]~17\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[5]~29_combout\ : std_logic;
+SIGNAL \inst38|inst8~regout\ : std_logic;
+SIGNAL \inst38|inst13~regout\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\ : std_logic;
+SIGNAL \inst38|inst9~regout\ : std_logic;
+SIGNAL \inst38|inst11~regout\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~42_cout0\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[8]~11\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[7]~9\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[7]~11\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[7]~23_combout\ : std_logic;
+SIGNAL \inst38|inst6~regout\ : std_logic;
+SIGNAL \inst38|inst5~regout\ : std_logic;
+SIGNAL \inst5|$00000|auto_generated|result_node[6]~15\ : std_logic;
+SIGNAL \inst38|inst7~regout\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~17_cout0\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|op_1~0_combout\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\ : std_logic;
+SIGNAL \inst24|LPM_COMPARE_component|auto_generated|aeb_int~4_combout\ : std_logic;
+SIGNAL \inst44~regout\ : std_logic;
+SIGNAL \inst34|WideOr0\ : std_logic;
+SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
+SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
+SIGNAL \inst12|inst1~regout\ : std_logic;
+SIGNAL \inst13|inst1~regout\ : std_logic;
+SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
+SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[12]~0\ : std_logic;
+SIGNAL \inst14|inst1~regout\ : std_logic;
 SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\ : std_logic;
 SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\ : std_logic;
 SIGNAL \inst2|$00000|auto_generated|result_node[12]~1\ : std_logic;
 SIGNAL \inst2|$00000|auto_generated|result_node[10]~5\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[5]~15\ : std_logic;
 SIGNAL \inst2|$00000|auto_generated|result_node[0]~25\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~62_cout\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[4]~17\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[3]~19\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[2]~21\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[1]~23\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[4]~15\ : std_logic;
+SIGNAL \inst2|$00000|auto_generated|result_node[2]~19\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~57_cout0\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~52_cout0\ : std_logic;
@@ -496,9 +554,7 @@ SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\ : std_logic
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~42_cout0\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~37_cout\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[9]~7\ : std_logic;
 SIGNAL \inst2|$00000|auto_generated|result_node[8]~9\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[7]~11\ : std_logic;
 SIGNAL \inst2|$00000|auto_generated|result_node[6]~13\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~32_cout0\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\ : std_logic;
@@ -509,32 +565,116 @@ SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\ : std_logic
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~17_cout0\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\ : std_logic;
-SIGNAL \inst2|$00000|auto_generated|result_node[11]~3\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~7_cout0\ : std_logic;
 SIGNAL \inst23|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\ : std_logic;
 SIGNAL \inst45~regout\ : std_logic;
-SIGNAL \inst55~combout\ : std_logic;
-SIGNAL \inst54~regout\ : std_logic;
-SIGNAL \inst53~regout\ : std_logic;
-SIGNAL \inst52~regout\ : std_logic;
-SIGNAL \inst51~regout\ : std_logic;
-SIGNAL \inst50~regout\ : std_logic;
-SIGNAL \hiTrueSetDisp~combout\ : std_logic;
-SIGNAL \inst3|$00000|auto_generated|result_node[12]~0_combout\ : std_logic;
-SIGNAL \inst3|$00000|auto_generated|result_node[12]~1_combout\ : std_logic;
-SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
-SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
-SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \inst3|$00000|auto_generated|result_node[12]~14_combout\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[12]~13_combout\ : std_logic;
+SIGNAL \inst57|adder|adder|cin_node~0_combout\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[7]~24\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[4]~27_combout\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[4]~28_combout\ : std_logic;
+SIGNAL \inst57|adder|adder|cin_node\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[3]~35\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[2]~32_combout\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[2]~33_combout\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[1]~38\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[0]~39_combout\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[0]~40_combout\ : std_logic;
+SIGNAL \inst57|adder|adder|result_node|cout[0]~COUT1_1\ : std_logic;
+SIGNAL \inst57|adder|adder|result_node|cout[1]~COUT1_2\ : std_logic;
+SIGNAL \inst57|adder|adder|result_node|cout[2]~COUT1_3\ : std_logic;
+SIGNAL \inst57|adder|adder|result_node|cout[3]~COUT1_4\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[6]~25_combout\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[6]~26_combout\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[5]~30\ : std_logic;
+SIGNAL \inst57|adder|adder|result_node|cout[5]~COUT1_5\ : std_logic;
+SIGNAL \inst57|adder|adder|result_node|cout[6]~COUT1_6\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[10]~17_combout\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[10]~18_combout\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[9]~20\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[8]~21_combout\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[8]~22_combout\ : std_logic;
+SIGNAL \inst57|adder|adder|result_node|cout[7]~COUT1_7\ : std_logic;
+SIGNAL \inst57|adder|adder|result_node|cout[8]~COUT1_8\ : std_logic;
+SIGNAL \inst3|$00000|auto_generated|result_node[11]~16\ : std_logic;
+SIGNAL \inst57|adder|adder|result_node|cout[10]~COUT1_9\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~COUT\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~COUTCOUT1_8\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~4\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[17]~2_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~COUT\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~COUTCOUT1_8\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~4\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[18]~0_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[2]~0_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[22]~3_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~COUT\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~COUTCOUT1_9\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~5\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~0_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~0_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[27]~6_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~COUT\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~COUTCOUT1_9\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~5\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~COUT\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~COUTCOUT1_9\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~5\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[32]~7_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~0_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\ : std_logic;
+SIGNAL \inst86|A~combout\ : std_logic;
+SIGNAL \inst86|B~combout\ : std_logic;
+SIGNAL \inst86|C~combout\ : std_logic;
+SIGNAL \inst86|D~combout\ : std_logic;
+SIGNAL \inst86|F~0_combout\ : std_logic;
+SIGNAL \inst86|E~0_combout\ : std_logic;
+SIGNAL \inst86|G~0_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\ : std_logic;
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\ : std_logic;
+SIGNAL \inst87|A~0_combout\ : std_logic;
+SIGNAL \inst87|B~combout\ : std_logic;
+SIGNAL \inst87|C~combout\ : std_logic;
+SIGNAL \inst87|D~0_combout\ : std_logic;
+SIGNAL \inst87|E~0_combout\ : std_logic;
+SIGNAL \inst87|F~0_combout\ : std_logic;
+SIGNAL \inst87|G~0_combout\ : std_logic;
+SIGNAL \inst88|B~0_combout\ : std_logic;
+SIGNAL \inst88|B~1_combout\ : std_logic;
+SIGNAL \inst88|B~2_combout\ : std_logic;
+SIGNAL \inst88|B~3_combout\ : std_logic;
 SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \inst57|adder|adder|result_node|cs_buffer\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \inst57|adder|adder|result_node|cout\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella\ : std_logic_vector(3 DOWNTO 0);
+SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \inst6|LPM_SHIFTREG_component|dffs\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella\ : std_logic_vector(4 DOWNTO 0);
+SIGNAL \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella\ : std_logic_vector(4 DOWNTO 0);
 SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \inst34|ALT_INV_freezeParalell\ : std_logic;
+SIGNAL \inst34|ALT_INV_WideOr0\ : std_logic;
 SIGNAL \ALT_INV_inst51~regout\ : std_logic;
 SIGNAL \ALT_INV_Passive~combout\ : std_logic;
 SIGNAL \ALT_INV_Night~combout\ : std_logic;
 SIGNAL \ALT_INV_Day~combout\ : std_logic;
-SIGNAL \inst34|ALT_INV_freezeParalell\ : std_logic;
-SIGNAL \inst34|ALT_INV_WideOr0\ : std_logic;
+SIGNAL \inst88|ALT_INV_B~2_combout\ : std_logic;
+SIGNAL \inst88|ALT_INV_B~1_combout\ : std_logic;
+SIGNAL \inst88|ALT_INV_B~0_combout\ : std_logic;
 
 BEGIN
 
@@ -560,18 +700,42 @@ FreezeReg <= ww_FreezeReg;
 Cool <= ww_Cool;
 sevsegSign <= ww_sevsegSign;
 ww_hiTrueSetDisp <= hiTrueSetDisp;
+MSA <= ww_MSA;
+MSB <= ww_MSB;
+MSC <= ww_MSC;
+MSD <= ww_MSD;
+MSF <= ww_MSF;
+MSE <= ww_MSE;
+MSG <= ww_MSG;
+LSA <= ww_LSA;
+LSB <= ww_LSB;
+LSC <= ww_LSC;
+LSD <= ww_LSD;
+LSE <= ww_LSE;
+LSF <= ww_LSF;
+LSG <= ww_LSG;
+FracA <= ww_FracA;
+FracB <= ww_FracB;
+FracC <= ww_FracC;
+FracD <= ww_FracD;
+FracF <= ww_FracF;
+FracE <= ww_FracE;
+FracG <= ww_FracG;
 externalTemp <= ww_externalTemp;
 ww_fbctestclk <= fbctestclk;
 ww_fbctestrestart <= fbctestrestart;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
+\inst34|ALT_INV_freezeParalell\ <= NOT \inst34|freezeParalell\;
+\inst34|ALT_INV_WideOr0\ <= NOT \inst34|WideOr0\;
 \ALT_INV_inst51~regout\ <= NOT \inst51~regout\;
 \ALT_INV_Passive~combout\ <= NOT \Passive~combout\;
 \ALT_INV_Night~combout\ <= NOT \Night~combout\;
 \ALT_INV_Day~combout\ <= NOT \Day~combout\;
-\inst34|ALT_INV_freezeParalell\ <= NOT \inst34|freezeParalell\;
-\inst34|ALT_INV_WideOr0\ <= NOT \inst34|WideOr0\;
+\inst88|ALT_INV_B~2_combout\ <= NOT \inst88|B~2_combout\;
+\inst88|ALT_INV_B~1_combout\ <= NOT \inst88|B~1_combout\;
+\inst88|ALT_INV_B~0_combout\ <= NOT \inst88|B~0_combout\;
 
 -- Location: PIN_12,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \RTC~I\ : maxv_io
@@ -584,32 +748,10 @@ PORT MAP (
 	padio => ww_RTC,
 	combout => \RTC~combout\);
 
--- Location: LC_X9_Y5_N4
+-- Location: LC_X3_Y4_N2
 \inst22|inst\ : maxv_lcell
 -- Equation(s):
 -- \inst22|inst~regout\ = DFFEAS((((!\inst22|inst~regout\))), GLOBAL(\RTC~combout\), VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0f0f",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst22|inst~regout\,
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst22|inst~regout\);
-
--- Location: LC_X12_Y5_N2
-\inst22|inst1\ : maxv_lcell
--- Equation(s):
--- \inst22|inst1~regout\ = DFFEAS((((!\inst22|inst1~regout\))), \inst22|inst~regout\, VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -621,14 +763,36 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
+	clk => \RTC~combout\,
+	datad => \inst22|inst~regout\,
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst22|inst~regout\);
+
+-- Location: LC_X2_Y4_N7
+\inst22|inst1\ : maxv_lcell
+-- Equation(s):
+-- \inst22|inst1~regout\ = DFFEAS((((!\inst22|inst1~regout\))), \inst22|inst~regout\, VCC, , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0f0f",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
 	clk => \inst22|inst~regout\,
-	datad => \inst22|inst1~regout\,
+	datac => \inst22|inst1~regout\,
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst22|inst1~regout\);
 
--- Location: LC_X12_Y5_N1
+-- Location: LC_X1_Y4_N9
 \inst22|inst2\ : maxv_lcell
 -- Equation(s):
 -- \inst22|inst2~regout\ = DFFEAS((((!\inst22|inst2~regout\))), \inst22|inst1~regout\, VCC, , , , , , )
@@ -650,14 +814,14 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst22|inst2~regout\);
 
--- Location: LC_X11_Y5_N3
+-- Location: LC_X2_Y4_N5
 \inst22|inst3\ : maxv_lcell
 -- Equation(s):
 -- \inst22|inst3~regout\ = DFFEAS((((!\inst22|inst3~regout\))), \inst22|inst2~regout\, VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "00ff",
+	lut_mask => "0f0f",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -666,13 +830,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \inst22|inst2~regout\,
-	datad => \inst22|inst3~regout\,
+	datac => \inst22|inst3~regout\,
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst22|inst3~regout\);
 
--- Location: LC_X11_Y5_N9
+-- Location: LC_X3_Y4_N8
 \inst22|inst4\ : maxv_lcell
 -- Equation(s):
 -- \inst22|inst4~regout\ = DFFEAS((((!\inst22|inst4~regout\))), \inst22|inst3~regout\, VCC, , , , , , )
@@ -694,7 +858,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst22|inst4~regout\);
 
--- Location: LC_X10_Y5_N8
+-- Location: LC_X4_Y4_N3
 \inst22|inst7\ : maxv_lcell
 -- Equation(s):
 -- \inst22|inst7~regout\ = DFFEAS((((!\inst22|inst7~regout\))), \inst22|inst4~regout\, VCC, , , , , , )
@@ -716,14 +880,14 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst22|inst7~regout\);
 
--- Location: LC_X10_Y5_N0
+-- Location: LC_X4_Y4_N2
 \inst22|inst8\ : maxv_lcell
 -- Equation(s):
 -- \inst22|inst8~regout\ = DFFEAS((((!\inst22|inst8~regout\))), \inst22|inst7~regout\, VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0f0f",
+	lut_mask => "00ff",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -732,16 +896,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \inst22|inst7~regout\,
-	datac => \inst22|inst8~regout\,
+	datad => \inst22|inst8~regout\,
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst22|inst8~regout\);
 
--- Location: LC_X11_Y5_N8
+-- Location: LC_X2_Y4_N8
 \inst36~0\ : maxv_lcell
 -- Equation(s):
--- \inst36~0_combout\ = (\inst22|inst2~regout\) # ((\inst22|inst4~regout\) # ((\inst22|inst1~regout\) # (\inst22|inst3~regout\)))
+-- \inst36~0_combout\ = (\inst22|inst2~regout\) # ((\inst22|inst1~regout\) # ((\inst22|inst3~regout\) # (\inst22|inst4~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -754,17 +918,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \inst22|inst2~regout\,
-	datab => \inst22|inst4~regout\,
-	datac => \inst22|inst1~regout\,
-	datad => \inst22|inst3~regout\,
+	datab => \inst22|inst1~regout\,
+	datac => \inst22|inst3~regout\,
+	datad => \inst22|inst4~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst36~0_combout\);
 
--- Location: LC_X10_Y5_N9
+-- Location: LC_X4_Y4_N4
 inst36 : maxv_lcell
 -- Equation(s):
--- \inst36~combout\ = LCELL((!\inst22|inst7~regout\ & (!\inst22|inst~regout\ & (!\inst22|inst8~regout\ & !\inst36~0_combout\))))
+-- \inst36~combout\ = LCELL((!\inst22|inst7~regout\ & (!\inst22|inst8~regout\ & (!\inst36~0_combout\ & !\inst22|inst~regout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -777,14 +941,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \inst22|inst7~regout\,
-	datab => \inst22|inst~regout\,
-	datac => \inst22|inst8~regout\,
-	datad => \inst36~0_combout\,
+	datab => \inst22|inst8~regout\,
+	datac => \inst36~0_combout\,
+	datad => \inst22|inst~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst36~combout\);
 
--- Location: PIN_43,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_41,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \Passive~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -795,7 +959,7 @@ PORT MAP (
 	padio => ww_Passive,
 	combout => \Passive~combout\);
 
--- Location: PIN_34,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_40,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \Night~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -806,7 +970,7 @@ PORT MAP (
 	padio => ww_Night,
 	combout => \Night~combout\);
 
--- Location: PIN_89,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_43,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \Day~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -817,14 +981,14 @@ PORT MAP (
 	padio => ww_Day,
 	combout => \Day~combout\);
 
--- Location: LC_X8_Y4_N3
+-- Location: LC_X8_Y4_N7
 \inst55~0\ : maxv_lcell
 -- Equation(s):
--- \inst55~0_combout\ = (((!\Night~combout\ & !\Day~combout\)))
+-- \inst55~0_combout\ = ((!\Night~combout\ & ((!\Day~combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "000f",
+	lut_mask => "0033",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -832,16 +996,40 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datac => \Night~combout\,
+	datab => \Night~combout\,
 	datad => \Day~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst55~0_combout\);
 
--- Location: LC_X8_Y4_N8
+-- Location: LC_X7_Y6_N0
 inst47 : maxv_lcell
 -- Equation(s):
--- \inst47~regout\ = DFFEAS((((\inst47~regout\))), GLOBAL(\RTC~combout\), \Passive~combout\, , , VCC, \inst55~0_combout\, , )
+-- \inst47~regout\ = DFFEAS(((\inst47~regout\)), GLOBAL(\RTC~combout\), \Passive~combout\, , , VCC, \inst55~0_combout\, , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "cccc",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst47~regout\,
+	datac => VCC,
+	aclr => \ALT_INV_Passive~combout\,
+	aload => \inst55~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst47~regout\);
+
+-- Location: LC_X8_Y5_N3
+inst49 : maxv_lcell
+-- Equation(s):
+-- \inst49~regout\ = DFFEAS((((\inst49~regout\))), GLOBAL(\RTC~combout\), \Day~combout\, , , VCC, !\Night~combout\, , )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -855,14 +1043,14 @@ GENERIC MAP (
 PORT MAP (
 	clk => \RTC~combout\,
 	datac => VCC,
-	datad => \inst47~regout\,
-	aclr => \ALT_INV_Passive~combout\,
-	aload => \inst55~0_combout\,
+	datad => \inst49~regout\,
+	aclr => \ALT_INV_Day~combout\,
+	aload => \ALT_INV_Night~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \inst47~regout\);
+	regout => \inst49~regout\);
 
--- Location: PIN_4,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_69,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \Inc~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -873,7 +1061,7 @@ PORT MAP (
 	padio => ww_Inc,
 	combout => \Inc~combout\);
 
--- Location: LC_X7_Y5_N0
+-- Location: LC_X11_Y5_N0
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst9|inst13~regout\ $ ((!\Inc~combout\)))
@@ -899,7 +1087,18 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
 
--- Location: PIN_7,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_42,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\Hiset~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_Hiset,
+	combout => \Hiset~combout\);
+
+-- Location: PIN_38,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \Dec~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -910,10 +1109,10 @@ PORT MAP (
 	padio => ww_Dec,
 	combout => \Dec~combout\);
 
--- Location: LC_X4_Y7_N9
+-- Location: LC_X7_Y6_N1
 \inst11|inst16\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst16~combout\ = ((\Inc~combout\) # ((\Dec~combout\)))
+-- \inst11|inst16~combout\ = ((\Dec~combout\) # ((\Inc~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -925,55 +1124,20 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datab => \Inc~combout\,
-	datad => \Dec~combout\,
+	datab => \Dec~combout\,
+	datad => \Inc~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst11|inst16~combout\);
 
--- Location: PIN_16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\Hiset~I\ : maxv_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "input")
--- pragma translate_on
-PORT MAP (
-	oe => GND,
-	padio => ww_Hiset,
-	combout => \Hiset~combout\);
-
--- Location: LC_X5_Y7_N7
-inst49 : maxv_lcell
--- Equation(s):
--- \inst49~regout\ = DFFEAS(((\inst49~regout\)), GLOBAL(\RTC~combout\), \Day~combout\, , , VCC, !\Night~combout\, , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "cccc",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst49~regout\,
-	datac => VCC,
-	aclr => \ALT_INV_Day~combout\,
-	aload => \ALT_INV_Night~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst49~regout\);
-
--- Location: LC_X6_Y7_N9
+-- Location: LC_X7_Y6_N5
 \inst9|inst1~0\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst1~0_combout\ = (\inst11|inst16~combout\ & (!\Hiset~combout\ & (!\inst49~regout\ & \inst47~regout\)))
+-- \inst9|inst1~0_combout\ = (!\Hiset~combout\ & (\inst11|inst16~combout\ & (\inst47~regout\ & !\inst49~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0200",
+	lut_mask => "0040",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -981,46 +1145,45 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst11|inst16~combout\,
-	datab => \Hiset~combout\,
-	datac => \inst49~regout\,
-	datad => \inst47~regout\,
+	dataa => \Hiset~combout\,
+	datab => \inst11|inst16~combout\,
+	datac => \inst47~regout\,
+	datad => \inst49~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst9|inst1~0_combout\);
 
--- Location: LC_X6_Y5_N6
+-- Location: LC_X12_Y5_N4
 \inst9|inst13\ : maxv_lcell
 -- Equation(s):
--- \inst9|inst13~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0), , , VCC)
+-- \inst9|inst13~regout\ = DFFEAS((((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0)))), GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000",
+	lut_mask => "ff00",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "on")
+	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
 	aclr => GND,
-	sload => VCC,
 	ena => \inst9|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst9|inst13~regout\);
 
--- Location: LC_X6_Y7_N2
+-- Location: LC_X7_Y6_N9
 \inst10|inst1~0\ : maxv_lcell
 -- Equation(s):
--- \inst10|inst1~0_combout\ = (\inst11|inst16~combout\ & (\inst49~regout\ & (!\Hiset~combout\ & \inst47~regout\)))
+-- \inst10|inst1~0_combout\ = (!\Hiset~combout\ & (\inst11|inst16~combout\ & (\inst47~regout\ & \inst49~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0800",
+	lut_mask => "4000",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -1028,23 +1191,23 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst11|inst16~combout\,
-	datab => \inst49~regout\,
-	datac => \Hiset~combout\,
-	datad => \inst47~regout\,
+	dataa => \Hiset~combout\,
+	datab => \inst11|inst16~combout\,
+	datac => \inst47~regout\,
+	datad => \inst49~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst10|inst1~0_combout\);
 
--- Location: LC_X6_Y4_N2
+-- Location: LC_X8_Y5_N7
 \inst10|inst13\ : maxv_lcell
 -- Equation(s):
--- \inst5|$00000|auto_generated|result_node[0]~24\ = ((\inst49~regout\ & ((E2_inst13))) # (!\inst49~regout\ & (\inst9|inst13~regout\)))
+-- \inst5|$00000|auto_generated|result_node[0]~24\ = ((\inst49~regout\ & (E2_inst13)) # (!\inst49~regout\ & ((\inst9|inst13~regout\))))
 -- \inst10|inst13~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[0]~24\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f0cc",
+	lut_mask => "f3c0",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -1053,9 +1216,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst9|inst13~regout\,
+	datab => \inst49~regout\,
 	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	datad => \inst49~regout\,
+	datad => \inst9|inst13~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst10|inst1~0_combout\,
@@ -1064,7 +1227,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[0]~24\,
 	regout => \inst10|inst13~regout\);
 
--- Location: LC_X7_Y7_N0
+-- Location: LC_X7_Y5_N0
 \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
 -- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst10|inst13~regout\ $ ((!\Inc~combout\)))
@@ -1090,14 +1253,14 @@ PORT MAP (
 	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
 	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
 
--- Location: LC_X9_Y4_N2
+-- Location: LC_X7_Y6_N2
 \inst11|inst1~0\ : maxv_lcell
 -- Equation(s):
--- \inst11|inst1~0_combout\ = (!\Hiset~combout\ & (!\inst47~regout\ & ((\Dec~combout\) # (\Inc~combout\))))
+-- \inst11|inst1~0_combout\ = (!\Hiset~combout\ & (!\inst47~regout\ & ((\Inc~combout\) # (\Dec~combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0302",
+	lut_mask => "0504",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -1105,15 +1268,15 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \Dec~combout\,
-	datab => \Hiset~combout\,
+	dataa => \Hiset~combout\,
+	datab => \Inc~combout\,
 	datac => \inst47~regout\,
-	datad => \Inc~combout\,
+	datad => \Dec~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst11|inst1~0_combout\);
 
--- Location: LC_X6_Y4_N3
+-- Location: LC_X9_Y6_N3
 \inst11|inst13\ : maxv_lcell
 -- Equation(s):
 -- \inst5|$00000|auto_generated|result_node[0]~25\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[0]~24\))) # (!\inst47~regout\ & (E3_inst13)))
@@ -1141,7 +1304,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[0]~25\,
 	regout => \inst11|inst13~regout\);
 
--- Location: LC_X7_Y4_N0
+-- Location: LC_X8_Y6_N0
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst11|inst13~regout\ $ ((!\Inc~combout\)))
@@ -1167,47 +1330,36 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
 
--- Location: LC_X7_Y5_N1
-\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
+-- Location: LC_X8_Y4_N5
+inst55 : maxv_lcell
 -- Equation(s):
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst9|inst12~regout\ $ (((!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst9|inst12~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst9|inst12~regout\))))
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst9|inst12~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst9|inst12~regout\))))
+-- \inst55~combout\ = ((!\Night~combout\ & (!\Passive~combout\ & !\Day~combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
+	lut_mask => "0003",
+	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
+	sum_lutc_input => "datac",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => VCC,
-	datab => \inst9|inst12~regout\,
-	cin0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
-	cin1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
-	inverta => \Inc~combout\,
+	datab => \Night~combout\,
+	datac => \Passive~combout\,
+	datad => \Day~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
+	combout => \inst55~combout\);
 
--- Location: LC_X6_Y5_N2
-\inst9|inst12\ : maxv_lcell
+-- Location: LC_X3_Y7_N6
+inst54 : maxv_lcell
 -- Equation(s):
--- \inst9|inst12~regout\ = DFFEAS((((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1)))), GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, , , , )
+-- \inst54~regout\ = DFFEAS((((!\inst55~combout\))), GLOBAL(\RTC~combout\), VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ff00",
+	lut_mask => "00ff",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -1216,50 +1368,16 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	datad => \inst55~combout\,
 	aclr => GND,
-	ena => \inst9|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \inst9|inst12~regout\);
+	regout => \inst54~regout\);
 
--- Location: LC_X7_Y5_N2
-\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
+-- Location: LC_X3_Y7_N4
+inst53 : maxv_lcell
 -- Equation(s):
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst9|inst11~regout\ $ (((!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst9|inst11~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst9|inst11~regout\) # 
--- (!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst9|inst11~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
--- ((\inst9|inst11~regout\) # (!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "964d",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst9|inst11~regout\,
-	cin0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cin1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
-
--- Location: LC_X6_Y5_N7
-\inst9|inst11\ : maxv_lcell
--- Equation(s):
--- \inst9|inst11~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
+-- \inst53~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst55~combout\), , , \inst54~regout\, , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1272,105 +1390,17 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	aclr => GND,
+	datac => \inst54~regout\,
+	aclr => \inst55~combout\,
 	sload => VCC,
-	ena => \inst9|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \inst9|inst11~regout\);
+	regout => \inst53~regout\);
 
--- Location: LC_X7_Y5_N3
-\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
+-- Location: LC_X4_Y7_N6
+inst52 : maxv_lcell
 -- Equation(s):
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst9|inst10~regout\ $ (((!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst9|inst10~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst9|inst10~regout\))))
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst9|inst10~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst9|inst10~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst9|inst10~regout\,
-	cin0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cin1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
-	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
-
--- Location: LC_X6_Y5_N1
-\inst9|inst10\ : maxv_lcell
--- Equation(s):
--- \inst9|inst10~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst9|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst9|inst10~regout\);
-
--- Location: LC_X7_Y5_N4
-\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
--- Equation(s):
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst9|inst9~regout\ $ ((!(!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))))
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst9|inst9~regout\) # (!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))) # (!VCC $ \Inc~combout\ & 
--- (\inst9|inst9~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "698e",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst9|inst9~regout\,
-	cin0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
-	cin1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
-	cout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
-
--- Location: LC_X6_Y5_N3
-\inst9|inst9\ : maxv_lcell
--- Equation(s):
--- \inst9|inst9~regout\ = DFFEAS((((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4)))), GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, , , , )
+-- \inst52~regout\ = DFFEAS((((\inst53~regout\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst55~combout\), , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1383,496 +1413,60 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
-	aclr => GND,
-	ena => \inst9|inst1~0_combout\,
+	datad => \inst53~regout\,
+	aclr => \inst55~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \inst9|inst9~regout\);
+	regout => \inst52~regout\);
 
--- Location: LC_X6_Y7_N0
-\inst10|inst9\ : maxv_lcell
+-- Location: LC_X4_Y7_N7
+inst51 : maxv_lcell
 -- Equation(s):
--- \inst5|$00000|auto_generated|result_node[4]~18\ = ((\inst49~regout\ & (E2_inst9)) # (!\inst49~regout\ & ((\inst9|inst9~regout\))))
--- \inst10|inst9~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[4]~18\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4), , , VCC)
+-- \inst51~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst55~combout\), , , \inst52~regout\, , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f3c0",
+	lut_mask => "0000",
 	operation_mode => "normal",
-	output_mode => "reg_and_comb",
+	output_mode => "reg_only",
 	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
+	sum_lutc_input => "datac",
 	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst49~regout\,
-	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
-	datad => \inst9|inst9~regout\,
-	aclr => GND,
+	datac => \inst52~regout\,
+	aclr => \inst55~combout\,
 	sload => VCC,
-	ena => \inst10|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[4]~18\,
-	regout => \inst10|inst9~regout\);
+	regout => \inst51~regout\);
 
--- Location: LC_X7_Y7_N1
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
+-- Location: LC_X4_Y7_N8
+inst50 : maxv_lcell
 -- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst10|inst12~regout\ $ (((!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst12~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst10|inst12~regout\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst12~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst10|inst12~regout\))))
+-- \inst50~regout\ = DFFEAS((((\inst50~regout\))), GLOBAL(\RTC~combout\), \inst51~regout\, , , VCC, GLOBAL(\inst55~combout\), , )
 
 -- pragma translate_off
 GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst12~regout\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
-
--- Location: LC_X6_Y4_N6
-\inst10|inst12\ : maxv_lcell
--- Equation(s):
--- \inst5|$00000|auto_generated|result_node[1]~20\ = ((\inst49~regout\ & ((E2_inst12))) # (!\inst49~regout\ & (\inst9|inst12~regout\)))
--- \inst10|inst12~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[1]~20\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
+	lut_mask => "ff00",
 	operation_mode => "normal",
-	output_mode => "reg_and_comb",
+	output_mode => "reg_only",
 	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
+	sum_lutc_input => "datac",
+	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst9|inst12~regout\,
-	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	datad => \inst49~regout\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst10|inst1~0_combout\,
+	datac => VCC,
+	datad => \inst50~regout\,
+	aclr => \ALT_INV_inst51~regout\,
+	aload => \inst55~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[1]~20\,
-	regout => \inst10|inst12~regout\);
+	regout => \inst50~regout\);
 
--- Location: LC_X7_Y7_N2
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst10|inst11~regout\ $ (((!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst11~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst10|inst11~regout\) # 
--- (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst11~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
--- ((\inst10|inst11~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "964d",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst11~regout\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
-
--- Location: LC_X6_Y6_N2
-\inst10|inst11\ : maxv_lcell
--- Equation(s):
--- \inst5|$00000|auto_generated|result_node[2]~22\ = ((\inst49~regout\ & ((E2_inst11))) # (!\inst49~regout\ & (\inst9|inst11~regout\)))
--- \inst10|inst11~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[2]~22\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst9|inst11~regout\,
-	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	datad => \inst49~regout\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst10|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[2]~22\,
-	regout => \inst10|inst11~regout\);
-
--- Location: LC_X7_Y7_N3
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst10|inst10~regout\ $ (((!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst10~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst10|inst10~regout\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst10~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst10|inst10~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst10~regout\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
-	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
-
--- Location: LC_X6_Y4_N9
-\inst10|inst10\ : maxv_lcell
--- Equation(s):
--- \inst5|$00000|auto_generated|result_node[3]~16\ = ((\inst49~regout\ & ((E2_inst10))) # (!\inst49~regout\ & (\inst9|inst10~regout\)))
--- \inst10|inst10~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[3]~16\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst9|inst10~regout\,
-	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	datad => \inst49~regout\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst10|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[3]~16\,
-	regout => \inst10|inst10~regout\);
-
--- Location: LC_X7_Y7_N4
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst10|inst9~regout\ $ ((!(!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))))
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst9~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))) # (!VCC $ \Inc~combout\ & 
--- (\inst10|inst9~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "698e",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst10|inst9~regout\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
-	cout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
-
--- Location: LC_X6_Y7_N1
-\inst11|inst9\ : maxv_lcell
--- Equation(s):
--- \inst5|$00000|auto_generated|result_node[4]~19\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[4]~18\))) # (!\inst47~regout\ & (E3_inst9)))
--- \inst11|inst9~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[4]~19\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fc30",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst47~regout\,
-	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
-	datad => \inst5|$00000|auto_generated|result_node[4]~18\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst11|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[4]~19\,
-	regout => \inst11|inst9~regout\);
-
--- Location: LC_X7_Y4_N1
-\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
--- Equation(s):
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst11|inst12~regout\ $ (((!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst11|inst12~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst11|inst12~regout\))))
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst11|inst12~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst11|inst12~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst11|inst12~regout\,
-	cin0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
-	cin1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
-
--- Location: LC_X6_Y4_N7
-\inst11|inst12\ : maxv_lcell
--- Equation(s):
--- \inst5|$00000|auto_generated|result_node[1]~21\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[1]~20\))) # (!\inst47~regout\ & (E3_inst12)))
--- \inst11|inst12~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[1]~21\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fc30",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst47~regout\,
-	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	datad => \inst5|$00000|auto_generated|result_node[1]~20\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst11|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[1]~21\,
-	regout => \inst11|inst12~regout\);
-
--- Location: LC_X7_Y4_N2
-\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
--- Equation(s):
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst11|inst11~regout\ $ (((!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst11|inst11~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst11|inst11~regout\) # 
--- (!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst11|inst11~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
--- ((\inst11|inst11~regout\) # (!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "964d",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst11|inst11~regout\,
-	cin0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cin1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
-
--- Location: LC_X6_Y6_N0
-\inst11|inst11\ : maxv_lcell
--- Equation(s):
--- \inst5|$00000|auto_generated|result_node[2]~23\ = (\inst47~regout\ & (((\inst5|$00000|auto_generated|result_node[2]~22\)))) # (!\inst47~regout\ & (((E3_inst11))))
--- \inst11|inst11~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[2]~23\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fa50",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	dataa => \inst47~regout\,
-	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	datad => \inst5|$00000|auto_generated|result_node[2]~22\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst11|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[2]~23\,
-	regout => \inst11|inst11~regout\);
-
--- Location: LC_X7_Y4_N3
-\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
--- Equation(s):
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst11|inst10~regout\ $ (((!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst11|inst10~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst11|inst10~regout\))))
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst11|inst10~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst11|inst10~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst11|inst10~regout\,
-	cin0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cin1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
-	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
-
--- Location: LC_X6_Y4_N8
-\inst11|inst10\ : maxv_lcell
--- Equation(s):
--- \inst5|$00000|auto_generated|result_node[3]~17\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[3]~16\))) # (!\inst47~regout\ & (E3_inst10)))
--- \inst11|inst10~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[3]~17\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(3), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fc30",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst47~regout\,
-	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	datad => \inst5|$00000|auto_generated|result_node[3]~16\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst11|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[3]~17\,
-	regout => \inst11|inst10~regout\);
-
--- Location: LC_X7_Y4_N4
-\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
--- Equation(s):
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst11|inst9~regout\ $ ((!(!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))))
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst11|inst9~regout\) # (!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))) # (!VCC $ \Inc~combout\ & 
--- (\inst11|inst9~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "698e",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst11|inst9~regout\,
-	cin0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
-	cin1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
-	cout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
-
--- Location: PIN_98,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_77,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \Dout~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -1883,7 +1477,7 @@ PORT MAP (
 	padio => ww_Dout,
 	combout => \Dout~combout\);
 
--- Location: LC_X11_Y3_N1
+-- Location: LC_X11_Y3_N9
 \inst15|inst\ : maxv_lcell
 -- Equation(s):
 -- \inst15|inst~regout\ = DFFEAS((((!\inst15|inst~regout\))), GLOBAL(\RTC~combout\), VCC, , , , , , )
@@ -1905,14 +1499,14 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst15|inst~regout\);
 
--- Location: LC_X10_Y3_N5
+-- Location: LC_X10_Y3_N8
 \inst15|inst1\ : maxv_lcell
 -- Equation(s):
 -- \inst15|inst1~regout\ = DFFEAS((((!\inst15|inst1~regout\))), \inst15|inst~regout\, VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0f0f",
+	lut_mask => "00ff",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -1921,13 +1515,13 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \inst15|inst~regout\,
-	datac => \inst15|inst1~regout\,
+	datad => \inst15|inst1~regout\,
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst15|inst1~regout\);
 
--- Location: LC_X10_Y3_N9
+-- Location: LC_X10_Y3_N2
 \inst15|inst2\ : maxv_lcell
 -- Equation(s):
 -- \inst15|inst2~regout\ = DFFEAS((((!\inst15|inst2~regout\))), \inst15|inst1~regout\, VCC, , , , , , )
@@ -1949,32 +1543,10 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst15|inst2~regout\);
 
--- Location: LC_X12_Y3_N9
+-- Location: LC_X12_Y3_N4
 \inst15|inst3\ : maxv_lcell
 -- Equation(s):
 -- \inst15|inst3~regout\ = DFFEAS((((!\inst15|inst3~regout\))), \inst15|inst2~regout\, VCC, , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "00ff",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \inst15|inst2~regout\,
-	datad => \inst15|inst3~regout\,
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst15|inst3~regout\);
-
--- Location: LC_X12_Y3_N5
-\inst15|inst4\ : maxv_lcell
--- Equation(s):
--- \inst15|inst4~regout\ = DFFEAS((((!\inst15|inst4~regout\))), \inst15|inst3~regout\, VCC, , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1986,8 +1558,30 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
+	clk => \inst15|inst2~regout\,
+	datac => \inst15|inst3~regout\,
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst15|inst3~regout\);
+
+-- Location: LC_X12_Y3_N9
+\inst15|inst4\ : maxv_lcell
+-- Equation(s):
+-- \inst15|inst4~regout\ = DFFEAS((((!\inst15|inst4~regout\))), \inst15|inst3~regout\, VCC, , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "00ff",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
 	clk => \inst15|inst3~regout\,
-	datac => \inst15|inst4~regout\,
+	datad => \inst15|inst4~regout\,
 	aclr => GND,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1996,7 +1590,7 @@ PORT MAP (
 -- Location: LC_X12_Y3_N3
 \inst17~0\ : maxv_lcell
 -- Equation(s):
--- \inst17~0_combout\ = (((!\inst15|inst4~regout\ & !\inst15|inst3~regout\)))
+-- \inst17~0_combout\ = (((!\inst15|inst3~regout\ & !\inst15|inst4~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2008,20 +1602,20 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datac => \inst15|inst4~regout\,
-	datad => \inst15|inst3~regout\,
+	datac => \inst15|inst3~regout\,
+	datad => \inst15|inst4~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst17~0_combout\);
 
--- Location: LC_X10_Y3_N4
+-- Location: LC_X10_Y3_N9
 inst17 : maxv_lcell
 -- Equation(s):
--- \inst17~combout\ = (!\inst15|inst1~regout\ & (!\inst15|inst2~regout\ & (\inst17~0_combout\ & !\inst15|inst~regout\)))
+-- \inst17~combout\ = (!\inst15|inst1~regout\ & (!\inst15|inst2~regout\ & (!\inst15|inst~regout\ & \inst17~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0010",
+	lut_mask => "0100",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -2031,13 +1625,13 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \inst15|inst1~regout\,
 	datab => \inst15|inst2~regout\,
-	datac => \inst17~0_combout\,
-	datad => \inst15|inst~regout\,
+	datac => \inst15|inst~regout\,
+	datad => \inst17~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst17~combout\);
 
--- Location: LC_X12_Y4_N8
+-- Location: LC_X12_Y4_N1
 \inst34|fstate.Origin\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.Origin~regout\ = DFFEAS(VCC, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , , , , )
@@ -2058,7 +1652,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.Origin~regout\);
 
--- Location: LC_X12_Y4_N7
+-- Location: LC_X12_Y4_N5
 \inst34|fstate.state1\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state1~regout\ = DFFEAS((((!\inst34|fstate.Origin~regout\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , , , , )
@@ -2080,7 +1674,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state1~regout\);
 
--- Location: LC_X12_Y4_N9
+-- Location: LC_X12_Y4_N6
 \inst34|fstate.state2\ : maxv_lcell
 -- Equation(s):
 -- \inst34|WideOr0~0\ = (\inst34|fstate.state5~regout\) # ((\inst34|fstate.state4~regout\) # ((H1_fstate.state2) # (!\inst34|fstate.Origin~regout\)))
@@ -2111,21 +1705,22 @@ PORT MAP (
 -- Location: LC_X12_Y4_N4
 \inst34|fstate.state3\ : maxv_lcell
 -- Equation(s):
--- \inst34|fstate.state3~regout\ = DFFEAS((((\inst34|fstate.state2~regout\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , , , , )
+-- \inst34|fstate.state3~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state2~regout\, , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ff00",
+	lut_mask => "0000",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datad => \inst34|fstate.state2~regout\,
+	datac => \inst34|fstate.state2~regout\,
 	aclr => \inst17~combout\,
+	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state3~regout\);
@@ -2176,15 +1771,15 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state5~regout\);
 
--- Location: LC_X12_Y4_N1
+-- Location: LC_X12_Y4_N2
 \inst34|fstate.state6\ : maxv_lcell
 -- Equation(s):
--- \inst34|WideOr0\ = (\inst34|fstate.state7~regout\) # ((\inst34|WideOr0~0\) # ((H1_fstate.state6)))
+-- \inst34|WideOr0\ = ((\inst34|fstate.state7~regout\) # ((H1_fstate.state6) # (\inst34|WideOr0~0\)))
 -- \inst34|fstate.state6~regout\ = DFFEAS(\inst34|WideOr0\, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state5~regout\, , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fefe",
+	lut_mask => "fffc",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -2193,9 +1788,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	dataa => \inst34|fstate.state7~regout\,
-	datab => \inst34|WideOr0~0\,
+	datab => \inst34|fstate.state7~regout\,
 	datac => \inst34|fstate.state5~regout\,
+	datad => \inst34|WideOr0~0\,
 	aclr => \inst17~combout\,
 	sload => VCC,
 	devclrn => ww_devclrn,
@@ -2203,7 +1798,7 @@ PORT MAP (
 	combout => \inst34|WideOr0\,
 	regout => \inst34|fstate.state6~regout\);
 
--- Location: LC_X12_Y4_N5
+-- Location: LC_X12_Y4_N7
 \inst34|fstate.state7\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state7~regout\ = DFFEAS((((\inst34|fstate.state6~regout\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , , , , )
@@ -2225,7 +1820,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state7~regout\);
 
--- Location: LC_X12_Y4_N2
+-- Location: LC_X12_Y4_N8
 \inst34|fstate.state8\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state8~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state7~regout\, , , VCC)
@@ -2248,7 +1843,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state8~regout\);
 
--- Location: LC_X12_Y4_N6
+-- Location: LC_X12_Y4_N9
 \inst34|fstate.state9\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state9~regout\ = DFFEAS((((\inst34|fstate.state8~regout\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , , , , )
@@ -2270,7 +1865,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state9~regout\);
 
--- Location: LC_X12_Y6_N7
+-- Location: LC_X11_Y4_N6
 \inst34|fstate.state10\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state10~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state9~regout\, , , VCC)
@@ -2293,7 +1888,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state10~regout\);
 
--- Location: LC_X12_Y6_N5
+-- Location: LC_X11_Y4_N7
 \inst34|fstate.state11\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state11~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state10~regout\, , , VCC)
@@ -2316,7 +1911,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state11~regout\);
 
--- Location: LC_X12_Y6_N4
+-- Location: LC_X11_Y4_N0
 \inst34|fstate.state12\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state12~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state11~regout\, , , VCC)
@@ -2339,7 +1934,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state12~regout\);
 
--- Location: LC_X12_Y6_N6
+-- Location: LC_X11_Y4_N4
 \inst34|fstate.state13\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state13~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state12~regout\, , , VCC)
@@ -2362,7 +1957,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state13~regout\);
 
--- Location: LC_X12_Y6_N8
+-- Location: LC_X11_Y4_N5
 \inst34|fstate.state14\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state14~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state13~regout\, , , VCC)
@@ -2385,29 +1980,30 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state14~regout\);
 
--- Location: LC_X12_Y6_N3
+-- Location: LC_X11_Y4_N8
 \inst34|fstate.state15\ : maxv_lcell
 -- Equation(s):
--- \inst34|fstate.state15~regout\ = DFFEAS((((\inst34|fstate.state14~regout\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , , , , )
+-- \inst34|fstate.state15~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state14~regout\, , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ff00",
+	lut_mask => "0000",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datad => \inst34|fstate.state14~regout\,
+	datac => \inst34|fstate.state14~regout\,
 	aclr => \inst17~combout\,
+	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state15~regout\);
 
--- Location: LC_X12_Y6_N9
+-- Location: LC_X11_Y4_N3
 \inst34|fstate.state16\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state16~regout\ = DFFEAS((((\inst34|fstate.state15~regout\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , , , , )
@@ -2429,7 +2025,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state16~regout\);
 
--- Location: LC_X12_Y6_N1
+-- Location: LC_X11_Y4_N9
 \inst34|fstate.state17\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state17~regout\ = DFFEAS((((\inst34|fstate.state16~regout\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , , , , )
@@ -2451,7 +2047,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state17~regout\);
 
--- Location: LC_X12_Y6_N0
+-- Location: LC_X11_Y4_N2
 \inst34|fstate.state18\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state18~regout\ = DFFEAS((((\inst34|fstate.state17~regout\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , , , , )
@@ -2473,30 +2069,29 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state18~regout\);
 
--- Location: LC_X12_Y6_N2
+-- Location: LC_X11_Y4_N1
 \inst34|fstate.state19\ : maxv_lcell
 -- Equation(s):
--- \inst34|fstate.state19~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state18~regout\, , , VCC)
+-- \inst34|fstate.state19~regout\ = DFFEAS((((\inst34|fstate.state18~regout\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000",
+	lut_mask => "ff00",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "on")
+	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datac => \inst34|fstate.state18~regout\,
+	datad => \inst34|fstate.state18~regout\,
 	aclr => \inst17~combout\,
-	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state19~regout\);
 
--- Location: LC_X12_Y7_N5
+-- Location: LC_X9_Y7_N7
 \inst34|fstate.state20\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state20~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state19~regout\, , , VCC)
@@ -2519,7 +2114,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state20~regout\);
 
--- Location: LC_X12_Y7_N6
+-- Location: LC_X9_Y7_N5
 \inst34|fstate.state21\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state21~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state20~regout\, , , VCC)
@@ -2542,7 +2137,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state21~regout\);
 
--- Location: LC_X12_Y7_N2
+-- Location: LC_X9_Y7_N3
 \inst34|fstate.state22\ : maxv_lcell
 -- Equation(s):
 -- \inst34|fstate.state22~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|fstate.state21~regout\, , , VCC)
@@ -2565,29 +2160,30 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state22~regout\);
 
--- Location: LC_X4_Y6_N3
+-- Location: LC_X11_Y7_N1
 \inst34|fstate.state24\ : maxv_lcell
 -- Equation(s):
--- \inst34|fstate.state24~regout\ = DFFEAS((((\inst34|freezeParalell\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , , , , )
+-- \inst34|fstate.state24~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst17~combout\), , , \inst34|freezeParalell\, , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ff00",
+	lut_mask => "0000",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datad => \inst34|freezeParalell\,
+	datac => \inst34|freezeParalell\,
 	aclr => \inst17~combout\,
+	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst34|fstate.state24~regout\);
 
--- Location: LC_X4_Y6_N2
+-- Location: LC_X11_Y7_N5
 \inst34|fstate.state23\ : maxv_lcell
 -- Equation(s):
 -- \inst34|freezeParalell\ = (((H1_fstate.state23) # (\inst34|fstate.state24~regout\)))
@@ -2612,7 +2208,7 @@ PORT MAP (
 	combout => \inst34|freezeParalell\,
 	regout => \inst34|fstate.state23~regout\);
 
--- Location: LC_X4_Y6_N0
+-- Location: LC_X12_Y7_N8
 \inst6|LPM_SHIFTREG_component|dffs[0]\ : maxv_lcell
 -- Equation(s):
 -- \inst6|LPM_SHIFTREG_component|dffs\(0) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \Dout~combout\, , , VCC)
@@ -2636,55 +2232,53 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst6|LPM_SHIFTREG_component|dffs\(0));
 
--- Location: LC_X4_Y6_N5
+-- Location: LC_X11_Y7_N2
 \inst6|LPM_SHIFTREG_component|dffs[1]\ : maxv_lcell
 -- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(1) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(0), , , VCC)
+-- \inst6|LPM_SHIFTREG_component|dffs\(1) = DFFEAS((((\inst6|LPM_SHIFTREG_component|dffs\(0)))), GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000",
+	lut_mask => "ff00",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "on")
+	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(0),
+	datad => \inst6|LPM_SHIFTREG_component|dffs\(0),
 	aclr => GND,
-	sload => VCC,
 	ena => \inst34|ALT_INV_freezeParalell\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst6|LPM_SHIFTREG_component|dffs\(1));
 
--- Location: LC_X4_Y6_N8
+-- Location: LC_X11_Y7_N3
 \inst6|LPM_SHIFTREG_component|dffs[2]\ : maxv_lcell
 -- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(2) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(1), , , VCC)
+-- \inst6|LPM_SHIFTREG_component|dffs\(2) = DFFEAS((((\inst6|LPM_SHIFTREG_component|dffs\(1)))), GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000",
+	lut_mask => "ff00",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "on")
+	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(1),
+	datad => \inst6|LPM_SHIFTREG_component|dffs\(1),
 	aclr => GND,
-	sload => VCC,
 	ena => \inst34|ALT_INV_freezeParalell\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst6|LPM_SHIFTREG_component|dffs\(2));
 
--- Location: LC_X4_Y6_N6
+-- Location: LC_X11_Y7_N7
 \inst6|LPM_SHIFTREG_component|dffs[3]\ : maxv_lcell
 -- Equation(s):
 -- \inst6|LPM_SHIFTREG_component|dffs\(3) = DFFEAS((((\inst6|LPM_SHIFTREG_component|dffs\(2)))), GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, , , , )
@@ -2707,7 +2301,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst6|LPM_SHIFTREG_component|dffs\(3));
 
--- Location: LC_X4_Y6_N7
+-- Location: LC_X11_Y7_N9
 \inst6|LPM_SHIFTREG_component|dffs[4]\ : maxv_lcell
 -- Equation(s):
 -- \inst6|LPM_SHIFTREG_component|dffs\(4) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(3), , , VCC)
@@ -2731,10 +2325,70 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst6|LPM_SHIFTREG_component|dffs\(4));
 
--- Location: LC_X4_Y6_N1
-\inst6|LPM_SHIFTREG_component|dffs[5]\ : maxv_lcell
+-- Location: PIN_98,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+\hiTrueSetDisp~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "input")
+-- pragma translate_on
+PORT MAP (
+	oe => GND,
+	padio => ww_hiTrueSetDisp,
+	combout => \hiTrueSetDisp~combout\);
+
+-- Location: LC_X7_Y4_N0
+\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
 -- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(5) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(4), , , VCC)
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst12|inst13~regout\ $ ((!\Inc~combout\)))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst12|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst12|inst13~regout\ & !\Inc~combout\)))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst12|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst12|inst13~regout\ & !\Inc~combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "698e",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst12|inst13~regout\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
+	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
+
+-- Location: LC_X7_Y6_N7
+\inst12|inst1~0\ : maxv_lcell
+-- Equation(s):
+-- \inst12|inst1~0_combout\ = (\Hiset~combout\ & (\inst11|inst16~combout\ & (\inst47~regout\ & !\inst49~regout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0080",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Hiset~combout\,
+	datab => \inst11|inst16~combout\,
+	datac => \inst47~regout\,
+	datad => \inst49~regout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst12|inst1~0_combout\);
+
+-- Location: LC_X6_Y4_N3
+\inst12|inst13\ : maxv_lcell
+-- Equation(s):
+-- \inst12|inst13~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2747,61 +2401,1420 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(4),
+	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
 	aclr => GND,
 	sload => VCC,
+	ena => \inst12|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst12|inst13~regout\);
+
+-- Location: LC_X7_Y4_N1
+\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst12|inst12~regout\ $ (((!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst12|inst12~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst12|inst12~regout\))))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst12|inst12~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst12|inst12~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst12|inst12~regout\,
+	cin0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
+	cin1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
+
+-- Location: LC_X6_Y4_N6
+\inst12|inst12\ : maxv_lcell
+-- Equation(s):
+-- \inst12|inst12~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	aclr => GND,
+	sload => VCC,
+	ena => \inst12|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst12|inst12~regout\);
+
+-- Location: LC_X7_Y6_N3
+\inst13|inst1~0\ : maxv_lcell
+-- Equation(s):
+-- \inst13|inst1~0_combout\ = (\Hiset~combout\ & (\inst11|inst16~combout\ & (\inst47~regout\ & \inst49~regout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "8000",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Hiset~combout\,
+	datab => \inst11|inst16~combout\,
+	datac => \inst47~regout\,
+	datad => \inst49~regout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst13|inst1~0_combout\);
+
+-- Location: LC_X4_Y5_N2
+\inst13|inst12\ : maxv_lcell
+-- Equation(s):
+-- \inst2|$00000|auto_generated|result_node[1]~22\ = ((\inst49~regout\ & (E6_inst12)) # (!\inst49~regout\ & ((\inst12|inst12~regout\))))
+-- \inst13|inst12~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[1]~22\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f3c0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst49~regout\,
+	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	datad => \inst12|inst12~regout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst13|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst2|$00000|auto_generated|result_node[1]~22\,
+	regout => \inst13|inst12~regout\);
+
+-- Location: LC_X5_Y5_N0
+\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
+-- Equation(s):
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst13|inst13~regout\ $ ((!\Inc~combout\)))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst13|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst13|inst13~regout\ & !\Inc~combout\)))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst13|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst13|inst13~regout\ & !\Inc~combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "698e",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst13|inst13~regout\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
+	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
+
+-- Location: LC_X4_Y5_N0
+\inst13|inst13\ : maxv_lcell
+-- Equation(s):
+-- \inst2|$00000|auto_generated|result_node[0]~24\ = ((\inst49~regout\ & (E6_inst13)) # (!\inst49~regout\ & ((\inst12|inst13~regout\))))
+-- \inst13|inst13~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[0]~24\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f3c0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst49~regout\,
+	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	datad => \inst12|inst13~regout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst13|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst2|$00000|auto_generated|result_node[0]~24\,
+	regout => \inst13|inst13~regout\);
+
+-- Location: LC_X5_Y5_N1
+\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst13|inst12~regout\ $ (((!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst13|inst12~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst13|inst12~regout\))))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst13|inst12~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst13|inst12~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst13|inst12~regout\,
+	cin0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
+	cin1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
+
+-- Location: LC_X7_Y6_N4
+\inst14|inst1~0\ : maxv_lcell
+-- Equation(s):
+-- \inst14|inst1~0_combout\ = (\Hiset~combout\ & (!\inst47~regout\ & ((\Inc~combout\) # (\Dec~combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0a08",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \Hiset~combout\,
+	datab => \Inc~combout\,
+	datac => \inst47~regout\,
+	datad => \Dec~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst14|inst1~0_combout\);
+
+-- Location: LC_X5_Y7_N0
+\inst14|inst12\ : maxv_lcell
+-- Equation(s):
+-- \inst2|$00000|auto_generated|result_node[1]~23\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[1]~22\))) # (!\inst47~regout\ & (E7_inst12)))
+-- \inst14|inst12~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[1]~23\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst47~regout\,
+	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	datad => \inst2|$00000|auto_generated|result_node[1]~22\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst14|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst2|$00000|auto_generated|result_node[1]~23\,
+	regout => \inst14|inst12~regout\);
+
+-- Location: LC_X4_Y6_N0
+\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
+-- Equation(s):
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst14|inst13~regout\ $ ((!\Inc~combout\)))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst14|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst14|inst13~regout\ & !\Inc~combout\)))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst14|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst14|inst13~regout\ & !\Inc~combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "698e",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst14|inst13~regout\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
+	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
+
+-- Location: LC_X4_Y5_N1
+\inst14|inst13\ : maxv_lcell
+-- Equation(s):
+-- \inst2|$00000|auto_generated|result_node[0]~25\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[0]~24\))) # (!\inst47~regout\ & (E7_inst13)))
+-- \inst14|inst13~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[0]~25\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst47~regout\,
+	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
+	datad => \inst2|$00000|auto_generated|result_node[0]~24\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst14|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst2|$00000|auto_generated|result_node[0]~25\,
+	regout => \inst14|inst13~regout\);
+
+-- Location: LC_X4_Y6_N1
+\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst14|inst12~regout\ $ (((!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst14|inst12~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst14|inst12~regout\))))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst14|inst12~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst14|inst12~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst14|inst12~regout\,
+	cin0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
+	cin1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
+
+-- Location: LC_X11_Y5_N1
+\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst9|inst12~regout\ $ (((!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst9|inst12~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst9|inst12~regout\))))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst9|inst12~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst9|inst12~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst9|inst12~regout\,
+	cin0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
+	cin1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
+
+-- Location: LC_X12_Y5_N5
+\inst9|inst12\ : maxv_lcell
+-- Equation(s):
+-- \inst9|inst12~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	aclr => GND,
+	sload => VCC,
+	ena => \inst9|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst9|inst12~regout\);
+
+-- Location: LC_X8_Y5_N4
+\inst10|inst12\ : maxv_lcell
+-- Equation(s):
+-- \inst5|$00000|auto_generated|result_node[1]~20\ = ((\inst49~regout\ & ((E2_inst12))) # (!\inst49~regout\ & (\inst9|inst12~regout\)))
+-- \inst10|inst12~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[1]~20\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f0cc",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst9|inst12~regout\,
+	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	datad => \inst49~regout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst10|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst5|$00000|auto_generated|result_node[1]~20\,
+	regout => \inst10|inst12~regout\);
+
+-- Location: LC_X7_Y5_N1
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst10|inst12~regout\ $ (((!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst12~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst10|inst12~regout\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst12~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst10|inst12~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst12~regout\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
+
+-- Location: LC_X9_Y6_N7
+\inst11|inst12\ : maxv_lcell
+-- Equation(s):
+-- \inst5|$00000|auto_generated|result_node[1]~21\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[1]~20\))) # (!\inst47~regout\ & (E3_inst12)))
+-- \inst11|inst12~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[1]~21\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst47~regout\,
+	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	datad => \inst5|$00000|auto_generated|result_node[1]~20\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst11|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst5|$00000|auto_generated|result_node[1]~21\,
+	regout => \inst11|inst12~regout\);
+
+-- Location: LC_X8_Y6_N1
+\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst11|inst12~regout\ $ (((!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst11|inst12~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst11|inst12~regout\))))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst11|inst12~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst11|inst12~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst11|inst12~regout\,
+	cin0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
+	cin1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
+	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
+
+-- Location: LC_X9_Y7_N4
+\inst3|$00000|auto_generated|result_node[1]~37\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[1]~37_combout\ = (\hiTrueSetDisp~combout\ & (\inst2|$00000|auto_generated|result_node[1]~23\)) # (!\hiTrueSetDisp~combout\ & (((\inst5|$00000|auto_generated|result_node[1]~21\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "dd88",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \hiTrueSetDisp~combout\,
+	datab => \inst2|$00000|auto_generated|result_node[1]~23\,
+	datad => \inst5|$00000|auto_generated|result_node[1]~21\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[1]~37_combout\);
+
+-- Location: LC_X10_Y7_N2
+\inst38|inst12\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[1]~38\ = (\inst50~regout\ & (((\inst3|$00000|auto_generated|result_node[1]~37_combout\)))) # (!\inst50~regout\ & (((E4_inst12))))
+-- \inst38|inst12~regout\ = DFFEAS(\inst3|$00000|auto_generated|result_node[1]~38\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(4), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fa50",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	dataa => \inst50~regout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(4),
+	datad => \inst3|$00000|auto_generated|result_node[1]~37_combout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[1]~38\,
+	regout => \inst38|inst12~regout\);
+
+-- Location: LC_X11_Y7_N6
+\inst6|LPM_SHIFTREG_component|dffs[5]\ : maxv_lcell
+-- Equation(s):
+-- \inst6|LPM_SHIFTREG_component|dffs\(5) = DFFEAS((((\inst6|LPM_SHIFTREG_component|dffs\(4)))), GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ff00",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datad => \inst6|LPM_SHIFTREG_component|dffs\(4),
+	aclr => GND,
 	ena => \inst34|ALT_INV_freezeParalell\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst6|LPM_SHIFTREG_component|dffs\(5));
 
--- Location: LC_X4_Y6_N4
-\inst6|LPM_SHIFTREG_component|dffs[6]\ : maxv_lcell
+-- Location: LC_X11_Y5_N2
+\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(6) = DFFEAS((((\inst6|LPM_SHIFTREG_component|dffs\(5)))), GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, , , , )
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst9|inst11~regout\ $ (((!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst9|inst11~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst9|inst11~regout\) # 
+-- (!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst9|inst11~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst9|inst11~regout\) # (!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ff00",
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "964d",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst9|inst11~regout\,
+	cin0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cin1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
+
+-- Location: LC_X10_Y5_N7
+\inst9|inst11\ : maxv_lcell
+-- Equation(s):
+-- \inst9|inst11~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "off")
+	synch_mode => "on")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datad => \inst6|LPM_SHIFTREG_component|dffs\(5),
+	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
 	aclr => GND,
+	sload => VCC,
+	ena => \inst9|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst9|inst11~regout\);
+
+-- Location: LC_X9_Y5_N2
+\inst10|inst11\ : maxv_lcell
+-- Equation(s):
+-- \inst5|$00000|auto_generated|result_node[2]~22\ = ((\inst49~regout\ & (E2_inst11)) # (!\inst49~regout\ & ((\inst9|inst11~regout\))))
+-- \inst10|inst11~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[2]~22\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f3c0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst49~regout\,
+	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	datad => \inst9|inst11~regout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst10|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst5|$00000|auto_generated|result_node[2]~22\,
+	regout => \inst10|inst11~regout\);
+
+-- Location: LC_X7_Y5_N2
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst10|inst11~regout\ $ (((!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst11~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst10|inst11~regout\) # 
+-- (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst10|inst11~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst10|inst11~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "964d",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst11~regout\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
+
+-- Location: LC_X9_Y5_N4
+\inst11|inst11\ : maxv_lcell
+-- Equation(s):
+-- \inst5|$00000|auto_generated|result_node[2]~23\ = (\inst47~regout\ & (((\inst5|$00000|auto_generated|result_node[2]~22\)))) # (!\inst47~regout\ & (((E3_inst11))))
+-- \inst11|inst11~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[2]~23\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fa50",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	dataa => \inst47~regout\,
+	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	datad => \inst5|$00000|auto_generated|result_node[2]~22\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst11|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst5|$00000|auto_generated|result_node[2]~23\,
+	regout => \inst11|inst11~regout\);
+
+-- Location: LC_X8_Y6_N2
+\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
+-- Equation(s):
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst11|inst11~regout\ $ (((!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst11|inst11~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst11|inst11~regout\) # 
+-- (!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst11|inst11~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst11|inst11~regout\) # (!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "964d",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst11|inst11~regout\,
+	cin0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cin1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
+
+-- Location: LC_X10_Y7_N9
+\inst38|inst11\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~6\ = (\inst38|inst12~regout\ & (\inst5|$00000|auto_generated|result_node[1]~21\ & (E4_inst11 $ (!\inst5|$00000|auto_generated|result_node[2]~23\)))) # (!\inst38|inst12~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[1]~21\ & (E4_inst11 $ (!\inst5|$00000|auto_generated|result_node[2]~23\))))
+-- \inst38|inst11~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~6\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(5), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "9009",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	dataa => \inst38|inst12~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[1]~21\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(5),
+	datad => \inst5|$00000|auto_generated|result_node[2]~23\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~6\,
+	regout => \inst38|inst11~regout\);
+
+-- Location: LC_X11_Y7_N0
+\inst6|LPM_SHIFTREG_component|dffs[6]\ : maxv_lcell
+-- Equation(s):
+-- \inst6|LPM_SHIFTREG_component|dffs\(6) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(5), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(5),
+	aclr => GND,
+	sload => VCC,
 	ena => \inst34|ALT_INV_freezeParalell\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst6|LPM_SHIFTREG_component|dffs\(6));
 
--- Location: LC_X3_Y6_N2
-\inst38|inst10\ : maxv_lcell
+-- Location: LC_X7_Y4_N2
+\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
 -- Equation(s):
--- \inst38|inst10~regout\ = DFFEAS((((\inst6|LPM_SHIFTREG_component|dffs\(6)))), GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, , , , )
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst12|inst11~regout\ $ (((!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst12|inst11~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst12|inst11~regout\) # 
+-- (!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst12|inst11~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst12|inst11~regout\) # (!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ff00",
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "964d",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst12|inst11~regout\,
+	cin0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cin1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
+
+-- Location: LC_X6_Y4_N2
+\inst12|inst11\ : maxv_lcell
+-- Equation(s):
+-- \inst12|inst11~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
 	operation_mode => "normal",
 	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	aclr => GND,
+	sload => VCC,
+	ena => \inst12|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst12|inst11~regout\);
+
+-- Location: LC_X7_Y4_N3
+\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
+-- Equation(s):
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst12|inst10~regout\ $ (((!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst12|inst10~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst12|inst10~regout\))))
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst12|inst10~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst12|inst10~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst12|inst10~regout\,
+	cin0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cin1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
+	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
+
+-- Location: LC_X6_Y4_N8
+\inst12|inst10\ : maxv_lcell
+-- Equation(s):
+-- \inst12|inst10~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(3), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	aclr => GND,
+	sload => VCC,
+	ena => \inst12|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst12|inst10~regout\);
+
+-- Location: LC_X5_Y6_N8
+\inst13|inst10\ : maxv_lcell
+-- Equation(s):
+-- \inst2|$00000|auto_generated|result_node[3]~20\ = ((\inst49~regout\ & ((E6_inst10))) # (!\inst49~regout\ & (\inst12|inst10~regout\)))
+-- \inst13|inst10~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[3]~20\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f0cc",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst12|inst10~regout\,
+	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	datad => \inst49~regout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst13|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst2|$00000|auto_generated|result_node[3]~20\,
+	regout => \inst13|inst10~regout\);
+
+-- Location: LC_X5_Y5_N2
+\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
+-- Equation(s):
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst13|inst11~regout\ $ (((!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst13|inst11~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst13|inst11~regout\) # 
+-- (!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst13|inst11~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst13|inst11~regout\) # (!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "964d",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst13|inst11~regout\,
+	cin0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cin1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
+
+-- Location: LC_X6_Y5_N7
+\inst13|inst11\ : maxv_lcell
+-- Equation(s):
+-- \inst2|$00000|auto_generated|result_node[2]~18\ = ((\inst49~regout\ & (E6_inst11)) # (!\inst49~regout\ & ((\inst12|inst11~regout\))))
+-- \inst13|inst11~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[2]~18\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f3c0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst49~regout\,
+	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	datad => \inst12|inst11~regout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst13|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst2|$00000|auto_generated|result_node[2]~18\,
+	regout => \inst13|inst11~regout\);
+
+-- Location: LC_X5_Y5_N3
+\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
+-- Equation(s):
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst13|inst10~regout\ $ (((!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst13|inst10~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst13|inst10~regout\))))
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst13|inst10~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst13|inst10~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst13|inst10~regout\,
+	cin0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cin1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
+	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
+
+-- Location: LC_X5_Y6_N9
+\inst14|inst10\ : maxv_lcell
+-- Equation(s):
+-- \inst2|$00000|auto_generated|result_node[3]~21\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[3]~20\))) # (!\inst47~regout\ & (E7_inst10)))
+-- \inst14|inst10~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[3]~21\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst47~regout\,
+	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	datad => \inst2|$00000|auto_generated|result_node[3]~20\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst14|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst2|$00000|auto_generated|result_node[3]~21\,
+	regout => \inst14|inst10~regout\);
+
+-- Location: LC_X4_Y6_N2
+\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
+-- Equation(s):
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst14|inst11~regout\ $ (((!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst14|inst11~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst14|inst11~regout\) # 
+-- (!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst14|inst11~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
+-- ((\inst14|inst11~regout\) # (!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "964d",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst14|inst11~regout\,
+	cin0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
+	cin1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
+
+-- Location: LC_X5_Y7_N3
+\inst14|inst11\ : maxv_lcell
+-- Equation(s):
+-- \inst2|$00000|auto_generated|result_node[2]~19\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[2]~18\))) # (!\inst47~regout\ & (E7_inst11)))
+-- \inst14|inst11~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[2]~19\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst47~regout\,
+	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
+	datad => \inst2|$00000|auto_generated|result_node[2]~18\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst14|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst2|$00000|auto_generated|result_node[2]~19\,
+	regout => \inst14|inst11~regout\);
+
+-- Location: LC_X4_Y6_N3
+\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
+-- Equation(s):
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst14|inst10~regout\ $ (((!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst14|inst10~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst14|inst10~regout\))))
+-- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst14|inst10~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst14|inst10~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst14|inst10~regout\,
+	cin0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cin1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
+	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
+
+-- Location: LC_X11_Y5_N3
+\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
+-- Equation(s):
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst9|inst10~regout\ $ (((!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst9|inst10~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst9|inst10~regout\))))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst9|inst10~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst9|inst10~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst9|inst10~regout\,
+	cin0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cin1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
+	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
+
+-- Location: LC_X10_Y5_N0
+\inst9|inst10\ : maxv_lcell
+-- Equation(s):
+-- \inst9|inst10~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datac => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	aclr => GND,
+	sload => VCC,
+	ena => \inst9|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst9|inst10~regout\);
+
+-- Location: LC_X10_Y6_N2
+\inst10|inst10\ : maxv_lcell
+-- Equation(s):
+-- \inst5|$00000|auto_generated|result_node[3]~16\ = ((\inst49~regout\ & ((E2_inst10))) # (!\inst49~regout\ & (\inst9|inst10~regout\)))
+-- \inst10|inst10~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[3]~16\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f0cc",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst9|inst10~regout\,
+	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	datad => \inst49~regout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst10|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst5|$00000|auto_generated|result_node[3]~16\,
+	regout => \inst10|inst10~regout\);
+
+-- Location: LC_X7_Y5_N3
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst10|inst10~regout\ $ (((!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst10~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst10|inst10~regout\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst10|inst10~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst10|inst10~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst10~regout\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
+	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
+
+-- Location: LC_X10_Y6_N3
+\inst11|inst10\ : maxv_lcell
+-- Equation(s):
+-- \inst5|$00000|auto_generated|result_node[3]~17\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[3]~16\))) # (!\inst47~regout\ & (E3_inst10)))
+-- \inst11|inst10~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[3]~17\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(3), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst47~regout\,
+	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	datad => \inst5|$00000|auto_generated|result_node[3]~16\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst11|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst5|$00000|auto_generated|result_node[3]~17\,
+	regout => \inst11|inst10~regout\);
+
+-- Location: LC_X8_Y6_N3
+\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
+-- Equation(s):
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst11|inst10~regout\ $ (((!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst11|inst10~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst11|inst10~regout\))))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst11|inst10~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
+-- ((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst11|inst10~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "9617",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst11|inst10~regout\,
+	cin0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
+	cin1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
+	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
+	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
+
+-- Location: LC_X9_Y7_N8
+\inst3|$00000|auto_generated|result_node[3]~34\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[3]~34_combout\ = (\hiTrueSetDisp~combout\ & (((\inst2|$00000|auto_generated|result_node[3]~21\)))) # (!\hiTrueSetDisp~combout\ & (((\inst5|$00000|auto_generated|result_node[3]~17\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f5a0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
+	dataa => \hiTrueSetDisp~combout\,
+	datac => \inst2|$00000|auto_generated|result_node[3]~21\,
+	datad => \inst5|$00000|auto_generated|result_node[3]~17\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[3]~34_combout\);
+
+-- Location: LC_X10_Y7_N6
+\inst38|inst10\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[3]~35\ = (\inst50~regout\ & (((\inst3|$00000|auto_generated|result_node[3]~34_combout\)))) # (!\inst50~regout\ & (((E4_inst10))))
+-- \inst38|inst10~regout\ = DFFEAS(\inst3|$00000|auto_generated|result_node[3]~35\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(6), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fa50",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
 	clk => \RTC~combout\,
-	datad => \inst6|LPM_SHIFTREG_component|dffs\(6),
+	dataa => \inst50~regout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(6),
+	datad => \inst3|$00000|auto_generated|result_node[3]~34_combout\,
 	aclr => GND,
+	sload => VCC,
 	ena => \inst34|freezeParalell\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[3]~35\,
 	regout => \inst38|inst10~regout\);
 
--- Location: LC_X4_Y6_N9
+-- Location: LC_X11_Y7_N8
 \inst6|LPM_SHIFTREG_component|dffs[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst6|LPM_SHIFTREG_component|dffs\(7) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(6), , , VCC)
@@ -2825,40 +3838,40 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst6|LPM_SHIFTREG_component|dffs\(7));
 
--- Location: LC_X5_Y7_N9
-\inst38|inst9\ : maxv_lcell
+-- Location: LC_X11_Y5_N4
+\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
 -- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\ = (\inst5|$00000|auto_generated|result_node[4]~19\ & (E4_inst9 & (\inst38|inst10~regout\ $ (!\inst5|$00000|auto_generated|result_node[3]~17\)))) # (!\inst5|$00000|auto_generated|result_node[4]~19\ & 
--- (!E4_inst9 & (\inst38|inst10~regout\ $ (!\inst5|$00000|auto_generated|result_node[3]~17\))))
--- \inst38|inst9~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(7), , , VCC)
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst9|inst9~regout\ $ ((!(!\Inc~combout\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))))
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst9|inst9~regout\) # (!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))) # (!VCC $ \Inc~combout\ & 
+-- (\inst9|inst9~regout\ & !\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "8421",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "698e",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
 	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
+	sum_lutc_input => "cin",
+	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	clk => \RTC~combout\,
-	dataa => \inst5|$00000|auto_generated|result_node[4]~19\,
-	datab => \inst38|inst10~regout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(7),
-	datad => \inst5|$00000|auto_generated|result_node[3]~17\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|freezeParalell\,
+	dataa => VCC,
+	datab => \inst9|inst9~regout\,
+	cin0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
+	cin1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\,
+	inverta => \Inc~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\,
-	regout => \inst38|inst9~regout\);
+	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
+	cout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
 
--- Location: LC_X5_Y6_N5
-\inst38|inst12\ : maxv_lcell
+-- Location: LC_X10_Y5_N4
+\inst9|inst9\ : maxv_lcell
 -- Equation(s):
--- \inst38|inst12~regout\ = DFFEAS((((\inst6|LPM_SHIFTREG_component|dffs\(4)))), GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, , , , )
+-- \inst9|inst9~regout\ = DFFEAS((((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4)))), GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, , , , )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2871,19 +3884,135 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datad => \inst6|LPM_SHIFTREG_component|dffs\(4),
+	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	aclr => GND,
-	ena => \inst34|freezeParalell\,
+	ena => \inst9|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \inst38|inst12~regout\);
+	regout => \inst9|inst9~regout\);
 
--- Location: LC_X5_Y7_N8
-\inst38|inst11\ : maxv_lcell
+-- Location: LC_X10_Y5_N1
+\inst10|inst9\ : maxv_lcell
 -- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~6\ = (\inst5|$00000|auto_generated|result_node[1]~21\ & (\inst38|inst12~regout\ & (E4_inst11 $ (!\inst5|$00000|auto_generated|result_node[2]~23\)))) # (!\inst5|$00000|auto_generated|result_node[1]~21\ & 
--- (!\inst38|inst12~regout\ & (E4_inst11 $ (!\inst5|$00000|auto_generated|result_node[2]~23\))))
--- \inst38|inst11~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~6\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(5), , , VCC)
+-- \inst5|$00000|auto_generated|result_node[4]~18\ = ((\inst49~regout\ & ((E2_inst9))) # (!\inst49~regout\ & (\inst9|inst9~regout\)))
+-- \inst10|inst9~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[4]~18\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f0aa",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	dataa => \inst9|inst9~regout\,
+	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
+	datad => \inst49~regout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst10|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst5|$00000|auto_generated|result_node[4]~18\,
+	regout => \inst10|inst9~regout\);
+
+-- Location: LC_X7_Y5_N4
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst10|inst9~regout\ $ ((!(!\Inc~combout\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))))
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst10|inst9~regout\) # (!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))) # (!VCC $ \Inc~combout\ & 
+-- (\inst10|inst9~regout\ & !\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "698e",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst10|inst9~regout\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
+	cout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
+
+-- Location: LC_X9_Y6_N6
+\inst11|inst9\ : maxv_lcell
+-- Equation(s):
+-- \inst5|$00000|auto_generated|result_node[4]~19\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[4]~18\))) # (!\inst47~regout\ & (E3_inst9)))
+-- \inst11|inst9~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[4]~19\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst47~regout\,
+	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
+	datad => \inst5|$00000|auto_generated|result_node[4]~18\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst11|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst5|$00000|auto_generated|result_node[4]~19\,
+	regout => \inst11|inst9~regout\);
+
+-- Location: LC_X8_Y6_N4
+\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
+-- Equation(s):
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst11|inst9~regout\ $ ((!(!\Inc~combout\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))))
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst11|inst9~regout\) # (!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\))) # (!VCC $ \Inc~combout\ & 
+-- (\inst11|inst9~regout\ & !\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "698e",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datab => \inst11|inst9~regout\,
+	cin0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
+	cin1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
+	cout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
+
+-- Location: LC_X10_Y7_N3
+\inst38|inst9\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\ = (\inst38|inst10~regout\ & (\inst5|$00000|auto_generated|result_node[3]~17\ & (E4_inst9 $ (!\inst5|$00000|auto_generated|result_node[4]~19\)))) # (!\inst38|inst10~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[3]~17\ & (E4_inst9 $ (!\inst5|$00000|auto_generated|result_node[4]~19\))))
+-- \inst38|inst9~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(7), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2896,22 +4025,22 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	dataa => \inst5|$00000|auto_generated|result_node[1]~21\,
-	datab => \inst38|inst12~regout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(5),
-	datad => \inst5|$00000|auto_generated|result_node[2]~23\,
+	dataa => \inst38|inst10~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[3]~17\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(7),
+	datad => \inst5|$00000|auto_generated|result_node[4]~19\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst34|freezeParalell\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~6\,
-	regout => \inst38|inst11~regout\);
+	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\,
+	regout => \inst38|inst9~regout\);
 
--- Location: LC_X5_Y7_N5
+-- Location: LC_X10_Y7_N5
 \inst38|inst13\ : maxv_lcell
 -- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~7\ = (\inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\ & (\inst24|LPM_COMPARE_component|auto_generated|aeb_int~6\ & (\inst5|$00000|auto_generated|result_node[0]~25\ $ (!E4_inst13))))
+-- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~7\ = (\inst24|LPM_COMPARE_component|auto_generated|aeb_int~6\ & (\inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\ & (\inst5|$00000|auto_generated|result_node[0]~25\ $ (!E4_inst13))))
 -- \inst38|inst13~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~7\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(3), , , VCC)
 
 -- pragma translate_off
@@ -2926,9 +4055,9 @@ GENERIC MAP (
 PORT MAP (
 	clk => \RTC~combout\,
 	dataa => \inst5|$00000|auto_generated|result_node[0]~25\,
-	datab => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\,
+	datab => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~6\,
 	datac => \inst6|LPM_SHIFTREG_component|dffs\(3),
-	datad => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~6\,
+	datad => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~5\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst34|freezeParalell\,
@@ -2937,198 +4066,7 @@ PORT MAP (
 	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~7\,
 	regout => \inst38|inst13~regout\);
 
--- Location: LC_X5_Y6_N7
-\inst6|LPM_SHIFTREG_component|dffs[8]\ : maxv_lcell
--- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(8) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(7), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(7),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|ALT_INV_freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst6|LPM_SHIFTREG_component|dffs\(8));
-
--- Location: LC_X5_Y6_N2
-\inst6|LPM_SHIFTREG_component|dffs[9]\ : maxv_lcell
--- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(9) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(8), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(8),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|ALT_INV_freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst6|LPM_SHIFTREG_component|dffs\(9));
-
--- Location: LC_X5_Y6_N6
-\inst6|LPM_SHIFTREG_component|dffs[10]\ : maxv_lcell
--- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(10) = DFFEAS((((\inst6|LPM_SHIFTREG_component|dffs\(9)))), GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datad => \inst6|LPM_SHIFTREG_component|dffs\(9),
-	aclr => GND,
-	ena => \inst34|ALT_INV_freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst6|LPM_SHIFTREG_component|dffs\(10));
-
--- Location: LC_X5_Y6_N8
-\inst6|LPM_SHIFTREG_component|dffs[11]\ : maxv_lcell
--- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(11) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(10), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(10),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|ALT_INV_freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst6|LPM_SHIFTREG_component|dffs\(11));
-
--- Location: LC_X3_Y6_N7
-\inst6|LPM_SHIFTREG_component|dffs[12]\ : maxv_lcell
--- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(12) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(11), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(11),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|ALT_INV_freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst6|LPM_SHIFTREG_component|dffs\(12));
-
--- Location: LC_X3_Y6_N6
-\inst6|LPM_SHIFTREG_component|dffs[13]\ : maxv_lcell
--- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(13) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(12), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(12),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|ALT_INV_freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst6|LPM_SHIFTREG_component|dffs\(13));
-
--- Location: LC_X3_Y6_N5
-\inst6|LPM_SHIFTREG_component|dffs[14]\ : maxv_lcell
--- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(14) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(13), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(13),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|ALT_INV_freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst6|LPM_SHIFTREG_component|dffs\(14));
-
--- Location: LC_X3_Y6_N4
-\inst38|inst2\ : maxv_lcell
--- Equation(s):
--- \inst38|inst2~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(14), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(14),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst38|inst2~regout\);
-
--- Location: LC_X7_Y5_N5
+-- Location: LC_X11_Y5_N5
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst9|inst8~regout\ $ ((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
@@ -3158,7 +4096,7 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
 
--- Location: LC_X8_Y5_N9
+-- Location: LC_X10_Y5_N2
 \inst9|inst8\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst8~regout\ = DFFEAS((((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(5)))), GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, , , , )
@@ -3181,7 +4119,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst9|inst8~regout\);
 
--- Location: LC_X7_Y5_N6
+-- Location: LC_X11_Y5_N6
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst9|inst7~regout\ $ ((!(!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\) 
@@ -3216,7 +4154,7 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
 
--- Location: LC_X6_Y5_N9
+-- Location: LC_X10_Y5_N8
 \inst9|inst7\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst7~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(6), , , VCC)
@@ -3240,7 +4178,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst9|inst7~regout\);
 
--- Location: LC_X7_Y5_N7
+-- Location: LC_X11_Y5_N7
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst9|inst6~regout\ $ (((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\) # 
@@ -3275,7 +4213,7 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
 
--- Location: LC_X6_Y5_N8
+-- Location: LC_X10_Y5_N5
 \inst9|inst6\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst6~regout\ = DFFEAS((((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))), GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, , , , )
@@ -3298,7 +4236,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst9|inst6~regout\);
 
--- Location: LC_X7_Y5_N8
+-- Location: LC_X11_Y5_N8
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst9|inst5~regout\ $ ((!(!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\) 
@@ -3333,7 +4271,7 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
 
--- Location: LC_X6_Y5_N4
+-- Location: LC_X10_Y5_N6
 \inst9|inst5\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst5~regout\ = DFFEAS((((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(8)))), GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, , , , )
@@ -3356,7 +4294,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst9|inst5~regout\);
 
--- Location: LC_X7_Y5_N9
+-- Location: LC_X11_Y5_N9
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst9|inst4~regout\ $ (((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\) # 
@@ -3388,7 +4326,7 @@ PORT MAP (
 	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	cout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
 
--- Location: LC_X6_Y5_N5
+-- Location: LC_X12_Y5_N8
 \inst9|inst4\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst4~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(9), , , VCC)
@@ -3412,7 +4350,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst9|inst4~regout\);
 
--- Location: LC_X8_Y5_N0
+-- Location: LC_X12_Y5_N0
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst9|inst3~regout\ $ ((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
@@ -3442,7 +4380,7 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
 
--- Location: LC_X8_Y5_N5
+-- Location: LC_X12_Y5_N9
 \inst9|inst3\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst3~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(10), , , VCC)
@@ -3466,7 +4404,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst9|inst3~regout\);
 
--- Location: LC_X8_Y5_N1
+-- Location: LC_X12_Y5_N1
 \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst9|inst2~regout\ $ (((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\) 
@@ -3501,7 +4439,7 @@ PORT MAP (
 	cout0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
 	cout1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
 
--- Location: LC_X8_Y5_N7
+-- Location: LC_X12_Y5_N7
 \inst9|inst2\ : maxv_lcell
 -- Equation(s):
 -- \inst9|inst2~regout\ = DFFEAS((((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(11)))), GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, , , , )
@@ -3524,15 +4462,15 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst9|inst2~regout\);
 
--- Location: LC_X8_Y7_N3
+-- Location: LC_X8_Y5_N9
 \inst10|inst2\ : maxv_lcell
 -- Equation(s):
--- \inst5|$00000|auto_generated|result_node[11]~2\ = ((\inst49~regout\ & ((E2_inst2))) # (!\inst49~regout\ & (\inst9|inst2~regout\)))
--- \inst10|inst2~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[11]~2\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11), , , VCC)
+-- \inst5|$00000|auto_generated|result_node[11]~0\ = ((\inst49~regout\ & (E2_inst2)) # (!\inst49~regout\ & ((\inst9|inst2~regout\))))
+-- \inst10|inst2~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[11]~0\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f0cc",
+	lut_mask => "f3c0",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -3541,18 +4479,18 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst9|inst2~regout\,
+	datab => \inst49~regout\,
 	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
-	datad => \inst49~regout\,
+	datad => \inst9|inst2~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst10|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[11]~2\,
+	combout => \inst5|$00000|auto_generated|result_node[11]~0\,
 	regout => \inst10|inst2~regout\);
 
--- Location: LC_X7_Y7_N5
+-- Location: LC_X7_Y5_N5
 \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
 -- Equation(s):
 -- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst10|inst8~regout\ $ ((\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
@@ -3582,15 +4520,15 @@ PORT MAP (
 	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
 	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
 
--- Location: LC_X6_Y6_N3
+-- Location: LC_X9_Y5_N3
 \inst10|inst8\ : maxv_lcell
 -- Equation(s):
--- \inst5|$00000|auto_generated|result_node[5]~12\ = ((\inst49~regout\ & (E2_inst8)) # (!\inst49~regout\ & ((\inst9|inst8~regout\))))
+-- \inst5|$00000|auto_generated|result_node[5]~12\ = ((\inst49~regout\ & ((E2_inst8))) # (!\inst49~regout\ & (\inst9|inst8~regout\)))
 -- \inst10|inst8~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[5]~12\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(5), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f3c0",
+	lut_mask => "f0cc",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -3599,9 +4537,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst49~regout\,
+	datab => \inst9|inst8~regout\,
 	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(5),
-	datad => \inst9|inst8~regout\,
+	datad => \inst49~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst10|inst1~0_combout\,
@@ -3610,7 +4548,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[5]~12\,
 	regout => \inst10|inst8~regout\);
 
--- Location: LC_X7_Y7_N6
+-- Location: LC_X7_Y5_N6
 \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
 -- Equation(s):
 -- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst10|inst7~regout\ $ ((!(!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -3645,7 +4583,7 @@ PORT MAP (
 	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
 	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
 
--- Location: LC_X6_Y4_N0
+-- Location: LC_X9_Y5_N5
 \inst10|inst7\ : maxv_lcell
 -- Equation(s):
 -- \inst5|$00000|auto_generated|result_node[6]~14\ = ((\inst49~regout\ & ((E2_inst7))) # (!\inst49~regout\ & (\inst9|inst7~regout\)))
@@ -3673,7 +4611,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[6]~14\,
 	regout => \inst10|inst7~regout\);
 
--- Location: LC_X7_Y7_N7
+-- Location: LC_X7_Y5_N7
 \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst10|inst6~regout\ $ (((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -3708,7 +4646,7 @@ PORT MAP (
 	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
 	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
 
--- Location: LC_X6_Y4_N4
+-- Location: LC_X9_Y5_N1
 \inst10|inst6\ : maxv_lcell
 -- Equation(s):
 -- \inst5|$00000|auto_generated|result_node[7]~8\ = ((\inst49~regout\ & ((E2_inst6))) # (!\inst49~regout\ & (\inst9|inst6~regout\)))
@@ -3736,7 +4674,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[7]~8\,
 	regout => \inst10|inst6~regout\);
 
--- Location: LC_X7_Y7_N8
+-- Location: LC_X7_Y5_N8
 \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
 -- Equation(s):
 -- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst10|inst5~regout\ $ ((!(!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -3771,15 +4709,15 @@ PORT MAP (
 	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
 	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
 
--- Location: LC_X6_Y5_N0
+-- Location: LC_X9_Y5_N8
 \inst10|inst5\ : maxv_lcell
 -- Equation(s):
--- \inst5|$00000|auto_generated|result_node[8]~10\ = ((\inst49~regout\ & ((E2_inst5))) # (!\inst49~regout\ & (\inst9|inst5~regout\)))
+-- \inst5|$00000|auto_generated|result_node[8]~10\ = ((\inst49~regout\ & (E2_inst5)) # (!\inst49~regout\ & ((\inst9|inst5~regout\))))
 -- \inst10|inst5~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[8]~10\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(8), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f0aa",
+	lut_mask => "f3c0",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -3788,9 +4726,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	dataa => \inst9|inst5~regout\,
+	datab => \inst49~regout\,
 	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
-	datad => \inst49~regout\,
+	datad => \inst9|inst5~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst10|inst1~0_combout\,
@@ -3799,7 +4737,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[8]~10\,
 	regout => \inst10|inst5~regout\);
 
--- Location: LC_X7_Y7_N9
+-- Location: LC_X7_Y5_N9
 \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
 -- Equation(s):
 -- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst10|inst4~regout\ $ (((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -3831,7 +4769,7 @@ PORT MAP (
 	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	cout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
 
--- Location: LC_X6_Y7_N8
+-- Location: LC_X8_Y5_N6
 \inst10|inst4\ : maxv_lcell
 -- Equation(s):
 -- \inst5|$00000|auto_generated|result_node[9]~4\ = ((\inst49~regout\ & (E2_inst4)) # (!\inst49~regout\ & ((\inst9|inst4~regout\))))
@@ -3859,7 +4797,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[9]~4\,
 	regout => \inst10|inst4~regout\);
 
--- Location: LC_X8_Y7_N0
+-- Location: LC_X8_Y5_N0
 \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
 -- Equation(s):
 -- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst10|inst3~regout\ $ ((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
@@ -3889,7 +4827,7 @@ PORT MAP (
 	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
 	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
 
--- Location: LC_X8_Y7_N7
+-- Location: LC_X8_Y5_N5
 \inst10|inst3\ : maxv_lcell
 -- Equation(s):
 -- \inst5|$00000|auto_generated|result_node[10]~6\ = ((\inst49~regout\ & (E2_inst3)) # (!\inst49~regout\ & ((\inst9|inst3~regout\))))
@@ -3917,7 +4855,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[10]~6\,
 	regout => \inst10|inst3~regout\);
 
--- Location: LC_X8_Y7_N1
+-- Location: LC_X8_Y5_N1
 \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
 -- Equation(s):
 -- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst10|inst2~regout\ $ (((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & 
@@ -3952,11 +4890,11 @@ PORT MAP (
 	cout0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
 	cout1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
 
--- Location: LC_X8_Y4_N7
+-- Location: LC_X9_Y6_N9
 \inst11|inst2\ : maxv_lcell
 -- Equation(s):
--- \inst5|$00000|auto_generated|result_node[11]~3\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[11]~2\))) # (!\inst47~regout\ & (E3_inst2)))
--- \inst11|inst2~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[11]~3\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(11), , , VCC)
+-- \inst5|$00000|auto_generated|result_node[11]~1\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[11]~0\))) # (!\inst47~regout\ & (E3_inst2)))
+-- \inst11|inst2~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[11]~1\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(11), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3971,16 +4909,16 @@ PORT MAP (
 	clk => \RTC~combout\,
 	datab => \inst47~regout\,
 	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
-	datad => \inst5|$00000|auto_generated|result_node[11]~2\,
+	datad => \inst5|$00000|auto_generated|result_node[11]~0\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst11|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[11]~3\,
+	combout => \inst5|$00000|auto_generated|result_node[11]~1\,
 	regout => \inst11|inst2~regout\);
 
--- Location: LC_X7_Y4_N5
+-- Location: LC_X8_Y6_N5
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst11|inst8~regout\ $ ((\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
@@ -4010,7 +4948,7 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
 
--- Location: LC_X6_Y6_N1
+-- Location: LC_X9_Y5_N7
 \inst11|inst8\ : maxv_lcell
 -- Equation(s):
 -- \inst5|$00000|auto_generated|result_node[5]~13\ = (\inst47~regout\ & (((\inst5|$00000|auto_generated|result_node[5]~12\)))) # (!\inst47~regout\ & (((E3_inst8))))
@@ -4038,7 +4976,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[5]~13\,
 	regout => \inst11|inst8~regout\);
 
--- Location: LC_X7_Y4_N6
+-- Location: LC_X8_Y6_N6
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst11|inst7~regout\ $ ((!(!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -4073,15 +5011,15 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
 
--- Location: LC_X6_Y4_N1
+-- Location: LC_X9_Y5_N6
 \inst11|inst7\ : maxv_lcell
 -- Equation(s):
--- \inst5|$00000|auto_generated|result_node[6]~15\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[6]~14\))) # (!\inst47~regout\ & (E3_inst7)))
+-- \inst5|$00000|auto_generated|result_node[6]~15\ = (\inst47~regout\ & (((\inst5|$00000|auto_generated|result_node[6]~14\)))) # (!\inst47~regout\ & (((E3_inst7))))
 -- \inst11|inst7~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[6]~15\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(6), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fc30",
+	lut_mask => "fa50",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -4090,7 +5028,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst47~regout\,
+	dataa => \inst47~regout\,
 	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
 	datad => \inst5|$00000|auto_generated|result_node[6]~14\,
 	aclr => GND,
@@ -4101,7 +5039,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[6]~15\,
 	regout => \inst11|inst7~regout\);
 
--- Location: LC_X7_Y4_N7
+-- Location: LC_X8_Y6_N7
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst11|inst6~regout\ $ (((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -4136,15 +5074,15 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
 
--- Location: LC_X6_Y4_N5
+-- Location: LC_X9_Y5_N0
 \inst11|inst6\ : maxv_lcell
 -- Equation(s):
--- \inst5|$00000|auto_generated|result_node[7]~9\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[7]~8\))) # (!\inst47~regout\ & (E3_inst6)))
+-- \inst5|$00000|auto_generated|result_node[7]~9\ = (\inst47~regout\ & (((\inst5|$00000|auto_generated|result_node[7]~8\)))) # (!\inst47~regout\ & (((E3_inst6))))
 -- \inst11|inst6~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[7]~9\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(7), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fc30",
+	lut_mask => "fa50",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -4153,7 +5091,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst47~regout\,
+	dataa => \inst47~regout\,
 	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
 	datad => \inst5|$00000|auto_generated|result_node[7]~8\,
 	aclr => GND,
@@ -4164,7 +5102,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[7]~9\,
 	regout => \inst11|inst6~regout\);
 
--- Location: LC_X7_Y4_N8
+-- Location: LC_X8_Y6_N8
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst11|inst5~regout\ $ ((!(!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -4199,15 +5137,15 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
 
--- Location: LC_X7_Y6_N9
+-- Location: LC_X9_Y5_N9
 \inst11|inst5\ : maxv_lcell
 -- Equation(s):
--- \inst5|$00000|auto_generated|result_node[8]~11\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[8]~10\))) # (!\inst47~regout\ & (E3_inst5)))
+-- \inst5|$00000|auto_generated|result_node[8]~11\ = (\inst47~regout\ & (((\inst5|$00000|auto_generated|result_node[8]~10\)))) # (!\inst47~regout\ & (((E3_inst5))))
 -- \inst11|inst5~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[8]~11\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(8), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "fc30",
+	lut_mask => "fa50",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -4216,7 +5154,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst47~regout\,
+	dataa => \inst47~regout\,
 	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
 	datad => \inst5|$00000|auto_generated|result_node[8]~10\,
 	aclr => GND,
@@ -4227,7 +5165,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[8]~11\,
 	regout => \inst11|inst5~regout\);
 
--- Location: LC_X7_Y4_N9
+-- Location: LC_X8_Y6_N9
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst11|inst4~regout\ $ (((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -4259,7 +5197,7 @@ PORT MAP (
 	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	cout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
 
--- Location: LC_X6_Y7_N5
+-- Location: LC_X7_Y6_N8
 \inst11|inst4\ : maxv_lcell
 -- Equation(s):
 -- \inst5|$00000|auto_generated|result_node[9]~5\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[9]~4\))) # (!\inst47~regout\ & (E3_inst4)))
@@ -4287,7 +5225,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[9]~5\,
 	regout => \inst11|inst4~regout\);
 
--- Location: LC_X8_Y4_N0
+-- Location: LC_X9_Y6_N0
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst11|inst3~regout\ $ ((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
@@ -4317,7 +5255,7 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
 
--- Location: LC_X8_Y4_N5
+-- Location: LC_X9_Y6_N4
 \inst11|inst3\ : maxv_lcell
 -- Equation(s):
 -- \inst5|$00000|auto_generated|result_node[10]~7\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[10]~6\))) # (!\inst47~regout\ & (E3_inst3)))
@@ -4345,7 +5283,7 @@ PORT MAP (
 	combout => \inst5|$00000|auto_generated|result_node[10]~7\,
 	regout => \inst11|inst3~regout\);
 
--- Location: LC_X8_Y4_N1
+-- Location: LC_X9_Y6_N1
 \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
 -- Equation(s):
 -- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst11|inst2~regout\ $ (((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & 
@@ -4380,1067 +5318,7 @@ PORT MAP (
 	cout0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
 	cout1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
 
--- Location: LC_X3_Y6_N3
-\inst6|LPM_SHIFTREG_component|dffs[15]\ : maxv_lcell
--- Equation(s):
--- \inst6|LPM_SHIFTREG_component|dffs\(15) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(14), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(14),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|ALT_INV_freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst6|LPM_SHIFTREG_component|dffs\(15));
-
--- Location: LC_X8_Y5_N2
-\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
--- Equation(s):
--- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
--- (\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst9|inst1~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "5aa5",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datad => \inst9|inst1~regout\,
-	cin => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
-	cin0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
-	cin1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
-
--- Location: LC_X8_Y5_N6
-\inst9|inst1\ : maxv_lcell
--- Equation(s):
--- \inst9|inst1~regout\ = DFFEAS((((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))), GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
-	aclr => GND,
-	ena => \inst9|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst9|inst1~regout\);
-
--- Location: LC_X8_Y7_N8
-\inst10|inst1\ : maxv_lcell
--- Equation(s):
--- \inst5|$00000|auto_generated|result_node[12]~0\ = ((\inst49~regout\ & (E2_inst1)) # (!\inst49~regout\ & ((\inst9|inst1~regout\))))
--- \inst10|inst1~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[12]~0\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f3c0",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst49~regout\,
-	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
-	datad => \inst9|inst1~regout\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst10|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[12]~0\,
-	regout => \inst10|inst1~regout\);
-
--- Location: LC_X8_Y7_N2
-\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
--- Equation(s):
--- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
--- (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst10|inst1~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "5aa5",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datad => \inst10|inst1~regout\,
-	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
-	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
-	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
-
--- Location: LC_X8_Y4_N6
-\inst11|inst1\ : maxv_lcell
--- Equation(s):
--- \inst5|$00000|auto_generated|result_node[12]~1\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[12]~0\))) # (!\inst47~regout\ & (E3_inst1)))
--- \inst11|inst1~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[12]~1\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fc30",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst47~regout\,
-	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
-	datad => \inst5|$00000|auto_generated|result_node[12]~0\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst11|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst5|$00000|auto_generated|result_node[12]~1\,
-	regout => \inst11|inst1~regout\);
-
--- Location: LC_X8_Y4_N2
-\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
--- Equation(s):
--- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
--- (\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst11|inst1~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "5aa5",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datad => \inst11|inst1~regout\,
-	cin => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
-	cin0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
-	cin1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
-
--- Location: LC_X8_Y6_N3
-\inst38|inst1\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\ = (\inst38|inst2~regout\ & (\inst5|$00000|auto_generated|result_node[11]~3\ & (E4_inst1 $ (!\inst5|$00000|auto_generated|result_node[12]~1\)))) # (!\inst38|inst2~regout\ & 
--- (!\inst5|$00000|auto_generated|result_node[11]~3\ & (E4_inst1 $ (!\inst5|$00000|auto_generated|result_node[12]~1\))))
--- \inst38|inst1~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(15), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "9009",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	dataa => \inst38|inst2~regout\,
-	datab => \inst5|$00000|auto_generated|result_node[11]~3\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(15),
-	datad => \inst5|$00000|auto_generated|result_node[12]~1\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\,
-	regout => \inst38|inst1~regout\);
-
--- Location: LC_X3_Y6_N9
-\inst38|inst4\ : maxv_lcell
--- Equation(s):
--- \inst38|inst4~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(12), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(12),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst38|inst4~regout\);
-
--- Location: LC_X8_Y6_N4
-\inst38|inst3\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\ = (\inst5|$00000|auto_generated|result_node[9]~5\ & (\inst38|inst4~regout\ & (E4_inst3 $ (!\inst5|$00000|auto_generated|result_node[10]~7\)))) # (!\inst5|$00000|auto_generated|result_node[9]~5\ & 
--- (!\inst38|inst4~regout\ & (E4_inst3 $ (!\inst5|$00000|auto_generated|result_node[10]~7\))))
--- \inst38|inst3~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(13), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "9009",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	dataa => \inst5|$00000|auto_generated|result_node[9]~5\,
-	datab => \inst38|inst4~regout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(13),
-	datad => \inst5|$00000|auto_generated|result_node[10]~7\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\,
-	regout => \inst38|inst3~regout\);
-
--- Location: LC_X5_Y6_N1
-\inst38|inst8\ : maxv_lcell
--- Equation(s):
--- \inst38|inst8~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(8), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(8),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst38|inst8~regout\);
-
--- Location: LC_X6_Y6_N4
-\inst24|LPM_COMPARE_component|auto_generated|op_1~62\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\ = CARRY((\inst38|inst13~regout\ & (!\inst5|$00000|auto_generated|result_node[0]~25\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff22",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst38|inst13~regout\,
-	datab => \inst5|$00000|auto_generated|result_node[0]~25\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~60\,
-	cout => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\);
-
--- Location: LC_X6_Y6_N5
-\inst24|LPM_COMPARE_component|auto_generated|op_1~57\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\ = CARRY((\inst38|inst12~regout\ & (\inst5|$00000|auto_generated|result_node[1]~21\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\)) # (!\inst38|inst12~regout\ & 
--- ((\inst5|$00000|auto_generated|result_node[1]~21\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\))))
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\ = CARRY((\inst38|inst12~regout\ & (\inst5|$00000|auto_generated|result_node[1]~21\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\)) # (!\inst38|inst12~regout\ & 
--- ((\inst5|$00000|auto_generated|result_node[1]~21\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin_used => "true",
-	lut_mask => "ff4d",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst38|inst12~regout\,
-	datab => \inst5|$00000|auto_generated|result_node[1]~21\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~55\,
-	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\,
-	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\);
-
--- Location: LC_X6_Y6_N6
-\inst24|LPM_COMPARE_component|auto_generated|op_1~52\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\ = CARRY((\inst38|inst11~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\) # (!\inst5|$00000|auto_generated|result_node[2]~23\))) # (!\inst38|inst11~regout\ & 
--- (!\inst5|$00000|auto_generated|result_node[2]~23\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\)))
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\ = CARRY((\inst38|inst11~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\) # (!\inst5|$00000|auto_generated|result_node[2]~23\))) # (!\inst38|inst11~regout\ & 
--- (!\inst5|$00000|auto_generated|result_node[2]~23\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "ff2b",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst38|inst11~regout\,
-	datab => \inst5|$00000|auto_generated|result_node[2]~23\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
-	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\,
-	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~50\,
-	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\,
-	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\);
-
--- Location: LC_X6_Y6_N7
-\inst24|LPM_COMPARE_component|auto_generated|op_1~47\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\ = CARRY((\inst38|inst10~regout\ & (\inst5|$00000|auto_generated|result_node[3]~17\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\)) # (!\inst38|inst10~regout\ & 
--- ((\inst5|$00000|auto_generated|result_node[3]~17\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\))))
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\ = CARRY((\inst38|inst10~regout\ & (\inst5|$00000|auto_generated|result_node[3]~17\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\)) # (!\inst38|inst10~regout\ & 
--- ((\inst5|$00000|auto_generated|result_node[3]~17\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "ff4d",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst38|inst10~regout\,
-	datab => \inst5|$00000|auto_generated|result_node[3]~17\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
-	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\,
-	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~45\,
-	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\,
-	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\);
-
--- Location: LC_X6_Y6_N8
-\inst24|LPM_COMPARE_component|auto_generated|op_1~42\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~42_cout0\ = CARRY((\inst38|inst9~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\) # (!\inst5|$00000|auto_generated|result_node[4]~19\))) # (!\inst38|inst9~regout\ & 
--- (!\inst5|$00000|auto_generated|result_node[4]~19\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\)))
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\ = CARRY((\inst38|inst9~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\) # (!\inst5|$00000|auto_generated|result_node[4]~19\))) # (!\inst38|inst9~regout\ & 
--- (!\inst5|$00000|auto_generated|result_node[4]~19\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "ff2b",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst38|inst9~regout\,
-	datab => \inst5|$00000|auto_generated|result_node[4]~19\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
-	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\,
-	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~40\,
-	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~42_cout0\,
-	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\);
-
--- Location: LC_X6_Y6_N9
-\inst24|LPM_COMPARE_component|auto_generated|op_1~37\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\ = CARRY((\inst38|inst8~regout\ & (\inst5|$00000|auto_generated|result_node[5]~13\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\)) # (!\inst38|inst8~regout\ & 
--- ((\inst5|$00000|auto_generated|result_node[5]~13\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "ff4d",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst38|inst8~regout\,
-	datab => \inst5|$00000|auto_generated|result_node[5]~13\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
-	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~42_cout0\,
-	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~35\,
-	cout => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\);
-
--- Location: LC_X5_Y6_N3
-\inst38|inst6\ : maxv_lcell
--- Equation(s):
--- \inst38|inst6~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(10), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(10),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst38|inst6~regout\);
-
--- Location: LC_X5_Y6_N9
-\inst38|inst5\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\ = (\inst38|inst6~regout\ & (\inst5|$00000|auto_generated|result_node[7]~9\ & (E4_inst5 $ (!\inst5|$00000|auto_generated|result_node[8]~11\)))) # (!\inst38|inst6~regout\ & 
--- (!\inst5|$00000|auto_generated|result_node[7]~9\ & (E4_inst5 $ (!\inst5|$00000|auto_generated|result_node[8]~11\))))
--- \inst38|inst5~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(11), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "9009",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	dataa => \inst38|inst6~regout\,
-	datab => \inst5|$00000|auto_generated|result_node[7]~9\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(11),
-	datad => \inst5|$00000|auto_generated|result_node[8]~11\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\,
-	regout => \inst38|inst5~regout\);
-
--- Location: LC_X5_Y6_N4
-\inst38|inst7\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\ = (\inst5|$00000|auto_generated|result_node[5]~13\ & (\inst38|inst8~regout\ & (E4_inst7 $ (!\inst5|$00000|auto_generated|result_node[6]~15\)))) # (!\inst5|$00000|auto_generated|result_node[5]~13\ & 
--- (!\inst38|inst8~regout\ & (E4_inst7 $ (!\inst5|$00000|auto_generated|result_node[6]~15\))))
--- \inst38|inst7~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(9), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "9009",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	dataa => \inst5|$00000|auto_generated|result_node[5]~13\,
-	datab => \inst38|inst8~regout\,
-	datac => \inst6|LPM_SHIFTREG_component|dffs\(9),
-	datad => \inst5|$00000|auto_generated|result_node[6]~15\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst34|freezeParalell\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\,
-	regout => \inst38|inst7~regout\);
-
--- Location: LC_X7_Y6_N0
-\inst24|LPM_COMPARE_component|auto_generated|op_1~32\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\ = CARRY((\inst38|inst7~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\) # (!\inst5|$00000|auto_generated|result_node[6]~15\))) # (!\inst38|inst7~regout\ & 
--- (!\inst5|$00000|auto_generated|result_node[6]~15\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\)))
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\ = CARRY((\inst38|inst7~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\) # (!\inst5|$00000|auto_generated|result_node[6]~15\))) # (!\inst38|inst7~regout\ & 
--- (!\inst5|$00000|auto_generated|result_node[6]~15\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin_used => "true",
-	lut_mask => "ff2b",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst38|inst7~regout\,
-	datab => \inst5|$00000|auto_generated|result_node[6]~15\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~30\,
-	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\,
-	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\);
-
--- Location: LC_X7_Y6_N1
-\inst24|LPM_COMPARE_component|auto_generated|op_1~27\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\ = CARRY((\inst5|$00000|auto_generated|result_node[7]~9\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\) # (!\inst38|inst6~regout\))) # 
--- (!\inst5|$00000|auto_generated|result_node[7]~9\ & (!\inst38|inst6~regout\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\)))
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\ = CARRY((\inst5|$00000|auto_generated|result_node[7]~9\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\) # (!\inst38|inst6~regout\))) # 
--- (!\inst5|$00000|auto_generated|result_node[7]~9\ & (!\inst38|inst6~regout\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "ff2b",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst5|$00000|auto_generated|result_node[7]~9\,
-	datab => \inst38|inst6~regout\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
-	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\,
-	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~25\,
-	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\,
-	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\);
-
--- Location: LC_X7_Y6_N2
-\inst24|LPM_COMPARE_component|auto_generated|op_1~22\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\ = CARRY((\inst38|inst5~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\) # (!\inst5|$00000|auto_generated|result_node[8]~11\))) # (!\inst38|inst5~regout\ & 
--- (!\inst5|$00000|auto_generated|result_node[8]~11\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\)))
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\ = CARRY((\inst38|inst5~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\) # (!\inst5|$00000|auto_generated|result_node[8]~11\))) # (!\inst38|inst5~regout\ & 
--- (!\inst5|$00000|auto_generated|result_node[8]~11\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "ff2b",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst38|inst5~regout\,
-	datab => \inst5|$00000|auto_generated|result_node[8]~11\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
-	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\,
-	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~20\,
-	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\,
-	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\);
-
--- Location: LC_X7_Y6_N3
-\inst24|LPM_COMPARE_component|auto_generated|op_1~17\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~17_cout0\ = CARRY((\inst5|$00000|auto_generated|result_node[9]~5\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\) # (!\inst38|inst4~regout\))) # 
--- (!\inst5|$00000|auto_generated|result_node[9]~5\ & (!\inst38|inst4~regout\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\)))
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\ = CARRY((\inst5|$00000|auto_generated|result_node[9]~5\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\) # (!\inst38|inst4~regout\))) # 
--- (!\inst5|$00000|auto_generated|result_node[9]~5\ & (!\inst38|inst4~regout\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "ff2b",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst5|$00000|auto_generated|result_node[9]~5\,
-	datab => \inst38|inst4~regout\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
-	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\,
-	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~15\,
-	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~17_cout0\,
-	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\);
-
--- Location: LC_X7_Y6_N4
-\inst24|LPM_COMPARE_component|auto_generated|op_1~12\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ = CARRY((\inst38|inst3~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\) # (!\inst5|$00000|auto_generated|result_node[10]~7\))) # (!\inst38|inst3~regout\ & 
--- (!\inst5|$00000|auto_generated|result_node[10]~7\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "ff2b",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst38|inst3~regout\,
-	datab => \inst5|$00000|auto_generated|result_node[10]~7\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
-	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~17_cout0\,
-	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~10\,
-	cout => \inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\);
-
--- Location: LC_X7_Y6_N5
-\inst24|LPM_COMPARE_component|auto_generated|op_1~7\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\ = CARRY((\inst5|$00000|auto_generated|result_node[11]~3\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\) # (!\inst38|inst2~regout\))) # 
--- (!\inst5|$00000|auto_generated|result_node[11]~3\ & (!\inst38|inst2~regout\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\)))
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\ = CARRY((\inst5|$00000|auto_generated|result_node[11]~3\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\) # (!\inst38|inst2~regout\))) # 
--- (!\inst5|$00000|auto_generated|result_node[11]~3\ & (!\inst38|inst2~regout\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	cin_used => "true",
-	lut_mask => "ff2b",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst5|$00000|auto_generated|result_node[11]~3\,
-	datab => \inst38|inst2~regout\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~5\,
-	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\,
-	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\);
-
--- Location: LC_X7_Y6_N6
-\inst24|LPM_COMPARE_component|auto_generated|op_1~0\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~0_combout\ = ((\inst38|inst1~regout\ & (!(!\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\) # 
--- (\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\) & \inst5|$00000|auto_generated|result_node[12]~1\)) # (!\inst38|inst1~regout\ & ((\inst5|$00000|auto_generated|result_node[12]~1\) 
--- # (!(!\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\) # (\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & 
--- \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\)))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "3f03",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \inst38|inst1~regout\,
-	datad => \inst5|$00000|auto_generated|result_node[12]~1\,
-	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\,
-	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\,
-	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~0_combout\);
-
--- Location: LC_X7_Y6_N7
-\inst24|LPM_COMPARE_component|auto_generated|aeb_int~4\ : maxv_lcell
--- Equation(s):
--- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~4_combout\ = (\inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\ & (\inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\ & (\inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\ & 
--- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "8000",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\,
-	datab => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\,
-	datac => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\,
-	datad => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~4_combout\);
-
--- Location: LC_X7_Y6_N8
-inst44 : maxv_lcell
--- Equation(s):
--- \inst44~regout\ = DFFEAS(((!\inst24|LPM_COMPARE_component|auto_generated|op_1~0_combout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|aeb_int~4_combout\) # (!\inst24|LPM_COMPARE_component|auto_generated|aeb_int~7\)))), GLOBAL(\inst36~combout\), VCC, 
--- , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "030f",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \inst36~combout\,
-	datab => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~7\,
-	datac => \inst24|LPM_COMPARE_component|auto_generated|op_1~0_combout\,
-	datad => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~4_combout\,
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst44~regout\);
-
--- Location: LC_X4_Y5_N0
-\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
--- Equation(s):
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst12|inst13~regout\ $ ((!\Inc~combout\)))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst12|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst12|inst13~regout\ & !\Inc~combout\)))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst12|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst12|inst13~regout\ & !\Inc~combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "698e",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst12|inst13~regout\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
-	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
-
--- Location: LC_X4_Y7_N7
-\inst12|inst1~0\ : maxv_lcell
--- Equation(s):
--- \inst12|inst1~0_combout\ = (\inst11|inst16~combout\ & (\Hiset~combout\ & (!\inst49~regout\ & \inst47~regout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0800",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst11|inst16~combout\,
-	datab => \Hiset~combout\,
-	datac => \inst49~regout\,
-	datad => \inst47~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst12|inst1~0_combout\);
-
--- Location: LC_X3_Y5_N7
-\inst12|inst13\ : maxv_lcell
--- Equation(s):
--- \inst12|inst13~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst12|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst12|inst13~regout\);
-
--- Location: LC_X4_Y5_N1
-\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
--- Equation(s):
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst12|inst12~regout\ $ (((!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst12|inst12~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst12|inst12~regout\))))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst12|inst12~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst12|inst12~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst12|inst12~regout\,
-	cin0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
-	cin1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
-
--- Location: LC_X3_Y5_N4
-\inst12|inst12\ : maxv_lcell
--- Equation(s):
--- \inst12|inst12~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst12|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst12|inst12~regout\);
-
--- Location: LC_X4_Y5_N2
-\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
--- Equation(s):
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst12|inst11~regout\ $ (((!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst12|inst11~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst12|inst11~regout\) # 
--- (!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst12|inst11~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
--- ((\inst12|inst11~regout\) # (!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "964d",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst12|inst11~regout\,
-	cin0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cin1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
-
--- Location: LC_X3_Y5_N6
-\inst12|inst11\ : maxv_lcell
--- Equation(s):
--- \inst12|inst11~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	aclr => GND,
-	sload => VCC,
-	ena => \inst12|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst12|inst11~regout\);
-
--- Location: LC_X4_Y5_N3
-\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
--- Equation(s):
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst12|inst10~regout\ $ (((!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst12|inst10~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst12|inst10~regout\))))
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst12|inst10~regout\ & !\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst12|inst10~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst12|inst10~regout\,
-	cin0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cin1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
-	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
-
--- Location: LC_X5_Y5_N4
-\inst12|inst10\ : maxv_lcell
--- Equation(s):
--- \inst12|inst10~regout\ = DFFEAS((((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(3)))), GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	aclr => GND,
-	ena => \inst12|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst12|inst10~regout\);
-
--- Location: LC_X4_Y5_N4
+-- Location: LC_X7_Y4_N4
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst12|inst9~regout\ $ ((!(!\Inc~combout\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
@@ -5470,31 +5348,30 @@ PORT MAP (
 	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	cout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
 
--- Location: LC_X5_Y5_N8
+-- Location: LC_X6_Y4_N4
 \inst12|inst9\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst9~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(4), , , VCC)
+-- \inst12|inst9~regout\ = DFFEAS((((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(4)))), GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000",
+	lut_mask => "ff00",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "on")
+	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
+	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	aclr => GND,
-	sload => VCC,
 	ena => \inst12|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst9~regout\);
 
--- Location: LC_X4_Y5_N5
+-- Location: LC_X7_Y4_N5
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst12|inst8~regout\ $ ((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
@@ -5524,7 +5401,7 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
 
--- Location: LC_X3_Y5_N2
+-- Location: LC_X6_Y4_N7
 \inst12|inst8\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst8~regout\ = DFFEAS((((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(5)))), GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, , , , )
@@ -5547,7 +5424,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst12|inst8~regout\);
 
--- Location: LC_X4_Y5_N6
+-- Location: LC_X7_Y4_N6
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst12|inst7~regout\ $ ((!(!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -5582,7 +5459,7 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
 
--- Location: LC_X3_Y5_N9
+-- Location: LC_X8_Y4_N8
 \inst12|inst7\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst7~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(6), , , VCC)
@@ -5606,7 +5483,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst12|inst7~regout\);
 
--- Location: LC_X4_Y5_N7
+-- Location: LC_X7_Y4_N7
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst12|inst6~regout\ $ (((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -5641,31 +5518,30 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
 
--- Location: LC_X3_Y5_N8
+-- Location: LC_X6_Y4_N9
 \inst12|inst6\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst6~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(7), , , VCC)
+-- \inst12|inst6~regout\ = DFFEAS((((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(7)))), GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000",
+	lut_mask => "ff00",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "on")
+	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
+	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
 	aclr => GND,
-	sload => VCC,
 	ena => \inst12|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst6~regout\);
 
--- Location: LC_X4_Y5_N8
+-- Location: LC_X7_Y4_N8
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst12|inst5~regout\ $ ((!(!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -5700,31 +5576,30 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
 
--- Location: LC_X3_Y5_N3
+-- Location: LC_X6_Y4_N1
 \inst12|inst5\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst5~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(8), , , VCC)
+-- \inst12|inst5~regout\ = DFFEAS((((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(8)))), GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, , , , )
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0000",
+	lut_mask => "ff00",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
 	sum_lutc_input => "datac",
-	synch_mode => "on")
+	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datac => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
+	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
 	aclr => GND,
-	sload => VCC,
 	ena => \inst12|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \inst12|inst5~regout\);
 
--- Location: LC_X4_Y5_N9
+-- Location: LC_X7_Y4_N9
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst12|inst4~regout\ $ (((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -5756,7 +5631,7 @@ PORT MAP (
 	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	cout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
 
--- Location: LC_X5_Y5_N9
+-- Location: LC_X6_Y4_N5
 \inst12|inst4\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst4~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(9), , , VCC)
@@ -5780,7 +5655,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst12|inst4~regout\);
 
--- Location: LC_X5_Y5_N0
+-- Location: LC_X8_Y4_N0
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst12|inst3~regout\ $ ((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
@@ -5810,7 +5685,7 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
 
--- Location: LC_X5_Y5_N6
+-- Location: LC_X8_Y4_N6
 \inst12|inst3\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst3~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(10), , , VCC)
@@ -5834,7 +5709,7 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst12|inst3~regout\);
 
--- Location: LC_X5_Y5_N1
+-- Location: LC_X8_Y4_N1
 \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst12|inst2~regout\ $ (((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & 
@@ -5869,7 +5744,7 @@ PORT MAP (
 	cout0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
 	cout1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
 
--- Location: LC_X5_Y5_N7
+-- Location: LC_X8_Y4_N9
 \inst12|inst2\ : maxv_lcell
 -- Equation(s):
 -- \inst12|inst2~regout\ = DFFEAS((((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(11)))), GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, , , , )
@@ -5892,90 +5767,15 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst12|inst2~regout\);
 
--- Location: LC_X5_Y5_N2
-\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
+-- Location: LC_X6_Y5_N6
+\inst13|inst2\ : maxv_lcell
 -- Equation(s):
--- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
--- (\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst12|inst1~regout\))))
+-- \inst2|$00000|auto_generated|result_node[11]~2\ = ((\inst49~regout\ & (E6_inst2)) # (!\inst49~regout\ & ((\inst12|inst2~regout\))))
+-- \inst13|inst2~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[11]~2\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(11), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "5aa5",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datad => \inst12|inst1~regout\,
-	cin => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
-	cin0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
-	cin1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
-
--- Location: LC_X5_Y5_N3
-\inst12|inst1\ : maxv_lcell
--- Equation(s):
--- \inst12|inst1~regout\ = DFFEAS((((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))), GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
-	aclr => GND,
-	ena => \inst12|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst12|inst1~regout\);
-
--- Location: LC_X3_Y7_N3
-\inst13|inst1~0\ : maxv_lcell
--- Equation(s):
--- \inst13|inst1~0_combout\ = (\Hiset~combout\ & (\inst11|inst16~combout\ & (\inst49~regout\ & \inst47~regout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "8000",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \Hiset~combout\,
-	datab => \inst11|inst16~combout\,
-	datac => \inst49~regout\,
-	datad => \inst47~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst13|inst1~0_combout\);
-
--- Location: LC_X3_Y5_N0
-\inst13|inst1\ : maxv_lcell
--- Equation(s):
--- \inst2|$00000|auto_generated|result_node[12]~0\ = ((\inst49~regout\ & ((E6_inst1))) # (!\inst49~regout\ & (\inst12|inst1~regout\)))
--- \inst13|inst1~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[12]~0\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
+	lut_mask => "f3c0",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -5984,255 +5784,18 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst12|inst1~regout\,
-	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
-	datad => \inst49~regout\,
+	datab => \inst49~regout\,
+	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
+	datad => \inst12|inst2~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst13|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[12]~0\,
-	regout => \inst13|inst1~regout\);
+	combout => \inst2|$00000|auto_generated|result_node[11]~2\,
+	regout => \inst13|inst2~regout\);
 
--- Location: LC_X1_Y5_N0
-\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
--- Equation(s):
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst13|inst13~regout\ $ ((!\Inc~combout\)))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst13|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst13|inst13~regout\ & !\Inc~combout\)))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst13|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst13|inst13~regout\ & !\Inc~combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "698e",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst13|inst13~regout\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
-	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
-
--- Location: LC_X2_Y5_N4
-\inst13|inst13\ : maxv_lcell
--- Equation(s):
--- \inst2|$00000|auto_generated|result_node[0]~24\ = ((\inst49~regout\ & ((E6_inst13))) # (!\inst49~regout\ & (\inst12|inst13~regout\)))
--- \inst13|inst13~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[0]~24\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst12|inst13~regout\,
-	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	datad => \inst49~regout\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst13|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[0]~24\,
-	regout => \inst13|inst13~regout\);
-
--- Location: LC_X1_Y5_N1
-\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
--- Equation(s):
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst13|inst12~regout\ $ (((!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst13|inst12~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst13|inst12~regout\))))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst13|inst12~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst13|inst12~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst13|inst12~regout\,
-	cin0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
-	cin1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
-
--- Location: LC_X2_Y5_N8
-\inst13|inst12\ : maxv_lcell
--- Equation(s):
--- \inst2|$00000|auto_generated|result_node[1]~22\ = ((\inst49~regout\ & ((E6_inst12))) # (!\inst49~regout\ & (\inst12|inst12~regout\)))
--- \inst13|inst12~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[1]~22\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst12|inst12~regout\,
-	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	datad => \inst49~regout\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst13|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[1]~22\,
-	regout => \inst13|inst12~regout\);
-
--- Location: LC_X1_Y5_N2
-\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
--- Equation(s):
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst13|inst11~regout\ $ (((!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst13|inst11~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst13|inst11~regout\) # 
--- (!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst13|inst11~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
--- ((\inst13|inst11~regout\) # (!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "964d",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst13|inst11~regout\,
-	cin0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cin1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
-
--- Location: LC_X2_Y5_N6
-\inst13|inst11\ : maxv_lcell
--- Equation(s):
--- \inst2|$00000|auto_generated|result_node[2]~20\ = ((\inst49~regout\ & ((E6_inst11))) # (!\inst49~regout\ & (\inst12|inst11~regout\)))
--- \inst13|inst11~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[2]~20\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst12|inst11~regout\,
-	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	datad => \inst49~regout\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst13|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[2]~20\,
-	regout => \inst13|inst11~regout\);
-
--- Location: LC_X1_Y5_N3
-\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
--- Equation(s):
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst13|inst10~regout\ $ (((!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst13|inst10~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst13|inst10~regout\))))
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst13|inst10~regout\ & !\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst13|inst10~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst13|inst10~regout\,
-	cin0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cin1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
-	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
-
--- Location: LC_X1_Y4_N6
-\inst13|inst10\ : maxv_lcell
--- Equation(s):
--- \inst2|$00000|auto_generated|result_node[3]~18\ = ((\inst49~regout\ & ((E6_inst10))) # (!\inst49~regout\ & (\inst12|inst10~regout\)))
--- \inst13|inst10~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[3]~18\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst12|inst10~regout\,
-	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	datad => \inst49~regout\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst13|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[3]~18\,
-	regout => \inst13|inst10~regout\);
-
--- Location: LC_X1_Y5_N4
+-- Location: LC_X5_Y5_N4
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst13|inst9~regout\ $ ((!(!\Inc~combout\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
@@ -6262,15 +5825,15 @@ PORT MAP (
 	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	cout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
 
--- Location: LC_X1_Y4_N8
+-- Location: LC_X6_Y5_N9
 \inst13|inst9\ : maxv_lcell
 -- Equation(s):
--- \inst2|$00000|auto_generated|result_node[4]~16\ = ((\inst49~regout\ & ((E6_inst9))) # (!\inst49~regout\ & (\inst12|inst9~regout\)))
--- \inst13|inst9~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[4]~16\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(4), , , VCC)
+-- \inst2|$00000|auto_generated|result_node[4]~14\ = ((\inst49~regout\ & (E6_inst9)) # (!\inst49~regout\ & ((\inst12|inst9~regout\))))
+-- \inst13|inst9~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[4]~14\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(4), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f0cc",
+	lut_mask => "f3c0",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -6279,18 +5842,18 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst12|inst9~regout\,
+	datab => \inst49~regout\,
 	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
-	datad => \inst49~regout\,
+	datad => \inst12|inst9~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst13|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[4]~16\,
+	combout => \inst2|$00000|auto_generated|result_node[4]~14\,
 	regout => \inst13|inst9~regout\);
 
--- Location: LC_X1_Y5_N5
+-- Location: LC_X5_Y5_N5
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst13|inst8~regout\ $ ((\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
@@ -6320,15 +5883,15 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
 
--- Location: LC_X2_Y5_N3
+-- Location: LC_X4_Y5_N9
 \inst13|inst8\ : maxv_lcell
 -- Equation(s):
--- \inst2|$00000|auto_generated|result_node[5]~14\ = ((\inst49~regout\ & ((E6_inst8))) # (!\inst49~regout\ & (\inst12|inst8~regout\)))
--- \inst13|inst8~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[5]~14\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(5), , , VCC)
+-- \inst2|$00000|auto_generated|result_node[5]~16\ = ((\inst49~regout\ & (E6_inst8)) # (!\inst49~regout\ & ((\inst12|inst8~regout\))))
+-- \inst13|inst8~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[5]~16\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(5), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f0cc",
+	lut_mask => "f3c0",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -6337,18 +5900,18 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst12|inst8~regout\,
+	datab => \inst49~regout\,
 	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(5),
-	datad => \inst49~regout\,
+	datad => \inst12|inst8~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst13|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[5]~14\,
+	combout => \inst2|$00000|auto_generated|result_node[5]~16\,
 	regout => \inst13|inst8~regout\);
 
--- Location: LC_X1_Y5_N6
+-- Location: LC_X5_Y5_N6
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst13|inst7~regout\ $ ((!(!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -6383,15 +5946,15 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
 
--- Location: LC_X2_Y5_N7
+-- Location: LC_X4_Y5_N7
 \inst13|inst7\ : maxv_lcell
 -- Equation(s):
--- \inst2|$00000|auto_generated|result_node[6]~12\ = ((\inst49~regout\ & ((E6_inst7))) # (!\inst49~regout\ & (\inst12|inst7~regout\)))
+-- \inst2|$00000|auto_generated|result_node[6]~12\ = ((\inst49~regout\ & (E6_inst7)) # (!\inst49~regout\ & ((\inst12|inst7~regout\))))
 -- \inst13|inst7~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[6]~12\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(6), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f0cc",
+	lut_mask => "f3c0",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -6400,9 +5963,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst12|inst7~regout\,
+	datab => \inst49~regout\,
 	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(6),
-	datad => \inst49~regout\,
+	datad => \inst12|inst7~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst13|inst1~0_combout\,
@@ -6411,7 +5974,7 @@ PORT MAP (
 	combout => \inst2|$00000|auto_generated|result_node[6]~12\,
 	regout => \inst13|inst7~regout\);
 
--- Location: LC_X1_Y5_N7
+-- Location: LC_X5_Y5_N7
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst13|inst6~regout\ $ (((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -6446,15 +6009,15 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
 
--- Location: LC_X3_Y5_N5
+-- Location: LC_X4_Y5_N5
 \inst13|inst6\ : maxv_lcell
 -- Equation(s):
--- \inst2|$00000|auto_generated|result_node[7]~10\ = ((\inst49~regout\ & ((E6_inst6))) # (!\inst49~regout\ & (\inst12|inst6~regout\)))
+-- \inst2|$00000|auto_generated|result_node[7]~10\ = ((\inst49~regout\ & (E6_inst6)) # (!\inst49~regout\ & ((\inst12|inst6~regout\))))
 -- \inst13|inst6~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[7]~10\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(7), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f0aa",
+	lut_mask => "f3c0",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -6463,9 +6026,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	dataa => \inst12|inst6~regout\,
+	datab => \inst49~regout\,
 	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(7),
-	datad => \inst49~regout\,
+	datad => \inst12|inst6~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst13|inst1~0_combout\,
@@ -6474,7 +6037,7 @@ PORT MAP (
 	combout => \inst2|$00000|auto_generated|result_node[7]~10\,
 	regout => \inst13|inst6~regout\);
 
--- Location: LC_X1_Y5_N8
+-- Location: LC_X5_Y5_N8
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst13|inst5~regout\ $ ((!(!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -6509,15 +6072,15 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
 
--- Location: LC_X3_Y5_N1
+-- Location: LC_X6_Y5_N4
 \inst13|inst5\ : maxv_lcell
 -- Equation(s):
--- \inst2|$00000|auto_generated|result_node[8]~8\ = ((\inst49~regout\ & ((E6_inst5))) # (!\inst49~regout\ & (\inst12|inst5~regout\)))
+-- \inst2|$00000|auto_generated|result_node[8]~8\ = ((\inst49~regout\ & (E6_inst5)) # (!\inst49~regout\ & ((\inst12|inst5~regout\))))
 -- \inst13|inst5~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[8]~8\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(8), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f0aa",
+	lut_mask => "f3c0",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -6526,9 +6089,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	dataa => \inst12|inst5~regout\,
+	datab => \inst49~regout\,
 	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(8),
-	datad => \inst49~regout\,
+	datad => \inst12|inst5~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst13|inst1~0_combout\,
@@ -6537,7 +6100,7 @@ PORT MAP (
 	combout => \inst2|$00000|auto_generated|result_node[8]~8\,
 	regout => \inst13|inst5~regout\);
 
--- Location: LC_X1_Y5_N9
+-- Location: LC_X5_Y5_N9
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst13|inst4~regout\ $ (((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -6569,15 +6132,15 @@ PORT MAP (
 	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	cout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
 
--- Location: LC_X5_Y5_N5
+-- Location: LC_X6_Y5_N3
 \inst13|inst4\ : maxv_lcell
 -- Equation(s):
--- \inst2|$00000|auto_generated|result_node[9]~6\ = ((\inst49~regout\ & ((E6_inst4))) # (!\inst49~regout\ & (\inst12|inst4~regout\)))
+-- \inst2|$00000|auto_generated|result_node[9]~6\ = ((\inst49~regout\ & (E6_inst4)) # (!\inst49~regout\ & ((\inst12|inst4~regout\))))
 -- \inst13|inst4~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[9]~6\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(9), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f0cc",
+	lut_mask => "f3c0",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -6586,9 +6149,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst12|inst4~regout\,
+	datab => \inst49~regout\,
 	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
-	datad => \inst49~regout\,
+	datad => \inst12|inst4~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst13|inst1~0_combout\,
@@ -6597,7 +6160,7 @@ PORT MAP (
 	combout => \inst2|$00000|auto_generated|result_node[9]~6\,
 	regout => \inst13|inst4~regout\);
 
--- Location: LC_X2_Y5_N0
+-- Location: LC_X6_Y5_N0
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst13|inst3~regout\ $ ((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
@@ -6627,15 +6190,15 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
 
--- Location: LC_X2_Y5_N5
+-- Location: LC_X6_Y5_N8
 \inst13|inst3\ : maxv_lcell
 -- Equation(s):
--- \inst2|$00000|auto_generated|result_node[10]~4\ = ((\inst49~regout\ & ((E6_inst3))) # (!\inst49~regout\ & (\inst12|inst3~regout\)))
+-- \inst2|$00000|auto_generated|result_node[10]~4\ = ((\inst49~regout\ & (E6_inst3)) # (!\inst49~regout\ & ((\inst12|inst3~regout\))))
 -- \inst13|inst3~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[10]~4\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(10), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "f0cc",
+	lut_mask => "f3c0",
 	operation_mode => "normal",
 	output_mode => "reg_and_comb",
 	register_cascade_mode => "off",
@@ -6644,9 +6207,9 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \RTC~combout\,
-	datab => \inst12|inst3~regout\,
+	datab => \inst49~regout\,
 	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(10),
-	datad => \inst49~regout\,
+	datad => \inst12|inst3~regout\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst13|inst1~0_combout\,
@@ -6655,7 +6218,7 @@ PORT MAP (
 	combout => \inst2|$00000|auto_generated|result_node[10]~4\,
 	regout => \inst13|inst3~regout\);
 
--- Location: LC_X2_Y5_N1
+-- Location: LC_X6_Y5_N1
 \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
 -- Equation(s):
 -- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst13|inst2~regout\ $ (((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & 
@@ -6690,91 +6253,11 @@ PORT MAP (
 	cout0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
 	cout1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
 
--- Location: LC_X2_Y5_N9
-\inst13|inst2\ : maxv_lcell
+-- Location: LC_X5_Y6_N7
+\inst14|inst2\ : maxv_lcell
 -- Equation(s):
--- \inst2|$00000|auto_generated|result_node[11]~2\ = ((\inst49~regout\ & ((E6_inst2))) # (!\inst49~regout\ & (\inst12|inst2~regout\)))
--- \inst13|inst2~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[11]~2\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(11), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "f0cc",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst12|inst2~regout\,
-	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
-	datad => \inst49~regout\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst13|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[11]~2\,
-	regout => \inst13|inst2~regout\);
-
--- Location: LC_X2_Y5_N2
-\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
--- Equation(s):
--- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
--- (\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst13|inst1~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "5aa5",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datad => \inst13|inst1~regout\,
-	cin => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
-	cin0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
-	cin1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
-
--- Location: LC_X1_Y4_N4
-\inst14|inst1~0\ : maxv_lcell
--- Equation(s):
--- \inst14|inst1~0_combout\ = (\Hiset~combout\ & (!\inst47~regout\ & ((\Dec~combout\) # (\Inc~combout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "00a8",
-	operation_mode => "normal",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \Hiset~combout\,
-	datab => \Dec~combout\,
-	datac => \Inc~combout\,
-	datad => \inst47~regout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst14|inst1~0_combout\);
-
--- Location: LC_X5_Y4_N8
-\inst14|inst1\ : maxv_lcell
--- Equation(s):
--- \inst2|$00000|auto_generated|result_node[12]~1\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[12]~0\))) # (!\inst47~regout\ & (E7_inst1)))
--- \inst14|inst1~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[12]~1\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12), , , VCC)
+-- \inst2|$00000|auto_generated|result_node[11]~3\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[11]~2\))) # (!\inst47~regout\ & (E7_inst2)))
+-- \inst14|inst2~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[11]~3\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(11), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -6788,254 +6271,17 @@ GENERIC MAP (
 PORT MAP (
 	clk => \RTC~combout\,
 	datab => \inst47~regout\,
-	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
-	datad => \inst2|$00000|auto_generated|result_node[12]~0\,
+	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
+	datad => \inst2|$00000|auto_generated|result_node[11]~2\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst14|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[12]~1\,
-	regout => \inst14|inst1~regout\);
+	combout => \inst2|$00000|auto_generated|result_node[11]~3\,
+	regout => \inst14|inst2~regout\);
 
--- Location: LC_X4_Y4_N0
-\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]\ : maxv_lcell
--- Equation(s):
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0) = VCC $ \Inc~combout\ $ (\inst14|inst13~regout\ $ ((!\Inc~combout\)))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\ = CARRY((VCC $ \Inc~combout\ & ((\inst14|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst14|inst13~regout\ & !\Inc~combout\)))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\ = CARRY((VCC $ \Inc~combout\ & ((\inst14|inst13~regout\) # (!\Inc~combout\))) # (!VCC $ \Inc~combout\ & (\inst14|inst13~regout\ & !\Inc~combout\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "698e",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst14|inst13~regout\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
-	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\);
-
--- Location: LC_X2_Y4_N0
-\inst14|inst13\ : maxv_lcell
--- Equation(s):
--- \inst2|$00000|auto_generated|result_node[0]~25\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[0]~24\))) # (!\inst47~regout\ & (E7_inst13)))
--- \inst14|inst13~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[0]~25\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fc30",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst47~regout\,
-	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(0),
-	datad => \inst2|$00000|auto_generated|result_node[0]~24\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst14|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[0]~25\,
-	regout => \inst14|inst13~regout\);
-
--- Location: LC_X4_Y4_N1
-\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]\ : maxv_lcell
--- Equation(s):
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1) = VCC $ \Inc~combout\ $ (\inst14|inst12~regout\ $ (((!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (\Inc~combout\ & 
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\))))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst14|inst12~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\) # (!\inst14|inst12~regout\))))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\ = CARRY((VCC $ \Inc~combout\ & (!\inst14|inst12~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\) # (!\inst14|inst12~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst14|inst12~regout\,
-	cin0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUT\,
-	cin1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[0]~COUTCOUT1_1\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\);
-
--- Location: LC_X2_Y4_N2
-\inst14|inst12\ : maxv_lcell
--- Equation(s):
--- \inst2|$00000|auto_generated|result_node[1]~23\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[1]~22\))) # (!\inst47~regout\ & (E7_inst12)))
--- \inst14|inst12~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[1]~23\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fc30",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst47~regout\,
-	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(1),
-	datad => \inst2|$00000|auto_generated|result_node[1]~22\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst14|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[1]~23\,
-	regout => \inst14|inst12~regout\);
-
--- Location: LC_X4_Y4_N2
-\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]\ : maxv_lcell
--- Equation(s):
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2) = VCC $ \Inc~combout\ $ (\inst14|inst11~regout\ $ (((!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\) # (\Inc~combout\ & 
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\ = CARRY((VCC $ \Inc~combout\ & (\inst14|inst11~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\)) # (!VCC $ \Inc~combout\ & ((\inst14|inst11~regout\) # 
--- (!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\))))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\ = CARRY((VCC $ \Inc~combout\ & (\inst14|inst11~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\)) # (!VCC $ \Inc~combout\ & 
--- ((\inst14|inst11~regout\) # (!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "964d",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst14|inst11~regout\,
-	cin0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUT\,
-	cin1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[1]~COUTCOUT1_2\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\);
-
--- Location: LC_X2_Y4_N1
-\inst14|inst11\ : maxv_lcell
--- Equation(s):
--- \inst2|$00000|auto_generated|result_node[2]~21\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[2]~20\))) # (!\inst47~regout\ & (E7_inst11)))
--- \inst14|inst11~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[2]~21\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fc30",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst47~regout\,
-	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(2),
-	datad => \inst2|$00000|auto_generated|result_node[2]~20\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst14|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[2]~21\,
-	regout => \inst14|inst11~regout\);
-
--- Location: LC_X4_Y4_N3
-\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]\ : maxv_lcell
--- Equation(s):
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3) = VCC $ \Inc~combout\ $ (\inst14|inst10~regout\ $ (((!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (\Inc~combout\ & 
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\))))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\ = CARRY((VCC $ \Inc~combout\ & (!\inst14|inst10~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\) # (!\inst14|inst10~regout\))))
--- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\ = CARRY((VCC $ \Inc~combout\ & (!\inst14|inst10~regout\ & !\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\)) # (!VCC $ \Inc~combout\ & 
--- ((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\) # (!\inst14|inst10~regout\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	lut_mask => "9617",
-	operation_mode => "arithmetic",
-	output_mode => "comb_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => VCC,
-	datab => \inst14|inst10~regout\,
-	cin0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUT\,
-	cin1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[2]~COUTCOUT1_3\,
-	inverta => \Inc~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\,
-	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUTCOUT1_4\);
-
--- Location: LC_X1_Y4_N7
-\inst14|inst10\ : maxv_lcell
--- Equation(s):
--- \inst2|$00000|auto_generated|result_node[3]~19\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[3]~18\))) # (!\inst47~regout\ & (E7_inst10)))
--- \inst14|inst10~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[3]~19\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3), , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "fc30",
-	operation_mode => "normal",
-	output_mode => "reg_and_comb",
-	register_cascade_mode => "off",
-	sum_lutc_input => "qfbk",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datab => \inst47~regout\,
-	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(3),
-	datad => \inst2|$00000|auto_generated|result_node[3]~18\,
-	aclr => GND,
-	sload => VCC,
-	ena => \inst14|inst1~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[3]~19\,
-	regout => \inst14|inst10~regout\);
-
--- Location: LC_X4_Y4_N4
+-- Location: LC_X4_Y6_N4
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(4) = VCC $ \Inc~combout\ $ (\inst14|inst9~regout\ $ ((!(!\Inc~combout\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[3]~COUT\) # (\Inc~combout\ & 
@@ -7065,11 +6311,11 @@ PORT MAP (
 	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
 	cout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\);
 
--- Location: LC_X1_Y4_N9
+-- Location: LC_X5_Y7_N1
 \inst14|inst9\ : maxv_lcell
 -- Equation(s):
--- \inst2|$00000|auto_generated|result_node[4]~17\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[4]~16\))) # (!\inst47~regout\ & (E7_inst9)))
--- \inst14|inst9~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[4]~17\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(4), , , VCC)
+-- \inst2|$00000|auto_generated|result_node[4]~15\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[4]~14\))) # (!\inst47~regout\ & (E7_inst9)))
+-- \inst14|inst9~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[4]~15\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(4), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7084,16 +6330,16 @@ PORT MAP (
 	clk => \RTC~combout\,
 	datab => \inst47~regout\,
 	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(4),
-	datad => \inst2|$00000|auto_generated|result_node[4]~16\,
+	datad => \inst2|$00000|auto_generated|result_node[4]~14\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst14|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[4]~17\,
+	combout => \inst2|$00000|auto_generated|result_node[4]~15\,
 	regout => \inst14|inst9~regout\);
 
--- Location: LC_X4_Y4_N5
+-- Location: LC_X4_Y6_N5
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(5) = VCC $ \Inc~combout\ $ (\inst14|inst8~regout\ $ ((\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\)))
@@ -7123,11 +6369,11 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[5]~COUTCOUT1_5\);
 
--- Location: LC_X2_Y4_N3
+-- Location: LC_X4_Y5_N6
 \inst14|inst8\ : maxv_lcell
 -- Equation(s):
--- \inst2|$00000|auto_generated|result_node[5]~15\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[5]~14\))) # (!\inst47~regout\ & (E7_inst8)))
--- \inst14|inst8~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[5]~15\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(5), , , VCC)
+-- \inst2|$00000|auto_generated|result_node[5]~17\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[5]~16\))) # (!\inst47~regout\ & (E7_inst8)))
+-- \inst14|inst8~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[5]~17\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(5), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7142,16 +6388,16 @@ PORT MAP (
 	clk => \RTC~combout\,
 	datab => \inst47~regout\,
 	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(5),
-	datad => \inst2|$00000|auto_generated|result_node[5]~14\,
+	datad => \inst2|$00000|auto_generated|result_node[5]~16\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst14|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[5]~15\,
+	combout => \inst2|$00000|auto_generated|result_node[5]~17\,
 	regout => \inst14|inst8~regout\);
 
--- Location: LC_X4_Y4_N6
+-- Location: LC_X4_Y6_N6
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(6) = VCC $ \Inc~combout\ $ (\inst14|inst7~regout\ $ ((!(!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -7186,7 +6432,7 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[6]~COUTCOUT1_6\);
 
--- Location: LC_X3_Y4_N7
+-- Location: LC_X4_Y5_N8
 \inst14|inst7\ : maxv_lcell
 -- Equation(s):
 -- \inst2|$00000|auto_generated|result_node[6]~13\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[6]~12\))) # (!\inst47~regout\ & (E7_inst7)))
@@ -7214,7 +6460,7 @@ PORT MAP (
 	combout => \inst2|$00000|auto_generated|result_node[6]~13\,
 	regout => \inst14|inst7~regout\);
 
--- Location: LC_X4_Y4_N7
+-- Location: LC_X4_Y6_N7
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(7) = VCC $ \Inc~combout\ $ (\inst14|inst6~regout\ $ (((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -7249,7 +6495,7 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[7]~COUTCOUT1_7\);
 
--- Location: LC_X3_Y4_N9
+-- Location: LC_X5_Y7_N2
 \inst14|inst6\ : maxv_lcell
 -- Equation(s):
 -- \inst2|$00000|auto_generated|result_node[7]~11\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[7]~10\))) # (!\inst47~regout\ & (E7_inst6)))
@@ -7277,7 +6523,7 @@ PORT MAP (
 	combout => \inst2|$00000|auto_generated|result_node[7]~11\,
 	regout => \inst14|inst6~regout\);
 
--- Location: LC_X4_Y4_N8
+-- Location: LC_X4_Y6_N8
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(8) = VCC $ \Inc~combout\ $ (\inst14|inst5~regout\ $ ((!(!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -7312,7 +6558,7 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[8]~COUTCOUT1_8\);
 
--- Location: LC_X3_Y4_N8
+-- Location: LC_X5_Y6_N4
 \inst14|inst5\ : maxv_lcell
 -- Equation(s):
 -- \inst2|$00000|auto_generated|result_node[8]~9\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[8]~8\))) # (!\inst47~regout\ & (E7_inst5)))
@@ -7340,7 +6586,7 @@ PORT MAP (
 	combout => \inst2|$00000|auto_generated|result_node[8]~9\,
 	regout => \inst14|inst5~regout\);
 
--- Location: LC_X4_Y4_N9
+-- Location: LC_X4_Y6_N9
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(9) = VCC $ \Inc~combout\ $ (\inst14|inst4~regout\ $ (((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[4]~COUT\ & 
@@ -7372,7 +6618,7 @@ PORT MAP (
 	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(9),
 	cout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\);
 
--- Location: LC_X5_Y4_N3
+-- Location: LC_X5_Y6_N6
 \inst14|inst4\ : maxv_lcell
 -- Equation(s):
 -- \inst2|$00000|auto_generated|result_node[9]~7\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[9]~6\))) # (!\inst47~regout\ & (E7_inst4)))
@@ -7400,7 +6646,7 @@ PORT MAP (
 	combout => \inst2|$00000|auto_generated|result_node[9]~7\,
 	regout => \inst14|inst4~regout\);
 
--- Location: LC_X5_Y4_N0
+-- Location: LC_X5_Y6_N0
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(10) = VCC $ \Inc~combout\ $ (\inst14|inst3~regout\ $ ((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\)))
@@ -7430,7 +6676,7 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[10]~COUTCOUT1_9\);
 
--- Location: LC_X5_Y4_N7
+-- Location: LC_X5_Y6_N5
 \inst14|inst3\ : maxv_lcell
 -- Equation(s):
 -- \inst2|$00000|auto_generated|result_node[10]~5\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[10]~4\))) # (!\inst47~regout\ & (E7_inst3)))
@@ -7458,7 +6704,7 @@ PORT MAP (
 	combout => \inst2|$00000|auto_generated|result_node[10]~5\,
 	regout => \inst14|inst3~regout\);
 
--- Location: LC_X5_Y4_N1
+-- Location: LC_X5_Y6_N1
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(11) = VCC $ \Inc~combout\ $ (\inst14|inst2~regout\ $ (((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & 
@@ -7493,11 +6739,359 @@ PORT MAP (
 	cout0 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
 	cout1 => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\);
 
--- Location: LC_X5_Y4_N9
-\inst14|inst2\ : maxv_lcell
+-- Location: LC_X9_Y6_N5
+\inst3|$00000|auto_generated|result_node[11]~15\ : maxv_lcell
 -- Equation(s):
--- \inst2|$00000|auto_generated|result_node[11]~3\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[11]~2\))) # (!\inst47~regout\ & (E7_inst2)))
--- \inst14|inst2~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[11]~3\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(11), , , VCC)
+-- \inst3|$00000|auto_generated|result_node[11]~15_combout\ = ((\hiTrueSetDisp~combout\ & ((\inst2|$00000|auto_generated|result_node[11]~3\))) # (!\hiTrueSetDisp~combout\ & (\inst5|$00000|auto_generated|result_node[11]~1\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \hiTrueSetDisp~combout\,
+	datac => \inst5|$00000|auto_generated|result_node[11]~1\,
+	datad => \inst2|$00000|auto_generated|result_node[11]~3\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[11]~15_combout\);
+
+-- Location: LC_X10_Y7_N7
+\inst6|LPM_SHIFTREG_component|dffs[8]\ : maxv_lcell
+-- Equation(s):
+-- \inst6|LPM_SHIFTREG_component|dffs\(8) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(7), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(7),
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|ALT_INV_freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst6|LPM_SHIFTREG_component|dffs\(8));
+
+-- Location: LC_X10_Y7_N4
+\inst6|LPM_SHIFTREG_component|dffs[9]\ : maxv_lcell
+-- Equation(s):
+-- \inst6|LPM_SHIFTREG_component|dffs\(9) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(8), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(8),
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|ALT_INV_freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst6|LPM_SHIFTREG_component|dffs\(9));
+
+-- Location: LC_X11_Y7_N4
+\inst6|LPM_SHIFTREG_component|dffs[10]\ : maxv_lcell
+-- Equation(s):
+-- \inst6|LPM_SHIFTREG_component|dffs\(10) = DFFEAS((((\inst6|LPM_SHIFTREG_component|dffs\(9)))), GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ff00",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datad => \inst6|LPM_SHIFTREG_component|dffs\(9),
+	aclr => GND,
+	ena => \inst34|ALT_INV_freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst6|LPM_SHIFTREG_component|dffs\(10));
+
+-- Location: LC_X12_Y7_N5
+\inst6|LPM_SHIFTREG_component|dffs[11]\ : maxv_lcell
+-- Equation(s):
+-- \inst6|LPM_SHIFTREG_component|dffs\(11) = DFFEAS((((\inst6|LPM_SHIFTREG_component|dffs\(10)))), GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ff00",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datad => \inst6|LPM_SHIFTREG_component|dffs\(10),
+	aclr => GND,
+	ena => \inst34|ALT_INV_freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst6|LPM_SHIFTREG_component|dffs\(11));
+
+-- Location: LC_X12_Y7_N7
+\inst6|LPM_SHIFTREG_component|dffs[12]\ : maxv_lcell
+-- Equation(s):
+-- \inst6|LPM_SHIFTREG_component|dffs\(12) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(11), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(11),
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|ALT_INV_freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst6|LPM_SHIFTREG_component|dffs\(12));
+
+-- Location: LC_X12_Y7_N9
+\inst6|LPM_SHIFTREG_component|dffs[13]\ : maxv_lcell
+-- Equation(s):
+-- \inst6|LPM_SHIFTREG_component|dffs\(13) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(12), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(12),
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|ALT_INV_freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst6|LPM_SHIFTREG_component|dffs\(13));
+
+-- Location: LC_X12_Y7_N6
+\inst6|LPM_SHIFTREG_component|dffs[14]\ : maxv_lcell
+-- Equation(s):
+-- \inst6|LPM_SHIFTREG_component|dffs\(14) = DFFEAS((((\inst6|LPM_SHIFTREG_component|dffs\(13)))), GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ff00",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datad => \inst6|LPM_SHIFTREG_component|dffs\(13),
+	aclr => GND,
+	ena => \inst34|ALT_INV_freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst6|LPM_SHIFTREG_component|dffs\(14));
+
+-- Location: LC_X12_Y7_N3
+\inst38|inst2\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[11]~16\ = (\inst50~regout\ & (\inst3|$00000|auto_generated|result_node[11]~15_combout\)) # (!\inst50~regout\ & (((E4_inst2))))
+-- \inst38|inst2~regout\ = DFFEAS(\inst3|$00000|auto_generated|result_node[11]~16\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(14), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "b8b8",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	dataa => \inst3|$00000|auto_generated|result_node[11]~15_combout\,
+	datab => \inst50~regout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(14),
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[11]~16\,
+	regout => \inst38|inst2~regout\);
+
+-- Location: LC_X12_Y7_N1
+\inst6|LPM_SHIFTREG_component|dffs[15]\ : maxv_lcell
+-- Equation(s):
+-- \inst6|LPM_SHIFTREG_component|dffs\(15) = DFFEAS(GND, GLOBAL(\RTC~combout\), VCC, , !\inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(14), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0000",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(14),
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|ALT_INV_freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst6|LPM_SHIFTREG_component|dffs\(15));
+
+-- Location: LC_X12_Y5_N2
+\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
+-- Equation(s):
+-- \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
+-- (\inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst9|inst1~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "5aa5",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datad => \inst9|inst1~regout\,
+	cin => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
+	cin0 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
+	cin1 => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
+
+-- Location: LC_X12_Y5_N6
+\inst9|inst1\ : maxv_lcell
+-- Equation(s):
+-- \inst9|inst1~regout\ = DFFEAS((((\inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))), GLOBAL(\RTC~combout\), VCC, , \inst9|inst1~0_combout\, , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ff00",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datad => \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
+	aclr => GND,
+	ena => \inst9|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst9|inst1~regout\);
+
+-- Location: LC_X8_Y5_N8
+\inst10|inst1\ : maxv_lcell
+-- Equation(s):
+-- \inst5|$00000|auto_generated|result_node[12]~2\ = ((\inst49~regout\ & (E2_inst1)) # (!\inst49~regout\ & ((\inst9|inst1~regout\))))
+-- \inst10|inst1~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[12]~2\, GLOBAL(\RTC~combout\), VCC, , \inst10|inst1~0_combout\, \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f3c0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst49~regout\,
+	datac => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
+	datad => \inst9|inst1~regout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst10|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst5|$00000|auto_generated|result_node[12]~2\,
+	regout => \inst10|inst1~regout\);
+
+-- Location: LC_X8_Y5_N2
+\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
+-- Equation(s):
+-- \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
+-- (\inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst10|inst1~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "5aa5",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datad => \inst10|inst1~regout\,
+	cin => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
+	cin0 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
+	cin1 => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
+
+-- Location: LC_X9_Y6_N8
+\inst11|inst1\ : maxv_lcell
+-- Equation(s):
+-- \inst5|$00000|auto_generated|result_node[12]~3\ = ((\inst47~regout\ & ((\inst5|$00000|auto_generated|result_node[12]~2\))) # (!\inst47~regout\ & (E3_inst1)))
+-- \inst11|inst1~regout\ = DFFEAS(\inst5|$00000|auto_generated|result_node[12]~3\, GLOBAL(\RTC~combout\), VCC, , \inst11|inst1~0_combout\, \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12), , , VCC)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7511,17 +7105,888 @@ GENERIC MAP (
 PORT MAP (
 	clk => \RTC~combout\,
 	datab => \inst47~regout\,
-	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(11),
-	datad => \inst2|$00000|auto_generated|result_node[11]~2\,
+	datac => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
+	datad => \inst5|$00000|auto_generated|result_node[12]~2\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst11|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst5|$00000|auto_generated|result_node[12]~3\,
+	regout => \inst11|inst1~regout\);
+
+-- Location: LC_X9_Y6_N2
+\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
+-- Equation(s):
+-- \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
+-- (\inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst11|inst1~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "5aa5",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datad => \inst11|inst1~regout\,
+	cin => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
+	cin0 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
+	cin1 => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
+
+-- Location: LC_X11_Y6_N7
+\inst38|inst1\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\ = (\inst38|inst2~regout\ & (\inst5|$00000|auto_generated|result_node[11]~1\ & (E4_inst1 $ (!\inst5|$00000|auto_generated|result_node[12]~3\)))) # (!\inst38|inst2~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[11]~1\ & (E4_inst1 $ (!\inst5|$00000|auto_generated|result_node[12]~3\))))
+-- \inst38|inst1~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(15), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "9009",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	dataa => \inst38|inst2~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[11]~1\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(15),
+	datad => \inst5|$00000|auto_generated|result_node[12]~3\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\,
+	regout => \inst38|inst1~regout\);
+
+-- Location: LC_X7_Y6_N6
+\inst3|$00000|auto_generated|result_node[9]~19\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[9]~19_combout\ = (\hiTrueSetDisp~combout\ & (((\inst2|$00000|auto_generated|result_node[9]~7\)))) # (!\hiTrueSetDisp~combout\ & (((\inst5|$00000|auto_generated|result_node[9]~5\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f5a0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \hiTrueSetDisp~combout\,
+	datac => \inst2|$00000|auto_generated|result_node[9]~7\,
+	datad => \inst5|$00000|auto_generated|result_node[9]~5\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[9]~19_combout\);
+
+-- Location: LC_X12_Y7_N2
+\inst38|inst4\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[9]~20\ = ((\inst50~regout\ & ((\inst3|$00000|auto_generated|result_node[9]~19_combout\))) # (!\inst50~regout\ & (E4_inst4)))
+-- \inst38|inst4~regout\ = DFFEAS(\inst3|$00000|auto_generated|result_node[9]~20\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(12), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst50~regout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(12),
+	datad => \inst3|$00000|auto_generated|result_node[9]~19_combout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[9]~20\,
+	regout => \inst38|inst4~regout\);
+
+-- Location: LC_X12_Y6_N9
+\inst38|inst3\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\ = (\inst38|inst4~regout\ & (\inst5|$00000|auto_generated|result_node[9]~5\ & (\inst5|$00000|auto_generated|result_node[10]~7\ $ (!E4_inst3)))) # (!\inst38|inst4~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[9]~5\ & (\inst5|$00000|auto_generated|result_node[10]~7\ $ (!E4_inst3))))
+-- \inst38|inst3~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(13), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "8241",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	dataa => \inst38|inst4~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[10]~7\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(13),
+	datad => \inst5|$00000|auto_generated|result_node[9]~5\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\,
+	regout => \inst38|inst3~regout\);
+
+-- Location: LC_X9_Y7_N0
+\inst3|$00000|auto_generated|result_node[5]~29\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[5]~29_combout\ = (\hiTrueSetDisp~combout\ & (((\inst2|$00000|auto_generated|result_node[5]~17\)))) # (!\hiTrueSetDisp~combout\ & (((\inst5|$00000|auto_generated|result_node[5]~13\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fa50",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \hiTrueSetDisp~combout\,
+	datac => \inst5|$00000|auto_generated|result_node[5]~13\,
+	datad => \inst2|$00000|auto_generated|result_node[5]~17\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[5]~29_combout\);
+
+-- Location: LC_X10_Y7_N8
+\inst38|inst8\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[5]~30\ = (\inst50~regout\ & (((\inst3|$00000|auto_generated|result_node[5]~29_combout\)))) # (!\inst50~regout\ & (((E4_inst8))))
+-- \inst38|inst8~regout\ = DFFEAS(\inst3|$00000|auto_generated|result_node[5]~30\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(8), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fa50",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	dataa => \inst50~regout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(8),
+	datad => \inst3|$00000|auto_generated|result_node[5]~29_combout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[5]~30\,
+	regout => \inst38|inst8~regout\);
+
+-- Location: LC_X10_Y6_N4
+\inst24|LPM_COMPARE_component|auto_generated|op_1~62\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\ = CARRY((\inst38|inst13~regout\ & (!\inst5|$00000|auto_generated|result_node[0]~25\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ff22",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst13~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[0]~25\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~60\,
+	cout => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\);
+
+-- Location: LC_X10_Y6_N5
+\inst24|LPM_COMPARE_component|auto_generated|op_1~57\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\ = CARRY((\inst38|inst12~regout\ & (\inst5|$00000|auto_generated|result_node[1]~21\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\)) # (!\inst38|inst12~regout\ & 
+-- ((\inst5|$00000|auto_generated|result_node[1]~21\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\))))
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\ = CARRY((\inst38|inst12~regout\ & (\inst5|$00000|auto_generated|result_node[1]~21\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\)) # (!\inst38|inst12~regout\ & 
+-- ((\inst5|$00000|auto_generated|result_node[1]~21\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin_used => "true",
+	lut_mask => "ff4d",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst12~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[1]~21\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~55\,
+	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\,
+	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\);
+
+-- Location: LC_X10_Y6_N6
+\inst24|LPM_COMPARE_component|auto_generated|op_1~52\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\ = CARRY((\inst38|inst11~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\) # (!\inst5|$00000|auto_generated|result_node[2]~23\))) # (!\inst38|inst11~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[2]~23\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\)))
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\ = CARRY((\inst38|inst11~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\) # (!\inst5|$00000|auto_generated|result_node[2]~23\))) # (!\inst38|inst11~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[2]~23\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "ff2b",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst11~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[2]~23\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
+	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~57_cout0\,
+	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~50\,
+	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\,
+	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\);
+
+-- Location: LC_X10_Y6_N7
+\inst24|LPM_COMPARE_component|auto_generated|op_1~47\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\ = CARRY((\inst5|$00000|auto_generated|result_node[3]~17\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\) # (!\inst38|inst10~regout\))) # 
+-- (!\inst5|$00000|auto_generated|result_node[3]~17\ & (!\inst38|inst10~regout\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\)))
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\ = CARRY((\inst5|$00000|auto_generated|result_node[3]~17\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\) # (!\inst38|inst10~regout\))) # 
+-- (!\inst5|$00000|auto_generated|result_node[3]~17\ & (!\inst38|inst10~regout\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "ff2b",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst5|$00000|auto_generated|result_node[3]~17\,
+	datab => \inst38|inst10~regout\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
+	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~52_cout0\,
+	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~45\,
+	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\,
+	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\);
+
+-- Location: LC_X10_Y6_N8
+\inst24|LPM_COMPARE_component|auto_generated|op_1~42\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~42_cout0\ = CARRY((\inst38|inst9~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\) # (!\inst5|$00000|auto_generated|result_node[4]~19\))) # (!\inst38|inst9~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[4]~19\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\)))
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\ = CARRY((\inst38|inst9~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\) # (!\inst5|$00000|auto_generated|result_node[4]~19\))) # (!\inst38|inst9~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[4]~19\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "ff2b",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst9~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[4]~19\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
+	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~47_cout0\,
+	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~40\,
+	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~42_cout0\,
+	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\);
+
+-- Location: LC_X10_Y6_N9
+\inst24|LPM_COMPARE_component|auto_generated|op_1~37\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\ = CARRY((\inst5|$00000|auto_generated|result_node[5]~13\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\) # (!\inst38|inst8~regout\))) # 
+-- (!\inst5|$00000|auto_generated|result_node[5]~13\ & (!\inst38|inst8~regout\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "ff2b",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst5|$00000|auto_generated|result_node[5]~13\,
+	datab => \inst38|inst8~regout\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
+	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~42_cout0\,
+	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~35\,
+	cout => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\);
+
+-- Location: LC_X9_Y7_N6
+\inst3|$00000|auto_generated|result_node[7]~23\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[7]~23_combout\ = (\hiTrueSetDisp~combout\ & (((\inst2|$00000|auto_generated|result_node[7]~11\)))) # (!\hiTrueSetDisp~combout\ & (\inst5|$00000|auto_generated|result_node[7]~9\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ee44",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \hiTrueSetDisp~combout\,
+	datab => \inst5|$00000|auto_generated|result_node[7]~9\,
+	datad => \inst2|$00000|auto_generated|result_node[7]~11\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[7]~23_combout\);
+
+-- Location: LC_X12_Y7_N4
+\inst38|inst6\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[7]~24\ = ((\inst50~regout\ & ((\inst3|$00000|auto_generated|result_node[7]~23_combout\))) # (!\inst50~regout\ & (E4_inst6)))
+-- \inst38|inst6~regout\ = DFFEAS(\inst3|$00000|auto_generated|result_node[7]~24\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(10), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst50~regout\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(10),
+	datad => \inst3|$00000|auto_generated|result_node[7]~23_combout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[7]~24\,
+	regout => \inst38|inst6~regout\);
+
+-- Location: LC_X10_Y7_N1
+\inst38|inst5\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\ = (\inst38|inst6~regout\ & (\inst5|$00000|auto_generated|result_node[7]~9\ & (E4_inst5 $ (!\inst5|$00000|auto_generated|result_node[8]~11\)))) # (!\inst38|inst6~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[7]~9\ & (E4_inst5 $ (!\inst5|$00000|auto_generated|result_node[8]~11\))))
+-- \inst38|inst5~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(11), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "9009",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	dataa => \inst38|inst6~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[7]~9\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(11),
+	datad => \inst5|$00000|auto_generated|result_node[8]~11\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\,
+	regout => \inst38|inst5~regout\);
+
+-- Location: LC_X10_Y7_N0
+\inst38|inst7\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\ = (\inst38|inst8~regout\ & (\inst5|$00000|auto_generated|result_node[5]~13\ & (\inst5|$00000|auto_generated|result_node[6]~15\ $ (!E4_inst7)))) # (!\inst38|inst8~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[5]~13\ & (\inst5|$00000|auto_generated|result_node[6]~15\ $ (!E4_inst7))))
+-- \inst38|inst7~regout\ = DFFEAS(\inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\, GLOBAL(\RTC~combout\), VCC, , \inst34|freezeParalell\, \inst6|LPM_SHIFTREG_component|dffs\(9), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "8241",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	dataa => \inst38|inst8~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[6]~15\,
+	datac => \inst6|LPM_SHIFTREG_component|dffs\(9),
+	datad => \inst5|$00000|auto_generated|result_node[5]~13\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst34|freezeParalell\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\,
+	regout => \inst38|inst7~regout\);
+
+-- Location: LC_X11_Y6_N0
+\inst24|LPM_COMPARE_component|auto_generated|op_1~32\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\ = CARRY((\inst38|inst7~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\) # (!\inst5|$00000|auto_generated|result_node[6]~15\))) # (!\inst38|inst7~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[6]~15\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\)))
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\ = CARRY((\inst38|inst7~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\) # (!\inst5|$00000|auto_generated|result_node[6]~15\))) # (!\inst38|inst7~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[6]~15\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin_used => "true",
+	lut_mask => "ff2b",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst7~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[6]~15\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~30\,
+	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\,
+	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\);
+
+-- Location: LC_X11_Y6_N1
+\inst24|LPM_COMPARE_component|auto_generated|op_1~27\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\ = CARRY((\inst38|inst6~regout\ & (\inst5|$00000|auto_generated|result_node[7]~9\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\)) # (!\inst38|inst6~regout\ & 
+-- ((\inst5|$00000|auto_generated|result_node[7]~9\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\))))
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\ = CARRY((\inst38|inst6~regout\ & (\inst5|$00000|auto_generated|result_node[7]~9\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\)) # (!\inst38|inst6~regout\ & 
+-- ((\inst5|$00000|auto_generated|result_node[7]~9\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "ff4d",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst6~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[7]~9\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
+	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~32_cout0\,
+	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~25\,
+	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\,
+	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\);
+
+-- Location: LC_X11_Y6_N2
+\inst24|LPM_COMPARE_component|auto_generated|op_1~22\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\ = CARRY((\inst5|$00000|auto_generated|result_node[8]~11\ & (\inst38|inst5~regout\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\)) # 
+-- (!\inst5|$00000|auto_generated|result_node[8]~11\ & ((\inst38|inst5~regout\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\))))
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\ = CARRY((\inst5|$00000|auto_generated|result_node[8]~11\ & (\inst38|inst5~regout\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\)) # 
+-- (!\inst5|$00000|auto_generated|result_node[8]~11\ & ((\inst38|inst5~regout\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "ff4d",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst5|$00000|auto_generated|result_node[8]~11\,
+	datab => \inst38|inst5~regout\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
+	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~27_cout0\,
+	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~20\,
+	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\,
+	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\);
+
+-- Location: LC_X11_Y6_N3
+\inst24|LPM_COMPARE_component|auto_generated|op_1~17\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~17_cout0\ = CARRY((\inst38|inst4~regout\ & (\inst5|$00000|auto_generated|result_node[9]~5\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\)) # (!\inst38|inst4~regout\ & 
+-- ((\inst5|$00000|auto_generated|result_node[9]~5\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\))))
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\ = CARRY((\inst38|inst4~regout\ & (\inst5|$00000|auto_generated|result_node[9]~5\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\)) # (!\inst38|inst4~regout\ & 
+-- ((\inst5|$00000|auto_generated|result_node[9]~5\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "ff4d",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst4~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[9]~5\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
+	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~22_cout0\,
+	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~15\,
+	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~17_cout0\,
+	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\);
+
+-- Location: LC_X11_Y6_N4
+\inst24|LPM_COMPARE_component|auto_generated|op_1~12\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ = CARRY((\inst38|inst3~regout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\) # (!\inst5|$00000|auto_generated|result_node[10]~7\))) # (!\inst38|inst3~regout\ & 
+-- (!\inst5|$00000|auto_generated|result_node[10]~7\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "ff2b",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst3~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[10]~7\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
+	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~17_cout0\,
+	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~10\,
+	cout => \inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\);
+
+-- Location: LC_X11_Y6_N5
+\inst24|LPM_COMPARE_component|auto_generated|op_1~7\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\ = CARRY((\inst38|inst2~regout\ & (\inst5|$00000|auto_generated|result_node[11]~1\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\)) # (!\inst38|inst2~regout\ & 
+-- ((\inst5|$00000|auto_generated|result_node[11]~1\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\))))
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\ = CARRY((\inst38|inst2~regout\ & (\inst5|$00000|auto_generated|result_node[11]~1\ & !\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\)) # (!\inst38|inst2~regout\ & 
+-- ((\inst5|$00000|auto_generated|result_node[11]~1\) # (!\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin_used => "true",
+	lut_mask => "ff4d",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst2~regout\,
+	datab => \inst5|$00000|auto_generated|result_node[11]~1\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~5\,
+	cout0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\,
+	cout1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\);
+
+-- Location: LC_X11_Y6_N6
+\inst24|LPM_COMPARE_component|auto_generated|op_1~0\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~0_combout\ = ((\inst38|inst1~regout\ & (!(!\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\) # 
+-- (\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\) & \inst5|$00000|auto_generated|result_node[12]~3\)) # (!\inst38|inst1~regout\ & ((\inst5|$00000|auto_generated|result_node[12]~3\) 
+-- # (!(!\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\) # (\inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & 
+-- \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "3f03",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst38|inst1~regout\,
+	datad => \inst5|$00000|auto_generated|result_node[12]~3\,
+	cin => \inst24|LPM_COMPARE_component|auto_generated|op_1~12_cout\,
+	cin0 => \inst24|LPM_COMPARE_component|auto_generated|op_1~7_cout0\,
+	cin1 => \inst24|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|op_1~0_combout\);
+
+-- Location: LC_X11_Y6_N8
+\inst24|LPM_COMPARE_component|auto_generated|aeb_int~4\ : maxv_lcell
+-- Equation(s):
+-- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~4_combout\ = (\inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\ & (\inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\ & (\inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\ & 
+-- \inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "8000",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~2\,
+	datab => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~3\,
+	datac => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~1\,
+	datad => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~0\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~4_combout\);
+
+-- Location: LC_X11_Y6_N9
+inst44 : maxv_lcell
+-- Equation(s):
+-- \inst44~regout\ = DFFEAS(((!\inst24|LPM_COMPARE_component|auto_generated|op_1~0_combout\ & ((!\inst24|LPM_COMPARE_component|auto_generated|aeb_int~4_combout\) # (!\inst24|LPM_COMPARE_component|auto_generated|aeb_int~7\)))), GLOBAL(\inst36~combout\), VCC, 
+-- , , , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "030f",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \inst36~combout\,
+	datab => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~7\,
+	datac => \inst24|LPM_COMPARE_component|auto_generated|op_1~0_combout\,
+	datad => \inst24|LPM_COMPARE_component|auto_generated|aeb_int~4_combout\,
+	aclr => GND,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst44~regout\);
+
+-- Location: LC_X8_Y4_N2
+\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
+-- Equation(s):
+-- \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
+-- (\inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst12|inst1~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "5aa5",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datad => \inst12|inst1~regout\,
+	cin => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
+	cin0 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
+	cin1 => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
+
+-- Location: LC_X8_Y4_N4
+\inst12|inst1\ : maxv_lcell
+-- Equation(s):
+-- \inst12|inst1~regout\ = DFFEAS((((\inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12)))), GLOBAL(\RTC~combout\), VCC, , \inst12|inst1~0_combout\, , , , )
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ff00",
+	operation_mode => "normal",
+	output_mode => "reg_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datad => \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
+	aclr => GND,
+	ena => \inst12|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	regout => \inst12|inst1~regout\);
+
+-- Location: LC_X6_Y5_N5
+\inst13|inst1\ : maxv_lcell
+-- Equation(s):
+-- \inst2|$00000|auto_generated|result_node[12]~0\ = ((\inst49~regout\ & (E6_inst1)) # (!\inst49~regout\ & ((\inst12|inst1~regout\))))
+-- \inst13|inst1~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[12]~0\, GLOBAL(\RTC~combout\), VCC, , \inst13|inst1~0_combout\, \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f3c0",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst49~regout\,
+	datac => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
+	datad => \inst12|inst1~regout\,
+	aclr => GND,
+	sload => VCC,
+	ena => \inst13|inst1~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst2|$00000|auto_generated|result_node[12]~0\,
+	regout => \inst13|inst1~regout\);
+
+-- Location: LC_X6_Y5_N2
+\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
+-- Equation(s):
+-- \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
+-- (\inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\) $ (!\inst13|inst1~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "5aa5",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => VCC,
+	datad => \inst13|inst1~regout\,
+	cin => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\,
+	cin0 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\,
+	cin1 => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUTCOUT1_10\,
+	inverta => \Inc~combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
+
+-- Location: LC_X5_Y6_N3
+\inst14|inst1\ : maxv_lcell
+-- Equation(s):
+-- \inst2|$00000|auto_generated|result_node[12]~1\ = ((\inst47~regout\ & ((\inst2|$00000|auto_generated|result_node[12]~0\))) # (!\inst47~regout\ & (E7_inst1)))
+-- \inst14|inst1~regout\ = DFFEAS(\inst2|$00000|auto_generated|result_node[12]~1\, GLOBAL(\RTC~combout\), VCC, , \inst14|inst1~0_combout\, \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12), , , VCC)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "reg_and_comb",
+	register_cascade_mode => "off",
+	sum_lutc_input => "qfbk",
+	synch_mode => "on")
+-- pragma translate_on
+PORT MAP (
+	clk => \RTC~combout\,
+	datab => \inst47~regout\,
+	datac => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12),
+	datad => \inst2|$00000|auto_generated|result_node[12]~0\,
 	aclr => GND,
 	sload => VCC,
 	ena => \inst14|inst1~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst2|$00000|auto_generated|result_node[11]~3\,
-	regout => \inst14|inst2~regout\);
+	combout => \inst2|$00000|auto_generated|result_node[12]~1\,
+	regout => \inst14|inst1~regout\);
 
--- Location: LC_X5_Y4_N2
+-- Location: LC_X5_Y6_N2
 \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[12]\ : maxv_lcell
 -- Equation(s):
 -- \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12) = VCC $ \Inc~combout\ $ ((((!\inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[9]~COUT\ & \inst14|inst|LPM_ADD_SUB_component|stratix_adder|add_sub_cell[11]~COUT\) # 
@@ -7550,14 +8015,14 @@ PORT MAP (
 	devpor => ww_devpor,
 	combout => \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\(12));
 
--- Location: LC_X2_Y4_N4
+-- Location: LC_X5_Y7_N4
 \inst23|LPM_COMPARE_component|auto_generated|op_1~62\ : maxv_lcell
 -- Equation(s):
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~62_cout\ = CARRY((\inst38|inst13~regout\ & (!\inst2|$00000|auto_generated|result_node[0]~25\)))
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~62_cout\ = CARRY((!\inst2|$00000|auto_generated|result_node[0]~25\ & (\inst38|inst13~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "ff22",
+	lut_mask => "ff44",
 	operation_mode => "arithmetic",
 	output_mode => "none",
 	register_cascade_mode => "off",
@@ -7565,14 +8030,14 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst38|inst13~regout\,
-	datab => \inst2|$00000|auto_generated|result_node[0]~25\,
+	dataa => \inst2|$00000|auto_generated|result_node[0]~25\,
+	datab => \inst38|inst13~regout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	combout => \inst23|LPM_COMPARE_component|auto_generated|op_1~60\,
 	cout => \inst23|LPM_COMPARE_component|auto_generated|op_1~62_cout\);
 
--- Location: LC_X2_Y4_N5
+-- Location: LC_X5_Y7_N5
 \inst23|LPM_COMPARE_component|auto_generated|op_1~57\ : maxv_lcell
 -- Equation(s):
 -- \inst23|LPM_COMPARE_component|auto_generated|op_1~57_cout0\ = CARRY((\inst38|inst12~regout\ & (\inst2|$00000|auto_generated|result_node[1]~23\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~62_cout\)) # (!\inst38|inst12~regout\ & 
@@ -7600,20 +8065,20 @@ PORT MAP (
 	cout0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~57_cout0\,
 	cout1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\);
 
--- Location: LC_X2_Y4_N6
+-- Location: LC_X5_Y7_N6
 \inst23|LPM_COMPARE_component|auto_generated|op_1~52\ : maxv_lcell
 -- Equation(s):
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~52_cout0\ = CARRY((\inst38|inst11~regout\ & ((!\inst23|LPM_COMPARE_component|auto_generated|op_1~57_cout0\) # (!\inst2|$00000|auto_generated|result_node[2]~21\))) # (!\inst38|inst11~regout\ & 
--- (!\inst2|$00000|auto_generated|result_node[2]~21\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~57_cout0\)))
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\ = CARRY((\inst38|inst11~regout\ & ((!\inst23|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\) # (!\inst2|$00000|auto_generated|result_node[2]~21\))) # (!\inst38|inst11~regout\ & 
--- (!\inst2|$00000|auto_generated|result_node[2]~21\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\)))
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~52_cout0\ = CARRY((\inst2|$00000|auto_generated|result_node[2]~19\ & (\inst38|inst11~regout\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~57_cout0\)) # 
+-- (!\inst2|$00000|auto_generated|result_node[2]~19\ & ((\inst38|inst11~regout\) # (!\inst23|LPM_COMPARE_component|auto_generated|op_1~57_cout0\))))
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\ = CARRY((\inst2|$00000|auto_generated|result_node[2]~19\ & (\inst38|inst11~regout\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\)) # 
+-- (!\inst2|$00000|auto_generated|result_node[2]~19\ & ((\inst38|inst11~regout\) # (!\inst23|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\))))
 
 -- pragma translate_off
 GENERIC MAP (
 	cin0_used => "true",
 	cin1_used => "true",
 	cin_used => "true",
-	lut_mask => "ff2b",
+	lut_mask => "ff4d",
 	operation_mode => "arithmetic",
 	output_mode => "none",
 	register_cascade_mode => "off",
@@ -7621,8 +8086,8 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst38|inst11~regout\,
-	datab => \inst2|$00000|auto_generated|result_node[2]~21\,
+	dataa => \inst2|$00000|auto_generated|result_node[2]~19\,
+	datab => \inst38|inst11~regout\,
 	cin => \inst23|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
 	cin0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~57_cout0\,
 	cin1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~57COUT1_66\,
@@ -7632,75 +8097,13 @@ PORT MAP (
 	cout0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~52_cout0\,
 	cout1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\);
 
--- Location: LC_X2_Y4_N7
+-- Location: LC_X5_Y7_N7
 \inst23|LPM_COMPARE_component|auto_generated|op_1~47\ : maxv_lcell
 -- Equation(s):
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~47_cout0\ = CARRY((\inst38|inst10~regout\ & (\inst2|$00000|auto_generated|result_node[3]~19\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~52_cout0\)) # (!\inst38|inst10~regout\ & 
--- ((\inst2|$00000|auto_generated|result_node[3]~19\) # (!\inst23|LPM_COMPARE_component|auto_generated|op_1~52_cout0\))))
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\ = CARRY((\inst38|inst10~regout\ & (\inst2|$00000|auto_generated|result_node[3]~19\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\)) # (!\inst38|inst10~regout\ & 
--- ((\inst2|$00000|auto_generated|result_node[3]~19\) # (!\inst23|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "ff4d",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst38|inst10~regout\,
-	datab => \inst2|$00000|auto_generated|result_node[3]~19\,
-	cin => \inst23|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
-	cin0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~52_cout0\,
-	cin1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst23|LPM_COMPARE_component|auto_generated|op_1~45\,
-	cout0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~47_cout0\,
-	cout1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\);
-
--- Location: LC_X2_Y4_N8
-\inst23|LPM_COMPARE_component|auto_generated|op_1~42\ : maxv_lcell
--- Equation(s):
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~42_cout0\ = CARRY((\inst2|$00000|auto_generated|result_node[4]~17\ & (\inst38|inst9~regout\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~47_cout0\)) # 
--- (!\inst2|$00000|auto_generated|result_node[4]~17\ & ((\inst38|inst9~regout\) # (!\inst23|LPM_COMPARE_component|auto_generated|op_1~47_cout0\))))
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\ = CARRY((\inst2|$00000|auto_generated|result_node[4]~17\ & (\inst38|inst9~regout\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\)) # 
--- (!\inst2|$00000|auto_generated|result_node[4]~17\ & ((\inst38|inst9~regout\) # (!\inst23|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\))))
-
--- pragma translate_off
-GENERIC MAP (
-	cin0_used => "true",
-	cin1_used => "true",
-	cin_used => "true",
-	lut_mask => "ff4d",
-	operation_mode => "arithmetic",
-	output_mode => "none",
-	register_cascade_mode => "off",
-	sum_lutc_input => "cin",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \inst2|$00000|auto_generated|result_node[4]~17\,
-	datab => \inst38|inst9~regout\,
-	cin => \inst23|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
-	cin0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~47_cout0\,
-	cin1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	combout => \inst23|LPM_COMPARE_component|auto_generated|op_1~40\,
-	cout0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~42_cout0\,
-	cout1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\);
-
--- Location: LC_X2_Y4_N9
-\inst23|LPM_COMPARE_component|auto_generated|op_1~37\ : maxv_lcell
--- Equation(s):
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~37_cout\ = CARRY((\inst2|$00000|auto_generated|result_node[5]~15\ & ((!\inst23|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\) # (!\inst38|inst8~regout\))) # 
--- (!\inst2|$00000|auto_generated|result_node[5]~15\ & (!\inst38|inst8~regout\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\)))
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~47_cout0\ = CARRY((\inst2|$00000|auto_generated|result_node[3]~21\ & ((!\inst23|LPM_COMPARE_component|auto_generated|op_1~52_cout0\) # (!\inst38|inst10~regout\))) # 
+-- (!\inst2|$00000|auto_generated|result_node[3]~21\ & (!\inst38|inst10~regout\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~52_cout0\)))
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\ = CARRY((\inst2|$00000|auto_generated|result_node[3]~21\ & ((!\inst23|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\) # (!\inst38|inst10~regout\))) # 
+-- (!\inst2|$00000|auto_generated|result_node[3]~21\ & (!\inst38|inst10~regout\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -7715,8 +8118,70 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst2|$00000|auto_generated|result_node[5]~15\,
-	datab => \inst38|inst8~regout\,
+	dataa => \inst2|$00000|auto_generated|result_node[3]~21\,
+	datab => \inst38|inst10~regout\,
+	cin => \inst23|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
+	cin0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~52_cout0\,
+	cin1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~52COUT1_67\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst23|LPM_COMPARE_component|auto_generated|op_1~45\,
+	cout0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~47_cout0\,
+	cout1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\);
+
+-- Location: LC_X5_Y7_N8
+\inst23|LPM_COMPARE_component|auto_generated|op_1~42\ : maxv_lcell
+-- Equation(s):
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~42_cout0\ = CARRY((\inst38|inst9~regout\ & ((!\inst23|LPM_COMPARE_component|auto_generated|op_1~47_cout0\) # (!\inst2|$00000|auto_generated|result_node[4]~15\))) # (!\inst38|inst9~regout\ & 
+-- (!\inst2|$00000|auto_generated|result_node[4]~15\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~47_cout0\)))
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\ = CARRY((\inst38|inst9~regout\ & ((!\inst23|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\) # (!\inst2|$00000|auto_generated|result_node[4]~15\))) # (!\inst38|inst9~regout\ & 
+-- (!\inst2|$00000|auto_generated|result_node[4]~15\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "ff2b",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst9~regout\,
+	datab => \inst2|$00000|auto_generated|result_node[4]~15\,
+	cin => \inst23|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
+	cin0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~47_cout0\,
+	cin1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~47COUT1_68\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst23|LPM_COMPARE_component|auto_generated|op_1~40\,
+	cout0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~42_cout0\,
+	cout1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\);
+
+-- Location: LC_X5_Y7_N9
+\inst23|LPM_COMPARE_component|auto_generated|op_1~37\ : maxv_lcell
+-- Equation(s):
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~37_cout\ = CARRY((\inst38|inst8~regout\ & (\inst2|$00000|auto_generated|result_node[5]~17\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\)) # (!\inst38|inst8~regout\ & 
+-- ((\inst2|$00000|auto_generated|result_node[5]~17\) # (!\inst23|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "ff4d",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst8~regout\,
+	datab => \inst2|$00000|auto_generated|result_node[5]~17\,
 	cin => \inst23|LPM_COMPARE_component|auto_generated|op_1~62_cout\,
 	cin0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~42_cout0\,
 	cin1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~42COUT1_69\,
@@ -7725,7 +8190,7 @@ PORT MAP (
 	combout => \inst23|LPM_COMPARE_component|auto_generated|op_1~35\,
 	cout => \inst23|LPM_COMPARE_component|auto_generated|op_1~37_cout\);
 
--- Location: LC_X3_Y4_N0
+-- Location: LC_X6_Y7_N0
 \inst23|LPM_COMPARE_component|auto_generated|op_1~32\ : maxv_lcell
 -- Equation(s):
 -- \inst23|LPM_COMPARE_component|auto_generated|op_1~32_cout0\ = CARRY((\inst38|inst7~regout\ & ((!\inst23|LPM_COMPARE_component|auto_generated|op_1~37_cout\) # (!\inst2|$00000|auto_generated|result_node[6]~13\))) # (!\inst38|inst7~regout\ & 
@@ -7753,7 +8218,7 @@ PORT MAP (
 	cout0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~32_cout0\,
 	cout1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~32COUT1_70\);
 
--- Location: LC_X3_Y4_N1
+-- Location: LC_X6_Y7_N1
 \inst23|LPM_COMPARE_component|auto_generated|op_1~27\ : maxv_lcell
 -- Equation(s):
 -- \inst23|LPM_COMPARE_component|auto_generated|op_1~27_cout0\ = CARRY((\inst38|inst6~regout\ & (\inst2|$00000|auto_generated|result_node[7]~11\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~32_cout0\)) # (!\inst38|inst6~regout\ & 
@@ -7785,20 +8250,20 @@ PORT MAP (
 	cout0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~27_cout0\,
 	cout1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\);
 
--- Location: LC_X3_Y4_N2
+-- Location: LC_X6_Y7_N2
 \inst23|LPM_COMPARE_component|auto_generated|op_1~22\ : maxv_lcell
 -- Equation(s):
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~22_cout0\ = CARRY((\inst2|$00000|auto_generated|result_node[8]~9\ & (\inst38|inst5~regout\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~27_cout0\)) # 
--- (!\inst2|$00000|auto_generated|result_node[8]~9\ & ((\inst38|inst5~regout\) # (!\inst23|LPM_COMPARE_component|auto_generated|op_1~27_cout0\))))
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\ = CARRY((\inst2|$00000|auto_generated|result_node[8]~9\ & (\inst38|inst5~regout\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\)) # 
--- (!\inst2|$00000|auto_generated|result_node[8]~9\ & ((\inst38|inst5~regout\) # (!\inst23|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\))))
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~22_cout0\ = CARRY((\inst38|inst5~regout\ & ((!\inst23|LPM_COMPARE_component|auto_generated|op_1~27_cout0\) # (!\inst2|$00000|auto_generated|result_node[8]~9\))) # (!\inst38|inst5~regout\ & 
+-- (!\inst2|$00000|auto_generated|result_node[8]~9\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~27_cout0\)))
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\ = CARRY((\inst38|inst5~regout\ & ((!\inst23|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\) # (!\inst2|$00000|auto_generated|result_node[8]~9\))) # (!\inst38|inst5~regout\ & 
+-- (!\inst2|$00000|auto_generated|result_node[8]~9\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\)))
 
 -- pragma translate_off
 GENERIC MAP (
 	cin0_used => "true",
 	cin1_used => "true",
 	cin_used => "true",
-	lut_mask => "ff4d",
+	lut_mask => "ff2b",
 	operation_mode => "arithmetic",
 	output_mode => "none",
 	register_cascade_mode => "off",
@@ -7806,8 +8271,8 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst2|$00000|auto_generated|result_node[8]~9\,
-	datab => \inst38|inst5~regout\,
+	dataa => \inst38|inst5~regout\,
+	datab => \inst2|$00000|auto_generated|result_node[8]~9\,
 	cin => \inst23|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
 	cin0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~27_cout0\,
 	cin1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~27COUT1_71\,
@@ -7817,7 +8282,7 @@ PORT MAP (
 	cout0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~22_cout0\,
 	cout1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~22COUT1_72\);
 
--- Location: LC_X3_Y4_N3
+-- Location: LC_X6_Y7_N3
 \inst23|LPM_COMPARE_component|auto_generated|op_1~17\ : maxv_lcell
 -- Equation(s):
 -- \inst23|LPM_COMPARE_component|auto_generated|op_1~17_cout0\ = CARRY((\inst38|inst4~regout\ & (\inst2|$00000|auto_generated|result_node[9]~7\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~22_cout0\)) # (!\inst38|inst4~regout\ & 
@@ -7849,18 +8314,18 @@ PORT MAP (
 	cout0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~17_cout0\,
 	cout1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\);
 
--- Location: LC_X3_Y4_N4
+-- Location: LC_X6_Y7_N4
 \inst23|LPM_COMPARE_component|auto_generated|op_1~12\ : maxv_lcell
 -- Equation(s):
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\ = CARRY((\inst38|inst3~regout\ & ((!\inst23|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\) # (!\inst2|$00000|auto_generated|result_node[10]~5\))) # (!\inst38|inst3~regout\ & 
--- (!\inst2|$00000|auto_generated|result_node[10]~5\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\)))
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\ = CARRY((\inst2|$00000|auto_generated|result_node[10]~5\ & (\inst38|inst3~regout\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\)) # 
+-- (!\inst2|$00000|auto_generated|result_node[10]~5\ & ((\inst38|inst3~regout\) # (!\inst23|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\))))
 
 -- pragma translate_off
 GENERIC MAP (
 	cin0_used => "true",
 	cin1_used => "true",
 	cin_used => "true",
-	lut_mask => "ff2b",
+	lut_mask => "ff4d",
 	operation_mode => "arithmetic",
 	output_mode => "none",
 	register_cascade_mode => "off",
@@ -7868,8 +8333,8 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst38|inst3~regout\,
-	datab => \inst2|$00000|auto_generated|result_node[10]~5\,
+	dataa => \inst2|$00000|auto_generated|result_node[10]~5\,
+	datab => \inst38|inst3~regout\,
 	cin => \inst23|LPM_COMPARE_component|auto_generated|op_1~37_cout\,
 	cin0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~17_cout0\,
 	cin1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~17COUT1_73\,
@@ -7878,7 +8343,7 @@ PORT MAP (
 	combout => \inst23|LPM_COMPARE_component|auto_generated|op_1~10\,
 	cout => \inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\);
 
--- Location: LC_X3_Y4_N5
+-- Location: LC_X6_Y7_N5
 \inst23|LPM_COMPARE_component|auto_generated|op_1~7\ : maxv_lcell
 -- Equation(s):
 -- \inst23|LPM_COMPARE_component|auto_generated|op_1~7_cout0\ = CARRY((\inst38|inst2~regout\ & (\inst2|$00000|auto_generated|result_node[11]~3\ & !\inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\)) # (!\inst38|inst2~regout\ & 
@@ -7906,11 +8371,11 @@ PORT MAP (
 	cout0 => \inst23|LPM_COMPARE_component|auto_generated|op_1~7_cout0\,
 	cout1 => \inst23|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\);
 
--- Location: LC_X3_Y4_N6
+-- Location: LC_X6_Y7_N6
 inst45 : maxv_lcell
 -- Equation(s):
--- \inst45~regout\ = DFFEAS(((\inst38|inst1~regout\ & (!(!\inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & \inst23|LPM_COMPARE_component|auto_generated|op_1~7_cout0\) # (\inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & 
--- \inst23|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\) & \inst2|$00000|auto_generated|result_node[12]~1\)) # (!\inst38|inst1~regout\ & ((\inst2|$00000|auto_generated|result_node[12]~1\) # 
+-- \inst45~regout\ = DFFEAS((\inst38|inst1~regout\ & (((!(!\inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & \inst23|LPM_COMPARE_component|auto_generated|op_1~7_cout0\) # (\inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & 
+-- \inst23|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\) & \inst2|$00000|auto_generated|result_node[12]~1\)))) # (!\inst38|inst1~regout\ & (((\inst2|$00000|auto_generated|result_node[12]~1\) # 
 -- (!(!\inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & \inst23|LPM_COMPARE_component|auto_generated|op_1~7_cout0\) # (\inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\ & \inst23|LPM_COMPARE_component|auto_generated|op_1~7COUT1_74\))))), 
 -- GLOBAL(\inst36~combout\), VCC, , , , , , )
 
@@ -7919,7 +8384,7 @@ GENERIC MAP (
 	cin0_used => "true",
 	cin1_used => "true",
 	cin_used => "true",
-	lut_mask => "3f03",
+	lut_mask => "5f05",
 	operation_mode => "normal",
 	output_mode => "reg_only",
 	register_cascade_mode => "off",
@@ -7928,7 +8393,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \inst36~combout\,
-	datab => \inst38|inst1~regout\,
+	dataa => \inst38|inst1~regout\,
 	datad => \inst2|$00000|auto_generated|result_node[12]~1\,
 	aclr => GND,
 	cin => \inst23|LPM_COMPARE_component|auto_generated|op_1~12_cout\,
@@ -7938,14 +8403,14 @@ PORT MAP (
 	devpor => ww_devpor,
 	regout => \inst45~regout\);
 
--- Location: LC_X8_Y4_N9
-inst55 : maxv_lcell
+-- Location: LC_X6_Y7_N9
+\inst3|$00000|auto_generated|result_node[12]~14\ : maxv_lcell
 -- Equation(s):
--- \inst55~combout\ = ((!\Day~combout\ & (!\Night~combout\ & !\Passive~combout\)))
+-- \inst3|$00000|auto_generated|result_node[12]~14_combout\ = (\inst50~regout\ & (((\hiTrueSetDisp~combout\ & \inst2|$00000|auto_generated|result_node[12]~1\)))) # (!\inst50~regout\ & (\inst38|inst1~regout\))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "0003",
+	lut_mask => "ca0a",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -7953,146 +8418,22 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	datab => \Day~combout\,
-	datac => \Night~combout\,
-	datad => \Passive~combout\,
+	dataa => \inst38|inst1~regout\,
+	datab => \hiTrueSetDisp~combout\,
+	datac => \inst50~regout\,
+	datad => \inst2|$00000|auto_generated|result_node[12]~1\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst55~combout\);
+	combout => \inst3|$00000|auto_generated|result_node[12]~14_combout\);
 
--- Location: LC_X8_Y6_N2
-inst54 : maxv_lcell
+-- Location: LC_X9_Y7_N2
+\inst3|$00000|auto_generated|result_node[12]~13\ : maxv_lcell
 -- Equation(s):
--- \inst54~regout\ = DFFEAS((((!\inst55~combout\))), GLOBAL(\RTC~combout\), VCC, , , , , , )
+-- \inst3|$00000|auto_generated|result_node[12]~13_combout\ = (!\hiTrueSetDisp~combout\ & (((\inst50~regout\ & \inst5|$00000|auto_generated|result_node[12]~3\))))
 
 -- pragma translate_off
 GENERIC MAP (
-	lut_mask => "00ff",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datad => \inst55~combout\,
-	aclr => GND,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst54~regout\);
-
--- Location: LC_X9_Y6_N5
-inst53 : maxv_lcell
--- Equation(s):
--- \inst53~regout\ = DFFEAS((((\inst54~regout\))), GLOBAL(\RTC~combout\), !GLOBAL(\inst55~combout\), , , , , , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datad => \inst54~regout\,
-	aclr => \inst55~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst53~regout\);
-
--- Location: LC_X9_Y6_N4
-inst52 : maxv_lcell
--- Equation(s):
--- \inst52~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst55~combout\), , , \inst53~regout\, , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst53~regout\,
-	aclr => \inst55~combout\,
-	sload => VCC,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst52~regout\);
-
--- Location: LC_X9_Y6_N6
-inst51 : maxv_lcell
--- Equation(s):
--- \inst51~regout\ = DFFEAS(GND, GLOBAL(\RTC~combout\), !GLOBAL(\inst55~combout\), , , \inst52~regout\, , , VCC)
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "0000",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "on")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => \inst52~regout\,
-	aclr => \inst55~combout\,
-	sload => VCC,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst51~regout\);
-
--- Location: LC_X9_Y6_N2
-inst50 : maxv_lcell
--- Equation(s):
--- \inst50~regout\ = DFFEAS((((\inst50~regout\))), GLOBAL(\RTC~combout\), \inst51~regout\, , , VCC, GLOBAL(\inst55~combout\), , )
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ff00",
-	operation_mode => "normal",
-	output_mode => "reg_only",
-	register_cascade_mode => "off",
-	sum_lutc_input => "datac",
-	synch_mode => "off")
--- pragma translate_on
-PORT MAP (
-	clk => \RTC~combout\,
-	datac => VCC,
-	datad => \inst50~regout\,
-	aclr => \ALT_INV_inst51~regout\,
-	aload => \inst55~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	regout => \inst50~regout\);
-
--- Location: PIN_85,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
-\hiTrueSetDisp~I\ : maxv_io
--- pragma translate_off
-GENERIC MAP (
-	operation_mode => "input")
--- pragma translate_on
-PORT MAP (
-	oe => GND,
-	padio => ww_hiTrueSetDisp,
-	combout => \hiTrueSetDisp~combout\);
-
--- Location: LC_X8_Y6_N1
-\inst3|$00000|auto_generated|result_node[12]~0\ : maxv_lcell
--- Equation(s):
--- \inst3|$00000|auto_generated|result_node[12]~0_combout\ = ((\hiTrueSetDisp~combout\ & ((\inst2|$00000|auto_generated|result_node[12]~1\))) # (!\hiTrueSetDisp~combout\ & (\inst5|$00000|auto_generated|result_node[12]~1\)))
-
--- pragma translate_off
-GENERIC MAP (
-	lut_mask => "ccaa",
+	lut_mask => "5000",
 	operation_mode => "normal",
 	output_mode => "comb_only",
 	register_cascade_mode => "off",
@@ -8100,17 +8441,344 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst5|$00000|auto_generated|result_node[12]~1\,
-	datab => \inst2|$00000|auto_generated|result_node[12]~1\,
+	dataa => \hiTrueSetDisp~combout\,
+	datac => \inst50~regout\,
+	datad => \inst5|$00000|auto_generated|result_node[12]~3\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[12]~13_combout\);
+
+-- Location: LC_X7_Y7_N4
+\inst57|adder|adder|cin_node~0\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|cin_node~0_combout\ = (\inst3|$00000|auto_generated|result_node[12]~14_combout\) # ((\inst3|$00000|auto_generated|result_node[12]~13_combout\))
+-- \inst57|adder|adder|cin_node\ = CARRY((\inst3|$00000|auto_generated|result_node[12]~14_combout\) # ((\inst3|$00000|auto_generated|result_node[12]~13_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "eeee",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst3|$00000|auto_generated|result_node[12]~14_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[12]~13_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|cin_node~0_combout\,
+	cout => \inst57|adder|adder|cin_node\);
+
+-- Location: LC_X4_Y7_N2
+\inst3|$00000|auto_generated|result_node[4]~27\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[4]~27_combout\ = (\hiTrueSetDisp~combout\ & (((\inst2|$00000|auto_generated|result_node[4]~15\)))) # (!\hiTrueSetDisp~combout\ & (((\inst5|$00000|auto_generated|result_node[4]~19\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f5a0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \hiTrueSetDisp~combout\,
+	datac => \inst2|$00000|auto_generated|result_node[4]~15\,
+	datad => \inst5|$00000|auto_generated|result_node[4]~19\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[4]~27_combout\);
+
+-- Location: LC_X4_Y7_N4
+\inst3|$00000|auto_generated|result_node[4]~28\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[4]~28_combout\ = ((\inst50~regout\ & ((\inst3|$00000|auto_generated|result_node[4]~27_combout\))) # (!\inst50~regout\ & (\inst38|inst9~regout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst50~regout\,
+	datac => \inst38|inst9~regout\,
+	datad => \inst3|$00000|auto_generated|result_node[4]~27_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[4]~28_combout\);
+
+-- Location: LC_X4_Y7_N9
+\inst3|$00000|auto_generated|result_node[2]~32\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[2]~32_combout\ = ((\hiTrueSetDisp~combout\ & (\inst2|$00000|auto_generated|result_node[2]~19\)) # (!\hiTrueSetDisp~combout\ & ((\inst5|$00000|auto_generated|result_node[2]~23\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ccf0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst2|$00000|auto_generated|result_node[2]~19\,
+	datac => \inst5|$00000|auto_generated|result_node[2]~23\,
 	datad => \hiTrueSetDisp~combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst3|$00000|auto_generated|result_node[12]~0_combout\);
+	combout => \inst3|$00000|auto_generated|result_node[2]~32_combout\);
 
--- Location: LC_X8_Y6_N9
-\inst3|$00000|auto_generated|result_node[12]~1\ : maxv_lcell
+-- Location: LC_X4_Y7_N5
+\inst3|$00000|auto_generated|result_node[2]~33\ : maxv_lcell
 -- Equation(s):
--- \inst3|$00000|auto_generated|result_node[12]~1_combout\ = ((\inst50~regout\ & ((\inst3|$00000|auto_generated|result_node[12]~0_combout\))) # (!\inst50~regout\ & (\inst38|inst1~regout\)))
+-- \inst3|$00000|auto_generated|result_node[2]~33_combout\ = (\inst50~regout\ & (((\inst3|$00000|auto_generated|result_node[2]~32_combout\)))) # (!\inst50~regout\ & (\inst38|inst11~regout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ee22",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst11~regout\,
+	datab => \inst50~regout\,
+	datad => \inst3|$00000|auto_generated|result_node[2]~32_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[2]~33_combout\);
+
+-- Location: LC_X8_Y7_N9
+\inst3|$00000|auto_generated|result_node[0]~39\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[0]~39_combout\ = ((\hiTrueSetDisp~combout\ & ((\inst2|$00000|auto_generated|result_node[0]~25\))) # (!\hiTrueSetDisp~combout\ & (\inst5|$00000|auto_generated|result_node[0]~25\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc0c",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst5|$00000|auto_generated|result_node[0]~25\,
+	datac => \hiTrueSetDisp~combout\,
+	datad => \inst2|$00000|auto_generated|result_node[0]~25\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[0]~39_combout\);
+
+-- Location: LC_X8_Y7_N8
+\inst3|$00000|auto_generated|result_node[0]~40\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[0]~40_combout\ = (\inst50~regout\ & (((\inst3|$00000|auto_generated|result_node[0]~39_combout\)))) # (!\inst50~regout\ & (\inst38|inst13~regout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ee44",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst50~regout\,
+	datab => \inst38|inst13~regout\,
+	datad => \inst3|$00000|auto_generated|result_node[0]~39_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[0]~40_combout\);
+
+-- Location: LC_X7_Y7_N5
+\inst57|adder|adder|result_node|cs_buffer[0]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cout\(0) = CARRY((\inst57|adder|adder|cin_node~0_combout\ $ (!\inst3|$00000|auto_generated|result_node[0]~40_combout\)) # (!\inst57|adder|adder|cin_node\))
+-- \inst57|adder|adder|result_node|cout[0]~COUT1_1\ = CARRY((\inst57|adder|adder|cin_node~0_combout\ $ (!\inst3|$00000|auto_generated|result_node[0]~40_combout\)) # (!\inst57|adder|adder|cin_node\))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin_used => "true",
+	lut_mask => "969f",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[0]~40_combout\,
+	cin => \inst57|adder|adder|cin_node\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(0),
+	cout0 => \inst57|adder|adder|result_node|cout\(0),
+	cout1 => \inst57|adder|adder|result_node|cout[0]~COUT1_1\);
+
+-- Location: LC_X7_Y7_N6
+\inst57|adder|adder|result_node|cs_buffer[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cout\(1) = CARRY((!\inst57|adder|adder|result_node|cout\(0) & (\inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[1]~38\))))
+-- \inst57|adder|adder|result_node|cout[1]~COUT1_2\ = CARRY((!\inst57|adder|adder|result_node|cout[0]~COUT1_1\ & (\inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[1]~38\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "6906",
+	operation_mode => "arithmetic",
+	output_mode => "none",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[1]~38\,
+	cin => \inst57|adder|adder|cin_node\,
+	cin0 => \inst57|adder|adder|result_node|cout\(0),
+	cin1 => \inst57|adder|adder|result_node|cout[0]~COUT1_1\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(1),
+	cout0 => \inst57|adder|adder|result_node|cout\(1),
+	cout1 => \inst57|adder|adder|result_node|cout[1]~COUT1_2\);
+
+-- Location: LC_X7_Y7_N7
+\inst57|adder|adder|result_node|cs_buffer[2]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cs_buffer\(2) = \inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[2]~33_combout\ $ (((!\inst57|adder|adder|cin_node\ & \inst57|adder|adder|result_node|cout\(1)) # 
+-- (\inst57|adder|adder|cin_node\ & \inst57|adder|adder|result_node|cout[1]~COUT1_2\))))
+-- \inst57|adder|adder|result_node|cout\(2) = CARRY((\inst57|adder|adder|cin_node~0_combout\ $ (!\inst3|$00000|auto_generated|result_node[2]~33_combout\)) # (!\inst57|adder|adder|result_node|cout\(1)))
+-- \inst57|adder|adder|result_node|cout[2]~COUT1_3\ = CARRY((\inst57|adder|adder|cin_node~0_combout\ $ (!\inst3|$00000|auto_generated|result_node[2]~33_combout\)) # (!\inst57|adder|adder|result_node|cout[1]~COUT1_2\))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "969f",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[2]~33_combout\,
+	cin => \inst57|adder|adder|cin_node\,
+	cin0 => \inst57|adder|adder|result_node|cout\(1),
+	cin1 => \inst57|adder|adder|result_node|cout[1]~COUT1_2\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(2),
+	cout0 => \inst57|adder|adder|result_node|cout\(2),
+	cout1 => \inst57|adder|adder|result_node|cout[2]~COUT1_3\);
+
+-- Location: LC_X7_Y7_N8
+\inst57|adder|adder|result_node|cs_buffer[3]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cs_buffer\(3) = \inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[3]~35\ $ ((!(!\inst57|adder|adder|cin_node\ & \inst57|adder|adder|result_node|cout\(2)) # (\inst57|adder|adder|cin_node\ & 
+-- \inst57|adder|adder|result_node|cout[2]~COUT1_3\))))
+-- \inst57|adder|adder|result_node|cout\(3) = CARRY((!\inst57|adder|adder|result_node|cout\(2) & (\inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[3]~35\))))
+-- \inst57|adder|adder|result_node|cout[3]~COUT1_4\ = CARRY((!\inst57|adder|adder|result_node|cout[2]~COUT1_3\ & (\inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[3]~35\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "6906",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[3]~35\,
+	cin => \inst57|adder|adder|cin_node\,
+	cin0 => \inst57|adder|adder|result_node|cout\(2),
+	cin1 => \inst57|adder|adder|result_node|cout[2]~COUT1_3\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(3),
+	cout0 => \inst57|adder|adder|result_node|cout\(3),
+	cout1 => \inst57|adder|adder|result_node|cout[3]~COUT1_4\);
+
+-- Location: LC_X7_Y7_N9
+\inst57|adder|adder|result_node|cs_buffer[4]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cs_buffer\(4) = \inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[4]~28_combout\ $ (((!\inst57|adder|adder|cin_node\ & \inst57|adder|adder|result_node|cout\(3)) # 
+-- (\inst57|adder|adder|cin_node\ & \inst57|adder|adder|result_node|cout[3]~COUT1_4\))))
+-- \inst57|adder|adder|result_node|cout\(4) = CARRY((\inst57|adder|adder|cin_node~0_combout\ $ (!\inst3|$00000|auto_generated|result_node[4]~28_combout\)) # (!\inst57|adder|adder|result_node|cout[3]~COUT1_4\))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "969f",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[4]~28_combout\,
+	cin => \inst57|adder|adder|cin_node\,
+	cin0 => \inst57|adder|adder|result_node|cout\(3),
+	cin1 => \inst57|adder|adder|result_node|cout[3]~COUT1_4\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(4),
+	cout => \inst57|adder|adder|result_node|cout\(4));
+
+-- Location: LC_X9_Y7_N1
+\inst3|$00000|auto_generated|result_node[6]~25\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[6]~25_combout\ = (\hiTrueSetDisp~combout\ & (((\inst2|$00000|auto_generated|result_node[6]~13\)))) # (!\hiTrueSetDisp~combout\ & (((\inst5|$00000|auto_generated|result_node[6]~15\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fa50",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \hiTrueSetDisp~combout\,
+	datac => \inst5|$00000|auto_generated|result_node[6]~15\,
+	datad => \inst2|$00000|auto_generated|result_node[6]~13\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[6]~25_combout\);
+
+-- Location: LC_X9_Y7_N9
+\inst3|$00000|auto_generated|result_node[6]~26\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[6]~26_combout\ = ((\inst50~regout\ & ((\inst3|$00000|auto_generated|result_node[6]~25_combout\))) # (!\inst50~regout\ & (\inst38|inst7~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -8122,14 +8790,1462 @@ GENERIC MAP (
 	synch_mode => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \inst38|inst1~regout\,
+	dataa => \inst38|inst7~regout\,
 	datac => \inst50~regout\,
-	datad => \inst3|$00000|auto_generated|result_node[12]~0_combout\,
+	datad => \inst3|$00000|auto_generated|result_node[6]~25_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	combout => \inst3|$00000|auto_generated|result_node[12]~1_combout\);
+	combout => \inst3|$00000|auto_generated|result_node[6]~26_combout\);
 
--- Location: PIN_87,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: LC_X8_Y7_N0
+\inst57|adder|adder|result_node|cs_buffer[5]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cs_buffer\(5) = \inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[5]~30\ $ ((!\inst57|adder|adder|result_node|cout\(4))))
+-- \inst57|adder|adder|result_node|cout\(5) = CARRY((!\inst57|adder|adder|result_node|cout\(4) & (\inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[5]~30\))))
+-- \inst57|adder|adder|result_node|cout[5]~COUT1_5\ = CARRY((!\inst57|adder|adder|result_node|cout\(4) & (\inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[5]~30\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin_used => "true",
+	lut_mask => "6906",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[5]~30\,
+	cin => \inst57|adder|adder|result_node|cout\(4),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(5),
+	cout0 => \inst57|adder|adder|result_node|cout\(5),
+	cout1 => \inst57|adder|adder|result_node|cout[5]~COUT1_5\);
+
+-- Location: LC_X8_Y7_N1
+\inst57|adder|adder|result_node|cs_buffer[6]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cs_buffer\(6) = \inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[6]~26_combout\ $ (((!\inst57|adder|adder|result_node|cout\(4) & \inst57|adder|adder|result_node|cout\(5)) # 
+-- (\inst57|adder|adder|result_node|cout\(4) & \inst57|adder|adder|result_node|cout[5]~COUT1_5\))))
+-- \inst57|adder|adder|result_node|cout\(6) = CARRY((\inst57|adder|adder|cin_node~0_combout\ $ (!\inst3|$00000|auto_generated|result_node[6]~26_combout\)) # (!\inst57|adder|adder|result_node|cout\(5)))
+-- \inst57|adder|adder|result_node|cout[6]~COUT1_6\ = CARRY((\inst57|adder|adder|cin_node~0_combout\ $ (!\inst3|$00000|auto_generated|result_node[6]~26_combout\)) # (!\inst57|adder|adder|result_node|cout[5]~COUT1_5\))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "969f",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[6]~26_combout\,
+	cin => \inst57|adder|adder|result_node|cout\(4),
+	cin0 => \inst57|adder|adder|result_node|cout\(5),
+	cin1 => \inst57|adder|adder|result_node|cout[5]~COUT1_5\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(6),
+	cout0 => \inst57|adder|adder|result_node|cout\(6),
+	cout1 => \inst57|adder|adder|result_node|cout[6]~COUT1_6\);
+
+-- Location: LC_X8_Y7_N2
+\inst57|adder|adder|result_node|cs_buffer[7]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cs_buffer\(7) = \inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[7]~24\ $ ((!(!\inst57|adder|adder|result_node|cout\(4) & \inst57|adder|adder|result_node|cout\(6)) # 
+-- (\inst57|adder|adder|result_node|cout\(4) & \inst57|adder|adder|result_node|cout[6]~COUT1_6\))))
+-- \inst57|adder|adder|result_node|cout\(7) = CARRY((!\inst57|adder|adder|result_node|cout\(6) & (\inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[7]~24\))))
+-- \inst57|adder|adder|result_node|cout[7]~COUT1_7\ = CARRY((!\inst57|adder|adder|result_node|cout[6]~COUT1_6\ & (\inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[7]~24\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "6906",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[7]~24\,
+	cin => \inst57|adder|adder|result_node|cout\(4),
+	cin0 => \inst57|adder|adder|result_node|cout\(6),
+	cin1 => \inst57|adder|adder|result_node|cout[6]~COUT1_6\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(7),
+	cout0 => \inst57|adder|adder|result_node|cout\(7),
+	cout1 => \inst57|adder|adder|result_node|cout[7]~COUT1_7\);
+
+-- Location: LC_X2_Y5_N5
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella\(1) = ((\inst57|adder|adder|result_node|cs_buffer\(7)))
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~COUT\ = CARRY(((\inst57|adder|adder|result_node|cs_buffer\(7))))
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~COUTCOUT1_9\ = CARRY(((\inst57|adder|adder|result_node|cs_buffer\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "cccc",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst57|adder|adder|result_node|cs_buffer\(7),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella\(1),
+	cout0 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~COUT\,
+	cout1 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~COUTCOUT1_9\);
+
+-- Location: LC_X4_Y7_N3
+\inst3|$00000|auto_generated|result_node[10]~17\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[10]~17_combout\ = (\inst50~regout\ & (\hiTrueSetDisp~combout\ & (\inst2|$00000|auto_generated|result_node[10]~5\))) # (!\inst50~regout\ & (((\inst38|inst3~regout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "b380",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \hiTrueSetDisp~combout\,
+	datab => \inst50~regout\,
+	datac => \inst2|$00000|auto_generated|result_node[10]~5\,
+	datad => \inst38|inst3~regout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[10]~17_combout\);
+
+-- Location: LC_X8_Y7_N7
+\inst3|$00000|auto_generated|result_node[10]~18\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[10]~18_combout\ = (\inst3|$00000|auto_generated|result_node[10]~17_combout\) # ((\inst5|$00000|auto_generated|result_node[10]~7\ & (!\hiTrueSetDisp~combout\ & \inst50~regout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "cecc",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst5|$00000|auto_generated|result_node[10]~7\,
+	datab => \inst3|$00000|auto_generated|result_node[10]~17_combout\,
+	datac => \hiTrueSetDisp~combout\,
+	datad => \inst50~regout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[10]~18_combout\);
+
+-- Location: LC_X6_Y7_N8
+\inst3|$00000|auto_generated|result_node[8]~21\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[8]~21_combout\ = ((\hiTrueSetDisp~combout\ & ((\inst2|$00000|auto_generated|result_node[8]~9\))) # (!\hiTrueSetDisp~combout\ & (\inst5|$00000|auto_generated|result_node[8]~11\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fc30",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \hiTrueSetDisp~combout\,
+	datac => \inst5|$00000|auto_generated|result_node[8]~11\,
+	datad => \inst2|$00000|auto_generated|result_node[8]~9\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[8]~21_combout\);
+
+-- Location: LC_X6_Y7_N7
+\inst3|$00000|auto_generated|result_node[8]~22\ : maxv_lcell
+-- Equation(s):
+-- \inst3|$00000|auto_generated|result_node[8]~22_combout\ = ((\inst50~regout\ & ((\inst3|$00000|auto_generated|result_node[8]~21_combout\))) # (!\inst50~regout\ & (\inst38|inst5~regout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fa0a",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst38|inst5~regout\,
+	datac => \inst50~regout\,
+	datad => \inst3|$00000|auto_generated|result_node[8]~21_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst3|$00000|auto_generated|result_node[8]~22_combout\);
+
+-- Location: LC_X8_Y7_N3
+\inst57|adder|adder|result_node|cs_buffer[8]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cs_buffer\(8) = \inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[8]~22_combout\ $ (((!\inst57|adder|adder|result_node|cout\(4) & \inst57|adder|adder|result_node|cout\(7)) # 
+-- (\inst57|adder|adder|result_node|cout\(4) & \inst57|adder|adder|result_node|cout[7]~COUT1_7\))))
+-- \inst57|adder|adder|result_node|cout\(8) = CARRY((\inst57|adder|adder|cin_node~0_combout\ $ (!\inst3|$00000|auto_generated|result_node[8]~22_combout\)) # (!\inst57|adder|adder|result_node|cout\(7)))
+-- \inst57|adder|adder|result_node|cout[8]~COUT1_8\ = CARRY((\inst57|adder|adder|cin_node~0_combout\ $ (!\inst3|$00000|auto_generated|result_node[8]~22_combout\)) # (!\inst57|adder|adder|result_node|cout[7]~COUT1_7\))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "969f",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[8]~22_combout\,
+	cin => \inst57|adder|adder|result_node|cout\(4),
+	cin0 => \inst57|adder|adder|result_node|cout\(7),
+	cin1 => \inst57|adder|adder|result_node|cout[7]~COUT1_7\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(8),
+	cout0 => \inst57|adder|adder|result_node|cout\(8),
+	cout1 => \inst57|adder|adder|result_node|cout[8]~COUT1_8\);
+
+-- Location: LC_X8_Y7_N4
+\inst57|adder|adder|result_node|cs_buffer[9]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cs_buffer\(9) = \inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[9]~20\ $ ((!(!\inst57|adder|adder|result_node|cout\(4) & \inst57|adder|adder|result_node|cout\(8)) # 
+-- (\inst57|adder|adder|result_node|cout\(4) & \inst57|adder|adder|result_node|cout[8]~COUT1_8\))))
+-- \inst57|adder|adder|result_node|cout\(9) = CARRY((!\inst57|adder|adder|result_node|cout[8]~COUT1_8\ & (\inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[9]~20\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "6906",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[9]~20\,
+	cin => \inst57|adder|adder|result_node|cout\(4),
+	cin0 => \inst57|adder|adder|result_node|cout\(8),
+	cin1 => \inst57|adder|adder|result_node|cout[8]~COUT1_8\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(9),
+	cout => \inst57|adder|adder|result_node|cout\(9));
+
+-- Location: LC_X8_Y7_N5
+\inst57|adder|adder|result_node|cs_buffer[10]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cs_buffer\(10) = \inst57|adder|adder|cin_node~0_combout\ $ (\inst3|$00000|auto_generated|result_node[10]~18_combout\ $ ((\inst57|adder|adder|result_node|cout\(9))))
+-- \inst57|adder|adder|result_node|cout\(10) = CARRY((\inst57|adder|adder|cin_node~0_combout\ $ (!\inst3|$00000|auto_generated|result_node[10]~18_combout\)) # (!\inst57|adder|adder|result_node|cout\(9)))
+-- \inst57|adder|adder|result_node|cout[10]~COUT1_9\ = CARRY((\inst57|adder|adder|cin_node~0_combout\ $ (!\inst3|$00000|auto_generated|result_node[10]~18_combout\)) # (!\inst57|adder|adder|result_node|cout\(9)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin_used => "true",
+	lut_mask => "969f",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datab => \inst3|$00000|auto_generated|result_node[10]~18_combout\,
+	cin => \inst57|adder|adder|result_node|cout\(9),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(10),
+	cout0 => \inst57|adder|adder|result_node|cout\(10),
+	cout1 => \inst57|adder|adder|result_node|cout[10]~COUT1_9\);
+
+-- Location: LC_X8_Y7_N6
+\inst57|adder|adder|result_node|cs_buffer[11]\ : maxv_lcell
+-- Equation(s):
+-- \inst57|adder|adder|result_node|cs_buffer\(11) = \inst57|adder|adder|cin_node~0_combout\ $ ((((!\inst57|adder|adder|result_node|cout\(9) & \inst57|adder|adder|result_node|cout\(10)) # (\inst57|adder|adder|result_node|cout\(9) & 
+-- \inst57|adder|adder|result_node|cout[10]~COUT1_9\) $ (!\inst3|$00000|auto_generated|result_node[11]~16\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	cin_used => "true",
+	lut_mask => "5aa5",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|cin_node~0_combout\,
+	datad => \inst3|$00000|auto_generated|result_node[11]~16\,
+	cin => \inst57|adder|adder|result_node|cout\(9),
+	cin0 => \inst57|adder|adder|result_node|cout\(10),
+	cin1 => \inst57|adder|adder|result_node|cout[10]~COUT1_9\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst57|adder|adder|result_node|cs_buffer\(11));
+
+-- Location: LC_X3_Y6_N0
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella\(1) = (\inst57|adder|adder|result_node|cs_buffer\(9))
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~COUT\ = CARRY((\inst57|adder|adder|result_node|cs_buffer\(9)))
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~COUTCOUT1_8\ = CARRY((\inst57|adder|adder|result_node|cs_buffer\(9)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "aaaa",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|result_node|cs_buffer\(9),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella\(1),
+	cout0 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~COUT\,
+	cout1 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~COUTCOUT1_8\);
+
+-- Location: LC_X3_Y6_N1
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~3\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~4\ = (((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~COUT\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "f0f0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	cin0 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~COUT\,
+	cin1 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~COUTCOUT1_8\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~4\);
+
+-- Location: LC_X3_Y6_N8
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[17]~2\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[17]~2_combout\ = ((\inst57|adder|adder|result_node|cs_buffer\(10) & ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~4\) # 
+-- (!\inst57|adder|adder|result_node|cs_buffer\(11)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "cc0c",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst57|adder|adder|result_node|cs_buffer\(10),
+	datac => \inst57|adder|adder|result_node|cs_buffer\(11),
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~4\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[17]~2_combout\);
+
+-- Location: LC_X2_Y6_N6
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella\(1) = ((\inst57|adder|adder|result_node|cs_buffer\(8)))
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~COUT\ = CARRY(((\inst57|adder|adder|result_node|cs_buffer\(8))))
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~COUTCOUT1_8\ = CARRY(((\inst57|adder|adder|result_node|cs_buffer\(8))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "cccc",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst57|adder|adder|result_node|cs_buffer\(8),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella\(1),
+	cout0 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~COUT\,
+	cout1 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~COUTCOUT1_8\);
+
+-- Location: LC_X2_Y6_N7
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~3\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~4\ = (((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~COUT\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "f0f0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	cin0 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~COUT\,
+	cin1 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~COUTCOUT1_8\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~4\);
+
+-- Location: LC_X3_Y6_N5
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[18]~0\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[18]~0_combout\ = ((\inst57|adder|adder|result_node|cs_buffer\(11) & (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~4\ & 
+-- !\inst57|adder|adder|result_node|cs_buffer\(10))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "000c",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst57|adder|adder|result_node|cs_buffer\(11),
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~4\,
+	datad => \inst57|adder|adder|result_node|cs_buffer\(10),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[18]~0_combout\);
+
+-- Location: LC_X3_Y6_N4
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[2]~0\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[2]~0_combout\ = ((\inst57|adder|adder|result_node|cs_buffer\(10)) # ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~4\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ffcc",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst57|adder|adder|result_node|cs_buffer\(10),
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[1]~4\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[2]~0_combout\);
+
+-- Location: LC_X3_Y6_N3
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[2]~0_combout\ & ((\inst57|adder|adder|result_node|cs_buffer\(11) & 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella\(1))) # (!\inst57|adder|adder|result_node|cs_buffer\(11) & ((\inst57|adder|adder|result_node|cs_buffer\(9)))))) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[2]~0_combout\ & (((\inst57|adder|adder|result_node|cs_buffer\(9)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "7f08",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella[2]~0_combout\,
+	datab => \inst57|adder|adder|result_node|cs_buffer\(11),
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_3|add_sub_cella\(1),
+	datad => \inst57|adder|adder|result_node|cs_buffer\(9),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\);
+
+-- Location: LC_X3_Y6_N7
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[22]~3\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[22]~3_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~4\ & 
+-- (((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\)))) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~4\ & 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[18]~0_combout\ & ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\))) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[18]~0_combout\ & (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[17]~2_combout\ & 
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "cd30",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[17]~2_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~4\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[18]~0_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[22]~3_combout\);
+
+-- Location: LC_X3_Y6_N6
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[18]~0_combout\) # 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[17]~2_combout\ & ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\) # 
+-- (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~4\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fef0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~4\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[18]~0_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[17]~2_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\);
+
+-- Location: LC_X2_Y6_N5
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\ & 
+-- (((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella\(1))))) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\ & (((\inst57|adder|adder|result_node|cs_buffer\(8)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "5f0a",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella\(1),
+	datad => \inst57|adder|adder|result_node|cs_buffer\(8),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4_combout\);
+
+-- Location: LC_X2_Y5_N6
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~4\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~5\ = (((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~COUT\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "f0f0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	cin0 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~COUT\,
+	cin1 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~COUTCOUT1_9\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~5\);
+
+-- Location: LC_X3_Y6_N9
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~0\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~0_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[17]~2_combout\ & 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~4\ & ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\)))) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[17]~2_combout\ & (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[18]~0_combout\ & 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~4\) # (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "5062",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[17]~2_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[1]~4\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[18]~0_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[16]~1_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~0_combout\);
+
+-- Location: LC_X2_Y5_N8
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~0_combout\) # 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[22]~3_combout\ & ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4_combout\) # 
+-- (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~5\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ffa8",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[22]~3_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~5\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\);
+
+-- Location: LC_X2_Y5_N0
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5_combout\ = ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\ & 
+-- ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella\(1)))) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\ & (\inst57|adder|adder|result_node|cs_buffer\(7))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0fcc",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst57|adder|adder|result_node|cs_buffer\(7),
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella\(1),
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5_combout\);
+
+-- Location: LC_X2_Y5_N2
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~0\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~0_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[22]~3_combout\ & 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4_combout\ & (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~5\))) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[22]~3_combout\ & (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~0_combout\ & 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4_combout\) # (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~5\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "5602",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[22]~3_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~5\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~0_combout\);
+
+-- Location: LC_X2_Y5_N9
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[27]~6\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[27]~6_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4_combout\ & 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~5\) # ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[22]~3_combout\ & 
+-- !\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~0_combout\)))) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4_combout\ & 
+-- (((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~5\ & \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "c3c4",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[22]~3_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[21]~4_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[1]~5\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[27]~6_combout\);
+
+-- Location: LC_X3_Y5_N8
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella\(1) = ((\inst57|adder|adder|result_node|cs_buffer\(6)))
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~COUT\ = CARRY(((\inst57|adder|adder|result_node|cs_buffer\(6))))
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~COUTCOUT1_9\ = CARRY(((\inst57|adder|adder|result_node|cs_buffer\(6))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "cccc",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst57|adder|adder|result_node|cs_buffer\(6),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella\(1),
+	cout0 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~COUT\,
+	cout1 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~COUTCOUT1_9\);
+
+-- Location: LC_X3_Y5_N9
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~4\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~5\ = (((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~COUT\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "f0f0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	cin0 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~COUT\,
+	cin1 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~COUTCOUT1_9\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~5\);
+
+-- Location: LC_X3_Y5_N7
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~0_combout\) # 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[27]~6_combout\ & ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5_combout\) # 
+-- (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~5\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fcec",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~0_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[27]~6_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~5\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\);
+
+-- Location: LC_X3_Y5_N2
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8_combout\ = ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\ & 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella\(1))) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\ & ((\inst57|adder|adder|result_node|cs_buffer\(6)))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "5f50",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella\(1),
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\,
+	datad => \inst57|adder|adder|result_node|cs_buffer\(6),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8_combout\);
+
+-- Location: LC_X9_Y4_N7
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella\(1) = ((\inst57|adder|adder|result_node|cs_buffer\(5)))
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~COUT\ = CARRY(((\inst57|adder|adder|result_node|cs_buffer\(5))))
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~COUTCOUT1_9\ = CARRY(((\inst57|adder|adder|result_node|cs_buffer\(5))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "cccc",
+	operation_mode => "arithmetic",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst57|adder|adder|result_node|cs_buffer\(5),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella\(1),
+	cout0 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~COUT\,
+	cout1 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~COUTCOUT1_9\);
+
+-- Location: LC_X9_Y4_N8
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~4\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~5\ = (((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~COUT\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	cin0_used => "true",
+	cin1_used => "true",
+	lut_mask => "f0f0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "cin",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	cin0 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~COUT\,
+	cin1 => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~COUTCOUT1_9\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~5\);
+
+-- Location: LC_X3_Y5_N0
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[32]~7\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[32]~7_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5_combout\ & 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~5\) # ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~0_combout\ & 
+-- !\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[27]~6_combout\)))) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5_combout\ & 
+-- (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~0_combout\ & ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~5\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "aa46",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~0_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[27]~6_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~5\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[32]~7_combout\);
+
+-- Location: LC_X3_Y5_N3
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~0\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~0_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[27]~6_combout\ & 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5_combout\ & ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~5\)))) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[27]~6_combout\ & (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~0_combout\ & 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5_combout\) # (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~5\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0c58",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[26]~5_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~0_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[27]~6_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[1]~5\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~0_combout\);
+
+-- Location: LC_X3_Y5_N4
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~0_combout\) # 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[32]~7_combout\ & ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8_combout\) # 
+-- (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~5\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "ffe0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~5\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[32]~7_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\);
+
+-- Location: LC_X1_Y5_N2
+\inst86|A\ : maxv_lcell
+-- Equation(s):
+-- \inst86|A~combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\) # ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\) # 
+-- (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\ $ (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fefd",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst86|A~combout\);
+
+-- Location: LC_X1_Y5_N9
+\inst86|B\ : maxv_lcell
+-- Equation(s):
+-- \inst86|B~combout\ = ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\ $ (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\)) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "cf3f",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst86|B~combout\);
+
+-- Location: LC_X1_Y5_N3
+\inst86|C\ : maxv_lcell
+-- Equation(s):
+-- \inst86|C~combout\ = (((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\) # (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\)) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fff3",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst86|C~combout\);
+
+-- Location: LC_X1_Y5_N8
+\inst86|D\ : maxv_lcell
+-- Equation(s):
+-- \inst86|D~combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\) # ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\ & 
+-- (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\ $ (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\))) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\ & ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f6fd",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst86|D~combout\);
+
+-- Location: LC_X1_Y5_N6
+\inst86|F~0\ : maxv_lcell
+-- Equation(s):
+-- \inst86|F~0_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\) # ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\ & 
+-- ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\))) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\ & (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\ & 
+-- !\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f2fb",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst86|F~0_combout\);
+
+-- Location: LC_X1_Y5_N7
+\inst86|E~0\ : maxv_lcell
+-- Equation(s):
+-- \inst86|E~0_combout\ = ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\ & ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "00cf",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst86|E~0_combout\);
+
+-- Location: LC_X1_Y5_N4
+\inst86|G~0\ : maxv_lcell
+-- Equation(s):
+-- \inst86|G~0_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\) # ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\ & 
+-- ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\))) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\ & (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f6fe",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_6|add_sub_cella[2]~1_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_5|add_sub_cella[2]~1_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_4|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst86|G~0_combout\);
+
+-- Location: LC_X3_Y5_N6
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~0_combout\ & 
+-- (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~5\ $ (((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8_combout\))))) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~0_combout\ & (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8_combout\ & 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~5\) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[32]~7_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "cd22",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~0_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~5\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[32]~7_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\);
+
+-- Location: LC_X4_Y4_N5
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\ = ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\ & 
+-- ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella\(1)))) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\ & (\inst57|adder|adder|result_node|cs_buffer\(5))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "30fc",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~1_combout\,
+	datac => \inst57|adder|adder|result_node|cs_buffer\(5),
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella\(1),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\);
+
+-- Location: LC_X3_Y5_N5
+\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10\ : maxv_lcell
+-- Equation(s):
+-- \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\ = (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[32]~7_combout\ & 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8_combout\ & (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~5\))) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[32]~7_combout\ & (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~0_combout\ & 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8_combout\) # (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~5\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "1e10",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[31]~8_combout\,
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[1]~5\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[32]~7_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|add_sub_7|add_sub_cella[2]~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\);
+
+-- Location: LC_X4_Y4_N6
+\inst87|A~0\ : maxv_lcell
+-- Equation(s):
+-- \inst87|A~0_combout\ = (\inst57|adder|adder|result_node|cs_buffer\(4)) # ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\) # (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\ $ 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "feef",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|result_node|cs_buffer\(4),
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst87|A~0_combout\);
+
+-- Location: LC_X3_Y4_N5
+\inst87|B\ : maxv_lcell
+-- Equation(s):
+-- \inst87|B~combout\ = ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\ $ (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\)) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "a5ff",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst87|B~combout\);
+
+-- Location: LC_X3_Y4_N6
+\inst87|C\ : maxv_lcell
+-- Equation(s):
+-- \inst87|C~combout\ = (((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\) # (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\))) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\)
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fff5",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst87|C~combout\);
+
+-- Location: LC_X4_Y4_N7
+\inst87|D~0\ : maxv_lcell
+-- Equation(s):
+-- \inst87|D~0_combout\ = (\inst57|adder|adder|result_node|cs_buffer\(4)) # ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\ & ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\))) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\ & 
+-- (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\ $ (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "beef",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|result_node|cs_buffer\(4),
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst87|D~0_combout\);
+
+-- Location: LC_X3_Y4_N7
+\inst87|E~0\ : maxv_lcell
+-- Equation(s):
+-- \inst87|E~0_combout\ = ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\ & ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0a0f",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst87|E~0_combout\);
+
+-- Location: LC_X4_Y4_N8
+\inst87|F~0\ : maxv_lcell
+-- Equation(s):
+-- \inst87|F~0_combout\ = (\inst57|adder|adder|result_node|cs_buffer\(4)) # ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\ & (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\ & 
+-- !\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\)) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\ & 
+-- ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "bafb",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|result_node|cs_buffer\(4),
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst87|F~0_combout\);
+
+-- Location: LC_X4_Y4_N9
+\inst87|G~0\ : maxv_lcell
+-- Equation(s):
+-- \inst87|G~0_combout\ = (\inst57|adder|adder|result_node|cs_buffer\(4)) # ((\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\ & ((!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\) # 
+-- (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\))) # (!\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\ & 
+-- (\inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\)))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "befe",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \inst57|adder|adder|result_node|cs_buffer\(4),
+	datab => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[37]~9_combout\,
+	datac => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[36]~11_combout\,
+	datad => \inst58|LPM_DIVIDE_component|auto_generated|divider|divider|StageOut[38]~10_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst87|G~0_combout\);
+
+-- Location: LC_X7_Y7_N1
+\inst88|B~0\ : maxv_lcell
+-- Equation(s):
+-- \inst88|B~0_combout\ = (((\inst57|adder|adder|result_node|cs_buffer\(2) & !\inst57|adder|adder|result_node|cs_buffer\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "00f0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datac => \inst57|adder|adder|result_node|cs_buffer\(2),
+	datad => \inst57|adder|adder|result_node|cs_buffer\(3),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst88|B~0_combout\);
+
+-- Location: LC_X7_Y7_N3
+\inst88|B~1\ : maxv_lcell
+-- Equation(s):
+-- \inst88|B~1_combout\ = (((\inst57|adder|adder|result_node|cs_buffer\(2) & \inst57|adder|adder|result_node|cs_buffer\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "f000",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datac => \inst57|adder|adder|result_node|cs_buffer\(2),
+	datad => \inst57|adder|adder|result_node|cs_buffer\(3),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst88|B~1_combout\);
+
+-- Location: LC_X7_Y7_N2
+\inst88|B~2\ : maxv_lcell
+-- Equation(s):
+-- \inst88|B~2_combout\ = (((!\inst57|adder|adder|result_node|cs_buffer\(2) & \inst57|adder|adder|result_node|cs_buffer\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "0f00",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datac => \inst57|adder|adder|result_node|cs_buffer\(2),
+	datad => \inst57|adder|adder|result_node|cs_buffer\(3),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst88|B~2_combout\);
+
+-- Location: LC_X7_Y7_N0
+\inst88|B~3\ : maxv_lcell
+-- Equation(s):
+-- \inst88|B~3_combout\ = (((\inst57|adder|adder|result_node|cs_buffer\(2)) # (\inst57|adder|adder|result_node|cs_buffer\(3))))
+
+-- pragma translate_off
+GENERIC MAP (
+	lut_mask => "fff0",
+	operation_mode => "normal",
+	output_mode => "comb_only",
+	register_cascade_mode => "off",
+	sum_lutc_input => "datac",
+	synch_mode => "off")
+-- pragma translate_on
+PORT MAP (
+	datac => \inst57|adder|adder|result_node|cs_buffer\(2),
+	datad => \inst57|adder|adder|result_node|cs_buffer\(3),
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	combout => \inst88|B~3_combout\);
+
+-- Location: PIN_70,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \Heat~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8151,7 +10267,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_Mof32);
 
--- Location: PIN_17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_15,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \SCL~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8162,7 +10278,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_SCL);
 
--- Location: PIN_99,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_76,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \CS~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8173,7 +10289,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_CS);
 
--- Location: PIN_91,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_33,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \fbc0~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8184,7 +10300,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_fbc0);
 
--- Location: PIN_5,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_61,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \fbc1~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8195,7 +10311,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_fbc1);
 
--- Location: PIN_6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \fbc3~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8206,7 +10322,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_fbc3);
 
--- Location: PIN_50,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_34,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \fbc4~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8217,7 +10333,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_fbc4);
 
--- Location: PIN_86,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_53,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \fbc2~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8228,7 +10344,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_fbc2);
 
--- Location: PIN_66,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_68,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \Din~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8239,7 +10355,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_Din);
 
--- Location: PIN_97,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_73,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \FreezeReg~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8250,7 +10366,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_FreezeReg);
 
--- Location: PIN_26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_92,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \Cool~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8261,18 +10377,249 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_Cool);
 
--- Location: PIN_83,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_84,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \sevsegSign~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
 	operation_mode => "output")
 -- pragma translate_on
 PORT MAP (
-	datain => \inst3|$00000|auto_generated|result_node[12]~1_combout\,
+	datain => \inst57|adder|adder|cin_node~0_combout\,
 	oe => VCC,
 	padio => ww_sevsegSign);
 
+-- Location: PIN_6,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\MSA~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst86|A~combout\,
+	oe => VCC,
+	padio => ww_MSA);
+
+-- Location: PIN_21,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\MSB~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst86|B~combout\,
+	oe => VCC,
+	padio => ww_MSB);
+
+-- Location: PIN_14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\MSC~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst86|C~combout\,
+	oe => VCC,
+	padio => ww_MSC);
+
+-- Location: PIN_17,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\MSD~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst86|D~combout\,
+	oe => VCC,
+	padio => ww_MSD);
+
+-- Location: PIN_20,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\MSF~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst86|F~0_combout\,
+	oe => VCC,
+	padio => ww_MSF);
+
+-- Location: PIN_18,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\MSE~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst86|E~0_combout\,
+	oe => VCC,
+	padio => ww_MSE);
+
+-- Location: PIN_16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\MSG~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst86|G~0_combout\,
+	oe => VCC,
+	padio => ww_MSG);
+
+-- Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\LSA~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst87|A~0_combout\,
+	oe => VCC,
+	padio => ww_LSA);
+
+-- Location: PIN_19,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\LSB~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst87|B~combout\,
+	oe => VCC,
+	padio => ww_LSB);
+
+-- Location: PIN_27,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\LSC~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst87|C~combout\,
+	oe => VCC,
+	padio => ww_LSC);
+
+-- Location: PIN_29,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\LSD~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst87|D~0_combout\,
+	oe => VCC,
+	padio => ww_LSD);
+
+-- Location: PIN_26,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\LSE~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst87|E~0_combout\,
+	oe => VCC,
+	padio => ww_LSE);
+
+-- Location: PIN_28,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\LSF~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst87|F~0_combout\,
+	oe => VCC,
+	padio => ww_LSF);
+
 -- Location: PIN_35,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\LSG~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst87|G~0_combout\,
+	oe => VCC,
+	padio => ww_LSG);
+
+-- Location: PIN_3,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\FracA~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst88|ALT_INV_B~0_combout\,
+	oe => VCC,
+	padio => ww_FracA);
+
+-- Location: PIN_87,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\FracB~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst88|ALT_INV_B~1_combout\,
+	oe => VCC,
+	padio => ww_FracB);
+
+-- Location: PIN_89,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\FracC~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst88|ALT_INV_B~2_combout\,
+	oe => VCC,
+	padio => ww_FracC);
+
+-- Location: PIN_2,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\FracD~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst88|ALT_INV_B~0_combout\,
+	oe => VCC,
+	padio => ww_FracD);
+
+-- Location: PIN_55,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\FracF~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => VCC,
+	oe => VCC,
+	padio => ww_FracF);
+
+-- Location: PIN_100,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\FracE~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst88|ALT_INV_B~0_combout\,
+	oe => VCC,
+	padio => ww_FracE);
+
+-- Location: PIN_86,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+\FracG~I\ : maxv_io
+-- pragma translate_off
+GENERIC MAP (
+	operation_mode => "output")
+-- pragma translate_on
+PORT MAP (
+	datain => \inst88|B~3_combout\,
+	oe => VCC,
+	padio => ww_FracG);
+
+-- Location: PIN_72,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[12]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8283,7 +10630,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(12));
 
--- Location: PIN_30,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_78,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[11]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8294,7 +10641,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(11));
 
--- Location: PIN_29,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_83,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[10]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8305,7 +10652,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(10));
 
--- Location: PIN_36,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_75,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[9]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8316,7 +10663,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(9));
 
--- Location: PIN_41,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_82,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[8]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8327,7 +10674,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(8));
 
--- Location: PIN_27,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_71,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[7]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8338,7 +10685,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(7));
 
--- Location: PIN_38,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_74,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[6]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8349,7 +10696,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(6));
 
--- Location: PIN_33,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_81,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[5]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8360,7 +10707,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(5));
 
--- Location: PIN_92,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_85,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[4]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8371,7 +10718,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(4));
 
--- Location: PIN_100,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_91,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[3]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8382,7 +10729,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(3));
 
--- Location: PIN_96,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_99,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[2]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8393,7 +10740,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(2));
 
--- Location: PIN_1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_97,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[1]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8404,7 +10751,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(1));
 
--- Location: PIN_28,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
+-- Location: PIN_96,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 16mA
 \externalTemp[0]~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8415,7 +10762,7 @@ PORT MAP (
 	oe => VCC,
 	padio => ww_externalTemp(0));
 
--- Location: PIN_58,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_56,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \fbctestclk~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (
@@ -8425,7 +10772,7 @@ PORT MAP (
 	oe => GND,
 	padio => ww_fbctestclk);
 
--- Location: PIN_76,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
+-- Location: PIN_54,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \fbctestrestart~I\ : maxv_io
 -- pragma translate_off
 GENERIC MAP (

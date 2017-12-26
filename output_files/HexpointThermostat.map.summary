@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Tue Dec 26 11:27:21 2017
+Analysis & Synthesis Status : Successful - Tue Dec 26 11:32:59 2017
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : HexpointThermostat
 Top-level Entity Name : HexpointThermostat
 Family : MAX V
-Total logic elements : 335
-Total pins : 37
+Total logic elements : 420
+Total pins : 58
 Total virtual pins : 0
 UFM blocks : 0 / 1 ( 0 % )
