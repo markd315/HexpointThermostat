@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
--- DATE "12/25/2017 16:26:36"
+-- DATE "12/26/2017 11:27:30"
 
 -- 
 -- Device: Altera 5M570ZT100C5 Package TQFP100
@@ -522,13 +522,13 @@ SIGNAL \inst50~regout\ : std_logic;
 SIGNAL \hiTrueSetDisp~combout\ : std_logic;
 SIGNAL \inst3|$00000|auto_generated|result_node[12]~0_combout\ : std_logic;
 SIGNAL \inst3|$00000|auto_generated|result_node[12]~1_combout\ : std_logic;
-SIGNAL \inst6|LPM_SHIFTREG_component|dffs\ : std_logic_vector(15 DOWNTO 0);
-SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \inst13|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \inst12|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \inst14|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \inst10|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \inst6|LPM_SHIFTREG_component|dffs\ : std_logic_vector(15 DOWNTO 0);
 SIGNAL \inst11|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
+SIGNAL \inst9|inst|LPM_ADD_SUB_component|stratix_adder|result\ : std_logic_vector(12 DOWNTO 0);
 SIGNAL \ALT_INV_inst51~regout\ : std_logic;
 SIGNAL \ALT_INV_Passive~combout\ : std_logic;
 SIGNAL \ALT_INV_Night~combout\ : std_logic;

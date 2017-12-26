@@ -1,5 +1,5 @@
 Flow report for HexpointThermostat
-Mon Dec 25 16:26:36 2017
+Tue Dec 26 11:27:30 2017
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------------+
 ; Flow Summary                                                        ;
 +-----------------------+---------------------------------------------+
-; Flow Status           ; Successful - Mon Dec 25 16:26:36 2017       ;
+; Flow Status           ; Successful - Tue Dec 26 11:27:30 2017       ;
 ; Quartus Prime Version ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name         ; HexpointThermostat                          ;
 ; Top-level Entity Name ; HexpointThermostat                          ;
@@ -59,7 +59,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/25/2017 16:26:15 ;
+; Start date & time ; 12/26/2017 11:27:09 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; HexpointThermostat  ;
 +-------------------+---------------------+
@@ -70,7 +70,7 @@ refer to the applicable agreement for further details.
 +-------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name               ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID         ; 22727985108119.151423717412852 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID         ; 22727985108119.151430562915864 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT        ; Vhdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL           ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                ; 1 ps                           ; --            ; --          ; eda_simulation ;
@@ -82,6 +82,8 @@ refer to the applicable agreement for further details.
 ; MISC_FILE                     ; compare13bits.cmp              ; --            ; --          ; --             ;
 ; MISC_FILE                     ; add13bits.bsf                  ; --            ; --          ; --             ;
 ; MISC_FILE                     ; add13bits.cmp                  ; --            ; --          ; --             ;
+; MISC_FILE                     ; decimalator.bsf                ; --            ; --          ; --             ;
+; MISC_FILE                     ; decimalator.cmp                ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION ; No Heat Sink With Still Air    ; --            ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY      ; output_files                   ; --            ; --          ; --             ;
 +-------------------------------+--------------------------------+---------------+-------------+----------------+
@@ -92,12 +94,12 @@ refer to the applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 671 MB              ; 00:00:27                           ;
-; Fitter                    ; 00:00:03     ; 1.0                     ; 961 MB              ; 00:00:04                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 542 MB              ; 00:00:00                           ;
+; Analysis & Synthesis      ; 00:00:13     ; 1.0                     ; 677 MB              ; 00:00:28                           ;
+; Fitter                    ; 00:00:03     ; 1.0                     ; 968 MB              ; 00:00:04                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 542 MB              ; 00:00:00                           ;
 ; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 549 MB              ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 504 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:33                           ;
+; EDA Netlist Writer        ; 00:00:00     ; 1.0                     ; 505 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:19     ; --                      ; --                  ; 00:00:34                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
