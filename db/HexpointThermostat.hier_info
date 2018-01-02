@@ -60,27 +60,6 @@ FreezeReg <= loadSignalGen:inst34.freezeParalell
 Cool <= inst45.DB_MAX_OUTPUT_PORT_TYPE
 sevsegSign <= toDisplay[12].DB_MAX_OUTPUT_PORT_TYPE
 hiTrueSetDisp => BUSMUX:inst8.sel
-MSA <= bcd_7seg:inst86.A
-MSB <= bcd_7seg:inst86.B
-MSC <= bcd_7seg:inst86.C
-MSD <= bcd_7seg:inst86.D
-MSF <= bcd_7seg:inst86.F
-MSE <= bcd_7seg:inst86.E
-MSG <= bcd_7seg:inst86.G
-LSA <= bcd_7seg:inst87.A
-LSB <= bcd_7seg:inst87.B
-LSC <= bcd_7seg:inst87.C
-LSD <= bcd_7seg:inst87.D
-LSE <= bcd_7seg:inst87.E
-LSF <= bcd_7seg:inst87.F
-LSG <= bcd_7seg:inst87.G
-FracA <= bcd_7seg:inst88.A
-FracB <= bcd_7seg:inst88.B
-FracC <= bcd_7seg:inst88.C
-FracD <= bcd_7seg:inst88.D
-FracF <= bcd_7seg:inst88.F
-FracE <= bcd_7seg:inst88.E
-FracG <= bcd_7seg:inst88.G
 externalTemp[0] <= act[0].DB_MAX_OUTPUT_PORT_TYPE
 externalTemp[1] <= act[1].DB_MAX_OUTPUT_PORT_TYPE
 externalTemp[2] <= act[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -94,6 +73,27 @@ externalTemp[9] <= act[9].DB_MAX_OUTPUT_PORT_TYPE
 externalTemp[10] <= act[10].DB_MAX_OUTPUT_PORT_TYPE
 externalTemp[11] <= act[11].DB_MAX_OUTPUT_PORT_TYPE
 externalTemp[12] <= act[12].DB_MAX_OUTPUT_PORT_TYPE
+frac[0] <= bcd_7seg:inst83v4.output[0]
+frac[1] <= bcd_7seg:inst83v4.output[1]
+frac[2] <= bcd_7seg:inst83v4.output[2]
+frac[3] <= bcd_7seg:inst83v4.output[3]
+frac[4] <= bcd_7seg:inst83v4.output[4]
+frac[5] <= bcd_7seg:inst83v4.output[5]
+frac[6] <= bcd_7seg:inst83v4.output[6]
+LS[0] <= bcd_7seg:inst82ds.output[0]
+LS[1] <= bcd_7seg:inst82ds.output[1]
+LS[2] <= bcd_7seg:inst82ds.output[2]
+LS[3] <= bcd_7seg:inst82ds.output[3]
+LS[4] <= bcd_7seg:inst82ds.output[4]
+LS[5] <= bcd_7seg:inst82ds.output[5]
+LS[6] <= bcd_7seg:inst82ds.output[6]
+MS[0] <= bcd_7seg:inst80sa.output[0]
+MS[1] <= bcd_7seg:inst80sa.output[1]
+MS[2] <= bcd_7seg:inst80sa.output[2]
+MS[3] <= bcd_7seg:inst80sa.output[3]
+MS[4] <= bcd_7seg:inst80sa.output[4]
+MS[5] <= bcd_7seg:inst80sa.output[5]
+MS[6] <= bcd_7seg:inst80sa.output[6]
 fbctestclk => ~NO_FANOUT~
 fbctestrestart => ~NO_FANOUT~
 
@@ -4962,417 +4962,100 @@ sel[0] => result_node[0].IN0
 sel[0] => _.IN0
 
 
-|HexpointThermostat|bcd_7seg:inst86
-BCD[0] => A.IN0
-BCD[0] => D.IN1
-BCD[0] => F.IN1
-BCD[0] => G.IN1
-BCD[1] => A.IN0
-BCD[1] => C.IN0
-BCD[1] => D.IN0
-BCD[1] => F.IN0
-BCD[1] => A.IN0
-BCD[1] => B.IN1
-BCD[1] => D.IN0
-BCD[2] => A.IN1
-BCD[2] => B.IN0
-BCD[2] => D.IN0
-BCD[2] => D.IN1
-BCD[2] => B.IN0
-BCD[2] => C.IN1
-BCD[2] => D.IN1
-BCD[3] => A.IN1
-BCD[3] => B.IN1
-BCD[3] => C.IN1
-BCD[3] => D.IN1
-BCD[3] => A.IN1
-BCD[3] => B.IN1
-BCD[3] => D.IN1
-BCD[3] => F.IN1
-A <= A.DB_MAX_OUTPUT_PORT_TYPE
-B <= B.DB_MAX_OUTPUT_PORT_TYPE
-C <= C.DB_MAX_OUTPUT_PORT_TYPE
-D <= D.DB_MAX_OUTPUT_PORT_TYPE
-E <= D.DB_MAX_OUTPUT_PORT_TYPE
-F <= F.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
+|HexpointThermostat|bcd_7seg:inst83v4
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+output[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|HexpointThermostat|decimalator:inst58
-denom[0] => lpm_divide:LPM_DIVIDE_component.denom[0]
-denom[1] => lpm_divide:LPM_DIVIDE_component.denom[1]
-denom[2] => lpm_divide:LPM_DIVIDE_component.denom[2]
-denom[3] => lpm_divide:LPM_DIVIDE_component.denom[3]
-numer[0] => lpm_divide:LPM_DIVIDE_component.numer[0]
-numer[1] => lpm_divide:LPM_DIVIDE_component.numer[1]
-numer[2] => lpm_divide:LPM_DIVIDE_component.numer[2]
-numer[3] => lpm_divide:LPM_DIVIDE_component.numer[3]
-numer[4] => lpm_divide:LPM_DIVIDE_component.numer[4]
-numer[5] => lpm_divide:LPM_DIVIDE_component.numer[5]
-numer[6] => lpm_divide:LPM_DIVIDE_component.numer[6]
-numer[7] => lpm_divide:LPM_DIVIDE_component.numer[7]
-quotient[0] <= lpm_divide:LPM_DIVIDE_component.quotient[0]
-quotient[1] <= lpm_divide:LPM_DIVIDE_component.quotient[1]
-quotient[2] <= lpm_divide:LPM_DIVIDE_component.quotient[2]
-quotient[3] <= lpm_divide:LPM_DIVIDE_component.quotient[3]
-quotient[4] <= lpm_divide:LPM_DIVIDE_component.quotient[4]
-quotient[5] <= lpm_divide:LPM_DIVIDE_component.quotient[5]
-quotient[6] <= lpm_divide:LPM_DIVIDE_component.quotient[6]
-quotient[7] <= lpm_divide:LPM_DIVIDE_component.quotient[7]
-remain[0] <= lpm_divide:LPM_DIVIDE_component.remain[0]
-remain[1] <= lpm_divide:LPM_DIVIDE_component.remain[1]
-remain[2] <= lpm_divide:LPM_DIVIDE_component.remain[2]
-remain[3] <= lpm_divide:LPM_DIVIDE_component.remain[3]
+|HexpointThermostat|BUSMUX:inst92
+dataa[0] => lpm_mux:$00000.data[0][0]
+dataa[1] => lpm_mux:$00000.data[0][1]
+dataa[2] => lpm_mux:$00000.data[0][2]
+dataa[3] => lpm_mux:$00000.data[0][3]
+datab[0] => lpm_mux:$00000.data[1][0]
+datab[1] => lpm_mux:$00000.data[1][1]
+datab[2] => lpm_mux:$00000.data[1][2]
+datab[3] => lpm_mux:$00000.data[1][3]
+sel => lpm_mux:$00000.sel[0]
+result[0] <= lpm_mux:$00000.result[0]
+result[1] <= lpm_mux:$00000.result[1]
+result[2] <= lpm_mux:$00000.result[2]
+result[3] <= lpm_mux:$00000.result[3]
 
 
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component
-numer[0] => lpm_divide_dbp:auto_generated.numer[0]
-numer[1] => lpm_divide_dbp:auto_generated.numer[1]
-numer[2] => lpm_divide_dbp:auto_generated.numer[2]
-numer[3] => lpm_divide_dbp:auto_generated.numer[3]
-numer[4] => lpm_divide_dbp:auto_generated.numer[4]
-numer[5] => lpm_divide_dbp:auto_generated.numer[5]
-numer[6] => lpm_divide_dbp:auto_generated.numer[6]
-numer[7] => lpm_divide_dbp:auto_generated.numer[7]
-denom[0] => lpm_divide_dbp:auto_generated.denom[0]
-denom[1] => lpm_divide_dbp:auto_generated.denom[1]
-denom[2] => lpm_divide_dbp:auto_generated.denom[2]
-denom[3] => lpm_divide_dbp:auto_generated.denom[3]
+|HexpointThermostat|BUSMUX:inst92|lpm_mux:$00000
+data[0][0] => mux_l6c:auto_generated.data[0]
+data[0][1] => mux_l6c:auto_generated.data[1]
+data[0][2] => mux_l6c:auto_generated.data[2]
+data[0][3] => mux_l6c:auto_generated.data[3]
+data[1][0] => mux_l6c:auto_generated.data[4]
+data[1][1] => mux_l6c:auto_generated.data[5]
+data[1][2] => mux_l6c:auto_generated.data[6]
+data[1][3] => mux_l6c:auto_generated.data[7]
+sel[0] => mux_l6c:auto_generated.sel[0]
 clock => ~NO_FANOUT~
 aclr => ~NO_FANOUT~
 clken => ~NO_FANOUT~
-quotient[0] <= lpm_divide_dbp:auto_generated.quotient[0]
-quotient[1] <= lpm_divide_dbp:auto_generated.quotient[1]
-quotient[2] <= lpm_divide_dbp:auto_generated.quotient[2]
-quotient[3] <= lpm_divide_dbp:auto_generated.quotient[3]
-quotient[4] <= lpm_divide_dbp:auto_generated.quotient[4]
-quotient[5] <= lpm_divide_dbp:auto_generated.quotient[5]
-quotient[6] <= lpm_divide_dbp:auto_generated.quotient[6]
-quotient[7] <= lpm_divide_dbp:auto_generated.quotient[7]
-remain[0] <= lpm_divide_dbp:auto_generated.remain[0]
-remain[1] <= lpm_divide_dbp:auto_generated.remain[1]
-remain[2] <= lpm_divide_dbp:auto_generated.remain[2]
-remain[3] <= lpm_divide_dbp:auto_generated.remain[3]
+result[0] <= mux_l6c:auto_generated.result[0]
+result[1] <= mux_l6c:auto_generated.result[1]
+result[2] <= mux_l6c:auto_generated.result[2]
+result[3] <= mux_l6c:auto_generated.result[3]
 
 
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated
-denom[0] => sign_div_unsign_bkh:divider.denominator[0]
-denom[1] => sign_div_unsign_bkh:divider.denominator[1]
-denom[2] => sign_div_unsign_bkh:divider.denominator[2]
-denom[3] => sign_div_unsign_bkh:divider.denominator[3]
-numer[0] => sign_div_unsign_bkh:divider.numerator[0]
-numer[1] => sign_div_unsign_bkh:divider.numerator[1]
-numer[2] => sign_div_unsign_bkh:divider.numerator[2]
-numer[3] => sign_div_unsign_bkh:divider.numerator[3]
-numer[4] => sign_div_unsign_bkh:divider.numerator[4]
-numer[5] => sign_div_unsign_bkh:divider.numerator[5]
-numer[6] => sign_div_unsign_bkh:divider.numerator[6]
-numer[7] => sign_div_unsign_bkh:divider.numerator[7]
-quotient[0] <= sign_div_unsign_bkh:divider.quotient[0]
-quotient[1] <= sign_div_unsign_bkh:divider.quotient[1]
-quotient[2] <= sign_div_unsign_bkh:divider.quotient[2]
-quotient[3] <= sign_div_unsign_bkh:divider.quotient[3]
-quotient[4] <= sign_div_unsign_bkh:divider.quotient[4]
-quotient[5] <= sign_div_unsign_bkh:divider.quotient[5]
-quotient[6] <= sign_div_unsign_bkh:divider.quotient[6]
-quotient[7] <= sign_div_unsign_bkh:divider.quotient[7]
-remain[0] <= sign_div_unsign_bkh:divider.remainder[0]
-remain[1] <= sign_div_unsign_bkh:divider.remainder[1]
-remain[2] <= sign_div_unsign_bkh:divider.remainder[2]
-remain[3] <= sign_div_unsign_bkh:divider.remainder[3]
-
-
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider
-denominator[0] => alt_u_div_lfe:divider.denominator[0]
-denominator[1] => alt_u_div_lfe:divider.denominator[1]
-denominator[2] => alt_u_div_lfe:divider.denominator[2]
-denominator[3] => alt_u_div_lfe:divider.denominator[3]
-numerator[0] => alt_u_div_lfe:divider.numerator[0]
-numerator[1] => alt_u_div_lfe:divider.numerator[1]
-numerator[2] => alt_u_div_lfe:divider.numerator[2]
-numerator[3] => alt_u_div_lfe:divider.numerator[3]
-numerator[4] => alt_u_div_lfe:divider.numerator[4]
-numerator[5] => alt_u_div_lfe:divider.numerator[5]
-numerator[6] => alt_u_div_lfe:divider.numerator[6]
-numerator[7] => alt_u_div_lfe:divider.numerator[7]
-quotient[0] <= protect_quotient[0].DB_MAX_OUTPUT_PORT_TYPE
-quotient[1] <= protect_quotient[1].DB_MAX_OUTPUT_PORT_TYPE
-quotient[2] <= protect_quotient[2].DB_MAX_OUTPUT_PORT_TYPE
-quotient[3] <= protect_quotient[3].DB_MAX_OUTPUT_PORT_TYPE
-quotient[4] <= protect_quotient[4].DB_MAX_OUTPUT_PORT_TYPE
-quotient[5] <= protect_quotient[5].DB_MAX_OUTPUT_PORT_TYPE
-quotient[6] <= protect_quotient[6].DB_MAX_OUTPUT_PORT_TYPE
-quotient[7] <= protect_quotient[7].DB_MAX_OUTPUT_PORT_TYPE
-remainder[0] <= protect_remainder[0].DB_MAX_OUTPUT_PORT_TYPE
-remainder[1] <= protect_remainder[1].DB_MAX_OUTPUT_PORT_TYPE
-remainder[2] <= protect_remainder[2].DB_MAX_OUTPUT_PORT_TYPE
-remainder[3] <= protect_remainder[3].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider
-denominator[0] => add_sub_i4c:add_sub_0.datab[0]
-denominator[0] => add_sub_j4c:add_sub_1.datab[0]
-denominator[0] => add_sub_k4c:add_sub_2.datab[0]
-denominator[0] => add_sub_l4c:add_sub_3.datab[0]
-denominator[0] => add_sub_m4c:add_sub_4.datab[0]
-denominator[0] => add_sub_m4c:add_sub_5.datab[0]
-denominator[0] => add_sub_m4c:add_sub_6.datab[0]
-denominator[0] => add_sub_m4c:add_sub_7.datab[0]
-denominator[1] => sel[0].IN1
-denominator[1] => add_sub_j4c:add_sub_1.datab[1]
-denominator[1] => sel[4].IN1
-denominator[1] => add_sub_k4c:add_sub_2.datab[1]
-denominator[1] => sel[8].IN1
-denominator[1] => add_sub_l4c:add_sub_3.datab[1]
-denominator[1] => sel[12].IN1
-denominator[1] => add_sub_m4c:add_sub_4.datab[1]
-denominator[1] => sel[16].IN1
-denominator[1] => add_sub_m4c:add_sub_5.datab[1]
-denominator[1] => sel[20].IN1
-denominator[1] => add_sub_m4c:add_sub_6.datab[1]
-denominator[1] => sel[24].IN1
-denominator[1] => add_sub_m4c:add_sub_7.datab[1]
-denominator[1] => sel[28].IN1
-denominator[1] => sel[32].IN1
-denominator[2] => sel[1].IN1
-denominator[2] => sel[5].IN1
-denominator[2] => add_sub_k4c:add_sub_2.datab[2]
-denominator[2] => sel[9].IN1
-denominator[2] => add_sub_l4c:add_sub_3.datab[2]
-denominator[2] => sel[13].IN1
-denominator[2] => add_sub_m4c:add_sub_4.datab[2]
-denominator[2] => sel[17].IN1
-denominator[2] => add_sub_m4c:add_sub_5.datab[2]
-denominator[2] => sel[21].IN1
-denominator[2] => add_sub_m4c:add_sub_6.datab[2]
-denominator[2] => sel[25].IN1
-denominator[2] => add_sub_m4c:add_sub_7.datab[2]
-denominator[2] => sel[29].IN1
-denominator[2] => sel[33].IN1
-denominator[3] => sel[2].IN1
-denominator[3] => sel[6].IN1
-denominator[3] => sel[10].IN1
-denominator[3] => add_sub_l4c:add_sub_3.datab[3]
-denominator[3] => sel[14].IN1
-denominator[3] => add_sub_m4c:add_sub_4.datab[3]
-denominator[3] => sel[18].IN1
-denominator[3] => add_sub_m4c:add_sub_5.datab[3]
-denominator[3] => sel[22].IN1
-denominator[3] => add_sub_m4c:add_sub_6.datab[3]
-denominator[3] => sel[26].IN1
-denominator[3] => add_sub_m4c:add_sub_7.datab[3]
-denominator[3] => sel[30].IN1
-denominator[3] => sel[34].IN1
-numerator[0] => add_sub_m4c:add_sub_7.dataa[0]
-numerator[0] => StageOut[35].IN0
-numerator[1] => add_sub_m4c:add_sub_6.dataa[0]
-numerator[1] => StageOut[30].IN0
-numerator[2] => add_sub_m4c:add_sub_5.dataa[0]
-numerator[2] => StageOut[25].IN0
-numerator[3] => add_sub_m4c:add_sub_4.dataa[0]
-numerator[3] => StageOut[20].IN0
-numerator[4] => add_sub_l4c:add_sub_3.dataa[0]
-numerator[4] => StageOut[15].IN0
-numerator[5] => add_sub_k4c:add_sub_2.dataa[0]
-numerator[5] => StageOut[10].IN0
-numerator[6] => add_sub_j4c:add_sub_1.dataa[0]
-numerator[6] => StageOut[5].IN0
-numerator[7] => add_sub_i4c:add_sub_0.dataa[0]
-numerator[7] => StageOut[0].IN0
-quotient[0] <= quotient_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
-quotient[1] <= quotient_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
-quotient[2] <= quotient_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
-quotient[3] <= quotient_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
-quotient[4] <= quotient_tmp[4].DB_MAX_OUTPUT_PORT_TYPE
-quotient[5] <= quotient_tmp[5].DB_MAX_OUTPUT_PORT_TYPE
-quotient[6] <= quotient_tmp[6].DB_MAX_OUTPUT_PORT_TYPE
-quotient[7] <= quotient_tmp[7].DB_MAX_OUTPUT_PORT_TYPE
-remainder[0] <= StageOut[35].DB_MAX_OUTPUT_PORT_TYPE
-remainder[1] <= StageOut[36].DB_MAX_OUTPUT_PORT_TYPE
-remainder[2] <= StageOut[37].DB_MAX_OUTPUT_PORT_TYPE
-remainder[3] <= StageOut[38].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_i4c:add_sub_0
-cout <= carry_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => carry_eqn[0].IN0
-dataa[0] => _.IN0
-dataa[0] => sum_eqn[0].IN0
-datab[0] => datab_node[0].IN0
-result[0] <= sum_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_j4c:add_sub_1
-cout <= carry_eqn[1].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => carry_eqn[0].IN0
-dataa[0] => _.IN0
-dataa[0] => sum_eqn[0].IN0
-dataa[1] => carry_eqn[1].IN0
-dataa[1] => _.IN0
-dataa[1] => sum_eqn[1].IN0
-datab[0] => datab_node[0].IN0
-datab[1] => datab_node[1].IN0
-result[0] <= sum_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= sum_eqn[1].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_k4c:add_sub_2
-cout <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-datab[0] => datab_node[0].IN0
-datab[1] => datab_node[1].IN0
-datab[2] => datab_node[2].IN0
-result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_l4c:add_sub_3
-cout <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-dataa[3] => _.IN0
-dataa[3] => _.IN0
-dataa[3] => _.IN0
-datab[0] => datab_node[0].IN0
-datab[1] => datab_node[1].IN0
-datab[2] => datab_node[2].IN0
-datab[3] => datab_node[3].IN0
-result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_m4c:add_sub_4
-cout <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-dataa[3] => _.IN0
-dataa[3] => _.IN0
-dataa[3] => _.IN0
-dataa[4] => _.IN0
-dataa[4] => _.IN0
-dataa[4] => _.IN0
-datab[0] => datab_node[0].IN0
-datab[1] => datab_node[1].IN0
-datab[2] => datab_node[2].IN0
-datab[3] => datab_node[3].IN0
-datab[4] => datab_node[4].IN0
-result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_m4c:add_sub_5
-cout <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-dataa[3] => _.IN0
-dataa[3] => _.IN0
-dataa[3] => _.IN0
-dataa[4] => _.IN0
-dataa[4] => _.IN0
-dataa[4] => _.IN0
-datab[0] => datab_node[0].IN0
-datab[1] => datab_node[1].IN0
-datab[2] => datab_node[2].IN0
-datab[3] => datab_node[3].IN0
-datab[4] => datab_node[4].IN0
-result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_m4c:add_sub_6
-cout <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-dataa[3] => _.IN0
-dataa[3] => _.IN0
-dataa[3] => _.IN0
-dataa[4] => _.IN0
-dataa[4] => _.IN0
-dataa[4] => _.IN0
-datab[0] => datab_node[0].IN0
-datab[1] => datab_node[1].IN0
-datab[2] => datab_node[2].IN0
-datab[3] => datab_node[3].IN0
-datab[4] => datab_node[4].IN0
-result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_m4c:add_sub_7
-cout <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[0] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[1] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-dataa[2] => _.IN0
-dataa[3] => _.IN0
-dataa[3] => _.IN0
-dataa[3] => _.IN0
-dataa[4] => _.IN0
-dataa[4] => _.IN0
-dataa[4] => _.IN0
-datab[0] => datab_node[0].IN0
-datab[1] => datab_node[1].IN0
-datab[2] => datab_node[2].IN0
-datab[3] => datab_node[3].IN0
-datab[4] => datab_node[4].IN0
-result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
-result[4] <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
+|HexpointThermostat|BUSMUX:inst92|lpm_mux:$00000|mux_l6c:auto_generated
+data[0] => result_node[0].IN1
+data[1] => result_node[1].IN1
+data[2] => result_node[2].IN1
+data[3] => result_node[3].IN1
+data[4] => result_node[0].IN1
+data[5] => result_node[1].IN1
+data[6] => result_node[2].IN1
+data[7] => result_node[3].IN1
+result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
+sel[0] => result_node[3].IN0
+sel[0] => _.IN0
+sel[0] => result_node[2].IN0
+sel[0] => _.IN0
+sel[0] => result_node[1].IN0
+sel[0] => _.IN0
+sel[0] => result_node[0].IN0
+sel[0] => _.IN0
 
 
 |HexpointThermostat|LPM_ABS:inst57
@@ -5785,136 +5468,6 @@ clken => ~NO_FANOUT~
 result[0] <= data[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|HexpointThermostat|bcd_7seg:inst87
-BCD[0] => A.IN0
-BCD[0] => D.IN1
-BCD[0] => F.IN1
-BCD[0] => G.IN1
-BCD[1] => A.IN0
-BCD[1] => C.IN0
-BCD[1] => D.IN0
-BCD[1] => F.IN0
-BCD[1] => A.IN0
-BCD[1] => B.IN1
-BCD[1] => D.IN0
-BCD[2] => A.IN1
-BCD[2] => B.IN0
-BCD[2] => D.IN0
-BCD[2] => D.IN1
-BCD[2] => B.IN0
-BCD[2] => C.IN1
-BCD[2] => D.IN1
-BCD[3] => A.IN1
-BCD[3] => B.IN1
-BCD[3] => C.IN1
-BCD[3] => D.IN1
-BCD[3] => A.IN1
-BCD[3] => B.IN1
-BCD[3] => D.IN1
-BCD[3] => F.IN1
-A <= A.DB_MAX_OUTPUT_PORT_TYPE
-B <= B.DB_MAX_OUTPUT_PORT_TYPE
-C <= C.DB_MAX_OUTPUT_PORT_TYPE
-D <= D.DB_MAX_OUTPUT_PORT_TYPE
-E <= D.DB_MAX_OUTPUT_PORT_TYPE
-F <= F.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|HexpointThermostat|bcd_7seg:inst88
-BCD[0] => A.IN0
-BCD[0] => D.IN1
-BCD[0] => F.IN1
-BCD[0] => G.IN1
-BCD[1] => A.IN0
-BCD[1] => C.IN0
-BCD[1] => D.IN0
-BCD[1] => F.IN0
-BCD[1] => A.IN0
-BCD[1] => B.IN1
-BCD[1] => D.IN0
-BCD[2] => A.IN1
-BCD[2] => B.IN0
-BCD[2] => D.IN0
-BCD[2] => D.IN1
-BCD[2] => B.IN0
-BCD[2] => C.IN1
-BCD[2] => D.IN1
-BCD[3] => A.IN1
-BCD[3] => B.IN1
-BCD[3] => C.IN1
-BCD[3] => D.IN1
-BCD[3] => A.IN1
-BCD[3] => B.IN1
-BCD[3] => D.IN1
-BCD[3] => F.IN1
-A <= A.DB_MAX_OUTPUT_PORT_TYPE
-B <= B.DB_MAX_OUTPUT_PORT_TYPE
-C <= C.DB_MAX_OUTPUT_PORT_TYPE
-D <= D.DB_MAX_OUTPUT_PORT_TYPE
-E <= D.DB_MAX_OUTPUT_PORT_TYPE
-F <= F.DB_MAX_OUTPUT_PORT_TYPE
-G <= G.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|HexpointThermostat|BUSMUX:inst92
-dataa[0] => lpm_mux:$00000.data[0][0]
-dataa[1] => lpm_mux:$00000.data[0][1]
-dataa[2] => lpm_mux:$00000.data[0][2]
-dataa[3] => lpm_mux:$00000.data[0][3]
-datab[0] => lpm_mux:$00000.data[1][0]
-datab[1] => lpm_mux:$00000.data[1][1]
-datab[2] => lpm_mux:$00000.data[1][2]
-datab[3] => lpm_mux:$00000.data[1][3]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-result[1] <= lpm_mux:$00000.result[1]
-result[2] <= lpm_mux:$00000.result[2]
-result[3] <= lpm_mux:$00000.result[3]
-
-
-|HexpointThermostat|BUSMUX:inst92|lpm_mux:$00000
-data[0][0] => mux_l6c:auto_generated.data[0]
-data[0][1] => mux_l6c:auto_generated.data[1]
-data[0][2] => mux_l6c:auto_generated.data[2]
-data[0][3] => mux_l6c:auto_generated.data[3]
-data[1][0] => mux_l6c:auto_generated.data[4]
-data[1][1] => mux_l6c:auto_generated.data[5]
-data[1][2] => mux_l6c:auto_generated.data[6]
-data[1][3] => mux_l6c:auto_generated.data[7]
-sel[0] => mux_l6c:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_l6c:auto_generated.result[0]
-result[1] <= mux_l6c:auto_generated.result[1]
-result[2] <= mux_l6c:auto_generated.result[2]
-result[3] <= mux_l6c:auto_generated.result[3]
-
-
-|HexpointThermostat|BUSMUX:inst92|lpm_mux:$00000|mux_l6c:auto_generated
-data[0] => result_node[0].IN1
-data[1] => result_node[1].IN1
-data[2] => result_node[2].IN1
-data[3] => result_node[3].IN1
-data[4] => result_node[0].IN1
-data[5] => result_node[1].IN1
-data[6] => result_node[2].IN1
-data[7] => result_node[3].IN1
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= result_node[1].DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= result_node[2].DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= result_node[3].DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => result_node[3].IN0
-sel[0] => _.IN0
-sel[0] => result_node[2].IN0
-sel[0] => _.IN0
-sel[0] => result_node[1].IN0
-sel[0] => _.IN0
-sel[0] => result_node[0].IN0
-sel[0] => _.IN0
-
-
 |HexpointThermostat|BUSMUX:inst94
 dataa[0] => lpm_mux:$00000.data[0][0]
 dataa[1] => lpm_mux:$00000.data[0][1]
@@ -6029,5 +5582,458 @@ sel[0] => result_node[1].IN0
 sel[0] => _.IN0
 sel[0] => result_node[0].IN0
 sel[0] => _.IN0
+
+
+|HexpointThermostat|bcd_7seg:inst82ds
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+output[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|decimalator:inst58
+denom[0] => lpm_divide:LPM_DIVIDE_component.denom[0]
+denom[1] => lpm_divide:LPM_DIVIDE_component.denom[1]
+denom[2] => lpm_divide:LPM_DIVIDE_component.denom[2]
+denom[3] => lpm_divide:LPM_DIVIDE_component.denom[3]
+numer[0] => lpm_divide:LPM_DIVIDE_component.numer[0]
+numer[1] => lpm_divide:LPM_DIVIDE_component.numer[1]
+numer[2] => lpm_divide:LPM_DIVIDE_component.numer[2]
+numer[3] => lpm_divide:LPM_DIVIDE_component.numer[3]
+numer[4] => lpm_divide:LPM_DIVIDE_component.numer[4]
+numer[5] => lpm_divide:LPM_DIVIDE_component.numer[5]
+numer[6] => lpm_divide:LPM_DIVIDE_component.numer[6]
+numer[7] => lpm_divide:LPM_DIVIDE_component.numer[7]
+quotient[0] <= lpm_divide:LPM_DIVIDE_component.quotient[0]
+quotient[1] <= lpm_divide:LPM_DIVIDE_component.quotient[1]
+quotient[2] <= lpm_divide:LPM_DIVIDE_component.quotient[2]
+quotient[3] <= lpm_divide:LPM_DIVIDE_component.quotient[3]
+quotient[4] <= lpm_divide:LPM_DIVIDE_component.quotient[4]
+quotient[5] <= lpm_divide:LPM_DIVIDE_component.quotient[5]
+quotient[6] <= lpm_divide:LPM_DIVIDE_component.quotient[6]
+quotient[7] <= lpm_divide:LPM_DIVIDE_component.quotient[7]
+remain[0] <= lpm_divide:LPM_DIVIDE_component.remain[0]
+remain[1] <= lpm_divide:LPM_DIVIDE_component.remain[1]
+remain[2] <= lpm_divide:LPM_DIVIDE_component.remain[2]
+remain[3] <= lpm_divide:LPM_DIVIDE_component.remain[3]
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component
+numer[0] => lpm_divide_dbp:auto_generated.numer[0]
+numer[1] => lpm_divide_dbp:auto_generated.numer[1]
+numer[2] => lpm_divide_dbp:auto_generated.numer[2]
+numer[3] => lpm_divide_dbp:auto_generated.numer[3]
+numer[4] => lpm_divide_dbp:auto_generated.numer[4]
+numer[5] => lpm_divide_dbp:auto_generated.numer[5]
+numer[6] => lpm_divide_dbp:auto_generated.numer[6]
+numer[7] => lpm_divide_dbp:auto_generated.numer[7]
+denom[0] => lpm_divide_dbp:auto_generated.denom[0]
+denom[1] => lpm_divide_dbp:auto_generated.denom[1]
+denom[2] => lpm_divide_dbp:auto_generated.denom[2]
+denom[3] => lpm_divide_dbp:auto_generated.denom[3]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+quotient[0] <= lpm_divide_dbp:auto_generated.quotient[0]
+quotient[1] <= lpm_divide_dbp:auto_generated.quotient[1]
+quotient[2] <= lpm_divide_dbp:auto_generated.quotient[2]
+quotient[3] <= lpm_divide_dbp:auto_generated.quotient[3]
+quotient[4] <= lpm_divide_dbp:auto_generated.quotient[4]
+quotient[5] <= lpm_divide_dbp:auto_generated.quotient[5]
+quotient[6] <= lpm_divide_dbp:auto_generated.quotient[6]
+quotient[7] <= lpm_divide_dbp:auto_generated.quotient[7]
+remain[0] <= lpm_divide_dbp:auto_generated.remain[0]
+remain[1] <= lpm_divide_dbp:auto_generated.remain[1]
+remain[2] <= lpm_divide_dbp:auto_generated.remain[2]
+remain[3] <= lpm_divide_dbp:auto_generated.remain[3]
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated
+denom[0] => sign_div_unsign_bkh:divider.denominator[0]
+denom[1] => sign_div_unsign_bkh:divider.denominator[1]
+denom[2] => sign_div_unsign_bkh:divider.denominator[2]
+denom[3] => sign_div_unsign_bkh:divider.denominator[3]
+numer[0] => sign_div_unsign_bkh:divider.numerator[0]
+numer[1] => sign_div_unsign_bkh:divider.numerator[1]
+numer[2] => sign_div_unsign_bkh:divider.numerator[2]
+numer[3] => sign_div_unsign_bkh:divider.numerator[3]
+numer[4] => sign_div_unsign_bkh:divider.numerator[4]
+numer[5] => sign_div_unsign_bkh:divider.numerator[5]
+numer[6] => sign_div_unsign_bkh:divider.numerator[6]
+numer[7] => sign_div_unsign_bkh:divider.numerator[7]
+quotient[0] <= sign_div_unsign_bkh:divider.quotient[0]
+quotient[1] <= sign_div_unsign_bkh:divider.quotient[1]
+quotient[2] <= sign_div_unsign_bkh:divider.quotient[2]
+quotient[3] <= sign_div_unsign_bkh:divider.quotient[3]
+quotient[4] <= sign_div_unsign_bkh:divider.quotient[4]
+quotient[5] <= sign_div_unsign_bkh:divider.quotient[5]
+quotient[6] <= sign_div_unsign_bkh:divider.quotient[6]
+quotient[7] <= sign_div_unsign_bkh:divider.quotient[7]
+remain[0] <= sign_div_unsign_bkh:divider.remainder[0]
+remain[1] <= sign_div_unsign_bkh:divider.remainder[1]
+remain[2] <= sign_div_unsign_bkh:divider.remainder[2]
+remain[3] <= sign_div_unsign_bkh:divider.remainder[3]
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider
+denominator[0] => alt_u_div_lfe:divider.denominator[0]
+denominator[1] => alt_u_div_lfe:divider.denominator[1]
+denominator[2] => alt_u_div_lfe:divider.denominator[2]
+denominator[3] => alt_u_div_lfe:divider.denominator[3]
+numerator[0] => alt_u_div_lfe:divider.numerator[0]
+numerator[1] => alt_u_div_lfe:divider.numerator[1]
+numerator[2] => alt_u_div_lfe:divider.numerator[2]
+numerator[3] => alt_u_div_lfe:divider.numerator[3]
+numerator[4] => alt_u_div_lfe:divider.numerator[4]
+numerator[5] => alt_u_div_lfe:divider.numerator[5]
+numerator[6] => alt_u_div_lfe:divider.numerator[6]
+numerator[7] => alt_u_div_lfe:divider.numerator[7]
+quotient[0] <= protect_quotient[0].DB_MAX_OUTPUT_PORT_TYPE
+quotient[1] <= protect_quotient[1].DB_MAX_OUTPUT_PORT_TYPE
+quotient[2] <= protect_quotient[2].DB_MAX_OUTPUT_PORT_TYPE
+quotient[3] <= protect_quotient[3].DB_MAX_OUTPUT_PORT_TYPE
+quotient[4] <= protect_quotient[4].DB_MAX_OUTPUT_PORT_TYPE
+quotient[5] <= protect_quotient[5].DB_MAX_OUTPUT_PORT_TYPE
+quotient[6] <= protect_quotient[6].DB_MAX_OUTPUT_PORT_TYPE
+quotient[7] <= protect_quotient[7].DB_MAX_OUTPUT_PORT_TYPE
+remainder[0] <= protect_remainder[0].DB_MAX_OUTPUT_PORT_TYPE
+remainder[1] <= protect_remainder[1].DB_MAX_OUTPUT_PORT_TYPE
+remainder[2] <= protect_remainder[2].DB_MAX_OUTPUT_PORT_TYPE
+remainder[3] <= protect_remainder[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider
+denominator[0] => add_sub_i4c:add_sub_0.datab[0]
+denominator[0] => add_sub_j4c:add_sub_1.datab[0]
+denominator[0] => add_sub_k4c:add_sub_2.datab[0]
+denominator[0] => add_sub_l4c:add_sub_3.datab[0]
+denominator[0] => add_sub_m4c:add_sub_4.datab[0]
+denominator[0] => add_sub_m4c:add_sub_5.datab[0]
+denominator[0] => add_sub_m4c:add_sub_6.datab[0]
+denominator[0] => add_sub_m4c:add_sub_7.datab[0]
+denominator[1] => sel[0].IN1
+denominator[1] => add_sub_j4c:add_sub_1.datab[1]
+denominator[1] => sel[4].IN1
+denominator[1] => add_sub_k4c:add_sub_2.datab[1]
+denominator[1] => sel[8].IN1
+denominator[1] => add_sub_l4c:add_sub_3.datab[1]
+denominator[1] => sel[12].IN1
+denominator[1] => add_sub_m4c:add_sub_4.datab[1]
+denominator[1] => sel[16].IN1
+denominator[1] => add_sub_m4c:add_sub_5.datab[1]
+denominator[1] => sel[20].IN1
+denominator[1] => add_sub_m4c:add_sub_6.datab[1]
+denominator[1] => sel[24].IN1
+denominator[1] => add_sub_m4c:add_sub_7.datab[1]
+denominator[1] => sel[28].IN1
+denominator[1] => sel[32].IN1
+denominator[2] => sel[1].IN1
+denominator[2] => sel[5].IN1
+denominator[2] => add_sub_k4c:add_sub_2.datab[2]
+denominator[2] => sel[9].IN1
+denominator[2] => add_sub_l4c:add_sub_3.datab[2]
+denominator[2] => sel[13].IN1
+denominator[2] => add_sub_m4c:add_sub_4.datab[2]
+denominator[2] => sel[17].IN1
+denominator[2] => add_sub_m4c:add_sub_5.datab[2]
+denominator[2] => sel[21].IN1
+denominator[2] => add_sub_m4c:add_sub_6.datab[2]
+denominator[2] => sel[25].IN1
+denominator[2] => add_sub_m4c:add_sub_7.datab[2]
+denominator[2] => sel[29].IN1
+denominator[2] => sel[33].IN1
+denominator[3] => sel[2].IN1
+denominator[3] => sel[6].IN1
+denominator[3] => sel[10].IN1
+denominator[3] => add_sub_l4c:add_sub_3.datab[3]
+denominator[3] => sel[14].IN1
+denominator[3] => add_sub_m4c:add_sub_4.datab[3]
+denominator[3] => sel[18].IN1
+denominator[3] => add_sub_m4c:add_sub_5.datab[3]
+denominator[3] => sel[22].IN1
+denominator[3] => add_sub_m4c:add_sub_6.datab[3]
+denominator[3] => sel[26].IN1
+denominator[3] => add_sub_m4c:add_sub_7.datab[3]
+denominator[3] => sel[30].IN1
+denominator[3] => sel[34].IN1
+numerator[0] => add_sub_m4c:add_sub_7.dataa[0]
+numerator[0] => StageOut[35].IN0
+numerator[1] => add_sub_m4c:add_sub_6.dataa[0]
+numerator[1] => StageOut[30].IN0
+numerator[2] => add_sub_m4c:add_sub_5.dataa[0]
+numerator[2] => StageOut[25].IN0
+numerator[3] => add_sub_m4c:add_sub_4.dataa[0]
+numerator[3] => StageOut[20].IN0
+numerator[4] => add_sub_l4c:add_sub_3.dataa[0]
+numerator[4] => StageOut[15].IN0
+numerator[5] => add_sub_k4c:add_sub_2.dataa[0]
+numerator[5] => StageOut[10].IN0
+numerator[6] => add_sub_j4c:add_sub_1.dataa[0]
+numerator[6] => StageOut[5].IN0
+numerator[7] => add_sub_i4c:add_sub_0.dataa[0]
+numerator[7] => StageOut[0].IN0
+quotient[0] <= quotient_tmp[0].DB_MAX_OUTPUT_PORT_TYPE
+quotient[1] <= quotient_tmp[1].DB_MAX_OUTPUT_PORT_TYPE
+quotient[2] <= quotient_tmp[2].DB_MAX_OUTPUT_PORT_TYPE
+quotient[3] <= quotient_tmp[3].DB_MAX_OUTPUT_PORT_TYPE
+quotient[4] <= quotient_tmp[4].DB_MAX_OUTPUT_PORT_TYPE
+quotient[5] <= quotient_tmp[5].DB_MAX_OUTPUT_PORT_TYPE
+quotient[6] <= quotient_tmp[6].DB_MAX_OUTPUT_PORT_TYPE
+quotient[7] <= quotient_tmp[7].DB_MAX_OUTPUT_PORT_TYPE
+remainder[0] <= StageOut[35].DB_MAX_OUTPUT_PORT_TYPE
+remainder[1] <= StageOut[36].DB_MAX_OUTPUT_PORT_TYPE
+remainder[2] <= StageOut[37].DB_MAX_OUTPUT_PORT_TYPE
+remainder[3] <= StageOut[38].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_i4c:add_sub_0
+cout <= carry_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => carry_eqn[0].IN0
+dataa[0] => _.IN0
+dataa[0] => sum_eqn[0].IN0
+datab[0] => datab_node[0].IN0
+result[0] <= sum_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_j4c:add_sub_1
+cout <= carry_eqn[1].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => carry_eqn[0].IN0
+dataa[0] => _.IN0
+dataa[0] => sum_eqn[0].IN0
+dataa[1] => carry_eqn[1].IN0
+dataa[1] => _.IN0
+dataa[1] => sum_eqn[1].IN0
+datab[0] => datab_node[0].IN0
+datab[1] => datab_node[1].IN0
+result[0] <= sum_eqn[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= sum_eqn[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_k4c:add_sub_2
+cout <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+datab[0] => datab_node[0].IN0
+datab[1] => datab_node[1].IN0
+datab[2] => datab_node[2].IN0
+result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_l4c:add_sub_3
+cout <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+datab[0] => datab_node[0].IN0
+datab[1] => datab_node[1].IN0
+datab[2] => datab_node[2].IN0
+datab[3] => datab_node[3].IN0
+result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_m4c:add_sub_4
+cout <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[4] => _.IN0
+dataa[4] => _.IN0
+dataa[4] => _.IN0
+datab[0] => datab_node[0].IN0
+datab[1] => datab_node[1].IN0
+datab[2] => datab_node[2].IN0
+datab[3] => datab_node[3].IN0
+datab[4] => datab_node[4].IN0
+result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_m4c:add_sub_5
+cout <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[4] => _.IN0
+dataa[4] => _.IN0
+dataa[4] => _.IN0
+datab[0] => datab_node[0].IN0
+datab[1] => datab_node[1].IN0
+datab[2] => datab_node[2].IN0
+datab[3] => datab_node[3].IN0
+datab[4] => datab_node[4].IN0
+result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_m4c:add_sub_6
+cout <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[4] => _.IN0
+dataa[4] => _.IN0
+dataa[4] => _.IN0
+datab[0] => datab_node[0].IN0
+datab[1] => datab_node[1].IN0
+datab[2] => datab_node[2].IN0
+datab[3] => datab_node[3].IN0
+datab[4] => datab_node[4].IN0
+result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|decimalator:inst58|lpm_divide:LPM_DIVIDE_component|lpm_divide_dbp:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_lfe:divider|add_sub_m4c:add_sub_7
+cout <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[0] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[1] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[2] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[3] => _.IN0
+dataa[4] => _.IN0
+dataa[4] => _.IN0
+dataa[4] => _.IN0
+datab[0] => datab_node[0].IN0
+datab[1] => datab_node[1].IN0
+datab[2] => datab_node[2].IN0
+datab[3] => datab_node[3].IN0
+datab[4] => datab_node[4].IN0
+result[0] <= add_sub_cella[0].DB_MAX_OUTPUT_PORT_TYPE
+result[1] <= add_sub_cella[1].DB_MAX_OUTPUT_PORT_TYPE
+result[2] <= add_sub_cella[2].DB_MAX_OUTPUT_PORT_TYPE
+result[3] <= add_sub_cella[3].DB_MAX_OUTPUT_PORT_TYPE
+result[4] <= add_sub_cella[4].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HexpointThermostat|bcd_7seg:inst80sa
+bcd[0] => Mux0.IN19
+bcd[0] => Mux1.IN19
+bcd[0] => Mux2.IN19
+bcd[0] => Mux3.IN19
+bcd[0] => Mux4.IN19
+bcd[0] => Mux5.IN19
+bcd[0] => Mux6.IN19
+bcd[1] => Mux0.IN18
+bcd[1] => Mux1.IN18
+bcd[1] => Mux2.IN18
+bcd[1] => Mux3.IN18
+bcd[1] => Mux4.IN18
+bcd[1] => Mux5.IN18
+bcd[1] => Mux6.IN18
+bcd[2] => Mux0.IN17
+bcd[2] => Mux1.IN17
+bcd[2] => Mux2.IN17
+bcd[2] => Mux3.IN17
+bcd[2] => Mux4.IN17
+bcd[2] => Mux5.IN17
+bcd[2] => Mux6.IN17
+bcd[3] => Mux0.IN16
+bcd[3] => Mux1.IN16
+bcd[3] => Mux2.IN16
+bcd[3] => Mux3.IN16
+bcd[3] => Mux4.IN16
+bcd[3] => Mux5.IN16
+bcd[3] => Mux6.IN16
+output[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 

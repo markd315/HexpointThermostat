@@ -2,97 +2,97 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Setup 'count7bits:inst22|inst'
-Slack : -25.303
-TNS   : -41.888
-
 Type  : Setup 'RTC'
-Slack : -21.639
-TNS   : -1551.286
+Slack : -20.175
+TNS   : -1648.202
 
 Type  : Setup 'count7bits:inst22|inst7'
-Slack : -21.327
-TNS   : -36.672
+Slack : -19.178
+TNS   : -39.896
 
-Type  : Setup 'count7bits:inst22|inst3'
-Slack : -19.786
-TNS   : -30.854
+Type  : Setup 'count7bits:inst22|inst'
+Slack : -18.984
+TNS   : -36.381
 
 Type  : Setup 'count7bits:inst22|inst4'
-Slack : -19.413
-TNS   : -30.108
+Slack : -16.238
+TNS   : -30.889
 
 Type  : Setup 'count7bits:inst22|inst1'
-Slack : -18.950
-TNS   : -29.182
+Slack : -15.900
+TNS   : -30.213
+
+Type  : Setup 'count7bits:inst22|inst3'
+Slack : -15.176
+TNS   : -28.765
 
 Type  : Setup 'count7bits:inst22|inst2'
-Slack : -17.695
-TNS   : -26.672
+Slack : -14.372
+TNS   : -27.157
 
 Type  : Setup 'count5bits:inst15|inst3'
-Slack : -2.742
-TNS   : -2.742
+Slack : -3.126
+TNS   : -3.126
 
 Type  : Setup 'count5bits:inst15|inst1'
-Slack : 0.972
-TNS   : 0.000
-
-Type  : Setup 'count5bits:inst15|inst'
-Slack : 1.994
+Slack : 0.963
 TNS   : 0.000
 
 Type  : Setup 'count5bits:inst15|inst2'
-Slack : 3.410
+Slack : 1.944
+TNS   : 0.000
+
+Type  : Setup 'count5bits:inst15|inst'
+Slack : 3.363
 TNS   : 0.000
 
 Type  : Hold 'count7bits:inst22|inst2'
-Slack : -13.752
-TNS   : -24.523
-
-Type  : Hold 'count7bits:inst22|inst1'
-Slack : -12.497
-TNS   : -22.400
-
-Type  : Hold 'count7bits:inst22|inst4'
-Slack : -12.034
-TNS   : -21.560
+Slack : -9.060
+TNS   : -17.901
 
 Type  : Hold 'count7bits:inst22|inst3'
-Slack : -11.661
-TNS   : -20.764
+Slack : -8.256
+TNS   : -15.283
 
-Type  : Hold 'count7bits:inst22|inst7'
-Slack : -10.120
-TNS   : -15.795
+Type  : Hold 'count7bits:inst22|inst1'
+Slack : -7.532
+TNS   : -14.232
+
+Type  : Hold 'count7bits:inst22|inst4'
+Slack : -7.194
+TNS   : -14.285
 
 Type  : Hold 'count7bits:inst22|inst'
-Slack : -6.144
-TNS   : -9.280
+Slack : -4.448
+TNS   : -9.079
 
-Type  : Hold 'count5bits:inst15|inst2'
-Slack : -3.270
-TNS   : -3.270
-
-Type  : Hold 'RTC'
-Slack : -1.975
-TNS   : -3.950
+Type  : Hold 'count7bits:inst22|inst7'
+Slack : -4.254
+TNS   : -6.847
 
 Type  : Hold 'count5bits:inst15|inst'
-Slack : -1.854
-TNS   : -1.854
+Slack : -3.223
+TNS   : -3.223
+
+Type  : Hold 'RTC'
+Slack : -1.976
+TNS   : -3.561
+
+Type  : Hold 'count5bits:inst15|inst2'
+Slack : -1.804
+TNS   : -1.804
 
 Type  : Hold 'count5bits:inst15|inst1'
-Slack : -0.832
-TNS   : -0.832
+Slack : -0.823
+TNS   : -0.823
 
 Type  : Hold 'count5bits:inst15|inst3'
-Slack : 3.382
+Slack : 3.766
 TNS   : 0.000
 
 Type  : Recovery 'RTC'
-Slack : -12.362
-TNS   : -313.366
+Slack : -11.948
+TNS   : -303.016
 
 Type  : Removal 'RTC'
 Slack : 4.956

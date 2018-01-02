@@ -75,3 +75,4 @@ set_global_assignment -name QIP_FILE currentTempReg.qip
 set_global_assignment -name BDF_FILE count7bits.bdf
 set_global_assignment -name QIP_FILE decimalator.qip
 set_global_assignment -name VHDL_FILE bcd_7seg.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
